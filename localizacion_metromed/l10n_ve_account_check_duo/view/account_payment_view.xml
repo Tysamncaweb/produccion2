@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_account_payment_form_inh" model="ir.ui.view">
+        <field name="name">account.payment.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_type']" position="before">
+                <field name="defaults_payment_type" invisible="1"/>
+                <field name="payment_type_s" widget="radio" domain = "[]" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='payment_type']" position="replace">
+                <field name="payment_type" widget="radio" domain = "[]" invisible="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

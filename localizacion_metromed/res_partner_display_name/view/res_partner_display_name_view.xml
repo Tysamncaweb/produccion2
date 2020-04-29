@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_res_partner_name_form" model="ir.ui.view">
+            <field name="name">res.partner.name</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+ 				<xpath expr="//field[@name='lang']" position="after">
+                    <!--field name="fax" string="Fax" /-->
+					<field name="date" string="Fecha de Ingreso"  required="1"/>
+				</xpath>
+                <xpath expr="//field[@name='state_id']" position="replace">
+                   <field name="state_id" class="o_address_state" placeholder="Estado" options="{'no_open': True,'no_create': True, 'no_create_edit':True}"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'country_id': country_id, 'zip': zip}"/>
+				</xpath>
+                <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name="string">RIF</attribute>
+                 </xpath>
+            </field>
+        </record>
+
+	</data>
+</odoo>

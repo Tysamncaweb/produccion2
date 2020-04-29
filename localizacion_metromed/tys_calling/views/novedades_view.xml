@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="novedades_register_menu" parent="call_center_root" name="Novedades Register" sequence="55" />
+        <menuitem id="guard_groups_register_menu" parent="call_center_root" name="Guard Groups Register" sequence="65" />
+
+        <!-- novedades -->
+        <!-- Novedades Register form view -->
+        <record id="view_novedades_register_form" model="ir.ui.view">
+            <field name="name">novedades</field>
+            <field name="model">novedades</field>
+            <field name="arch" type="xml">
+                <form string="Novedades Register">
+                    <sheet>
+                        <field name="novedades_date" string="Fecha de registro" required="1" />
+                        <field name="group_leader_id" string="Lider del grupo" required="1" />
+                        <field name="supervisor_id" string="Supervisor" required="1" />
+                        <field name="headquarter_id" string="Supervisor" required="1" />
+                        <field name="novedades" string="Novedades" required="1" />
+                        <notebook>
+                            <page string="Grupo de guardia que entrega">
+                                <field name="guard_group_out" />
+                            </page>
+                            <page string="Grupo de guardia que recibe">
+                                <field name="guard_group_in" />
+                            </page>
+                            <page string="Tripulación">
+
+                            </page>
+                            <page string="Unidades">
+                                <field name="unit_id" string="Unit" requred="1" />
+                                <field name="kilometer" string="Kilometraje" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- vista tree Novedades Register -->
+        <record id="view_novedades_tree" model="ir.ui.view">
+            <field name="name">novedades</field>
+            <field name="model">novedades</field>
+            <field name="arch" type="xml">
+                <tree string="Novedades">
+                    <field name="id" />
+                    <field name="guard_group_in" />
+                    <field name="guard_group_out" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Filtro Novedades Register -->
+        <record id="view_novedades_filter" model="ir.ui.view">
+            <field name="name">novedades.select</field>
+            <field name="model">novedades</field>
+            <field name="arch" type="xml">
+                <search string="Search Novedades">
+                    <field name="guard_group_in" string="Grupo de guardia que recibe" />
+                    <group expand="0" string="Group By">
+                        <filter string="Grupo de guardia ue recibe" name="guard_group_in" icon="erp-folder_orange" context="{'group_by':'guard_group_in'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action Novedades Register -->
+        <record id="action_view_novedades_register_form" model="ir.actions.act_window">
+            <field name="name">Novedades</field>
+            <field name="res_model">novedades</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_novedades_tree" />
+            <field name="search_view_id" ref="view_novedades_filter" />
+        </record>
+
+        <menuitem action="action_view_novedades_register_form" id="menu_novedades_view_tree" parent="novedades_register_menu" />
+
+        <!-- guard.groups -->
+        <!-- Guard Groups Register form view -->
+        <record id="view_guard_groups_register_form" model="ir.ui.view">
+            <field name="name">guard.groups</field>
+            <field name="model">guard.groups</field>
+            <field name="arch" type="xml">
+                <form string="Guard Register">
+                    <sheet>
+                        <field name="name" string="Nombre del grupo" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- vista tree Guard Group Register -->
+        <record id="view_guard_groups_tree" model="ir.ui.view">
+            <field name="name">guard.groups</field>
+            <field name="model">guard.groups</field>
+            <field name="arch" type="xml">
+                <tree string="Grupos">
+                    <field name="id" />
+                    <field name="name" string="Nombre del grupo" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Filtro Guard Groups Register -->
+        <record id="view_guard_groups_filter" model="ir.ui.view">
+            <field name="name">guard.groups.select</field>
+            <field name="model">guard.groups</field>
+            <field name="arch" type="xml">
+                <search string="Search Guard Groups">
+                    <field name="name" string="Nombre del grupo" />
+                    <group expand="0" string="Group By">
+                        <filter string="Nombre del grupo" name="name" icon="erp-folder_orange" context="{'group_by':'name'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action Guard Groups Register -->
+        <record id="action_view_guard_groups_register_form" model="ir.actions.act_window">
+            <field name="name">Guard groups</field>
+            <field name="res_model">guard.groups</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_guard_groups_tree" />
+            <field name="search_view_id" ref="view_guard_groups_filter" />
+        </record>
+
+        <menuitem action="action_view_guard_groups_register_form" id="menu_guard_groups_view_tree" parent="guard_groups_register_menu" />
+
+        <!-- guard.group.members -->
+        <!-- Guard Group Members Register form view -->
+        <record id="view_guard_group_members_register_form" model="ir.ui.view">
+            <field name="name">guard.group.members</field>
+            <field name="model">guard.group.members</field>
+            <field name="arch" type="xml">
+                <form string="Guard Members Register">
+                    <sheet>
+                        <field name="guard_group_id" string="Grupo" />
+                        <field name="group_leader" string="Lider del grupo" required="1" />
+                        <field name="guard_group_members" string="Grupo" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- vista tree Guard Group Members Register -->
+        <record id="view_guard_group_members_tree" model="ir.ui.view">
+            <field name="name">guard.group.members</field>
+            <field name="model">guard.group.members</field>
+            <field name="arch" type="xml">
+                <tree string="Guard Members">
+                    <field name="id" />
+                    <field name="guard_group_id" string="Grupo" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Filtro Guard Group Members Register -->
+        <record id="view_guard_group_members_filter" model="ir.ui.view">
+            <field name="name">guard.group.members.select</field>
+            <field name="model">guard.group.members</field>
+            <field name="arch" type="xml">
+                <search string="Search Guard Group Members">
+                    <field name="guard_group_id" string="Grupo" />
+                    <group expand="0" string="Group By">
+                        <filter string="Grupo" name="guard_group_id" icon="erp-folder_orange" context="{'group_by':'guard_group_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action Guard Group Members Register -->
+        <record id="action_view_guard_group_members_register_form" model="ir.actions.act_window">
+            <field name="name">Guard group members</field>
+            <field name="res_model">guard.group.members</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_guard_group_members_tree" />
+            <field name="search_view_id" ref="view_guard_group_members_filter" />
+        </record>
+
+        <menuitem action="action_view_guard_group_members_register_form" id="menu_guard_group_members_view_tree" parent="guard_groups_register_menu" />
+    </data>

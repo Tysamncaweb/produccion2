@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report
+                auto="False"
+                id="islr_historical_data_report"
+                menu="False"
+                model="res.partner"
+                name="islr.wh.historical.data"
+                rml="addons/../modules/l10n_ve_wh_islr_historical_data/report/islr_hitorical_data.rml"
+                string="Comprobante ARCV"/>
+
+    </data>
+</openerp>

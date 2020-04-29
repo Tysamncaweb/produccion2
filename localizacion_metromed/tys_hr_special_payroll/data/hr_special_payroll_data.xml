@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="hr_payroll_structure_fideicomiso" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">1</field>
+            <field name="pay_days">15</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso2" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">2</field>
+            <field name="pay_days">16</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso3" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">3</field>
+            <field name="pay_days">17</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso4" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">4</field>
+            <field name="pay_days">18</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso5" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">5</field>
+            <field name="pay_days">19</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso6" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">6</field>
+            <field name="pay_days">20</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso7" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">7</field>
+            <field name="pay_days">21</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso8" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">8</field>
+            <field name="pay_days">22</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso9" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">9</field>
+            <field name="pay_days">23</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso10" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">10</field>
+            <field name="pay_days">24</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso11" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">11</field>
+            <field name="pay_days">25</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso12" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">12</field>
+            <field name="pay_days">26</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso13" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">13</field>
+            <field name="pay_days">27</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso14" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">14</field>
+            <field name="pay_days">28</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso15" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">15</field>
+            <field name="pay_days">29</field>
+        </record>
+        <record id="hr_payroll_structure_fideicomiso16" model="hr.payroll.dias.vacaciones">
+            <field name="service_years">16</field>
+            <field name="pay_days">30</field>
+        </record>
+        <!--parametros del modulo-->
+        <record id="hr_config_parameter_utilidades" model="hr.config_parameter">
+            <field name="key">hr.payroll.max.utili.days.year</field>
+            <field name="value">90</field>
+        </record>
+    </data>
+</openerp>

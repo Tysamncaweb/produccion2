@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_contract_liq_view_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.liq.view.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract_add_fields.hr_contract_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='asignaciones_deducciones']" position="after">
+                    <page string="Liquidacion">
+                        <group>
+                            <group name="liq_fields_1">
+                                <field name="dias_acum_fideicomiso" string="Días acumilados prestaciones sociales"/>
+                                <field name="dias_adic_fideicomiso" string="Días adicionales prestaciones sociales"/>
+                                <field name="total_acum_ps" string="Total acumulado prestaciones sociales"/>
+                                <field name="total_acum_anticipo_ps" string="Total anticipos prestaciones sociales"/>
+                                <label for= "vacaciones_vencidas" string="Vacaciones vencidas"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="vacaciones_vencidas_check" style="width: 25%%"/>
+                                        <field name="vacaciones_vencidas_value" class="oe_no_button" style="width: 65%%" placeholder="%%" attrs="{'invisible': [('vacaciones_vencidas_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <field name="vacaciones_fraccionadas_check"/>
+                            </group>
+                            <group name="liq_fields_2">
+                                <field name="literal_a"/>
+                                <field name="literal_b"/>
+                                <field name="literal_c"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

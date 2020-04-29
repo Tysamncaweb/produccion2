@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='fleet_vehicle_view_form' model='ir.ui.view'>
+        <field name="name">fleet.vehicle.form</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+                 <xpath expr="//field[@name='driver_id']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                 </xpath>
+                <xpath expr="//field[@name='location']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='vin_sn']" position="attributes">
+                    <attribute name='string'>Número del serial del motor</attribute>
+                    <attribute name='required'>1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='vin_sn']" position="before">
+                    <field name="a"/>
+                </xpath>
+
+                <xpath expr="//field[@name='seats']" position="before">
+                    <field name="b"/>
+                    <field name="c"/>
+                    <field name="d"/>
+                </xpath>
+                <xpath expr="//field[@name='seats']" position="after">
+                    <field name="e"/>
+                </xpath>
+                <xpath expr="//field[@name='color']" position="after">
+                    <field name="f"/>
+                    <field name="g"/>
+                </xpath>
+
+                <xpath expr="//field[@name='car_value']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='residual_value']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='odometer']" position="attributes">
+                    <attribute name='string'>Ultimo Kilometraje</attribute>
+                </xpath>
+                <xpath expr="//field[@name='odometer_unit']" position="attributes">
+                    <attribute name='string'>Unidad del Kilometraje</attribute>
+                </xpath>
+
+            <xpath expr="//sheet" position="inside">
+                <group  col="2" >
+                    <group string="Fotos Actualizadas del Vehículo (lado Derecho)">
+                        <field name="h" widget="image" string="Foto 1-D"/>
+                        <field name="i" widget="image" string="Foto 2-D"/>
+                    </group>
+                    <group string="Fotos Actualizadas del Vehículo (lado Izquierdo)">
+                        <field name="j" widget="image" string="Foto 1-I"/>
+                        <field name="k" widget="image" string="Foto 2-I"/>
+                    </group>
+                </group>
+                <group  col="2" >
+                    <group string="Foto de la Parte Delantera del Vehículo">
+                        <field name="l" widget="image" string="Foto"/>
+                    </group>
+                    <group string="Foto de la Parte Trasera del Vehículo">
+                        <field name="m" widget="image" string="Foto"/>
+                    </group>
+                </group>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inh_view_account_invoice_form" model="ir.ui.view">
+            <field name="name">inh.view.account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <!--Se agrega el campo monto en letra en la vista del formulario -->
+                <xpath expr="//page//field[@name='comment']" position="before">
+                    <field name="monto_letra" invisible="0"/>
+                </xpath>
+            </field>
+        </record>
+
+        <template id="inh_view_account_invoice_report" inherit_id="account.report_invoice_document">
+            <!--Se agrega el campo monto en letra en el reporte  -->
+            <xpath expr="//p[@t-if='o.comment']" position="before">
+                <p>
+                    <span t-field="o.monto_letra"/>
+                </p>
+            </xpath>
+        </template>
+    </data>
+</odoo>

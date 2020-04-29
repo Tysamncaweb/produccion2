@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+    <!-- 
+    =====================================================
+    PURCHASE ORDER,  PURCHASE ORDER LINE
+    =====================================================
+    -->
+
+            <record model="ir.ui.view" id="view_purchase_order_form_concept_islr">
+                <field name="name">purchase_order_form_concept_islr</field>
+                <field name="model">purchase.order</field>
+                <field name="inherit_id" ref="purchase.purchase_order_form"/>
+                <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_planned']" position="replace">
+                    <field name="date_planned" invisible="0"/>
+                </xpath>
+                <xpath expr="//button[@name='action_set_date_planned']" position="replace">
+                    <button name="action_set_date_planned" invisible="1"/>
+                </xpath>
+                </field>
+            </record>
+    </data>
+</odoo>

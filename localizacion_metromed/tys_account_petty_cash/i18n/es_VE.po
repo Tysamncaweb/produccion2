@@ -1,0 +1,669 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_small_box
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-28 13:36+0000\n"
+"PO-Revision-Date: 2018-03-28 11:05-0400\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_VE\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: account_small_box
+#: field:account.small,small_accounting_account:0
+#: field:account.small.replacement,small_accounting_account:0
+#: field:account.validate.small.box,small_accounting_account:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: account_small_box
+#: model:ir.model,name:account_small_box.model_account_move
+msgid "Account Entry"
+msgstr "Entrada contable"
+
+#. module: account_small_box
+#: field:account.small.replacement,small_debit_account:0
+msgid "Account debit"
+msgstr " Cuenta de Débito "
+
+#. module: account_small_box
+#: field:account.small.transactions,account_id:0
+msgid "Account id"
+msgstr "Account id"
+
+#. module: account_small_box
+#: field:account.small.transactions,account_small_type_expense:0
+msgid "Account small type expense"
+msgstr "Cuenta de gasto"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Accounting"
+msgstr "Cuenta contable"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: view:account.small:account_small_box.view_small_box_tree
+msgid "Accounting Account"
+msgstr "Cuenta contable"
+
+#. module: account_small_box
+#: view:account.validate.small.box:account_small_box.view_validate_small_box_tree
+msgid "Accounting account"
+msgstr "Cuenta contable"
+
+#. module: account_small_box
+#: selection:account.validate.small.box,state:0
+msgid "Active"
+msgstr "Activo"
+
+#. module: account_small_box
+#: field:account.small.replacement,total_amount:0
+msgid "Amount consumed"
+msgstr "Cantidad consumida"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: selection:account.small,state:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: account_small_box
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+#: view:account.validate.small.box:account_small_box.view_validate_small_box_tree
+msgid "Balance Cash"
+msgstr "Balance de efectivo"
+
+#. module: account_small_box
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Balance account transitory"
+msgstr "Balance de cuenta transitoria"
+
+#. module: account_small_box
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Balance accounting account"
+msgstr "Balance contable"
+
+#. module: account_small_box
+#: field:account.small.replacement,small_amount_consumed:0
+msgid "Balance available"
+msgstr "Balance disponible"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: selection:account.small,state:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: account_small_box
+#: model:ir.ui.menu,name:account_small_box.cash_operations
+msgid "Cash Operations"
+msgstr "Operaciones de caja chica"
+
+#. module: account_small_box
+#: field:account.small,small_code:0
+#: view:account.small.replacement:account_small_box.view_small_replacement_tree
+#: field:account.small.replacement,replacement_code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Code Small box"
+msgstr "Código"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.view_small_box_tree
+#: view:account.validate.small.box:account_small_box.view_validate_small_box_tree
+msgid "Code small box"
+msgstr "Código"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: view:account.small:account_small_box.view_small_box_tree
+#: field:account.small,small_coin:0
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Coin"
+msgstr "Dinero"
+
+#. module: account_small_box
+#: field:account.small,create_uid:0
+#: field:account.small.document.type,create_uid:0
+#: field:account.small.provider,create_uid:0
+#: field:account.small.replacement,create_uid:0
+#: field:account.small.tmp,create_uid:0
+#: field:account.small.transactions,create_uid:0
+#: field:account.small.type.expense,create_uid:0
+#: field:account.small.validate.tickets,create_uid:0
+#: field:account.validate.small.box,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: account_small_box
+#: field:account.small,create_date:0
+#: field:account.small.document.type,create_date:0
+#: field:account.small.provider,create_date:0
+#: field:account.small.replacement,create_date:0
+#: field:account.small.tmp,create_date:0
+#: field:account.small.transactions,create_date:0
+#: field:account.small.type.expense,create_date:0
+#: field:account.small.validate.tickets,create_date:0
+#: field:account.validate.small.box,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: account_small_box
+#: field:account.move,id_account_small_move:0
+#: field:account.move.line,id_account_small:0
+msgid "DNI"
+msgstr "DNI"
+
+#. module: account_small_box
+#: model:ir.actions.act_window,name:account_small_box.action_small_replacement_tree
+#: model:ir.ui.menu,name:account_small_box.daily_movement
+msgid "Daily Movement"
+msgstr "Movimiento diario"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: field:account.small,small_date:0
+#: field:account.small.provider,provider_date:0
+#: field:account.small.replacement,date_invoice:0
+#: field:account.small.replacement,replacement_date:0
+#: field:account.small.transactions,date:0
+#: field:account.small.transactions,transactions_date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: account_small_box
+#: field:account.small,small_debit_account:0
+#: field:account.small,small_debit_transitory:0
+msgid "Debit"
+msgstr "Débito"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.view_small_box_tree
+msgid "Debit account"
+msgstr "Cuenta de débito"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Debit transitory"
+msgstr "Débito transitorio"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Debt"
+msgstr "Débito"
+
+#. module: account_small_box
+#: field:account.small,small_description:0
+#: field:account.small.provider,provider_code:0
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: field:account.small.replacement,small_description:0
+#: field:account.small.transactions,transactions_description:0
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+#: view:account.validate.small.box:account_small_box.view_validate_small_box_tree
+#: field:account.validate.small.box,small_description:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: account_small_box
+#: field:account.small,display_name:0
+#: field:account.small.document.type,display_name:0
+#: field:account.small.provider,display_name:0
+#: field:account.small.replacement,display_name:0
+#: field:account.small.tmp,display_name:0
+#: field:account.small.transactions,display_name:0
+#: field:account.small.type.expense,display_name:0
+#: field:account.small.validate.tickets,display_name:0
+#: field:account.validate.small.box,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: account_small_box
+#: field:account.small.document.type,name:0
+#: field:account.small.transactions,name:0
+msgid "Document type"
+msgstr "Tipo de Documento"
+
+#. module: account_small_box
+#: selection:account.small,state:0 selection:account.small.transactions,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: account_small_box
+#: model:ir.actions.act_window,name:account_small_box.action_small_type_expense
+#: model:ir.ui.menu,name:account_small_box.Registry_type_expense
+msgid "Expense"
+msgstr "Gastos"
+
+#. module: account_small_box
+#: view:account.small.type.expense:account_small_box.expense_account
+#: view:account.small.type.expense:account_small_box.expense_account_tree
+msgid "Expense account"
+msgstr "Cuenta de gastos"
+
+#. module: account_small_box
+#: view:account.small.type.expense:account_small_box.expense_account
+msgid "Expense account Register"
+msgstr "Registro de Cuenta de gastos "
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Guardar"
+msgstr "Guardar"
+
+#. module: account_small_box
+#: field:account.small,id:0 field:account.small.document.type,id:0
+#: field:account.small.provider,id:0 field:account.small.replacement,id:0
+#: field:account.small.tmp,id:0 field:account.small.transactions,id:0
+#: field:account.small.type.expense,id:0
+#: field:account.small.validate.tickets,id:0
+#: field:account.validate.small.box,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: account_small_box
+#: field:account.small.transactions,id_replacement:0
+msgid "Id replacement"
+msgstr "Id replacement"
+
+#. module: account_small_box
+#: field:account.small.transactions,id_small_box:0
+#: field:account.small.type.expense,id_small_box:0
+msgid "Id small box"
+msgstr "Id small box"
+
+#. module: account_small_box
+#: field:account.small.replacement,id_temp:0 field:account.small.tmp,id_temp:0
+msgid "Id temp"
+msgstr "Id temp"
+
+#. module: account_small_box
+#: field:account.small.type.expense,id_type_expense:0
+msgid "Id type expense"
+msgstr "Id type expense"
+
+#. module: account_small_box
+#: field:account.small.validate.tickets,id_validate_small_box:0
+msgid "Id validate small box"
+msgstr "Validación de caja chica"
+
+#. module: account_small_box
+#: selection:account.validate.small.box,state:0
+msgid "Inactive"
+msgstr "Inactive"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Invoices"
+msgstr "Invoices"
+
+#. module: account_small_box
+#: field:account.small.transactions,iva:0
+msgid "Iva"
+msgstr "Iva"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Journal"
+msgstr "Journal"
+
+#. module: account_small_box
+#: model:ir.model,name:account_small_box.model_account_move_line
+msgid "Journal Items"
+msgstr "Elementos diario"
+
+#. module: account_small_box
+#: field:account.small,__last_update:0
+#: field:account.small.document.type,__last_update:0
+#: field:account.small.provider,__last_update:0
+#: field:account.small.replacement,__last_update:0
+#: field:account.small.tmp,__last_update:0
+#: field:account.small.transactions,__last_update:0
+#: field:account.small.type.expense,__last_update:0
+#: field:account.small.validate.tickets,__last_update:0
+#: field:account.validate.small.box,__last_update:0
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: account_small_box
+#: field:account.small,write_uid:0
+#: field:account.small.document.type,write_uid:0
+#: field:account.small.provider,write_uid:0
+#: field:account.small.replacement,write_uid:0
+#: field:account.small.tmp,write_uid:0
+#: field:account.small.transactions,write_uid:0
+#: field:account.small.type.expense,write_uid:0
+#: field:account.small.validate.tickets,write_uid:0
+#: field:account.validate.small.box,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: account_small_box
+#: field:account.small,write_date:0
+#: field:account.small.document.type,write_date:0
+#: field:account.small.provider,write_date:0
+#: field:account.small.replacement,write_date:0
+#: field:account.small.tmp,write_date:0
+#: field:account.small.transactions,write_date:0
+#: field:account.small.type.expense,write_date:0
+#: field:account.small.validate.tickets,write_date:0
+#: field:account.validate.small.box,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: account_small_box
+#: field:account.small.provider,name:0
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+#: field:account.validate.small.box,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: account_small_box
+#: field:account.small.transactions,control_number:0
+msgid "N° control"
+msgstr "N° control"
+
+#. module: account_small_box
+#: field:account.small.transactions,document_number:0
+msgid "N°document"
+msgstr "N°documento"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: selection:account.small,state:0
+msgid "On Aprobation"
+msgstr "En aprobación"
+
+#. module: account_small_box
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Open small box"
+msgstr "Apertura de Caja"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Opening amount"
+msgstr "Cantidad de apertura"
+
+#. module: account_small_box
+#: field:account.small.transactions,partner_name:0
+msgid "Partner name"
+msgstr "Responsable"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Period"
+msgstr "Periodo"
+
+#. module: account_small_box
+#: selection:account.small.transactions,state:0
+msgid "Posted"
+msgstr "Procesado"
+
+#. module: account_small_box
+#: model:ir.ui.menu,name:account_small_box.Processes_and_movements_small
+msgid "Processes and movements"
+msgstr "Procesos y movimientos"
+
+#. module: account_small_box
+#: field:account.small.transactions,provider:0
+msgid "Provider"
+msgstr "Proveedor"
+
+#. module: account_small_box
+#: field:account.small.validate.tickets,quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: account_small_box
+#: field:account.small.provider,provider_rif:0
+msgid "RIF"
+msgstr "RIF"
+
+#. module: account_small_box
+#: model:ir.ui.menu,name:account_small_box.Registry_small
+msgid "Registry Small"
+msgstr "Registro de caja  Chica"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Replacement code"
+msgstr "Codigo"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Replacement date"
+msgstr "Fecha"
+
+#. module: account_small_box
+#: field:account.small.replacement,replacement_diary:0
+msgid "Replacement diary"
+msgstr "Diario"
+
+#. module: account_small_box
+#: field:account.small.replacement,replacement_transactions:0
+msgid "Replacement transactions"
+msgstr "Transacciones"
+
+#. module: account_small_box
+#: field:account.small.transactions,partner_id:0
+msgid "Res.user"
+msgstr "Res.user"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: view:account.small:account_small_box.view_small_box_tree
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+#: view:account.validate.small.box:account_small_box.view_validate_small_box_tree
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Select small box"
+msgstr "Selecione la Caja Chica"
+
+#. module: account_small_box
+#: view:account.small.type.expense:account_small_box.expense_account
+msgid "Select the expense account"
+msgstr "Seleccione la cuenta de gastos"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Selection"
+msgstr "Selección"
+
+#. module: account_small_box
+#: model:ir.actions.act_window,name:account_small_box.action_small
+#: model:ir.ui.menu,name:account_small_box.Registry_small_Box
+msgid "Small Box"
+msgstr "Caja chica"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Small Replacement"
+msgstr "Small Replacement"
+
+#. module: account_small_box
+#: field:account.small.replacement,small_box:0
+#: field:account.small.transactions,small_box:0
+#: field:account.validate.small.box,small_box:0
+msgid "Small box"
+msgstr "Small box"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Small box Register"
+msgstr "Registro de caja chica"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Small box description"
+msgstr "Descripción"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Small box diary"
+msgstr "Diario"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+msgid "Small box period"
+msgstr "Periodo"
+
+#. module: account_small_box
+#: field:account.validate.small.box,small_coin:0
+msgid "Small coin"
+msgstr "Dinero"
+
+#. module: account_small_box
+#: field:account.small,small_daily_id:0
+msgid "Small daily id"
+msgstr "Small daily id"
+
+#. module: account_small_box
+#: field:account.small,small_period_id:0
+msgid "Small period id"
+msgstr "Small period id"
+
+#. module: account_small_box
+#: field:account.small,small_type_expense:0
+msgid "Small type expense"
+msgstr "Small type expense"
+
+#. module: account_small_box
+#: field:account.validate.small.box,small_Validate_tickets:0
+msgid "Small validate tickets"
+msgstr "Small validate tickets"
+
+#. module: account_small_box
+#: field:account.small.type.expense,name:0
+msgid "Small_type_expense"
+msgstr "Small_type_expense"
+
+#. module: account_small_box
+#: field:account.small,state:0 field:account.small.transactions,state:0
+#: field:account.validate.small.box,state:0
+msgid "State"
+msgstr "Status"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.view_small_box_tree
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: view:account.validate.small.box:account_small_box.view_validate_small_box_tree
+msgid "Status"
+msgstr "Status"
+
+#. module: account_small_box
+#: field:account.small.transactions,taxable:0
+msgid "Taxable amount"
+msgstr "Base imponible"
+
+#. module: account_small_box
+#: field:account.small.validate.tickets,tickets:0
+msgid "Tickets"
+msgstr "Entradas"
+
+#. module: account_small_box
+#: field:account.small.transactions,total_amount:0
+#: field:account.small.validate.tickets,Result:0
+#: field:account.validate.small.box,total_result:0
+msgid "Total"
+msgstr "Total"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Total transactions_iva_amount"
+msgstr "Total transactions_iva_amount"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Total transactions_taxable_amount"
+msgstr "Total transactions_taxable_amount"
+
+#. module: account_small_box
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+msgid "Total transactions_total_amount"
+msgstr "Total transactions_total_amount"
+
+#. module: account_small_box
+#: field:account.small,small_transitory_account:0
+#: view:account.small.replacement:account_small_box.account_small_replacement_form
+#: field:account.small.replacement,small_transitory_account:0
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+#: field:account.validate.small.box,small_transitory_account:0
+msgid "Transitory"
+msgstr "Cuenta transitoria"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.small_box
+#: view:account.small:account_small_box.view_small_box_tree
+msgid "Transitory Account"
+msgstr "Cuenta transitoria"
+
+#. module: account_small_box
+#: field:account.small,small_responsible:0
+#: field:account.small.replacement,small_responsible:0
+#: field:account.validate.small.box,small_responsible:0
+msgid "User"
+msgstr "Usuario"
+
+#. module: account_small_box
+#: model:ir.actions.act_window,name:account_small_box.action_view_validate_small_box_tree
+#: model:ir.ui.menu,name:account_small_box.validate_small
+msgid "Validate small box"
+msgstr "Validar caja chica"
+
+#. module: account_small_box
+#: view:account.validate.small.box:account_small_box.validate_small_box_form
+msgid "Validate small box Register"
+msgstr "Validar Caja Chica  Registro"
+
+#. module: account_small_box
+#: field:account.small.replacement,small_daily_name:0
+#: field:account.small.transactions,journal_id:0
+#: field:account.validate.small.box,small_daily_name:0
+msgid "account.journal"
+msgstr "account.journal"
+
+#. module: account_small_box
+#: field:account.small.replacement,small_period_name:0
+#: field:account.small.transactions,period_id:0
+#: field:account.validate.small.box,small_period_name:0
+msgid "account.period"
+msgstr "account.period"
+
+#. module: account_small_box
+#: field:account.validate.small.box,small_debit_account:0
+msgid "balance account debit"
+msgstr "Saldo de la cuenta de contable"
+
+#. module: account_small_box
+#: field:account.validate.small.box,small_debit_transitory:0
+msgid "debit"
+msgstr "Débito"
+
+#. module: account_small_box
+#: view:account.small:account_small_box.view_small_box_tree
+msgid "description"
+msgstr "Descripción"
+
+#. module: account_small_box
+#: field:account.small.transactions,selection:0
+msgid "selection"
+msgstr "Selección"

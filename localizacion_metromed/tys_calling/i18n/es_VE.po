@@ -1,0 +1,2023 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* tys_calling
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-26 17:56+0000\n"
+"PO-Revision-Date: 2018-12-26 17:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "<strong>Desde</strong>:"
+msgstr "<strong>Desde</strong>:"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "<strong>Hasta</strong>:"
+msgstr "<strong>Hasta</strong>:"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "<strong>Totales</strong>"
+msgstr "<strong>Totales</strong>"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Abuelo"
+msgstr "Abuelo"
+
+#. module: tys_calling
+#: selection:calling,state:0
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Activo"
+msgstr "Activo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_additional_service_type_name
+msgid "Additional Service Type Name"
+msgstr "Tipo de Servicio Adicional"
+
+#. module: tys_calling
+#: selection:calling,calling_code:0
+msgid "Amarillo"
+msgstr "Amarillo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Antecendentes"
+msgstr "Antecendentes"
+
+#. module: tys_calling
+#: selection:calling,patient_type:0
+msgid "Assignee"
+msgstr "Asociados"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "Atendidos"
+msgstr "Atendidos"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Autorizado Por"
+msgstr "Autorizado por"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Autorizado por"
+msgstr "Autorizado por"
+
+#. module: tys_calling
+#: model:ir.module.category,name:tys_calling.tys_calling_management
+#: model:ir.ui.menu,name:tys_calling.menu_root_CallCenter
+msgid "Call Center"
+msgstr "Call Center"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_additional_service_type
+msgid "Calling Additional Service Type"
+msgstr "Calling Additional Service Type"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_code
+msgid "Calling Code"
+msgstr "Calling Code"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_collective
+msgid "Calling Collective"
+msgstr "Calling Collective"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_comments
+msgid "Calling Comments"
+msgstr "Calling Comments"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_commitment
+msgid "Calling Commitment"
+msgstr "Calling Commitment"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_date
+msgid "Calling Date"
+msgstr "Calling Date"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_diagnosis
+msgid "Calling Diagnosis"
+msgstr "Calling Diagnosis"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_duration
+msgid "Calling Duration"
+msgstr "Calling Duration"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_headquarter
+msgid "Calling Headquarter"
+msgstr "Calling Headquarter"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_time
+msgid "Calling Hour"
+msgstr "Calling Hour"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_end_time
+msgid "Calling Hour End"
+msgstr "Calling Hour End"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_medical_rest
+msgid "Calling Medical Rest"
+msgstr "Calling Medical Rest"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_number_key
+msgid "Calling Number Key"
+msgstr "Calling Number Key"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_reason
+msgid "Calling Reason"
+msgstr "Calling Reason"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Calling Register"
+msgstr "Registro de llamadas"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_service
+msgid "Calling Service"
+msgstr "Calling Service"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_service_atendant
+msgid "Calling Service Atendant"
+msgstr "Calling Service Atendant"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_service_atendant_others
+msgid "Calling Service Atendant Others"
+msgstr "Calling Service Atendant Others"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_service_type
+msgid "Calling Service Type"
+msgstr "Calling Service Type"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_transport
+msgid "Calling Transport"
+msgstr "Calling Transport"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_transport_from
+msgid "Calling Transport From"
+msgstr "Calling Transport From"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_transport_to
+msgid "Calling Transport To"
+msgstr "Calling Transport To"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_treatment
+msgid "Calling Treatment"
+msgstr "Calling Treatment"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_user
+msgid "Calling User"
+msgstr "Calling User"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.view_guard_change_tree_action
+#: model:ir.ui.menu,name:tys_calling.menu_view_guard_change_tree_action
+msgid "Cambio de Guardia"
+msgstr "Cambio de Guardia"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_service
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: tys_calling
+#: selection:calling,state:0
+msgid "Cancelado"
+msgstr "Cancelado"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "Cancelados"
+msgstr "Cancelados"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_id
+msgid "Cedula del paciente"
+msgstr "Cedula del paciente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_collective_certificate
+msgid "Certifiacdo"
+msgstr "Certifiacdo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Certificado"
+msgstr "Certificado"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Clave"
+msgstr "Clave"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_client_register_form
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_user_auth
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_unit_driver
+msgid "Client"
+msgstr "Cliente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_client_register_form
+msgid "Client Register"
+msgstr "Registro de cliente"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_client_register_test
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_client
+#: model:ir.ui.menu,name:tys_calling.menu_client_view_tree
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Cliente"
+msgstr "Cliente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_client_tree
+msgid "Clientes"
+msgstr "Clientes"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_collective_register_form
+#: model:ir.ui.menu,name:tys_calling.menu_collective_view_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Colectivo"
+msgstr "Colectivo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_collective
+msgid "Colectivo del paciente"
+msgstr "Colectivo del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_tree
+msgid "Colectivos"
+msgstr "Colectivos"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_register_form
+msgid "Collective Register"
+msgstr "Registro de colectivo"
+
+#. module: tys_calling
+#: selection:calling,state:0
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Completado"
+msgstr "Completado"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "Completados"
+msgstr "Completados"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Compromiso"
+msgstr "Compromiso"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Conductor"
+msgstr "Conductor"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Conductor Suplente"
+msgstr "Conductor Suplente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Confirmar"
+msgstr "Confirmar"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Conyuge"
+msgstr "Conyuge"
+
+#. module: tys_calling
+#: model:res.groups,name:tys_calling.tys_calling_coordinador
+msgid "Coordinador"
+msgstr "Coordinador"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_calling_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_client_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_collective_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_news_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_parish_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_patient_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_service_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_states_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_create_uid
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_calling_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_client_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_collective_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_news_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_parish_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_patient_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_service_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_states_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_create_date
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_crew_driver
+msgid "Crew driver"
+msgstr "Conductor"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_crew_driver_substitute
+msgid "Crew driver substitute"
+msgstr "Conductor suplente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_crew_medic
+msgid "Crew medic"
+msgstr "Médico"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_crew_medic_substitute
+msgid "Crew medic substitute"
+msgstr "Médico substituto"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_crew_paramedic
+msgid "Crew paramedic"
+msgstr "Crew paramedic"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_crew_paramedic_substitute
+msgid "Crew paramedic substitute"
+msgstr "Crew paramedic substitute"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+msgid "Cédula"
+msgstr "Cédula"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Cédula Paciente"
+msgstr "Cédula del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+msgid "Cédula del paciente"
+msgstr "Cédula del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Cédula del titular"
+msgstr "Cédula del titular"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Código"
+msgstr "Código"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_tree
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Desde"
+msgstr "Desde"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_diagnosis_description
+msgid "Diagnosis Description"
+msgstr "Diagnosis Description"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_diagnosis_name
+msgid "Diagnosis Name"
+msgstr "Diagnosis Name"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_form
+msgid "Diagnosis Register"
+msgstr "Registro de diagnóstico"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_diagnosis_register_form
+#: model:ir.ui.menu,name:tys_calling.menu_diagnosis_registert_tree
+msgid "Diagnostico"
+msgstr "Diagnostico"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_tree
+msgid "Diagnosticos"
+msgstr "Diagnósticos"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Diagnóstico"
+msgstr "Diagnóstico"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Direccion"
+msgstr "Dirección"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_address
+msgid "Direccion del paciente"
+msgstr "Direccion del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+msgid "Dirección"
+msgstr "Dirección"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_calling_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_client_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_collective_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_news_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_parish_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_patient_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_services_clientes_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_services_sede_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_servicios_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_service_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_states_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_display_name
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Duración de llamada"
+msgstr "Duración de la llamada"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Días de Reposo"
+msgstr "Días de Reposo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_age
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Edad"
+msgstr "Edad"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Empresa que atiende el servicio"
+msgstr "Empresa que atiende el servicio"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Empresa tercerizada"
+msgstr "Empresa tercerizada"
+
+#. module: tys_calling
+#: selection:calling,state:0
+msgid "En Progreso"
+msgstr "En Progreso"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_owner_patient
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Es Paciente"
+msgstr "Es Paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Estado"
+msgstr "Estado"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_service
+msgid "Exportar PDF"
+msgstr "Exportar PDF"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_tree
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_date_to
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_date_to
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_date_to
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_service
+msgid "Fecha Fin"
+msgstr "Fecha Fin"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_date_from
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_date_from
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_date_from
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_service
+msgid "Fecha Inicio"
+msgstr "Fecha Inicio"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Fecha Programada de Traslado"
+msgstr "Fecha Programada de Traslado"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_birth_date
+msgid "Fecha de Nacimiento"
+msgstr "Fecha de Nacimiento"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Fecha de nacimiento"
+msgstr "Fecha de nacimiento"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Fecha de registro"
+msgstr "Fecha de registro"
+
+#. module: tys_calling
+#: selection:calling,patient_gender:0
+#: selection:patient,patient_gender:0
+msgid "Femenino"
+msgstr "Femenino"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_name
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_name
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Fin de llamada"
+msgstr "Fin de la llamada"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_form_number
+msgid "Form Number"
+msgstr "Form Number"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Genero"
+msgstr "Género"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_gender
+msgid "Genero del paciente"
+msgstr "Genero del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_news_filter
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_group_headquarter
+msgid "Group Headquarter"
+msgstr "Group Headquarter"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_headquarter
+msgid "Group Headquerter"
+msgstr "Group Headquerter"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_group_leader
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_group_leader
+msgid "Group Leader"
+msgstr "Group Leader"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_group_leader
+#: model:ir.model.fields,field_description:tys_calling.field_news_group_leader_id
+msgid "Group leader"
+msgstr "Group leader"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_guard_group_members
+msgid "Group members"
+msgstr "Group members"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_tree
+msgid "Grupo"
+msgstr "Grupo"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_guard_groups_register_form
+#: model:ir.ui.menu,name:tys_calling.menu_guard_groups_view_tree
+msgid "Grupo de Guardia"
+msgstr "Grupo de Guardia"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_news_tree
+msgid "Grupo de guardia que entrega"
+msgstr "Grupo de guardia que entrega"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_news_tree
+msgid "Grupo de guardia que recibe"
+msgstr "Grupo de guardia que recibe"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_filter
+msgid "Grupo de guardia ue recibe"
+msgstr "Grupo de guardia que recibe"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_tree
+msgid "Grupos"
+msgstr "Grupos"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_guard_change_id
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_tree
+msgid "Guard Change"
+msgstr "Cambio de Guardia"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_group
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_guard_group_id
+msgid "Guard Group"
+msgstr "Guard Group"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_register_form
+msgid "Guard Register"
+msgstr "Registro de grupos"
+
+#. module: tys_calling
+#: selection:news.members.in.line,news_member_no_attendee_reason:0
+#: selection:news.members.out.line,news_member_no_attendee_reason:0
+msgid "Guard change"
+msgstr "Cambio de guardia"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_guard_group_id
+#: model:ir.model.fields,field_description:tys_calling.field_res_users_guard_groups_id
+msgid "Guard group id"
+msgstr "Guard group id"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_guard_group_in
+msgid "Guard group in"
+msgstr "Guard group in"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_name
+msgid "Guard group name"
+msgstr "Guard group name"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_guard_group_out
+msgid "Guard group out"
+msgstr "Guard group out"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_guard_members_in_attendant
+msgid "Guard members in attendant"
+msgstr "Guard members in attendant"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_guard_members_in_no_attendant
+msgid "Guard members in no attendant"
+msgstr "Guard members in no attendant"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_guard_members_out_attendant
+msgid "Guard members out attendant"
+msgstr "Guard members out attendant"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_guard_members_out_no_attendant
+msgid "Guard members out no attendant"
+msgstr "Guard members out no attendant"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Hacia"
+msgstr "Hacia"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_name
+#: model:ir.model.fields,field_description:tys_calling.field_news_headquarter_id
+msgid "Headquarter"
+msgstr "Sede"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_city
+msgid "Headquarter City"
+msgstr "Ciudad"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_description
+msgid "Headquarter Description"
+msgstr "Descripción"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Hermano"
+msgstr "Hermano"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Hijo"
+msgstr "Hijo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Hora del Servicio"
+msgstr "Hora del Servicio"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_id
+#: model:ir.model.fields,field_description:tys_calling.field_calling_id
+#: model:ir.model.fields,field_description:tys_calling.field_client_id
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_id
+#: model:ir.model.fields,field_description:tys_calling.field_collective_id
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_id
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_id
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_id
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_id
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_id
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_id
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_id
+#: model:ir.model.fields,field_description:tys_calling.field_news_id
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_id
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_id
+#: model:ir.model.fields,field_description:tys_calling.field_parish_id
+#: model:ir.model.fields,field_description:tys_calling.field_patient_id
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_id
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_services_clientes_id
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_services_sede_id
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_servicios_id
+#: model:ir.model.fields,field_description:tys_calling.field_service_id
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_id
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_id
+#: model:ir.model.fields,field_description:tys_calling.field_states_id
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_id
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_id
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_tree
+msgid "ID"
+msgstr "ID"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Id"
+msgstr "Id"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_client_tree
+msgid "Id  cliente"
+msgstr "Id del cliente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_tree
+msgid "Id  collectivo"
+msgstr "Id del colectivo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_collective_collective_client_id
+msgid "Id del cliente"
+msgstr "Id del cliente"
+
+#. module: tys_calling
+#: model:ir.actions.report,name:tys_calling.report_services_for_servicios
+msgid "Informe de Servicios Completados y Cancelados"
+msgstr "Informe de Servicios Completados y Cancelados"
+
+#. module: tys_calling
+#: model:ir.actions.report,name:tys_calling.report_services_for_clientes
+msgid "Informe de Servicios por Clientes"
+msgstr "Informe de Servicios por Clientes"
+
+#. module: tys_calling
+#: model:ir.actions.report,name:tys_calling.report_services_for_sede
+msgid "Informe de Servicios por Sede"
+msgstr "Informe de Servicios por Sede"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.menu_informes
+msgid "Informes"
+msgstr "Informes"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Inicio de llamada"
+msgstr "Inicio de la llamada"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_tree
+msgid "Jefe de Grupo"
+msgstr "Jefe de Grupo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Jefe de grupo"
+msgstr "Jefe de grupo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_mileage
+msgid "Kilometer"
+msgstr "Kilometer"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Kilometraje"
+msgstr "Kilometraje"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_calling___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_client___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_collective___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_news___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_parish___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_patient___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_services_clientes___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_services_sede___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_report_tys_calling_report_servicios___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_service___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_service_type___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_states___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_treatment___last_update
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_calling_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_client_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_collective_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_news_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_parish_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_patient_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_service_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_states_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_write_uid
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_calling_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_client_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_collective_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_diagnosis_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_guard_groups_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_headquarter_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_news_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_parish_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_patient_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_service_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_states_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_write_date
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "Listados de Casos Completados y Cancelados"
+msgstr "Listados de Casos Completados y Cancelados"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+msgid "Listados de Servicios por Sede"
+msgstr "Listados de Servicios por Sede"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_calling_register_form
+#: model:ir.ui.menu,name:tys_calling.menu_calling_register_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Llamadas"
+msgstr "Llamadas"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Madre"
+msgstr "Madre"
+
+#. module: tys_calling
+#: selection:calling,patient_gender:0
+#: selection:patient,patient_gender:0
+msgid "Masculino"
+msgstr "Masculino"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_medical_history
+msgid "Medical history"
+msgstr "Medical history"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_medical_rest_days
+msgid "Medical rest days"
+msgstr "Medical rest days"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_medical_treatment
+msgid "Medical treatment"
+msgstr "Medical treatment"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_line_member_id
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_member_id
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_member_id
+msgid "Member"
+msgstr "Member"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_members
+#: model:ir.model.fields,field_description:tys_calling.field_guard_group_members_line_member_id
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Members"
+msgstr "Miembros"
+
+#. module: tys_calling
+#: selection:calling,calling_service_atendant:0
+msgid "Metromed"
+msgstr "Metromed"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Miembro"
+msgstr "Miembro"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Miembro Asistente"
+msgstr "Miembro Asistente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_register_form
+msgid "Miembros"
+msgstr "Miembros"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Mobilización"
+msgstr "Mobilización"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Motivo de la llamada"
+msgstr "Motivo de la llamada"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Motivo de llamada"
+msgstr "Motivo de la llamada"
+
+#. module: tys_calling
+#: selection:calling,state:0
+msgid "Movilización"
+msgstr "Movilización"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Médico"
+msgstr "Médico"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Médico Suplente"
+msgstr "Médico Suplente"
+
+#. module: tys_calling
+#: selection:calling,calling_code:0
+msgid "Negro"
+msgstr "Negro"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_news
+#: model:ir.ui.view,arch_db:tys_calling.view_news_tree
+msgid "News"
+msgstr "Novedades"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_news_member_attendee
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_news_member_attendee
+msgid "News Member Attendee"
+msgstr "News Member Attendee"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "News Register"
+msgstr "Registro de novedades"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_news_id
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_news_id
+msgid "News id"
+msgstr "News id"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_news_members_in_line
+#: model:ir.model.fields,field_description:tys_calling.field_news_news_members_out_line
+msgid "News lines"
+msgstr "News lines"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Nieto"
+msgstr "Nieto"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_news_member_no_attendee_reason
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_news_member_no_attendee_reason
+msgid "No attendee reason"
+msgstr "No attendee reason"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_tree
+msgid "Nombre"
+msgstr "Nombre"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_client_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_tree
+msgid "Nombre del Cliente"
+msgstr "Nombre del cliente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_tree
+msgid "Nombre del Colectivo"
+msgstr "Nombre del colectivo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Nombre del Paciente"
+msgstr "Nombre del paciente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_client_client_name
+#: model:ir.ui.view,arch_db:tys_calling.view_client_register_form
+msgid "Nombre del cliente"
+msgstr "Nombre del cliente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_collective_collective_name
+#: model:ir.ui.view,arch_db:tys_calling.view_collective_register_form
+msgid "Nombre del colectivo"
+msgstr "Nombre del colectivo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_tree
+msgid "Nombre del grupo"
+msgstr "Nombre del grupo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_name
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+msgid "Nombre del paciente"
+msgstr "Nombre del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Nombre del titular"
+msgstr "Nombre del titular"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_news_register_form
+#: model:ir.ui.menu,name:tys_calling.menu_news_view_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Novedades"
+msgstr "Novedades"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_phone
+msgid "Numero de telefono del paciente"
+msgstr "Numero de telefono del paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Observaciones"
+msgstr "Observaciones"
+
+#. module: tys_calling
+#: model:res.groups,name:tys_calling.tys_calling_operador
+msgid "Operador"
+msgstr "Operador"
+
+#. module: tys_calling
+#: selection:calling,calling_service_atendant_others:0
+msgid "Otro 1"
+msgstr "Otro 1"
+
+#. module: tys_calling
+#: selection:calling,calling_service_atendant_others:0
+msgid "Otro2"
+msgstr "Otro2"
+
+#. module: tys_calling
+#: selection:calling,patient_type:0
+msgid "Owner"
+msgstr "Titular"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_owner_id
+msgid "Owner Identification"
+msgstr "Owner Identification"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_view_patient_register_form
+#: model:ir.ui.menu,name:tys_calling.menu_patient_view_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Paciente"
+msgstr "Paciente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Pacientes"
+msgstr "Pacientes"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Padre"
+msgstr "Padre"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "Page:"
+msgstr "Page:"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Paramédico"
+msgstr "Paramédico"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Paramédico Suplente"
+msgstr "Paramédico Suplente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_relationship
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Parentesco"
+msgstr "Parentesco"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_address_parish
+#: model:ir.model.fields,field_description:tys_calling.field_parish_name
+msgid "Parish"
+msgstr "Parroquia"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Parroquia"
+msgstr "Parroquia"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_name
+msgid "Patient"
+msgstr "Patient"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_address
+msgid "Patient Address"
+msgstr "Patient Address"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_age
+msgid "Patient Age"
+msgstr "Patient Age"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_type
+msgid "Patient Assignee"
+msgstr "Patient Assignee"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_gender
+msgid "Patient Gender"
+msgstr "Patient Gender"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_id
+msgid "Patient Identification"
+msgstr "Patient Identification"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_owner_id
+msgid "Patient Owner Id"
+msgstr "Patient Owner Id"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_owner_name
+msgid "Patient Owner Name"
+msgstr "Patient Owner Name"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_precedent
+msgid "Patient Precedent"
+msgstr "Patient Precedent"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+msgid "Patient Register"
+msgstr "Registro de paciente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_relation
+msgid "Patient Relation"
+msgstr "Patient Relation"
+
+#. module: tys_calling
+#: selection:news.members.in.line,news_member_no_attendee_reason:0
+#: selection:news.members.out.line,news_member_no_attendee_reason:0
+msgid "Permision"
+msgstr "Permiso"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Planilla"
+msgstr "Planilla"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_report
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_report
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_report
+msgid "Prepared file"
+msgstr "Prepared file"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Razon de Inasistencia"
+msgstr "Razon de Inasistencia"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_news_date
+msgid "Register date"
+msgstr "Register date"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.clients_register_menu
+msgid "Registro de Clientes"
+msgstr "Registro de Clientes"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.menu_root_DiagnosisRegister
+msgid "Registro de Diagnostico"
+msgstr "Registro de Diagnostico"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.guard_groups_register_menu
+msgid "Registro de Grupos"
+msgstr "Registro de Grupos"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.menu_root_CallingRegister
+msgid "Registro de Llamadas"
+msgstr "Registro de Llamadas"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.news_register_menu
+msgid "Registro de Novedades"
+msgstr "Registro de Novedades"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_report_callcenter
+msgid "Report CallCenter"
+msgstr "Report CallCenter"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_clientes_callcenter
+msgid "Report Clientes CallCenter"
+msgstr "Report Clientes CallCenter"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_servicios_callcenter
+msgid "Report Servicios CallCenter"
+msgstr "Report Servicios CallCenter"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_services
+msgid "Reporte"
+msgstr "Reporte"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_report_callcenter_service
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_service
+msgid "Reporte de Servicios"
+msgstr "Reporte de Servicios"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_report_callcenter_clientes
+msgid "Reporte de Servicios por Cliente"
+msgstr "Reporte de Servicios por Cliente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter_clientes
+msgid "Reporte de Servicios por Clientes"
+msgstr "Reporte de Servicios por Clientes"
+
+#. module: tys_calling
+#: model:ir.actions.act_window,name:tys_calling.action_report_callcenter
+#: model:ir.ui.view,arch_db:tys_calling.report_callcenter
+msgid "Reporte de Servicios por Sede"
+msgstr "Reporte de Servicios por Sede"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.report_service
+msgid "Reporte de servicios"
+msgstr "Reporte de servicios"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.report_clientes
+msgid "Reporte de servicios por cliente"
+msgstr "Reporte de servicios por cliente"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.report_sede
+msgid "Reporte de servicios por sede"
+msgstr "Reporte de servicios por sede"
+
+#. module: tys_calling
+#: model:ir.ui.menu,name:tys_calling.calling_report_root
+msgid "Reports"
+msgstr "Informes"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Reposo Médico"
+msgstr "Reposo Médico"
+
+#. module: tys_calling
+#: selection:news.members.in.line,news_member_no_attendee_reason:0
+#: selection:news.members.out.line,news_member_no_attendee_reason:0
+msgid "Rest"
+msgstr "Reposo"
+
+#. module: tys_calling
+#: selection:calling,calling_code:0
+msgid "Rojo"
+msgstr "Rojo"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_scheduled_transport_date
+msgid "Schedule transport dat"
+msgstr "Schedule transport dat"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+msgid "Search Calling"
+msgstr "Busqueda por llamada"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_diagnosis_register_filter
+msgid "Search Diagnosis"
+msgstr "Busqueda por diagnóstico"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_filter
+msgid "Search Guard Groups"
+msgstr "Busqueda por grupo"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_filter
+msgid "Search News"
+msgstr "Busqueda por novedad"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_groups_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Sede"
+msgstr "Sede"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Seguro o cliente"
+msgstr "Seguro o cliente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_service_id
+msgid "Service Id"
+msgstr "Id del Servicio"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_service_service_name
+msgid "Service Name"
+msgstr "Nombre del servicio"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_service_type
+msgid "Service Type"
+msgstr "Service Type"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_service_type_name
+msgid "Service Type Name"
+msgstr "Nombre del Servicio"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_service_time
+msgid "Service time"
+msgstr "Service time"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_service_unit
+msgid "Service unit"
+msgstr "Service unit"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_service_type_id
+msgid "Service_type_id"
+msgstr "Service_type_id"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_servicios
+msgid "Servicios"
+msgstr "Servicios"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+msgid "Servicios Atendidos"
+msgstr "Servicios Atendidos"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+#: model:ir.ui.view,arch_db:tys_calling.report_services_sede
+msgid "Servicios Cancelados"
+msgstr "Servicios Cancelados"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.report_services_clientes
+msgid "Servicios Completados"
+msgstr "Servicios Completados"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_additional_service_type_short_additional_service_type_name
+#: model:ir.model.fields,field_description:tys_calling.field_service_type_short_service_type_name
+msgid "Short Service Name"
+msgstr "Nombre Corto"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Sobrino"
+msgstr "Sobrino"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_address_state
+#: model:ir.model.fields,field_description:tys_calling.field_calling_state
+#: model:ir.model.fields,field_description:tys_calling.field_clientes_callcenter_state
+#: model:ir.model.fields,field_description:tys_calling.field_report_callcenter_state
+#: model:ir.model.fields,field_description:tys_calling.field_servicios_callcenter_state
+#: model:ir.model.fields,field_description:tys_calling.field_states_name
+msgid "State"
+msgstr "Estado"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_parish_state_id
+msgid "State Id"
+msgstr "Id del Estado"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_in_line_member_id_substitute
+#: model:ir.model.fields,field_description:tys_calling.field_news_members_out_line_member_id_substitute
+msgid "Substitute"
+msgstr "Substitute"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: selection:patient,patient_relationship:0
+msgid "Suegro"
+msgstr "Suegro"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_news_supervisor_id
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Supervisor"
+msgstr "Supervisor"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Suplente"
+msgstr "Suplente"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Suplentes"
+msgstr "Suplentes"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+msgid "Tele operador"
+msgstr "Teleoperador"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "Telefono"
+msgstr "Teléfono"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Teleoperador"
+msgstr "Teleoperador"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+msgid "Teléfono"
+msgstr "Teléfono"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+msgid "Tercerizado"
+msgstr "Tercerizado"
+
+#. module: tys_calling
+#: selection:calling,calling_service_atendant:0
+msgid "Tercerizados"
+msgstr "Tercerizados"
+
+#. module: tys_calling
+#: selection:news.members.in.line,news_member_no_attendee_reason:0
+#: selection:news.members.out.line,news_member_no_attendee_reason:0
+msgid "There is no supplier"
+msgstr "No hay suplente"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_third_service
+msgid "Third Service"
+msgstr "Third Service"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Tipo de servicio"
+msgstr "Tipo de servicio"
+
+#. module: tys_calling
+#: selection:calling,patient_relation:0
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_owner_id
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_filter
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_tree
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+#: selection:patient,patient_relationship:0
+msgid "Titular"
+msgstr "Titular"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Titulares"
+msgstr "Titulares"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Transporte"
+msgstr "Transporte"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Tratamiento"
+msgstr "Tratamiento"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Tripulación"
+msgstr "Tripulación"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Tripulación y Unidades"
+msgstr "Tripulación y Unidades"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Unidad"
+msgstr "Unidad"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_calling_register_form
+msgid "Unidad del Servicio"
+msgstr "Unidad del Servicio"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_vehicle
+#: model:ir.model.fields,field_description:tys_calling.field_news_unit_id
+#: model:ir.ui.view,arch_db:tys_calling.view_news_register_form
+msgid "Unit"
+msgstr "Unidad"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_unit_state
+msgid "Unit Sate"
+msgstr "Unit Sate"
+
+#. module: tys_calling
+#: selection:news.members.in.line,news_member_no_attendee_reason:0
+#: selection:news.members.out.line,news_member_no_attendee_reason:0
+msgid "Unknown"
+msgstr "Desconocido"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_register_form
+#: model:ir.ui.view,arch_db:tys_calling.view_patient_tree
+msgid "VIP"
+msgstr "VIP"
+
+#. module: tys_calling
+#: selection:news.members.in.line,news_member_no_attendee_reason:0
+#: selection:news.members.out.line,news_member_no_attendee_reason:0
+msgid "Vacations"
+msgstr "Vacaciones"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_vehicle_unit_unit_number
+msgid "Vehicle Unit"
+msgstr "Vehicle Unit"
+
+#. module: tys_calling
+#: selection:calling,calling_code:0
+msgid "Verde"
+msgstr "Verde"
+
+#. module: tys_calling
+#: model:ir.ui.view,arch_db:tys_calling.view_guard_change_form
+msgid "Viaticos"
+msgstr "Viaticos"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_viatic
+msgid "Viatics"
+msgstr "Viatics"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_guard_change_change_viatic_motive
+msgid "Viatics Motive"
+msgstr "Viatics Motive"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_additional_service_type
+msgid "additional.service.type"
+msgstr "additional.service.type"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_calling
+msgid "calling"
+msgstr "calling"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_calling_client
+msgid "calling Client"
+msgstr "calling Client"
+
+#. module: tys_calling
+#: selection:clientes.callcenter,state:0
+#: selection:report.callcenter,state:0
+#: selection:servicios.callcenter,state:0
+msgid "choose"
+msgstr "choose"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_client
+msgid "client"
+msgstr "client"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_collective
+msgid "collective"
+msgstr "collective"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_diagnosis
+msgid "diagnosis"
+msgstr "diagnosis"
+
+#. module: tys_calling
+#: selection:clientes.callcenter,state:0
+#: selection:report.callcenter,state:0
+#: selection:servicios.callcenter,state:0
+msgid "get"
+msgstr "get"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_guard_change
+msgid "guard.change"
+msgstr "guard.change"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_guard_change_line
+msgid "guard.change.line"
+msgstr "guard.change.line"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_guard_group_members
+msgid "guard.group.members"
+msgstr "guard.group.members"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_guard_group_members_line
+msgid "guard.group.members.line"
+msgstr "guard.group.members.line"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_guard_groups
+msgid "guard.groups"
+msgstr "guard.groups"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_headquarter
+msgid "headquarter"
+msgstr "headquarter"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_news
+msgid "news"
+msgstr "news"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_news_members_in_line
+msgid "news.members.in.line"
+msgstr "news.members.in.line"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_news_members_out_line
+msgid "news.members.out.line"
+msgstr "news.members.out.line"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_parish
+msgid "parish"
+msgstr "Parroquia"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_patient
+msgid "patient"
+msgstr "patient"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_calling_patient_phone
+msgid "patient Phone Number"
+msgstr "patient Phone Number"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_report_tys_calling_report_services_clientes
+msgid "report.tys_calling.report_services_clientes"
+msgstr "report.tys_calling.report_services_clientes"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_report_tys_calling_report_services_sede
+msgid "report.tys_calling.report_services_sede"
+msgstr "report.tys_calling.report_services_sede"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_report_tys_calling_report_servicios
+msgid "report.tys_calling.report_servicios"
+msgstr "report.tys_calling.report_servicios"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_service
+msgid "service"
+msgstr "service"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_service_type
+msgid "service.type"
+msgstr "service.type"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_states
+msgid "states"
+msgstr "states"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_treatment
+msgid "treatment"
+msgstr "treatment"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_treatment_description
+msgid "treatment Description"
+msgstr "treatment Description"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_treatment_treatment_number
+msgid "treatment Number"
+msgstr "treatment Number"
+
+#. module: tys_calling
+#: model:ir.model,name:tys_calling.model_vehicle_unit
+msgid "vehicle.unit"
+msgstr "vehicle.unit"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_active
+msgid "¿Paciente Activo?"
+msgstr "¿Paciente Activo?"
+
+#. module: tys_calling
+#: model:ir.model.fields,field_description:tys_calling.field_patient_patient_vip
+msgid "¿Paciente VIP?"
+msgstr "¿Paciente VIP?"
+

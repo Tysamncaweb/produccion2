@@ -1,0 +1,54 @@
+<odoo>
+    <!-- Vista que agrega a la ficha de proveedor el campo de cuentas de anticipo-->
+	<data>
+
+        <record id="view_account_advance_payment_purchase" model="ir.ui.view">
+            <field name="name">view_account_advance_payment_purchase</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_payable_id']" position="after">
+                        <field name="account_advance_payment_purchase_id"/>
+                        <field name="account_advance_payment_sales_id"/>
+                        <field name="journal_advanced_id"/>
+                </xpath>
+            </field>
+        </record>
+
+<!--
+    =====================================================
+    Partners Extension Income
+    =====================================================
+    -->
+
+        <!--record id="view_account_advance_payment_purchase" model="ir.ui.view">
+            <field name="name">view.account.advance.payment.purchase</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="l10n_ve_withholding.wh_partner"/>
+            <field name="arch" type="xml">
+                <xpath expr="//separator[@name='vsep']" position="before" >
+                     <xpath expr="//separator[@name='vsep']" position="attributes">
+                                 <attribute name="string">Cuentas de Anticipo</attribute>
+                      </xpath>
+                    <newline/>
+                        <group col="6" colspan="2">
+                            <field name="account_advance_payment_purchase_id"/>
+                            <field name="account_advance_payment_sales_id"/>
+                        </group>
+                        <group string='Income Withholding Historical Data' col="4" colspan="4">
+                            <field name="islr_wh_historical_data_ids" nolabel='1'>
+                                <tree editable='top'>
+                                    <field name="fiscalyear_id"/>
+                                    <field name="raw_base_ut"/>
+                                    <field name="raw_tax_ut"/>
+                                    <field name="concept_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                </xpath>
+            </field>
+        </record-->
+
+    </data>
+</odoo>
+        

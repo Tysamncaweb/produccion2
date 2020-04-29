@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><!--iniciio-->
+<odoo>
+    <data>
+    <record id="men_descarga_foram" model="ir.actions.act_window">
+        <field name="name">descarga</field>
+        <field name="res_model">men.descarga</field>
+        <field name="arch" type="xml">
+            <form string="descarga">
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="men_descarga_tree" model="ir.actions.act_window">
+        <field name="name">Descarga</field>
+        <field name="res_model">men.descarga</field>
+        <field name="arch" type="xml">
+            <tree string="v">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+        <!--Menu Valor del Bono de alimentacion-->
+     <record id="men_message_foram" model="ir.actions.act_window">
+        <field name="name">Message</field>
+        <field name="res_model">men.valor</field>
+        <field name="arch" type="xml">
+            <form string="Messages">
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="men_message_tree" model="ir.actions.act_window">
+        <field name="name">Message</field>
+        <field name="res_model">men.valor</field>
+        <field name="arch" type="xml">
+            <tree string="Messages">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="descarga_nuevo" model="ir.actions.act_window">
+        <field name="name">Mensajes Nuevos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">men.descarga</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+       <!--Vista de fechas y generar Txt-->
+    <record id="account_wizard_Bono" model="ir.ui.view">
+       	    <field name="name">Generar TXT</field>
+            <field name="model">account.wizard.generacion.txtfile</field>
+    	    <field name="arch" type="xml">
+                <form string="Generar TXT">
+                    <field invisible="1" name="state"/>
+                    <div states="choose">
+                        <group >
+                            <field name="bancose" string="Seleccione el banco" required="1" />
+                            <field name="date_from" string="Fecha Inicio" required="1"/>
+                            <field name="date_to"  string="Fecha Fin" required="1"/>
+                            <field name="date_imp"  string="Fecha de Pago" attrs="{'invisible':[('bancose','!=','activo')],'required':[('bancose','=','activo')]} "/>
+                            <field name="nlote"  string="Número de Lote" attrs="{'invisible':[('bancose','!=','activo')],'required':[('bancose','=','activo')]} "/>
+                            <field name="concepto"  string="Concepto de Pago" attrs="{'invisible':[('bancose','!=','activo')],'required':[('bancose','=','activo')]} "/>
+
+                        </group>
+
+                    </div>
+                    <div states="get">
+                        <group>
+                            <field name="name" colspan="4" invisible="1"/>
+                            <field name="report" filename="name" colspan="4"/>
+                        </group>
+                    </div>
+                    <footer states="choose">
+                        <button name="print_bono" string="Exportar TXT" type="object" class="oe_highlight" />
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                    <footer states="get">
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                </form>
+    	    </field>
+    </record>
+    <act_window id="action_Bono"
+        name="Asistente para impresion de factura de Clientes"
+        src_model="account.wizard.generacion.txtfile"
+        res_model="account.wizard.generacion.txtfile"
+        view_mode="form"
+        target="new" multi="True"
+    />
+    <record id="action_account_common_menu_Bono" model="ir.actions.act_window">
+        	<field name="name">Generar TXT</field>
+        	<field name="res_model">account.wizard.generacion.txtfile</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="account_wizard_Bono"/>
+        	<field name="target">new</field>
+    </record>
+
+    <menuitem id="descarga_menu"
+        name="Generar Archivo"
+        parent="hr_payroll.menu_hr_payroll_root"
+        sequence="450"/>
+    <menuitem name="Descarga TxT" id="account_bono" parent="descarga_menu"  sequence="0" action="action_account_common_menu_Bono"/>
+    </data>
+</odoo>

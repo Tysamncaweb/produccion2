@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Tree view register advance supplier-->
+        <record id="register_advance_supplier_tree" model="ir.ui.view">
+            <field name="name">register.advance.supplier.tree</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="state=='cancel'">
+                    <field name="name"/>
+                    <field name="partner_id" domain="[('supplier','=',True)]"/>
+                    <field name="journal_id"/>
+                    <field name="ref"/>
+                    <field name="bank_account_id"/>
+                    <field name="date_advance"/>
+                    <field name="amount_advance"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Tree view register advance clientes-->
+        <record id="register_advance_customer_tree" model="ir.ui.view">
+            <field name="name">register.advance.customer.tree</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="partner_id" domain="[('customer','=',True)]"/>
+                    <field name="journal_id"/>
+                    <field name="ref"/>
+                    <field name="bank_account_id"/>
+                    <field name="date_advance"/>
+                    <field name="invoice_id"/>
+                    <field name="amount_advance"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <!--Vistas tree de la aplicacion del los anticipos para proveedores y clientes-->
+        <!--Tree view apply supplier-->
+        <record id="apply_advance_supplier_tree" model="ir.ui.view">
+            <field name="name">apply.advance.supplier.tree</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <tree default_order="date_advance" create="false">
+                    <field name="name"/>
+                    <field name="partner_id" domain="[('supplier','=',True)]"/>
+                    <field name="journal_id"/>
+                    <field name="ref"/>
+                    <field name="bank_account_id"/>
+                    <field name="date_advance"/>
+                    <field name="invoice_id"/>
+                    <field name="amount_advance"/>
+                    <field name="amount_apply"/>
+                    <field name="amount_available"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Tree view apply customer-->
+        <record id="apply_advance_customer_tree" model="ir.ui.view">
+            <field name="name">apply.advance.customer.tree</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <tree default_order="date_advance" create="false">
+                    <field name="name"/>
+                    <field name="partner_id" domain="[('customer','=',True)]"/>
+                    <field name="journal_id"/>
+                    <field name="ref"/>
+                    <field name="bank_account_id"/>
+                    <field name="date_advance"/>
+                    <field name="invoice_id"/>
+                    <field name="amount_advance"/>
+                    <field name="amount_apply"/>
+                    <field name="amount_available"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Form view register advance supplier-->
+
+        <record id="account_advance_payment_form" model="ir.ui.view">
+            <field name="name">account.advance.payment.form</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <form string="Account Advance Payment">
+                        <header>
+                            <button name="action_register_advance" type="object" string="Validate" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('state', 'in', ('cancel','available','paid'))]}"/>
+                            <button name="action_cancel" type="object" string="Cancel" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('state', 'in', ('cancel','draft','paid'))]}"/>
+                            <button name="set_to_draft" type="object" string="Set to draft" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('draft','available','paid'))]}"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,available,cancel"/>
+                        </header>
+                    <sheet>
+                        <div>
+                            <group>
+                                <group >
+                                    <field name="name" readonly="1" attrs="{'invisible':[('state', 'in', ('draft',('cancel')))]}"/>
+                                    <field name="partner_id" placeholder="proveedor ..."  required="1" domain="[('supplier', '=', True)]" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="journal_id" placeholder="anticipo proveedor ..." attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="bank_account_id" placeholder="Por ejemplo, Banesco ..."  required="1" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="move_id" attrs="{'readonly': [('state', '=', 'available')],'invisible': [('state','!=','available')]}" />
+                                </group>
+                                <group>
+                                    <field name="date_advance" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_advance" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="payment_id" placeholder="Por ejemplo, Transferencia..." attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="ref" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                </group>
+                            </group>
+                        </div>
+                        <notebook>
+                            <page string="Asiento Contable" attrs="{'invisible': [('state','!=','available')]}">
+                                    <field name="asiento_conciliado" readonly="1">
+                                    <tree string="Asiento Contable">
+                                        <field name="ref"/>
+                                        <field name="date"/>
+                                        <field name="partner_id"/>
+                                        <field name="account_id"/>
+                                        <field name="name"/>
+                                        <field name="debit"/>
+                                        <field name="credit"/>
+                                        <field name="amount_currency" groups="base.group_multi_currency"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!--Form view register advance customer-->
+
+        <record id="account_advance_receivable_form" model="ir.ui.view">
+            <field name="name">account.advance.receivable.form</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <form string="Account Advance receivable">
+                        <header>
+                            <button name="action_register_advance" type="object" string="Validate" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('state', 'in', ('cancel','available','paid'))]}"/>
+                            <button name="action_cancel" type="object" string="Cancel" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('state', 'in', ('cancel','draft','paid'))]}"/>
+                            <button name="set_to_draft" type="object" string="Set to draft" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('draft','available','paid'))]}"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,available,cancel"/>
+                        </header>
+                    <sheet>
+                        <div>
+                            <group>
+                                <group >
+                                    <field name="name" readonly="1" attrs="{'invisible':[('state', 'in', ('draft',('cancel')))]}"/>
+                                    <field name="partner_id" placeholder="cliente ..."  required="1" domain="[('customer', '=', True)]" attrs="{'readonly': [('state', '=','available')]}"/>
+                                    <field name="journal_id" placeholder="anticipo cliente ..." attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="bank_account_id" placeholder="Por ejemplo, Banesco ..." required="1" attrs="{'readonly': [('state', '=','available')]}"/>
+                                </group>
+                                <group>
+                                    <field name="date_advance" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_advance" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="payment_id" placeholder="Por ejemplo, Transferencia..." attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="ref" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="move_id" attrs="{'readonly': [('state', '=', 'available')],'invisible': [('state','!=','available')]}" />
+                                </group>
+                            </group>
+                        </div>
+                        <notebook>
+                            <page string="Asiento Contable" attrs="{'invisible': [('state','!=','available')]}">
+                                    <field name="asiento_conciliado" readonly="1">
+                                    <tree string="Asiento Contable">
+                                        <field name="ref"/>
+                                        <field name="date"/>
+                                        <field name="partner_id"/>
+                                        <field name="account_id"/>
+                                        <field name="name"/>
+                                        <field name="debit"/>
+                                        <field name="credit"/>
+                                        <field name="amount_currency" groups="base.group_multi_currency"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Form view apply advance supplier-->
+        <record id="apply_advance_payment_supplier_form" model="ir.ui.view">
+            <field name="name">apply.advance.payment.supplier.formm</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <form string="Apply Advance Payment">
+                    <header>
+                        <button name="action_register_advance" type="object" string="Validate" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('paid','cancel'))]}"/>
+                        <button name="action_cancel" type="object" string="Cancel" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('cancel','available'))]}"/>
+                        <button name="action_refund_amount_available" type="object" string="Refund amount available" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('cancel','paid'))]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="available,paid,cancel"/>
+                </header>
+                    <sheet>
+                        <div>
+                            <group>
+                                <group >
+                                    <field name="name" readonly="1"/>
+                                    <field name="date_apply"/>
+                                    <field name="partner_id" required="1" domain="[('supplier', '=', True)]" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_advance" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="journal_id" attrs="{'invisible': [('state', '=', 'available')]}"/>
+                                    <field name="apply_journal_id" attrs="{'invisible': [('state', '!=', 'available')]}"/>
+                                </group>
+                                <group>
+                                    <field name="invoice_id" required="1" domain="[('partner_id', '=', partner_id),('state', '=', 'open')]"/>
+                                    <field name="amount_invoice" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_available" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_apply" placeholder="Monto a aplicar" required="1"/>
+                                    <field name="ref"/>
+                                    <field name="move_apply_id" attrs="{'invisible': [('state', 'in', ('available','cancel'))]}"/>
+                                    <field name="move_refund_id" attrs="{'invisible': [('state', 'in', ('available','paid'))]}"/>
+                                </group>
+                            </group>
+                        </div>
+                        <notebook>
+                            <page string="Asiento Contable" attrs="{'invisible': [('state', 'in', ('cancel','available'))]}">
+                                    <field name="asiento_conl_apply" readonly="1">
+                                    <tree string="Asiento Contable">
+                                        <field name="ref"/>
+                                        <field name="date"/>
+                                        <field name="partner_id"/>
+                                        <field name="account_id"/>
+                                        <field name="name"/>
+                                        <field name="debit"/>
+                                        <field name="credit"/>
+                                        <field name="amount_currency" groups="base.group_multi_currency"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!--Form view apply advance customer-->
+        <record id="apply_advance_payment_customer_form" model="ir.ui.view">
+            <field name="name">apply.advance.payment.customer.form</field>
+            <field name="model">account.advanced.payment</field>
+            <field name="arch" type="xml">
+                <form string="Apply Advance Payment Customer">
+                    <header>
+                        <button name="action_register_advance" type="object" string="Validate" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('paid','cancel'))]}"/>
+                        <button name="action_cancel" type="object" string="Cancel" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('cancel','available'))]}"/>
+                        <button name="action_refund_amount_available" type="object" string="Refund amount available" class="oe_highlight" icon="gtk-go-forward" attrs="{'invisible':[('state', 'in', ('cancel','paid'))]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="available,paid,cancel"/>
+                </header>
+                    <sheet>
+                        <div>
+                            <group>
+                                <group >
+                                    <field name="name" readonly="1"/>
+                                    <field name="date_apply"/>
+                                    <field name="partner_id" required="1" domain="[('customer', '=', True)]" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_advance" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="journal_id" attrs="{'invisible': [('state', '=', 'available')]}"/>
+                                    <field name="apply_journal_id" attrs="{'invisible': [('state', '!=', 'available')]}"/>
+                                </group>
+                                <group>
+                                    <field name="invoice_id" required="1" domain="[('partner_id', '=', partner_id),('state', '=', 'open')]"/>
+                                    <field name="amount_invoice" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_available" attrs="{'readonly': [('state', '=', 'available')]}"/>
+                                    <field name="amount_apply" required="1"/>
+                                    <field name="ref"/>
+                                    <field name="move_apply_id" attrs="{'invisible': [('state', 'in', ('available','cancel'))]}"/>
+                                    <field name="move_refund_id" attrs="{'invisible': [('state', 'in', ('available','paid'))]}"/>
+
+                                </group>
+                            </group>
+                        </div>
+                        <notebook>
+                            <page string="Asiento Contable" attrs="{'invisible': [('state', 'in', ('cancel','available'))]}">
+                                    <field name="asiento_conl_apply" readonly="1">
+                                    <tree string="Asiento Contable">
+                                        <field name="ref"/>
+                                        <field name="date"/>
+                                        <field name="partner_id"/>
+                                        <field name="account_id"/>
+                                        <field name="name"/>
+                                        <field name="debit"/>
+                                        <field name="credit"/>
+                                        <field name="amount_currency" groups="base.group_multi_currency"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--action views register supplier-->
+        <record id="action_account_advance_payment" model="ir.actions.act_window">
+            <field name="name">Register Advance Supplier</field>
+            <field name="res_model">account.advanced.payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','in',('cancel','available','draft')),('supplier','=',True)]</field>
+        </record>
+
+         <record id="action_register_advance_supplier_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="register_advance_supplier_tree"/>
+            <field name="act_window_id" ref="action_account_advance_payment"/>
+        </record>
+
+        <menuitem id="menu_action_account_advance_payment_parent_form" name="Anticipo" parent="account.menu_finance_payables_documents" sequence="21"/>
+        <menuitem id="menu_register_advance_supplier_form" name="Registrar de Anticipo Proveedores" parent="menu_action_account_advance_payment_parent_form" action="action_account_advance_payment"/>
+
+
+        <!--action views register customer-->
+
+        <record model="ir.actions.act_window" id="action_register_advance_customer">
+            <field name="name">Register Advance Customer</field>
+            <field name="res_model">account.advanced.payment</field>
+            <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','in',('cancel','available','draft')),('customer','=',True)]</field>
+        </record>
+
+        <record id="action_register_advance_customer_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="register_advance_customer_tree"/>
+            <field name="act_window_id" ref="action_register_advance_customer"/>
+        </record>
+
+        <record id="action_register_advance_customer_form" model="ir.actions.act_window.view">
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_advance_receivable_form"/>
+            <field name="act_window_id" ref="action_register_advance_customer"/>
+        </record>
+
+        <menuitem id="menu_action_advance_parent_customer_form" name="Anticipo" parent="account.menu_finance_receivables_documents"/>
+        <menuitem id="menu_action_advance_register_customer_form" name="Registrar de Anticipo Clientes" parent="menu_action_advance_parent_customer_form" action="action_register_advance_customer"/>
+
+
+
+        <!--action views apply supplier-->
+        <record model="ir.actions.act_window" id="action_apply_advance_payment_supplier">
+            <field name="name">Apply Advance</field>
+            <field name="res_model">account.advanced.payment</field>
+            <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','in',('available','paid','cancel')),('supplier','=',True)]</field>
+        </record>
+
+        <record id="action_apply_payment_supplier_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="apply_advance_supplier_tree"/>
+            <field name="act_window_id" ref="action_apply_advance_payment_supplier"/>
+        </record>
+
+        <record id="action_apply_payment_supplier_form" model="ir.actions.act_window.view" >
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="apply_advance_payment_supplier_form"/>
+            <field name="act_window_id" ref="action_apply_advance_payment_supplier"/>
+        </record>
+
+        <menuitem id="menu_apply_advance_supplier" name="Aplicar/reintegrar Anticipos Proveedores" parent="menu_action_account_advance_payment_parent_form" action="action_apply_advance_payment_supplier"/>
+
+
+        <!--action views apply customer-->
+
+        <record model="ir.actions.act_window" id="action_apply_advance_customer">
+            <field name="name">Apply Advance Customer</field>
+            <field name="res_model">account.advanced.payment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', 'in', ('available','paid','cancel')),('customer','=',1)]</field>
+        </record>
+
+        <record id="action_apply_payment_customer_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="apply_advance_customer_tree"/>
+            <field name="act_window_id" ref="action_apply_advance_customer"/>
+        </record>
+
+        <record id="action_apply_payment_customer_form" model="ir.actions.act_window.view" >
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="apply_advance_payment_customer_form"/>
+            <field name="act_window_id" ref="action_apply_advance_customer"/>
+        </record>
+
+        <menuitem id="menu_advance_apply_customer" name="Aplicar/reintegrar Anticipos Clientes" parent="menu_action_advance_parent_customer_form" action="action_apply_advance_customer"/>
+    </data>
+</odoo>

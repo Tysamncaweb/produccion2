@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_hr_payslip_run_form_inh" model="ir.ui.view">
+            <field name="name">view.hr.payslip.run.form.inh</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='close_payslip_run']" position="before">
+                    <button name="action_send_email" type="object" string="Send receipts by email" class="oe_highlight" attrs="{'invisible':[('state', 'in', ['draft','cancel'])]}" />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

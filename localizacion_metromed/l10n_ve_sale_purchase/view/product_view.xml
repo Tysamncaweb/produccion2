@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+	=====================================================
+	Products Extension
+	=====================================================
+
+        <record id="product_normal_form_view_type" model="ir.ui.view">
+            <field name="name">product.normal.form.type</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="replace">
+                    <field name="type"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

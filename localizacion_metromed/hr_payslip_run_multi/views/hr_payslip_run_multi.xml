@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_payslip_run_multi_form" model="ir.ui.view">
+            <field name="name">hr.payslip.run.multi</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//button[@name='close_payslip_run']" position="before">
+                    <!-- Add your fields or attributes here -->
+                    <button name="hr_payslip_multi" type="object" string="Confirmar" states="draft" class="oe_highlight"/>
+
+                </xpath>
+                <xpath expr="//button[@name='close_payslip_run']" position="replace">
+                    <button name="close_payslip_run" type="object" string="Close" states="draft,done" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//button[@name='draft_payslip_run']" position="replace">
+                    <button string="Set to Draft" name="draft_payslip_run" type="object" states="done" />
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>

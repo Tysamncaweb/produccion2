@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+            <!--menu Cash Operations Father -->
+         <menuitem name="Cash Operations" id="cash_operations"/>
+         <menuitem name="Registry Small" id="Registry_small" parent="cash_operations"/>
+         <!--<menuitem name="action_replacement_small_form" id="replacement" parent="Processes_and_movements_small"/-->
+         <!--parent="account.menu_finance_bank_and_cash"-->
+
+         <record id="small_box" model="ir.ui.view">
+             <field name="name">small.view</field>
+             <field name="model">account.small</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                 <form name="Small box Register">
+                     <header>
+                         <button string="On Aprobation" name="confirm" type="object"  class="oe_highlight" states="draft" />
+                         <button string="Approved" name="confirm_small" type="object"  class="oe_highlight" states="aprobation"/>
+                         <button string="Cancel" name="cancel_small" type="object"  class="oe_highlight" states="aprobation"/>
+                         <field name="state" widget="statusbar"  nolabel="1" statusbar_visible="draft,aprobation,approved" statusbar_colors="{'aprobation':'blue'}"/>
+                     </header>
+                    <sheet string="Small box Register">
+                        <group  colspan="2" col="2" >
+                            <group>
+                                <field name="small_code" string="Code Small box" readonly="1"/>
+                                <field name="small_accounting_account" string="Accounting Account"  required="1" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="small_transitory_account" string="Transitory Account" required="1" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="small_daily_id" string="Small box diary" required="1" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="small_responsible" string="Responsible" required="1" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="small_debit_account_increase"  readonly="1" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="small_date" string="Date" readonly="1"/>
+                                <field name="small_debit_account" string="Debt"  readonly="1"/>
+                                <field name="small_debit_transitory" string="Debit transitory"  readonly="1"/>
+                                <field name="currency_id" string="Moneda"/>
+                                <!--field name="small_period_id" string="Small box period" required="1" attrs="{'readonly': [('state','!=', 'draft')]}"/-->
+                            </group>
+                        </group>
+                        <group>
+                            <field name="small_description" string="Small box description" attrs="{'readonly': [('state','!=', 'draft')]}" />
+                        </group>
+                        <group  colspan="2" col="2" >
+                             <field name="small_type_expense" nolabel="1"  attrs="{'readonly': [('state','!=', 'draft')]}" >
+                                    <tree editable="bottom">
+                                        <field name="id_type_expense" />
+                                        <field name="code" string="Code" invisible="1"/>
+                                        <field name="name" string="Name" invisible="1"/>
+                                    </tree>
+                                </field>
+                        </group>
+                    </sheet>
+                 </form>
+             </field>
+	     </record>
+
+         <!--view small box tree -->
+         <record id="view_small_box_tree" model="ir.ui.view">
+            <field name="name">Registry small box</field>
+            <field name="model">account.small</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="small_code" string="Code small box"/>
+                    <field name="small_description" string="description"/>
+                    <field name="small_accounting_account" string="Accounting Account"/>
+                    <field name="small_transitory_account" string="Transitory Account"/>
+                    <field name="small_responsible" string="Responsible"/>
+                    <field name="smalcurrency_id" string="Moneda"/>
+                    <field name="small_debit_account" string="Debit account"/>
+                    <field name="state" string="Status"/>
+                </tree>
+            </field>
+         </record>
+
+         <!--action registry small box account__small_box -->
+         <record id="action_small" model="ir.actions.act_window">
+            <field name="name">Small Box</field>
+            <field name="res_model">account.small</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_small_box_tree"/>
+         </record>
+
+         <menuitem action="action_small" id="Registry_small_Box" parent="Registry_small"/>
+
+        <!--record id="expense_account" model="ir.ui.view">
+             <field name="name">expense_account.view</field>
+             <field name="model">account.small.type.expense</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                 <form name="Expense account">
+                    <sheet string="Expense account Register">
+                        <group>
+                            <field name="id_type_expense" string="Select the expense account" />
+                            <field name="code" string="Code" invisible="1"/>
+                            <field name="name" string="Name" invisible="1"/>
+                        </group>
+                    </sheet>
+                 </form>
+             </field>
+	     </record>
+
+        <record id="expense_account_tree" model="ir.ui.view">
+            <field name="name">Type expense small box</field>
+            <field name="model">account.small.type.expense</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code" string="Number account"/>
+                    <field name="name" string="Expense account"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_small_type_expense" model="ir.actions.act_window">
+            <field name="name">Expense</field>
+            <field name="res_model">account.small.type.expense</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="expense_account_tree"/>
+        </record-->
+
+        <!--menuitem action="action_small_type_expense" id="Registry_type_expense" parent="Registry_small"/-->
+
+      <!--///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+                                <!--menu Cash Processes and movements small-->
+
+         <menuitem name="Processes and movements" id="Processes_and_movements_small" parent="cash_operations"/>
+
+        <record id="validate_small_box_form" model="ir.ui.view">
+             <field name="name">validate.view</field>
+             <field name="model">account.validate.small.box</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                 <form name="Validate small box Register">
+                     <header>
+                         <button string="Open small box" name="confirm" type="object"  class="oe_highlight" states="inactive" />
+                         <field name="state" widget="statusbar"  nolabel="1" statusbar_visible="inactive,active" statusbar_colors="{'inactive':'blue'}"/>
+                    </header>
+                    <sheet string="Validate small box Register">
+                        <group colspan="2" col="2">
+                                <group>
+                                    <field name="small_box" string="Select small box"  widget="selection" options="{'no_quick_create':True, 'no_quick_edit':True}" attrs="{'readonly': [('state','=','active')]}" />
+                                    <field name="small_description" string="Description" readonly="1"/>
+                                    <field name="small_daily_name" string="Journal" readonly="1"/>
+                                    <field name="small_accounting_account" string="Accounting" readonly="1"/>
+                                    <field name="name" string="Name" readonly="1" invisible="1"/>
+                                    <field name="small_debit_account" string="Balance accounting account" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="small_responsible" string="Responsible" readonly="1"/>
+                                    <field name="small_coin" string="Coin" readonly="1"/>
+                                    <field name="small_period_name" string="Period" readonly="1"/>
+                                    <field name="small_transitory_account" string="Transitory" readonly="1"/>
+                                    <field name="small_debit_transitory" string="Balance account transitory" readonly="1"/>
+                                    <field name="total_result" string="Balance Cash" readonly="1"/>
+                                </group>
+                        </group>
+                        <group  colspan="2" col="2" >
+                             <field name="small_Validate_tickets" nolabel="1" attrs="{'readonly': [('state','=','active')]}">
+                                    <tree editable="bottom">
+                                        <field name="tickets" attrs="{'readonly': [('state','!=', 'active')]}"/>
+                                        <field name="quantity" attrs="{'readonly': [('state','!=', 'active')]}" />
+                                        <field name="Result" />
+                                        <field name="state" string="Status" invisible="1"/>
+                                    </tree>
+                             </field>
+                        </group>
+                    </sheet>
+                 </form>
+             </field>
+	     </record>
+
+        <record id="view_validate_small_box_tree" model="ir.ui.view">
+            <field name="name">Validate.small.view</field>
+            <field name="model">account.validate.small.box</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="small_box" string="Code small box"   />
+                    <field name="small_responsible" string="Responsible" />
+                    <field name="small_description" string="Description" />
+                    <field name="small_debit_account" string="Accounting account"/>
+                    <field name="total_result" string="Balance Cash"/>
+                    <field name="state" string="Status"/>
+                </tree>
+            </field>
+         </record>
+
+         <record id="action_view_validate_small_box_tree" model="ir.actions.act_window">
+            <field name="name">Validate small box</field>
+            <field name="res_model">account.validate.small.box</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_validate_small_box_tree"/>
+         </record>
+
+        <menuitem action="action_view_validate_small_box_tree" id="validate_small" parent="Processes_and_movements_small"/>
+
+        <!--action replacement_small -->
+
+        <record id="account_small_replacement_form" model="ir.ui.view">
+             <field name="name">replacement.view</field>
+             <field name="model">account.small.replacement</field>
+             <field name="arch" type="xml">
+                 <form string="Small Replacement">
+                        <header>
+                         <field name="state" widget="statusbar"  nolabel="1" statusbar_visible="inactive,active" statusbar_colors="{'inactive':'blue'}"/>
+                        </header>
+                        <group  colspan="4" col="3" >
+                            <group>
+                                <field name="replacement_code" string="Replacement code " readonly="1"/>
+                                <field name="small_box" string="Select small box"  widget="selection" options="{'no_quick_create':True, 'no_quick_edit':True}" attrs="{'readonly': [('state','!=', 'inactive')]}" />
+                                <field name="small_description" string="Description" readonly="1"/>
+                                <field name="small_daily_name" string="Journal" readonly="1"/>
+                                <field name="small_period_name" string="Period" readonly="1"/>
+                                <field name="small_responsible" string="Responsible" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="replacement_date" string="Replacement date " readonly="1"/>
+                                <field name="small_accounting_account" string="Accounting" readonly="1"/>
+                                <field name="small_transitory_account" string="Transitory" readonly="1"/>
+                                <field name="small_debit_account" string="Opening amount " readonly="1"/>
+                                <field name="small_amount_consumed" readonly="1"/>
+                                <field name="total_amount" />
+                                <field name="small_debit_account_increase"  readonly="1" invisible="1"/>
+                                <field name="id_temp"  readonly="1" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                        <page string="Invoices">
+                        <group  colspan="2" col="2" >
+                            <field name="replacement_transactions" nolabel="1">
+                                    <tree  editable="bottom" delete="0">
+                                        <field name="selection" type="checkbox" string="Selection" attrs="{'readonly': [('state','!=', 'draft')]}" />
+                                        <field name="name" attrs="{'readonly': [('state','!=', 'draft')]}" required="1"/>
+                                        <field name="account_small_type_expense" attrs="{'readonly': [('state','!=', 'draft')]}" required="1"/>
+                                        <field name="date" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                        <field name="document_number" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                        <field name="control_number" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                        <field name="provider" attrs="{'readonly': [('state','!=', 'draft')]}" required="1"/>
+                                        <field name="taxable" sum="Total transactions_taxable_amount" attrs="{'readonly': [('state','!=', 'draft')]}" required="1"/>
+                                        <field name="iva" sum=" Total transactions_iva_amount" attrs="{'readonly': [('state','!=', 'draft')]}" required="1"/>
+                                        <field name="total_amount" sum="Total transactions_total_amount" />
+                                        <field name="state" string="Status"/>
+                                        <field name="delete" string="Delete"/>
+                                    </tree>
+                             </field>
+                        </group>
+                        <group >
+                            <footer><button name="save" string="Guardar Factura"  class="oe_right oe_highlight" type="object"  /></footer>
+                            <footer><button name="delete" string="Eliminar Factura"  class="oe_right oe_highlight" type="object"  /></footer>
+                        </group>
+                     </page>
+                     </notebook>
+                 </form>
+             </field>
+        </record>
+
+
+        <!--view view_small_replacement_tree-->
+
+        <record id="view_small_replacement_tree" model="ir.ui.view">
+            <field name="name">Replacement Small</field>
+            <field name="model">account.small.replacement</field>
+            <field name="arch" type="xml">
+                <tree>
+                   <field name="replacement_code" string="Code"/>
+                   <field name="small_box"/>
+                   <field name="small_description"/>
+                   <field name="small_responsible" />
+                </tree>
+            </field>
+         </record>
+
+        <record id="action_small_replacement_tree" model="ir.actions.act_window">
+            <field name="name">Daily Movement</field>
+            <field name="res_model">account.small.replacement</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_small_replacement_tree"/>
+        </record>
+
+        <menuitem action="action_small_replacement_tree" id="daily_movement" parent="Processes_and_movements_small"/>
+
+     </data>
+</openerp>
+
+<!--parent="account.menu_finance_bank_and_cash"-->

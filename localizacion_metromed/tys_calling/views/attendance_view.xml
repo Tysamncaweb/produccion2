@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!--<menuitem name="Call Center" id="call_center_root" sequence="50"/>-->
+        <!--<menuitem id="calling_register" parent="call_center_root" name="Calling Register" sequence="40" />-->
+
+        <!--Calling Register form view-->
+        <record id="view_attendance_form" model="ir.ui.view">
+            <field name="name">attendance</field>
+            <field name="model">attendance</field>
+            <field name="arch" type="xml">
+                <form string="Attendance">
+                    <!--<header>>-->
+                        <!--<button string="Confirm" name="confirm_calling" type="object" states="calling" class="oe_highlight"/>-->
+                        <!--<button string="Complete" name="complete_calling" type="object" states="complete,mobilization" class="oe_highlight"/>-->
+                        <!--<button string="mobilization" name="mobilization_calling" type="object" states="complete,mobilization" class="oe_highlight"/>-->
+                        <!--<button string="Cancel" name="cancel_calling" type="object" states="calling" />-->
+                        <!--<field name="state" widget="statusbar" readonly="1" statusbar_visible="calling,complete,mobilization"/>-->
+                    <!--</header>-->
+                    <sheet>
+                        <group col="4">
+                            <group col="2">
+                                <field name="attendance_headquarter" string="Sede" required="1"/>
+                            </group>
+                            <!--<group col="2">-->
+                                <!--<field name="id" string="ID" readonly="1"/>-->
+                                <!--<field name="calling_date" string="Fecha" readonly="1"/>-->
+                                <!--<field name="calling_time" string="Hora" widget="float_time" readonly="1"/>-->
+                            <!--</group>-->
+                        </group>
+                        <group col="4" string="Guardia">
+                            <group col="2">
+                                <field name="attendance_group" string="Grupo" required="1"/>
+                                <field name="attendance_group_leader" string="Jefe de Grupo" required="1"/>
+                            </group>
+                            <group col="2">
+                                <field name="attendance_duty_line" string="ID"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <field name="attendance_duty_line" string="ID"/>
+                        </group>
+                        <group col="4">
+                            <group col="2">
+                                <field name="patient_owner_id" string="Cédula del titular" required="1"/>
+                                <field name="patient_owner_name" string="Nombre del titular" required="1"/>
+                                <field name="patient_id" string="Cédula del paciente" attrs="{'invisible':[('state','in','calling')],'required':[('state','not in','calling')]}"/>
+                                <field name="patient_name" string="Nombre del paciente" required="1"/>
+                                <field name="calling_client" string="Seguro o cliente" required="1"/>
+                                <field name="patient_age" string="Edad" attrs="{'invisible':[('state','in','calling')],'required':[('state','not in','calling')]}"/>
+                                <field name="calling_reason" string="Motivo de la llamada" attrs="{'invisible':[('state','not in','calling')],'required':[('state','in','calling')]}"/>
+                                <field name="patient_phone" string="Teléfono" required="1"/>
+                                <field name="patient_address" string="Dirección" required="1"/>
+                                <field name="calling_user_auth" string="Autorizado Por" attrs="{'invisible':[('state','in','calling')],'required':[('state','not in','calling')]}"/>
+                            </group>
+                            <group col="2">
+                                <field name="calling_end_time" string="Hora de Culminación" widget="float_time" attrs="{'invisible':[('state','not in','calling')],'required':[('state','in','calling')]}"/>
+                                <field name="service_type" string="Tipo de servicio" required="1"/>
+                                <field name="calling_code" string="Código" required="1"/>
+                                <field name="state" string="Estado" attrs="{'invisible':[('state','in','calling')]}" readonly="1"/>
+                                <field name="calling_diagnosis" string="Diagnóstico" attrs="{'invisible':[('state','in','calling')],'required':[('state','not in','calling')]}"/>
+                                <field name="calling_number_key" string="Clave" attrs="{'invisible':[('state','in','calling')]}"/>
+                                <field name="calling_commitment" string="Compromiso" attrs="{'invisible':[('state','in','calling')]}"/>
+                                <field name="calling_user" string="Tele operador" required="1"/>
+                                <field name="calling_duration" string="Duración de llamada" attrs="{'invisible':[('state','not in','calling')]}"/>
+                                <field name="calling_form_number" string="Planilla" attrs="{'invisible':[('state','in','calling')]}"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <field name="calling_comments" string="Observaciones" attrs="{'invisible':[('state','in','calling')],'required':[('state','not in','calling')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--calling register tree viwe-->
+        <record id="view_calling_register_tree" model="ir.ui.view">
+            <field name="name">calling</field>
+            <field name="model">calling</field>
+            <field name="arch" type="xml">
+                <tree string="Llamadas" >
+                    <field name="id" string="ID"/>
+                    <field name="calling_date" string="Fecha"/>
+                    <field name="state" string="Estado" widget="color_code"/>
+                    <field name="calling_client" string="Seguro o cliente"/>
+                    <field name="patient_owner_name" string="Titular"/>
+                    <field name="patient_name" string="Paciente"/>
+                    <field name="calling_reason" string="Motivo de llamada"/>
+                    <field name="calling_user" string="Tele operador"/>
+                    <field name="calling_user_auth" string="Autorizado por"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--calling register filte-->
+        <record id="view_calling_register_filter" model="ir.ui.view">
+            <field name="name">calling.select</field>
+            <field name="model">calling</field>
+            <field name="arch" type="xml">
+                <search string="Search Calling">
+                    <field name="patient_owner_id" string="Cédula"/>
+                    <field name="calling_form_number" string="Planilla"/>
+                    <field name="patient_owner_name" string="Titular"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Seguro o cliente" icon="terp-personal" name="calling_client" context="{'group_by':'calling_client'}"/>
+                        <filter string="Titular" name="patient_owner_name" icon="terp-folder-orange" context="{'group_by':'patient_owner_name'}"/>
+                        <filter string="Estado" name="state" icon="terp-stock_effects-object-colorize" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!--action-->
+        <record id="action_view_calling_register_form" model="ir.actions.act_window">
+            <field name="name">Calling</field>
+            <field name="res_model">calling</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_calling_register_tree"/>
+            <field name="search_view_id" ref="view_calling_register_filter"/>
+        </record>
+
+        <menuitem action="action_view_calling_register_form" id="menu_calling_registert_tree" parent="calling_register"/>
+    </data>
+</odoo>

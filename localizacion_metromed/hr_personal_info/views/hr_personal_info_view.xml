@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_personal_info_view_inherit" model="ir.ui.view">
+            <field name="name">hr.personal.info.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='personal_information']" position="replace">
+                    <page name ="Personal Information" string="Información Personal">
+                     <group>
+                         <group string="Datos Personales">
+                             <field name="nationality"/>
+                             <field name="passport_id"/>
+                             <field name="identification_id_2" placeholder="Ej. 19763505" required="True"/>
+                             <field name="rif" on_change="onchange_rif_er(rif)" placeholder="Ej. VEV012345678 o VEE012345678"/>
+                             <field name="personal_email" string="Email" placeholder="Ej. cuenta@dominio.xxx"/>
+                             <field name="education"/>
+                             <field name="profesion_id"/>
+                             <field name="birthday"/>
+                             <field name="country_birth_id" string="Pais de nacimiento" options="{'no_create': True, 'no_edit': True}" />
+                             <field name="state_id" string="Estado de nacimiento"  domain="[('country_id','=',country_birth_id)]" options="{'no_create': True, 'no_edit': True}"/>
+                             <field name="city_id" string="Ciudad de nacimiento"   domain="[('res_country_state_id','=',state_id)]" options="{'no_create': True, 'no_edit': True}"/>
+                             <field name="employee_age"/>
+                             <field name="marriage_certificate"/>
+                             <field name="marital_2"/>
+                             <!--field name="Nro_de_Hijos"/-->
+                             <field name="grupo_sanguineo"/>
+                             <field name="factor_rh"/>
+                             <field name="gender"/>
+                         </group>
+                         <group string="Informacion de Contacto">
+                             <field name="state_id_res" options="{'no_create': True, 'no_edit': True}"/>
+                             <field name="city_id_res"  domain="[('res_country_state_id','=',state_id_res)]" options="{'no_create': True, 'no_edit': True}"/>
+                             <field name="e_municipio" string="Municipio"   domain="[('res_country_state_id','=',state_id_res)]" options="{'no_create': True, 'no_edit': True}"/>
+                             <field name="e_parroquia" string="Parroquia"   domain="[('res_state_municipal_id','=',e_municipio)]" options="{'no_create': True, 'no_edit': True}"/>
+                             <field name="code_postal"/>
+                             <field name="street"/>
+                             <field name="house"/>
+                             <field name="apto"/>
+                             <field name="piso"/>
+                             <field name="telf_hab" placeholder="Ej. 0123-4567890" />
+                             <field name="telf_Contacto" placeholder="Ej. 0123-4567890"/>
+                         </group>
+                     </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="hr_employee_ci_view_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.ci.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[4]" position="after">
+                     <field name="identification_id_2" string="Cédula de Identidad"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_employee_ci_filter" model="ir.ui.view">
+            <field name="name">hr.employee.ci.filter</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search/field[@name='name']" position="after">
+                     <field name="identification_id_2" string="Cédula"/>
+                </xpath>
+            </field>
+
+        </record>
+    </data>
+</odoo>

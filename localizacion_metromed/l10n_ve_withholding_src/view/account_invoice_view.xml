@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+        <record id="account_invoice_wh_src_customer" model="ir.ui.view">
+            <field name="name">account.invoice.wh.src.customer</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']" position="before">
+                    <page name='Withholdings_SRC' string="Withholdings SRC">
+                        <separator string="Social Responsability Commitment"/>
+                        <group col="6" colspan="4">
+                                <group col="6" colspan="2">
+                                    <field name="wh_src_rate"/>
+                                     <button name="%(action_wiz_retention)d" type="action" string="Change SRC Wh. Rate" icon="gtk-execute" attrs="{'invisible': ['|',('state','=', 'draft'),('state','=', 'paid')]}"/>
+                                </group>
+                            <field name="wh_src_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="account_invoice_wh_src_supplier" model="ir.ui.view">
+            <field name="name">account.invoice.wh.src.supplier</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']" position="before">
+                    <page name='Withholdings_SRC' string="Withholdings SRC">
+                        <separator string="Social Responsability Commitment"/>
+                            <group col="6" colspan="4">
+                                <group col="6" colspan="2">
+                                    <field name="wh_src_rate"/>
+                                     <button name="%(action_wiz_retention)d" type="action" string="Change SRC Wh. Rate" icon="gtk-execute" attrs="{'invisible': ['|',('state','=', 'draft'),('state','=', 'paid')]}"/>
+                                </group>
+                                <field name="wh_src_id"/>
+                            </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

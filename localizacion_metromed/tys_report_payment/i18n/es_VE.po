@@ -1,0 +1,168 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tys_report_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-02 14:37+0000\n"
+"PO-Revision-Date: 2019-01-02 10:44-0400\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong><strong>Total Original Amount: </strong></strong>"
+msgstr "<strong><strong>Total Original Amount: </strong></strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Customer: </strong>"
+msgstr "<strong>Cliente: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Memo: </strong>"
+msgstr "<strong>Memo: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Payment Amount: </strong>"
+msgstr "<strong>Importe del pago: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Payment Date: </strong>"
+msgstr "<strong>Fecha de Pago: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Payment Method: </strong>"
+msgstr "<strong>Método de Pago: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Total Amount Balance: </strong>"
+msgstr "<strong>Monto total Balance: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Total Amount Paid: </strong>"
+msgstr "<strong>Monto Total a pagar: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Total Amount Tax Ret ISRL:</strong>"
+msgstr "<strong>Monto Total Ret ISRL:</strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Total Amount Tax Ret IVA: </strong>"
+msgstr "<strong>Monto Total Ret IVA: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Total Tax Amount: </strong>"
+msgstr "<strong>Monto Total impuesto: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Total Untaxed Amount: </strong>"
+msgstr "<strong>Monto Total sin impuesto: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "<strong>Vendor: </strong>"
+msgstr "<strong>Proveedor: </strong>"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Amount Paid"
+msgstr "Importe pagado"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Amount Tax Ret ISLR"
+msgstr "Monto de impuesto Ret ISLR"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Amount Tax Ret IVA"
+msgstr "Monto de impuesto Ret IVA"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Balance"
+msgstr "Balance"
+
+#. module: tys_report_payment
+#: model:ir.actions.report,name:tys_report_payment.action_account_payment_report
+msgid "Consolidado de Pagos"
+msgstr "Consolidado de Pagos"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Consolidated paid invoices:"
+msgstr "Consolidado de Facturas Pagadas:"
+
+#. module: tys_report_payment
+#: model:ir.model.fields,field_description:tys_report_payment.field_report_tys_report_payment_template_account_payment_display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: tys_report_payment
+#: model:ir.model.fields,field_description:tys_report_payment.field_report_tys_report_payment_template_account_payment_id
+msgid "ID"
+msgstr "ID"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Invoice Date"
+msgstr "Fecha de la factura"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Invoice Number"
+msgstr "Número de factura"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Invoice Reference Number"
+msgstr "Número de referencia factura"
+
+#. module: tys_report_payment
+#: model:ir.model.fields,field_description:tys_report_payment.field_report_tys_report_payment_template_account_payment___last_update
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Original Amount"
+msgstr "Importe original"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Tax Amount"
+msgstr "Importe de impuesto"
+
+#. module: tys_report_payment
+#: model:ir.ui.view,arch_db:tys_report_payment.template_account_payment
+msgid "Untaxed Amount"
+msgstr "Monto sin impuesto"
+
+#. module: tys_report_payment
+#: code:addons/tys_report_payment/report/report_account_payment.py:13
+#, python-format
+msgid "You need select a data to print."
+msgstr "Necesita seleccionar dato para imprimir."
+
+#. module: tys_report_payment
+#: model:ir.model,name:tys_report_payment.model_report_tys_report_payment_template_account_payment
+msgid "report.tys_report_payment.template_account_payment"
+msgstr "report.tys_report_payment.template_account_payment"

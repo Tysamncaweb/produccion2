@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record model="report.paperformat" id="paperformat_custom_invoice_report_record">
+            <field name="name">paperformat.custom.invocie.report</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_width">215</field>
+            <field name="page_height">140</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_right">7</field>
+            <field name="margin_bottom">20</field>
+            <field name="margin_left">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">15</field>
+            <field name="dpi">85</field>
+        </record>
+        <report
+            id="custom_invoice"
+            string="Custom Invoice"
+            model="account.invoice"
+            report_type="qweb-pdf"
+            paperformat="paperformat_custom_invoice_report_record"
+            name="tys_custom_account_invoice.custom_invoice_template"
+            file="tys_custom_account_invoice.custom_invoice_template"
+        />
+        <template id="custom_invoice_template">
+            <div class="article" style="font-size:19px">
+                <t t-foreach="invoices" t-as="o" >
+                    <table width="100%">
+                        <tr>
+                            <td><br/><br/></td>
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <tr>
+                            <td></td>
+                            <td class="text-right"> <strong>Factura N°:   </strong><span t-field="o.number"/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Cliente:   </strong>
+                            </td>
+                            <td class="text-right">
+                                <strong>Fecha de emisión:   </strong><span t-field="o.date_invoice"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <tr class="border-black">
+                            <td><strong>Nombre o Razón Social:   </strong> <span t-field="o.partner_id"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dirección Fiscal:   </strong> <span t-field="o.partner_id.street"/></td>
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <tr class="border-black">
+                            <td><strong>Rif:  </strong><span t-esc="formated_rif"/></td>
+                            <td width="10%">  </td>
+                            <td aling="center"><strong>Condición de pago:  </strong></td>
+                            <td width="20%">  </td>
+                            <td aling="center"><strong>Teléfono:  </strong><span t-esc="telefono"/></td>
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <tr class="border-black">
+                            <td> </td>
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <thead>
+                            <tr class="border-black" style="font-size:17px">
+                                <th>Detalle</th>
+                                <th>Cantidad</th>
+                                <th class="text-center">Tarifas</th>
+                                <th class="text-center" >Desc. (%)</th><!--groups="sale.group_discount_per_so_line"-->
+                                <th class="text-center">Impuesto</th>
+                                <th class="text-right">Sub Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="invoice_tbody">
+
+                            <t t-foreach="invoice_lines" t-as="l">
+                                <tr style="font-size:17px">
+                                    <td>
+                                        <span t-field="l.name"/></td>
+                                    <td>
+                                        <span t-field="l.quantity"/>
+                                        <span t-field="l.uom_id"  /><!--groups="product.group_uom"/-->
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="l.price_unit"/>
+                                    </td>
+                                    <td class="text-center" >
+                                        <span t-field="l.discount"/>
+                                    </td><!--groups="sale.group_discount_per_so_line"-->
+                                    <td class="text-center">
+                                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.invoice_line_tax_ids))"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.price_subtotal"
+                                          t-field-options='{"widget": "monetary", "display_currency": "l.currency_id"}'/>
+                                    </td>
+                                </tr >
+                            </t>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <br/>
+                    <div style="font-size:17px">
+                        <p >
+                            <t t-if="o.comment">
+                                <strong>Comment: </strong>
+                            <span style="font-size:14px" t-field="o.comment"/>
+                            </t>
+                        </p>
+                        <p t-if="o.fiscal_position_id.note">
+                            <strong>Position Fiscal :</strong>
+                            <span t-field="o.fiscal_position_id.note"/>
+                        </p>
+                    </div>
+                    <div style="font-size:17px">
+                        <table width="100%">
+                            <tr class="border-black">
+                                <td width="72.5%">
+                                    <t t-if="o.date_due">
+                                        <strong>Fecha de vencimiento:  <span t-field="o.date_due"/> </strong>
+                                    </t>
+                                </td>
+                                <td class="text-right" width="7%">
+                                    <strong>SubTotal</strong>
+                                </td>
+                                <td class="text-right" width="20.5%">
+                                    <span t-field="o.amount_untaxed" t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="text-right">I.V.A.</td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_tax"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr class="border-black">
+                                <td> </td>
+                            </tr>
+                        </table>
+                        <table width="100%">
+                            <tr class="border-black">
+                                <td width="72.5%">
+                                    <strong>Son:   </strong>
+                                    <span t-field="o.monto_letra"/>
+                                </td>
+                                <td class="text-right"><strong>Total  </strong></td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_total" t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </div>
+        </template>
+    </data>
+</odoo>

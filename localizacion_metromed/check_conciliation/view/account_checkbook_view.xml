@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+		<!-- 28/12/2015: Se modifica por herencia el modulo account_checkbook (Chequeras) para agregar
+            un campo relacion many2one llamado "Cuenta Transitoria", como parte del requerimiento 
+            del modulo de Conciliacion de Cheques.
+            
+            Autor: Roger Sosa
+        -->
+        
+        <!--record id="view_account_checkbook_form" model="ir.ui.view">
+            <field name="name">account.checkbook.inherit.form</field>
+            <field name="model">account.checkbook</field>
+            <field name="inherit_id" ref="l10n_ve_account_check_duo.view_account_checkbook_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='account_bank_id']" position="after">
+            		<field name = 'cuenta_transitoria' attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+            	</xpath>
+            </field>
+        </record-->
+        
+	</data>
+</odoo>

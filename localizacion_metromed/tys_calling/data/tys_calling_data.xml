@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Contract Types -->
+        <record id="tys_calling_job_id" model="hr.job">
+            <field name="name">Miembro de Call Center</field>
+        </record>
+
+        <!-- services types -->
+        <record id="tys_calling_service_type_id_1" model="service.type">
+            <field name="service_type_name">Asistencia Médica Domiciliaria</field>
+            <field name="short_service_type_name">AMD</field>
+        </record>
+        <record id="tys_calling_service_type_id_2" model="service.type">
+            <field name="service_type_name">Asistencia Médica Empresarial</field>
+            <field name="short_service_type_name">AME</field>
+        </record>
+        <record id="tys_calling_service_type_id_3" model="service.type">
+            <field name="service_type_name">Orientación Médica Telefónica</field>
+            <field name="short_service_type_name">OMT</field>
+        </record>
+        <record id="tys_calling_service_type_id_4" model="service.type">
+            <field name="service_type_name">Traslado Programado</field>
+            <field name="short_service_type_name">TP</field>
+        </record>
+        <record id="tys_calling_service_type_id_5" model="service.type">
+            <field name="service_type_name">Traslado de Emergencia</field>
+            <field name="short_service_type_name">TE</field>
+        </record>
+        <record id="tys_calling_service_type_id_6" model="service.type">
+            <field name="service_type_name">Guardia de Prevención</field>
+            <field name="short_service_type_name">GP</field>
+        </record>
+        <record id="tys_calling_service_type_id_7" model="service.type">
+            <field name="service_type_name">Jornada Ocupaciona</field>
+            <field name="short_service_type_name">JO</field>
+        </record>
+        <record id="tys_calling_service_type_id_8" model="service.type">
+            <field name="service_type_name">Jornada de Salud</field>
+            <field name="short_service_type_name">JS</field>
+        </record>
+    </data>
+</odoo>

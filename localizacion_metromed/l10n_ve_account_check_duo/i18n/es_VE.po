@@ -1,0 +1,1132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ve_account_check_duo
+#   * account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-26 18:54+0000\n"
+"PO-Revision-Date: 2018-12-26 18:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,clearing:0
+#: selection:account.third.check,clearing:0
+msgid "24 hs"
+msgstr "24 hs"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,clearing:0
+#: selection:account.third.check,clearing:0
+msgid "48 hs"
+msgstr "48 hs"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,clearing:0
+#: selection:account.third.check,clearing:0
+msgid "72 hs"
+msgstr "72 hs"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_voucher.py:102
+#, python-format
+msgid "ATENTION !"
+msgstr "ATENCION !"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_res_partner_bank_account_id
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_res_partner_bank_form
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_account_bank_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_account_bank_id
+msgid "Account Bank"
+msgstr "Cuenta Bancaria"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:189
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:203
+#, python-format
+msgid "Advertencia"
+msgstr "Advertencia"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,help:l10n_ve_account_check_duo.field_account_journal_use_issued_check
+msgid "Allow to user Issued Checks in associated vouchers."
+msgstr "Allow to user Issued Checks in associated vouchers."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,help:l10n_ve_account_check_duo.field_account_journal_use_third_check
+msgid "Allow to user Third Checks in associated vouchers."
+msgstr "Allow to user Third Checks in associated vouchers."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_amount
+msgid "Amount Check"
+msgstr "Monto del Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.ckus_stub
+msgid "Balance Due"
+msgstr "Saldo adeudado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+msgid "Banco"
+msgstr "Banco"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_bank_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_bank_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_bank_account_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_bank_account_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_bank_account_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_bank_account_id
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_ticket_deposit_search
+msgid "Bank Account"
+msgstr "Cuenta bancaria"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.wizard_ticket_deposit_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_voucher.py:260
+#, python-format
+msgid "Cannot Validate Voucher"
+msgstr "No se puede validar el vale"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_change_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_change_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_change_date
+msgid "Change Date"
+msgstr "Cambiar fecha"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_payment
+msgid "Change the journal_id in Check Model"
+msgstr "Change the journal_id in Check Model"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_amount
+msgid "Check Amount"
+msgstr "Monto del Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_check_journal_form
+msgid "Check Configuration"
+msgstr "Configuración del Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_date
+msgid "Check Date"
+msgstr "Dato del Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_deposit
+msgid "Check Deposit"
+msgstr "Depositar Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_checks_ids
+msgid "Check Lines"
+msgstr "Linea de Cheques"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_number
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_number
+msgid "Check Number"
+msgstr "Número de cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_range_desde
+msgid "Check Number Desde"
+msgstr "Numero de cheque Desde"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_range_hasta
+msgid "Check Number Hasta"
+msgstr "Numero de cheque Hasta"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_sold
+msgid "Check Sold"
+msgstr "Cheque Vendido"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_checkbook_id
+msgid "Checkbook"
+msgstr "Chequera"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_account_checkbooks_form
+#: model:ir.ui.menu,name:l10n_ve_account_check_duo.menu_action_account_checkbooks_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_tree
+msgid "Checkbooks"
+msgstr "Chequeras"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.menu,name:l10n_ve_account_check_duo.menu_account_check
+msgid "Checks"
+msgstr "Cheques"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_checkbook_ids
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+msgid "Chequera"
+msgstr "Chequera"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_payment_issued_check_ids
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_voucher_check_form
+msgid "Cheques Propios"
+msgstr "Cheques Propios"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_number_draft_id
+msgid "Cheques pendientes"
+msgstr "Cheques pendientes"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:349
+#, python-format
+msgid "Ckeck Number must be 8 numbers !"
+msgstr "Ckeck Number must be 8 numbers !"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_clearing
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_clearing
+msgid "Clearing"
+msgstr "Clearing"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_clearing_date
+msgid "Clearing Date"
+msgstr "Clearing Date"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_clearing_date_hasta
+msgid "Clearing Date Hasta"
+msgstr "Clearing Date Hasta"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:214
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:361
+#, python-format
+msgid "Clearing date must be greater than check date"
+msgstr "Clearing date must be greater than check date"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_company_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,help:l10n_ve_account_check_duo.field_account_third_check_company_id
+msgid "Company related to this Check"
+msgstr "Company related to this Check"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,help:l10n_ve_account_check_duo.field_account_issued_check_company_id
+msgid "Company related to this Check=1"
+msgstr "Company related to this Check=1"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_create_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+msgid "Cuenta Bancaria"
+msgstr "Cuenta Bancaria"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_debit_vendor_receipt
+msgid "Customer Debit Payment"
+msgstr "Customer Debit Payment"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_issued_checks_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_ticket_deposit_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_debit_date
+msgid "Date Debit"
+msgstr "Date Debit"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_date_in
+msgid "Date In"
+msgstr "Date In"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:44
+#, python-format
+msgid "Debe Crear una Chequera para Poder Emitir el Cheque  "
+msgstr "Debe Crear una Chequera para Poder Emitir el Cheque  "
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.third.check,state:0
+msgid "Dep-Rejected"
+msgstr "Depositado-Rechazado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_date
+msgid "Deposit Date"
+msgstr "Deposit Date"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.third.check,state:0
+msgid "Deposited"
+msgstr "Depositado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_check_description
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_name
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.ckus_stub
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Desde fecha Clearing"
+msgstr "Desde fecha Clearing"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_account_bank_id
+msgid "Destiny Account"
+msgstr "Cuenta de Destino"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_destiny_partner_id
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Destiny Partner"
+msgstr "Empresa Destino"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_display_name
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.checkbook,state:0
+#: selection:account.issued.check,state:0
+#: selection:account.third.check,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.ckus_stub
+msgid "Due Date"
+msgstr "Fecha vencimiento"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:176
+#, python-format
+msgid "EXISTEN CHEQUES EN ESTADO BORRADOR"
+msgstr "EXISTEN CHEQUES EN ESTADO BORRADOR"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_check_endorsed
+msgid "Endorsed"
+msgstr "Endosable"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/Wizard/_wizard_issued_/check_issued_hreject.py:108
+#: code:addons/l10n_ve_account_check_duo/Wizard/wizard_third/check_dreject.py:105
+#: code:addons/l10n_ve_account_check_duo/Wizard/wizard_third/check_hreject.py:157
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:44
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:104
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:161
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:167
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:176
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:214
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:349
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:361
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:372
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:377
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:387
+#: code:addons/l10n_ve_account_check_duo/models/account_checkbook.py:63
+#: code:addons/l10n_ve_account_check_duo/models/account_checkbook.py:134
+#, python-format
+msgid "Error !"
+msgstr "Error !"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:190
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:204
+#, python-format
+msgid "Esta cuenta bancaria no tiene chequera asignada"
+msgstr "Esta cuenta bancaria no tiene chequera asignada"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_issued_checks_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Estado"
+msgstr "Estado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_expense_account
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_expense_account
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_expense_account
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_expense_account
+msgid "Expense Account"
+msgstr "Cuenta de gasto"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_expense_amount
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_expense_amount
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_expense_amount
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_expense_amount
+msgid "Expense Amount"
+msgstr "Cantidad de gastos"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_clearing_date
+msgid "Fecha de Entrega de Cheque"
+msgstr "Fecha de Entrega de Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+msgid "Fecha de emision"
+msgstr "Fecha de emision"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_date
+msgid "Fecha de emisión del Cheque"
+msgstr "Fecha de emisión del Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_group_multi_company
+msgid "Group Multi Company"
+msgstr "Grupo Multi Compañia"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.third.check,state:0
+msgid "Hand-Rejected"
+msgstr "Entregado-Rechazado"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,state:0
+msgid "Handed"
+msgstr "Entregado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Hasta fecha Clearing"
+msgstr "Hasta fecha Clearing"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.third.check,state:0
+msgid "Holding"
+msgstr "En Cartera"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_sequence_number
+msgid "Id Number"
+msgstr "Numero de ID"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,help:l10n_ve_account_check_duo.field_account_journal_validate_only_checks
+msgid "If marked, when validating a voucher, verifies that the total amounth of the voucher is the same as the checks used."
+msgstr "If marked, when validating a voucher, verifies that the total amounth of the voucher is the same as the checks used."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "In Holding"
+msgstr "En Cartera"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.checkbook,state:0
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+msgid "In Use"
+msgstr "En Uso"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.report,name:l10n_ve_account_check_duo.report_check_duo
+msgid "Informe de Cheques"
+msgstr "Informe de Cheques"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.ckus_stub
+msgid "Invoice Amount"
+msgstr "Importe factura"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_invoice_expense
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_invoice_expense
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_invoice_expense
+msgid "Invoice Expense?"
+msgstr "Gastos de factura?"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_issued
+msgid "Issued"
+msgstr "Emitido"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_issued_check
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_calendar
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+msgid "Issued Checks"
+msgstr "Cheques Propios"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_issued_checks_search
+msgid "Issued Checks..."
+msgstr "Cheques Propios..."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_voucher.py:102
+#, python-format
+msgid "Journal must be fill"
+msgstr "Diario debe ser llenado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line___last_update
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_deposit_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_write_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_make_expense
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_make_expense
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_make_expense
+msgid "Make Expenses ?"
+msgstr "Hacer gastos ?"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_checkbook
+msgid "Manage Checkbook"
+msgstr "Gestion de Chequeras"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_issued_check
+msgid "Manage Checks Issued"
+msgstr "Gestion de Cheques Propios"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_third_check
+msgid "Manage Checks Third"
+msgstr "Gestion de Cheque de Terceros"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_calendar
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_calendar
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+msgid "Monto"
+msgstr "Monto"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_ticket_deposit_search
+msgid "Name Ticket"
+msgstr "Nombre"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_actual_number
+msgid "Next Check Number"
+msgstr "Nº del próximo cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_check_endorsed
+msgid "No Endorsed"
+msgstr "No Endosable"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+msgid "No Endosable"
+msgstr "No Endosable"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_name
+msgid "Nombre Chequera"
+msgstr "Nombre Chequera"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_numbers
+msgid "Numbers"
+msgstr "Numero"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_tree
+msgid "Numero Actual de Cheque"
+msgstr "Numero Actual de Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_issued_checks_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Numero de Cheque"
+msgstr "Numero de Cheque"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,state:0
+msgid "Pagado"
+msgstr "Pagado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_partner_id
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_issued_checks_search
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.ckus_stub
+msgid "Payment"
+msgstr "Pagos"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_vat
+msgid "RIF"
+msgstr "RIF"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+msgid "Ranges"
+msgstr "Rangos"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_tree
+msgid "Rango Desde"
+msgstr "Rango Desde"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_tree
+msgid "Rango Hasta"
+msgstr "Rango Hasta"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.issued.check,state:0
+msgid "Rechazado"
+msgstr "Rechazado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_dreject_reject_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_hreject_reject_date
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issuedcheck_hreject_reject_date
+msgid "Reject Date"
+msgstr "Fecha de rechazo"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_reject_debit_note
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_reject_debit_note
+msgid "Reject Debit Note"
+msgstr "Rechazar nota de débito"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_reject_debit_note_prov
+msgid "Reject Debit Note Prov"
+msgstr "Rechazar nota de débito Prov"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_issue_hrejected
+msgid "Reject Handed Checks"
+msgstr "Rechazar Cheques Entregados"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_dreject
+msgid "Rejected Deposited Check"
+msgstr "Cheque Depositado-Rechazado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_hrejected
+msgid "Rejected Handed Checks"
+msgstr "Rechazar Cheques Entregados"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_issue
+msgid "Reporte de Cheques"
+msgstr "Reporte de Cheques"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,help:l10n_ve_account_check_duo.action_debit_vendor_receipt
+msgid "Sales payment allows you to register the payments you receive from your customers. In order to record a payment, you must enter the customer, the payment method (=the journal) and the payment amount. OpenERP will propose to you automatically the reconciliation of this payment with the open invoices or sales receipts."
+msgstr "Sales payment allows you to register the payments you receive from your customers. In order to record a payment, you must enter the customer, the payment method (=the journal) and the payment amount. OpenERP will propose to you automatically the reconciliation of this payment with the open invoices or sales receipts."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_payment_show_check_page
+msgid "Show Check Page"
+msgstr "Mostrar página de verificación"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_calendar
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+msgid "Socio"
+msgstr "Socio"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.third.check,state:0
+msgid "Sold"
+msgstr "Vendido"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_check_sold_sold_date
+msgid "Sold Date"
+msgstr "Fecha de venta"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_source_partner_id
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Source Partner"
+msgstr "Socio de origen"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_state
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_state
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_state
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_issued_checks_search
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_voucher.py:213
+#, python-format
+msgid "State!"
+msgstr "Estado!"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:104
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:387
+#, python-format
+msgid "The Check must  be in draft state only for unlink !"
+msgstr "The Check must  be in draft state only for unlink !"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:167
+#, python-format
+msgid "The Checkbook is not active"
+msgstr "El talonario de cheques no está activo"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_voucher.py:261
+#, python-format
+msgid "The associated journal force that the total amount is the same as the one paid with checks."
+msgstr "El diario asociado obliga a que el monto total sea igual al pagado con cheques.."
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_voucher.py:213
+#, python-format
+msgid "The check must be in holding state."
+msgstr "El cheque debe estar en estado de espera."
+
+#. module: l10n_ve_account_check_duo
+#: sql_constraint:ticket.deposit:0
+msgid "The name must be unique!"
+msgstr "El nombre deber ser único!"
+
+#. module: l10n_ve_account_check_duo
+#: sql_constraint:account.issued.check:0
+msgid "The number must be unique!"
+msgstr "El número debe ser único!"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_third_check
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_payment_third_check_ids
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_payment_third_check_receipt_ids
+#: model:ir.ui.menu,name:l10n_ve_account_check_duo.menu_treasury_third_check
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_calendar
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_voucher_check_form
+msgid "Third Checks"
+msgstr "Cheque de Terceros"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_third_checks_search
+msgid "Third Checks..."
+msgstr "Cheques de Terceros..."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_account_third_check_id
+msgid "Thirds Checks"
+msgstr "Cheques de Terceros"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_ticket_deposit
+msgid "Ticket Check Deposit"
+msgstr "Boleta de Deposito"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.wizard_ticket_deposit_form_view
+msgid "Ticket Checks Deposit"
+msgstr "Boleta de Depósitos"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_ticket_deposit_menu
+#: model:ir.model,name:l10n_ve_account_check_duo.model_ticket_deposit
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_ticket_deposit_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_line_ticket_deposit_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_ticket_deposit
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_ticket_deposit_form
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_ticket_deposit_tree
+msgid "Ticket Deposit"
+msgstr "Boleta de Deposito"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_date
+msgid "Ticket Deposit Date"
+msgstr "Fecha de depósito del boleto"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_ticket_deposit_line
+msgid "Ticket Deposit Line"
+msgstr "Detalle de Boleta de Deposito"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_name
+msgid "Ticket Deposit number"
+msgstr "Número de depósito de entrada"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_name
+msgid "Ticket deposited number"
+msgstr "Número de depósito de entrada"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.wizard_ticket_deposit_form_view
+msgid "Tickets Checks Deposit"
+msgstr "Boletas de Cheques Depositados"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_ticket_deposit_total_ammount
+msgid "Total Ammount"
+msgstr "Cantidad total"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_wizard_ticket_deposit_total_amount
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+msgid "Total Amount"
+msgstr "Importe total"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_journal_use_issued_check
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_payment_use_issued_check
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_check_journal_form
+msgid "Use Issued Checks"
+msgstr "Mostar solapa de Cheques  Propios"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_journal_use_third_check
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_payment_use_third_check
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_check_journal_form
+msgid "Use Third Checks"
+msgstr "Mostrar Solapa  Cheques de Terceros"
+
+#. module: l10n_ve_account_check_duo
+#: selection:account.checkbook,state:0
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_checkbook_form
+msgid "Used"
+msgstr "Usado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_checkbook_user_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_user_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_tree
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_third_check_tree
+msgid "Usuario"
+msgstr "Usuario"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.ckus_check
+msgid "VOID"
+msgstr "VOID"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_issued_check_form
+msgid "Validar"
+msgstr "Validar"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_journal_validate_only_checks
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_account_check_journal_form
+msgid "Validate only Checks"
+msgstr "Validar monto total de cheques"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:377
+#, python-format
+msgid "Vat number must be 11 numbers !"
+msgstr "El número de IVA debe ser 11 números!"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:372
+#, python-format
+msgid "Vat number must be not null !"
+msgstr "El número de IVA no debe ser nulo !"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_checkbook.py:63
+#, python-format
+msgid "You can drop the checkbook(s) only in  draft state !"
+msgstr "Puede dejar la (s) chequera (s) solo en borrador !"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_checkbook.py:134
+#, python-format
+msgid "You cant change the checkbook´s state, there is one active !"
+msgstr "No puedes cambiar el estado de la chequera, hay uno activo.!"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/Wizard/_wizard_issued_/check_issued_hreject.py:108
+#: code:addons/l10n_ve_account_check_duo/Wizard/wizard_third/check_dreject.py:106
+#: code:addons/l10n_ve_account_check_duo/Wizard/wizard_third/check_hreject.py:157
+#, python-format
+msgid "You must assign expense account and amount !"
+msgstr "Debe asignar la cuenta de gastos y el importe.!"
+
+#. module: l10n_ve_account_check_duo
+#: code:addons/l10n_ve_account_check_duo/models/account_check_duo.py:161
+#, python-format
+msgid "You must be create a checkbook or change state"
+msgstr "Debes crear una chequera o cambiar de estado."
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_issuedcheck_hreject
+msgid "account issued check hreject"
+msgstr "cuenta emitida cheque rechazo"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_check_deposit
+msgid "account.check.deposit"
+msgstr "account.check.deposit"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_check_dreject
+msgid "account.check.dreject"
+msgstr "account.check.dreject"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_check_hreject
+msgid "account.check.hreject"
+msgstr "Cheque rechazado"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_account_check_sold
+msgid "account.check.sold"
+msgstr "Cheque Vendido"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_receiving_partner_id
+msgid "beneficiary/provider"
+msgstr "beneficiario/proveedor"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.menu,name:l10n_ve_account_check_duo.menu_treasury_issued_check
+msgid "issue check"
+msgstr "Cheques Propios"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_name
+msgid "nombre cheque"
+msgstr "nombre cheque"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.wizard_ticket_deposit_form_view
+msgid "or"
+msgstr "o"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_issued_check_voucher_id
+#: model:ir.model.fields,field_description:l10n_ve_account_check_duo.field_account_third_check_voucher_id
+msgid "payment"
+msgstr "pago"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.ui.view,arch_db:l10n_ve_account_check_duo.view_ticket_deposit_search
+msgid "ticket Deposit...."
+msgstr "Boleta de Deposito"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.model,name:l10n_ve_account_check_duo.model_wizard_ticket_deposit
+msgid "wizard.ticket.deposit"
+msgstr "Boleta de Deposito"
+
+#. module: l10n_ve_account_check_duo
+#: model:ir.actions.act_window,name:l10n_ve_account_check_duo.action_check_hrejected
+msgid "Reject Date"
+msgstr "Fecha de rechazo"
+
+#. module: account
+#: model:ir.actions.act_window,name:account.action_account_payments
+#: model:ir.ui.menu,name:account.menu_action_account_payments_receivable
+#, python-format
+msgid "Payments"
+msgstr "Cobros"
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.res_config_settings_view_form
+#: model:account.payment.method,name:account_check_printing.account_payment_method_check
+msgid "Checks"
+msgstr "Cheques"
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.res_config_settings_view_form
+msgid "Checks"
+msgstr "Cheques"
+

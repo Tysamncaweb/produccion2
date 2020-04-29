@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!--iniciio-->
+<odoo>
+    <data>
+        <record id="view_account_paysliprun_camp" model="ir.ui.view">
+            <field name="name">hr_payslip_run_total_xml</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='slip_ids']" position="after">
+                     <group class="oe_subtotal_footer oe_right">
+                         <field name="total_asig" string="Total de Asignaciones" readonly="1" force_save="1"/>
+                         <field name="total_deduc" string="Total de Deducciones" readonly="1" force_save="1"/>
+                         <field name="total" string="Total a cancelar" readonly="1" force_save="1"/>
+                     </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

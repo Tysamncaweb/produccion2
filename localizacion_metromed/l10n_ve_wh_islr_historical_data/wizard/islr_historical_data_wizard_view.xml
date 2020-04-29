@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="islr_historical_data_w_view" model="ir.ui.view">
+            <field name="name">islr.historical.data.wizard</field>
+            <field name="model">islr.historical.data.report</field>
+            <field name="arch" type="xml">
+            <form string="Select Period">
+                <header>
+                    <button name="print_report" string="Print" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </header>
+                <group col="4">
+                    <!--field name="start_period_id" required="1"/-->
+                    <!--field name="end_period_id" required="1"/-->
+                    <!--<field name="date1"/>-->
+                    <!--<field name="date2"/>-->
+                </group>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_islr_historical_data_wizard" model="ir.actions.act_window">
+            <field name="name">Comprobante ARCV</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">islr.historical.data.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="islr_historical_data_w_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.values" id="islr_historical_data_wizard_values">
+            <field name="model_id" ref="base.model_res_partner" />
+            <field name="name">Comprobante ARCV</field>
+            <field name="key2">client_print_multi</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_islr_historical_data_wizard'))" />
+            <field name="key">action</field>
+            <field name="model">res.partner</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,1 @@
+from . import hr_contract_non_common

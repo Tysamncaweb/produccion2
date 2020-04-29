@@ -1,0 +1,2034 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ve_withholding_islr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-09 20:50+0000\n"
+"PO-Revision-Date: 2019-01-09 20:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:307
+#, python-format
+msgid "\n"
+"Please, Load the Taxes to be withheld and Try Again"
+msgstr "\n"
+"Por favor, cargue los impuestos a retener y vuelva a intentarlo"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_account_invoice_line_state
+msgid " * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.\n"
+" * The 'Pro-forma' status is used when the invoice does not have an invoice number.\n"
+" * The 'Open' status is used when user creates invoice, an invoice number is generated. It stays in the open status till the user pays the invoice.\n"
+" * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
+" * The 'Cancelled' status is used when user cancel invoice."
+msgstr ""* El estado 'Borrador' se usa cuando un usuario está codificando una Factura nueva y no confirmada. \ N"
+"* El estado 'Pro-forma' se usa cuando la factura no tiene un número de factura. \ N"
+"* El estado 'Abierto' se usa cuando el usuario crea una factura, se genera un número de factura. Permanece en el estado abierto hasta que el usuario paga la factura. \ N"
+"* El estado 'Pagado' se establece automáticamente cuando se paga la factura. Sus entradas de diario relacionadas pueden o no estar reconciliadas. \ N"
+"* El estado 'Cancelado' se usa cuando el usuario cancela la factura"."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_account_invoice_status
+msgid " * The 'Processed withholding, xml Line generated' state\n"
+"            is used when a user is a withhold income is processed.\n"
+"            * The 'Withholding no processed' state is when user create a\n"
+"            invoice and withhold income is no processed.\n"
+"            * The 'Not exceed the rate,xml Line generated' state is\n"
+"            used when user create invoice,a invoice no exceed the\n"
+"            minimun rate."
+msgstr " * El estado 'Retención procesada, línea xml generada' \ n "
+"se utiliza cuando un usuario es un ingreso de retención se procesa. \ n"
+"* El estado 'Sin retención no procesada' es cuando el usuario crea un \ n"
+"la factura y los ingresos de retención no se procesan. \ n"
+"* El estado 'No exceder la tasa xml Línea generada' es \ n"
+"utilizado cuando el usuario crea una factura, una factura que no exceda de \ n"
+"tarifa mínima."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1502
+#, python-format
+msgid " For Tax Units greater than zero"
+msgstr "Para Impuestos Unidades mayores a cero."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "\"Según Artículo No. 24 de la Gaceta Oficial de la República Bolivariana de Venezuela No. 36203 del 125997\""
+msgstr "\"Según artículo No. 24 de la Gaceta Oficial de la República Bolivariana de Venezuela No. 36203 del 125997\""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "% de Retención"
+msgstr "Retención"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:367
+#, python-format
+msgid "%s - ISLR: %s"
+msgstr "ISLR"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "<b>AGENTE DE RETENCIÓN</b>"
+msgstr "AGENTE DE RETENCIÓN"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "<b>COMPROBANTE DE RETENCION DEL IMPUESTO SOBRE LA RENTA</b>"
+msgstr "COMPROBANTE DE RETENCION DEL IMPUESTO SOBRE LA RENTA"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "<b>DATOS DEL AGENTE BENEFICIARIO</b>"
+msgstr "DATOS DEL AGENTE BENEFICIARIO"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "<b>Total Impuesto Retenido: </b>"
+msgstr "Total Impuesto Retenido: "
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "<br/>\n"
+"                            <b>Firma Sello</b>"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_account_id
+msgid "Account Receivable or Account Payable of partner"
+msgstr "Cuenta por cobrar o cuenta por pagar de socio"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_date_ret
+msgid "Accounting Date"
+msgstr "Fecha de contabilidad"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Accounting Date of Withhold"
+msgstr "Fecha contable de la retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_move_id
+msgid "Accounting voucher"
+msgstr "Bono contable"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_amount_total_ret
+msgid "Amount Total"
+msgstr "Monto total"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_amount_total_ret
+msgid "Amount Total of withholding"
+msgstr "Importe total de la retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_subtract
+msgid "Amount to subtract from the total amount to withhold, Amount Percentage withhold ..... This subtrahend only applied the first time you perform withhold"
+msgstr "Cantidad a restar de la cantidad total a retener, Cantidad Porcentaje de retención ... Esta subprendimiento solo se aplicó la primera vez que realiza la retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_base_ret
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_currency_base_ret
+msgid "Amount where a withholding is going to be compute from"
+msgstr "Monto a partir del cual se calculará una retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_base
+msgid "Amount where a withholding is going to be computed from"
+msgstr "Monto a partir del cual se computará una retención."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_amount_islr_ret
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_currency_amount_islr_ret
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_amount
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_currency_amount
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_currency_base_amount
+msgid "Amount withheld from the base amount"
+msgstr "Monto retenido del monto base"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_xml_binary
+msgid "Archivo XML"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_automatic_income_wh
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_company_automatic_income_wh
+msgid "Automatic Income Withhold"
+msgstr "Retención automática de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "Base"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_base_ret
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_base_amount
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_base
+msgid "Base Amount"
+msgstr "Cantidad base"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_base_amount
+msgid "Base amount"
+msgstr "Cantidad base"
+
+#. module: l10n_ve_withholding_islr
+#: selection:employee.income.wh,type:0
+msgid "CSV File"
+msgstr "CSV Expediente"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+msgid "Cancel Document of Generate file XML"
+msgstr "Cancelar documento de generar archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Cancel Income Withholding"
+msgstr "Cancelar la retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice.line,state:0
+#: selection:islr.wh.doc,state:0
+#: selection:islr.xml.wh.doc,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_fondos_de_comercio_en_el_pais
+msgid "Cantidades que se paguen por la adquisición de fondos de comercio situados en el país"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_concept_withholdable
+msgid "Check if the concept  withholding is withheld or not."
+msgstr "Compruebe si el concepto de retención se retiene o no."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_partner_islr_withholding_agent
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_users_islr_withholding_agent
+msgid "Check if the partner is an agent for income withholding"
+msgstr "Compruebe si el socio es un agente para la retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_code
+msgid "Code"
+msgstr "Codigo"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_comisiones_venta_inmuebles
+msgid "Comisiones pagadas por la venta de bienes inmuebles"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_res_company
+msgid "Companies"
+msgstr "Compañias"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_company_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_company_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_company_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_company_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_company_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_partner_income_wh_print_company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.report,name:l10n_ve_withholding_islr.action_withholdong_islr_report
+msgid "Comprobante de ISLR"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Compute Income Withholding"
+msgstr "Retención de ingresos de cómputo"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_code
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_concept_code
+msgid "Concept Code"
+msgstr "Código Conceptual"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_product_product_concept_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_product_template_concept_id
+msgid "Concept Income Withholding to apply to the service"
+msgstr "Concepto Retención de ingresos a aplicar al servicio."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_code
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_concept_code
+msgid "Concept code"
+msgstr "Código Conceptual"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,name:l10n_ve_withholding_islr.action_wh_islr_concept
+#: model:ir.ui.menu,name:l10n_ve_withholding_islr.menu_finance_islr_settings
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_product_product_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_islr_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_islr_tree
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_form
+msgid "Concept of Income Withholding"
+msgstr "Concepto de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_account_invoice_line_concept_id
+msgid "Concept of Income Withholding asociate this rate"
+msgstr "Concepto de retención de ingresos asociado a esta tasa."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_account_invoice_line_concept_id
+msgid "Concept of Islr"
+msgstr "Concepto de Islr"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_filter
+msgid "Concept withholding withheld"
+msgstr "Retención de concepto retenida"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "Concepto de Retención"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+msgid "Concepts"
+msgstr "Concepto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+msgid "Confirm"
+msgstr "Confirmación"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+#: selection:islr.wh.doc,state:0
+#: selection:islr.xml.wh.doc,state:0
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+msgid "Confirmed Document of Generate file XML"
+msgstr "Documento Confirmado de Generar Archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Confirmed Income Withholding"
+msgstr "Retención de ingresos confirmada"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_control_number
+msgid "Control Number"
+msgstr "Numéro de control"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_create_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_create_date
+msgid "Created on"
+msgstr "Crear en"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_account_invoice_refund
+msgid "Credit Note"
+msgstr "Nota de crédito"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_cualquie_cosa_menos_sueldos
+msgid "Cualquier otra Comisión distintas a Remuneraciones accesorias de los sueldos, salarios y demás remuneraciones similares"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_raw_base_ut
+msgid "Cumulative UT Amount"
+msgstr "Cantidad acumulada de UT"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_raw_tax_ut
+msgid "Cumulative UT Withheld Tax"
+msgstr "Impuesto retenido de UT acumulado"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_currency_id
+msgid "Currency in which the transaction takes place"
+msgstr "Moneda en la que se realiza la transacción."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,name:l10n_ve_withholding_islr.action_wh_islr_customer
+#: model:ir.ui.menu,name:l10n_ve_withholding_islr.menu_action_wh_islr_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_tree_customers
+msgid "Customer Income Withholding"
+msgstr "Retención de ingresos del cliente"
+
+#. module: l10n_ve_withholding_islr
+#: selection:islr.wh.doc,type:0
+msgid "Customer Invoice"
+msgstr "Factura del cliente"
+
+#. module: l10n_ve_withholding_islr
+#: selection:islr.wh.doc,type:0
+msgid "Customer Invoice Refund"
+msgstr "Reembolso de la factura del cliente"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_canon_arrendamiento_bienes_en_el_pais
+msgid "Cánones de arrendamiento de Bienes Muebles situados en el país"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "DIRECCIÓN FISCAL"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_name
+msgid "Description about statement of income withholding"
+msgstr "Descripción de la declaración de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_name
+msgid "Description of the voucher line"
+msgstr "Descripción de la línea de vales"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_line_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Detail of the Concept of Income Withholding"
+msgstr "Detalle del concepto de retención de ingresos."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_tree
+msgid "Detail of the XML"
+msgstr "Detalle del XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_display_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_report_l10n_ve_withholding_islr_template_wh_islr_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_wh_doc
+msgid "Document Income Withholding"
+msgstr "Documento de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_account_invoice_islr_wh_doc_id
+msgid "Document Income Withholding tax generated from this Invoice"
+msgstr "Documentación de la retención de ingresos del impuesto generado a partir de esta factura."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_islr_wh_doc_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_islr_wh_doc_id
+msgid "Document Retention income tax generated from this bill"
+msgstr "Retención de documentos del impuesto sobre la renta generado por esta factura."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_wh_doc_invoices
+msgid "Document and Invoice Withheld Income"
+msgstr "Ingresos retenidos de documentos y facturas"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+#: selection:islr.wh.doc,state:0
+#: selection:islr.xml.wh.doc,state:0
+msgid "Done"
+msgstr "Hecho"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+msgid "Done Document of Generate file XML"
+msgstr "Hecho el documento de generar archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Done Income Withholding"
+msgstr "Retención de ingresos hecha"
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice.line,state:0
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+#: selection:islr.wh.doc,state:0
+#: selection:islr.xml.wh.doc,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+msgid "Draft Document of Generate file XML"
+msgstr "Borrador de Documento de Generar Archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Draft Income Withholding"
+msgstr "Proyecto de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: selection:islr.xml.wh.line,type:0
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+msgid "Employee Withholding Lines"
+msgstr "Líneas de retención de empleados"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/employee_income_wh.py:231
+#, python-format
+msgid "Empty or Invalid XML File (you should check both company vat and period too)"
+msgstr "Archivo XML vacío o no válido (también debe verificar el depósito y el período de la empresa)"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_exhibicion_de_peliculas
+msgid "Enriquecimientos netos de exhibición de películas, cine o la televisión"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_primas_seguros_reaseguros
+msgid "Enriquecimientos netos derivados de las primas de seguros y reaseguros"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_servicios_tecnologicos
+msgid "Enriquecimientos obtenidos por Servicios Tecnológicos utilizados en el país o cedidos a terceros"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_regalias
+msgid "Enriquecimientos obtenidos por concepto de regalías y demás participaciones analogas"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_asistencia_tecnica
+msgid "Enriquecimientos obtenidos por las Remuneraciones, Honorarios y Pagos análogos por Asistencia Técnica"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:301
+#, python-format
+msgid "Error !"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1303
+#, python-format
+msgid "Error on Human Process"
+msgstr "Error en el proceso humano"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/employee_income_wh.py:64
+#: code:addons/l10n_ve_withholding_islr/wizard/employee_income_wh.py:235
+#, python-format
+msgid "Error!"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: constraint:islr.wh.doc.invoices:0
+msgid "Error! The invoice must be in Open State."
+msgstr "¡Error! La factura debe estar en estado abierto."
+
+#. module: l10n_ve_withholding_islr
+#: constraint:islr.wh.doc:0
+msgid "Error! The partner must be income withholding agent."
+msgstr "¡Error! El socio debe ser agente de retención de ingresos."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_form
+msgid "Export in XML data"
+msgstr "Exportar en datos XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "FECHA"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "Fecha Factura"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_type
+msgid "File Type"
+msgstr "Tipo de archivo"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_name
+msgid "File name"
+msgstr "Nombre del archivo"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_fiscalyear_id
+msgid "Fiscal Year"
+msgstr "Año fiscal"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_historical_data_fiscalyear_id
+msgid "Fiscal Year to applicable to this cumulation"
+msgstr "Año fiscal aplicable a esta acumulación."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_fiscalyear_id
+msgid "Fiscalyear"
+msgstr "Año fiscal"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_currency_base_ret
+msgid "Foreign Currency Base Amount"
+msgstr "Monto base en moneda extranjera"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_currency_base_amount
+msgid "Foreign Currency Base amount"
+msgstr "Monto base en moneda extranjera"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_currency_amount_islr_ret
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_currency_amount
+msgid "Foreign Currency Withheld Amount"
+msgstr "Moneda retenida Monto retenido"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_juegos_y_apuestas
+msgid "Ganancias obtenidas por juegos y apuestas"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_loterias_e_hipodromos
+msgid "Ganancias obtenidas por premios de Loterías y de Hipódromos"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_xml_wh_doc
+msgid "Generate XML"
+msgstr "Generar XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_xml_wh_line
+msgid "Generate XML Lines"
+msgstr "Generar líneas XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,name:l10n_ve_withholding_islr.action_xml_islr
+#: model:ir.ui.menu,name:l10n_ve_withholding_islr.menu_action_xml_islr
+msgid "Generate file XML"
+msgstr "Generar archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Group By..."
+msgstr "Agrupar por"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_hprof_mancomunados_no_mercantiles
+msgid "Honorarios Profesionales Mancomunados No Mercantiles"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_hprof_no_mercantiles
+msgid "Honorarios Profesionales No Mercantiles"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_hprof_jinetes_entrenadores_preparadores
+msgid "Honorarios Profesionales Pagados a Jinetes, Veterinarios, Preparadores o Entrenadores"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_hprof_sin_relacion_otras_instituciones
+msgid "Honorarios Profesionales pagados por Clínicas, Hospitales, Centros de Salud, Bufetes, Escritorios, Oficinas, Colegios Profesionales u otra Institución Profesionales No Mercantiles sin Relación de Dependencia"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_report_l10n_ve_withholding_islr_template_wh_islr_id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_partner_islr_wh_historical_data_ids
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_users_islr_wh_historical_data_ids
+msgid "ISLR Historical Data"
+msgstr "Datos históricos de ISLR"
+
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "ISLR Monto Retenido"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_islr_xml_wh_doc
+msgid "ISLR XML Document"
+msgstr "Documento XML ISLR"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_xml_wh.py:230
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+#, python-format
+msgid "Import XML employee"
+msgstr "Importar empleado XML"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1521
+#, python-format
+msgid "Impossible income withholding, because the partner '%s' country has not been defined in the address!"
+msgstr "Retención de ingresos imposible, porque el país socio '% s' no se ha definido en la dirección."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1396
+#, python-format
+msgid "Impossible income withholding, because the partner '%s' has not vat associated!"
+msgstr "Imposible retención de ingresos, porque el socio '% s' no se ha asociado al deposito!."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.res_partner_wh_islr
+msgid "Income Withholding"
+msgstr "Retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_partner_islr_withholding_agent
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_users_islr_withholding_agent
+msgid "Income Withholding Agent?"
+msgstr "¿Agente de retención de ingresos?"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_amount_total_ret
+msgid "Income Withholding Amount Total"
+msgstr "Total de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_wh_concept
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_concept_ids
+msgid "Income Withholding Concept"
+msgstr "Concepto de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Income Withholding Concepts"
+msgstr "Conceptos de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_account_invoice_islr_wh_doc_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_islr_wh_doc_line_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_islr_wh_doc_line_id
+msgid "Income Withholding Document"
+msgstr "Documento de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,name:l10n_ve_withholding_islr.action_wh_islr_rates
+#: model:ir.ui.menu,name:l10n_ve_withholding_islr.menu_finance_islr_rates
+msgid "Income Withholding Rates"
+msgstr "Tasas de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/income_wh_change_concept.py:52
+#, python-format
+msgid "Income Withholding from this invoice must be cancelled prior to change concept"
+msgstr "La retención de ingresos de esta factura debe cancelarse antes de cambiar el concepto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_islr_xml_wh_doc
+msgid "Income tax XML Doc"
+msgstr "Impuesto sobre la renta XML Doc."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_account_invoice_line_apply_wh
+msgid "Indicates whether a line has been retained or not, to accumulate the amount to withhold next month, according to the lines that have not been retained."
+msgstr "Indica si una línea se ha retenido o no, para acumular el monto a retener el próximo mes, de acuerdo con las líneas que no se han retenido."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_nature
+msgid "Indicates whether a person is nature or legal"
+msgstr "Indica si una persona es natural o legal."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_residence
+msgid "Indicates whether a person is resident, compared with the direction of the Company"
+msgstr "Indica si una persona es residente, en comparación con la dirección de la Compañía"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_partner_spn
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_users_spn
+msgid "Indicates whether refers to a society of natural persons"
+msgstr "Indica si se refiere a una sociedad de personas físicas."
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_rh_concept_interes_capital_invertido_en_renta
+msgid "Intereses de Capitales tomados en préstamo e invertidos en la producción de renta"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_intereses_por_personas_juridicas_o_comunidades
+msgid "Intereses pagados por las personas jurídicas o comunidades a cualquier otras persona natural, jurídica o comunidad"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_int_prestamos_exterior
+msgid "Intereses provenientes de préstamos y otros créditos pagaderos a instituciones financieras constituidas en el exterior y no domiciliadas en el país"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:884
+#, python-format
+msgid "Invalid Procedure!"
+msgstr "Procedimiento inválido!"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:846
+#, python-format
+msgid "Invalid Procedure!!"
+msgstr "Procedimiento inválido!!"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:248
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1395
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1520
+#: code:addons/l10n_ve_withholding_islr/models/product.py:65
+#, python-format
+msgid "Invalid action !"
+msgstr "Acción no válida !"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:45
+#, python-format
+msgid "Concept of Islr"
+msgstr "Concepto de Islr"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+msgid "Invalidate"
+msgstr "Invalidar"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_account_invoice
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_invoice_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_invoice_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_account_invoice_id
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.account_invoice_wh_islr_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.account_invoice_wh_islr_supplier
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_form
+#: selection:islr.xml.wh.line,type:0
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_account_invoice_line
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_account_invoice_line_id
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_invoice_number
+msgid "Invoice Number"
+msgstr "Número de factura"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+msgid "Invoice Withholding Lines"
+msgstr "Líneas de retención de facturas"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_account_invoice_line_id
+msgid "Invoice line to Withhold"
+msgstr "Línea de factura a retener"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_account_invoice_id
+msgid "Invoice to Withhold"
+msgstr "Factura para Retener"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_invoice_id
+msgid "Invoice to withhold"
+msgstr "Factura para retener"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_islr_wh_doc_id
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Invoices to Be Withheld"
+msgstr "Facturas a retener"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:308
+#, python-format
+msgid "Invoices with Missing Withheld Taxes!"
+msgstr "Facturas con falta de impuestos retenidos!"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_partner_spn
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_users_spn
+msgid "Is it a society of natural persons?"
+msgstr "¿Es una sociedad de personas naturales?"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_partner_islr_exempt
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_users_islr_exempt
+msgid "Is it exempt from income withholding?"
+msgstr "¿Está exento de retención de ingresos?"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_journal_id
+msgid "Journal"
+msgstr "diario"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_move_id
+msgid "Journal Entry"
+msgstr "Entrada de diario"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_journal_id
+msgid "Journal where accounting entries are recorded"
+msgstr "Diario donde se registran los asientos contables."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_date_ret
+msgid "Keep empty to use the current date"
+msgstr "Mantener vacío para usar la fecha actual."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print___last_update
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_report_l10n_ve_withholding_islr_template_wh_islr___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización para"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_write_date
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_write_date
+msgid "Last Updated on"
+msgstr "Última actualización para"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_line_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_line_tree
+msgid "Lines Income Withholding"
+msgstr "Líneas de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_tree
+msgid "Lines Withholding for XML"
+msgstr "Retención de líneas para XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_wh_doc_line
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_wh_historical_data
+msgid "Lines of Document Income Withholding"
+msgstr "Líneas de documentos de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+msgid "Load Concepts"
+msgstr "Conceptos de carga"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_minimum
+msgid "Min. Amount"
+msgstr "Min. Cantidad"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_minimum
+msgid "Minimum amount, from which it will determine whether you withholded"
+msgstr "Cantidad mínima, a partir de la cual se determinará si usted retuvo"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:352
+#, python-format
+msgid "Missing Account in Tax!"
+msgstr "Falta la cuenta en el impuesto!"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1444
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1503
+#, python-format
+msgid "Missing Configuration"
+msgstr "Falta configuración"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:560
+#, python-format
+msgid "Missing Configuration !"
+msgstr "Falta configuración!"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/employee_income_wh.py:60
+#, python-format
+msgid "Missing Fields in CSV File.\n"
+"File shall bear following fields:\n"
+""
+msgstr "
+Campos que faltan en el archivo CSV. \ N"
+"El archivo deberá contener los siguientes campos: \ n"
+""
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:293
+#, python-format
+msgid "Missing Invoices!!!"
+msgstr "Facturas que faltan !!!"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/product.py:66
+#, python-format
+msgid "Must create the concept of income withholding"
+msgstr "Debe crearse el concepto de retención de ingresos."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_filter
+msgid "My Income Withholding"
+msgstr "Mi retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_no_apply_withholding
+msgid "NO APLICA RETENCION"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/partner_income_wh_print.py:79
+#, python-format
+msgid "NO INVOICE ADDRESS DEFINED"
+msgstr "NINGUNA DIRECCIÓN DE FACTURA DEFINIDA"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "NOMBRE O RAZON SOCIAL"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_concept_name
+msgid "Name of Withholding Concept, Example: Honorarios Profesionales, Comisiones a..."
+msgstr "Nombre del concepto de retención, ejemplo:Honorarios Profesionales, Comisiones a..."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_name
+msgid "Name retention rate of withhold concept"
+msgstr "Tasa de retención de nombre del concepto de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_nature
+msgid "Nature"
+msgstr "Naturaleza"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1441
+#, python-format
+msgid "No Available Rates for \"Persona %s %s\" in Concept: \"%s\""
+msgstr "No hay tarifas disponibles para \"Persona %s %s\" en Concepto: \"%s\""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/partner_income_wh_print.py:101
+#, python-format
+msgid "No Income Withholding for %s"
+msgstr "Sin retención de ingresos para% s"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:561
+#, python-format
+msgid "No Sequence configured for Supplier Income Withholding"
+msgstr "Sin secuencia configurada para la retención de ingresos del proveedor"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/partner_income_wh_print.py:99
+#, python-format
+msgid "No Withholdings"
+msgstr "No hay retenciones"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:248
+#, python-format
+msgid "No se ha encontrado el numero de secuencia!"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_xml_filename
+msgid "Nombre Archivo XML"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice,status:0
+msgid "Not exceed the rate,xml Line generated"
+msgstr "No exceder la tasa, xml Línea generada."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/employee_income_wh.py:230
+#, python-format
+msgid "Not imported data:\n"
+""
+msgstr "Datos no importados: \ n"
+""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_invoice_number
+msgid "Number of invoice"
+msgstr "Número de factura"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "N° COMPROBANTE"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "N° Control"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "N° de Factura"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice.line,state:0
+msgid "Open"
+msgstr "Abierto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_date_ret
+msgid "Operation Date"
+msgstr "Fecha de operación"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Other Information"
+msgstr "Otra información"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+msgid "Other information"
+msgstr "Otra información"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "PERIODO FISCAL"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pago_contratistas
+msgid "Pagos a Empresas Contratistas o Subcontratistas domiciliadas o no en el país, por la ejecución de obras o de la prestación de servicios en base a valuaciones y ordenes de pago"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pagos_propietarios_animales_carrera_premios
+msgid "Pagos a Propietarios de Animales de Carrera por concepto de Premios"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pago_arrendadores_en_el_pais
+msgid "Pagos a los arrendadores de los bienes inmuebles situados en el país"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_tarjetas_de_credito_cualquier_concepto
+msgid "Pagos de las Empresas Emisoras de Tarjetas de Credito o Consumo por la venta de bienes y servicios o cualquier otro concepto"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_tarjetas_de_credito_gasolina
+msgid "Pagos de las Empresas Emisoras de Tarjetas de Crédito por la venta de Gasolina en las Estaciones de Servicio"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_seguros_prestacion
+msgid "Pagos de las Empresas de Seguro, las sociedades de corretaje de seguro y las empresas de reaseguros por la prestación de los servicios que le son propios"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pagos_seguros_a_clinicas
+msgid "Pagos de las Empresas de Seguros a Clínicas, Hospitales y/o Centros de Salud por la Atención Médica a sus Asegurados"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pago_seguros_reparacion_damage
+msgid "Pagos de las Empresas de seguros a sus contratistas por la reparación de daños sufridos por los asegurados"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pagos_administradores_en_el_pais
+msgid "Pagos de los Administradores de bienes Inmuebles a los arrendadores de los bienes inmuebles situados en el pais"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pagos_transportes_y_fletes
+msgid "Pagos por Gastos de Transporte conformados por Fletes"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pub_emisoras
+msgid "Pagos por Servicios de Publicidad Propaganda y la Cesión de la Venta de los Espacios para tales fines a Emisoras de Radio"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_pagos_de_servicios_publicitarios
+msgid "Pagos por Servicios de Publicidad y Propaganda y la Cesión de la Venta de Espacios para tales fines"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice.line,state:0
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_partner_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_partner_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_partner_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_partner_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_partner_income_wh_print_partner_id
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Partner"
+msgstr "Compañero"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_partner_income_wh_print
+msgid "Partner Income Withholding Print"
+msgstr "Retención de ingresos del socio Imprimir"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_partner_vat
+msgid "Partner VAT"
+msgstr "Socio IVA"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_historical_data_partner_id
+msgid "Partner for this historical data"
+msgstr "Socio para estos datos históricos."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_partner_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_partner_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_partner_id
+msgid "Partner object of withholding"
+msgstr "Socio objeto de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_partner_income_wh_print_partner_id
+msgid "Partner to be use in the report."
+msgstr "Socio para ser utilizado en el informe."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_wh_perc
+msgid "Percentage Amount"
+msgstr "Porcentaje de cantidad"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_base
+msgid "Percentage of the amount on which to apply the withholding"
+msgstr "Porcentaje del importe sobre el que se aplicará la retención."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_rate_id
+msgid "Person Type"
+msgstr "Tipo de persona"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_rate_id
+msgid "Person type"
+msgstr "Tipo de persona"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:1304
+#, python-format
+msgid "Please fill the Invoice number to continue, without this number will be impossible to compute the withholding"
+msgstr "Rellene el número de factura para continuar, sin este número será imposible calcular la retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+msgid "Please, if there are no concepts loaded, Click on 'Load concepts'"
+msgstr "Por favor, si no hay conceptos cargados, haga clic en 'Cargar conceptos'"
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice,status:0
+msgid "Processed withholding, xml Line generated"
+msgstr "Retención procesada, xml Línea generada"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_res_company_propagate_invoice_date_to_income_withholding
+msgid "Propagate Invoice Date to Income Withholding"
+msgstr "Propagar fecha de factura a la retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_company_propagate_invoice_date_to_income_withholding
+msgid "Propagate Invoice Date to Income Withholding. By default is in False."
+msgstr "Propagar fecha de factura a la retención de ingresos. Por defecto está en falso."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_property_retencion_islr_payable
+msgid "Purchase account withhold income"
+msgstr "Cuenta de compra retener ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "RIF"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_rate_ids
+msgid "Rate"
+msgstr "Tarifa"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_rate2
+msgid "Rate 2"
+msgstr "Tarifa 2"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_rate2
+msgid "Rate Used for Foreign Entities"
+msgstr "Tarifa utilizada para entidades extranjeras"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_rates
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_islr_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_rate_form
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_rate_tree
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_form
+msgid "Rates"
+msgstr "Tarifa"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_control_number
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_residence
+msgid "Residence"
+msgstr "Residencia"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_property_retencion_islr_receivable
+msgid "Sale account withhold income"
+msgstr "Cuenta de venta retener ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_user_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_user_id
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+msgid "Salesman"
+msgstr "Vendedor"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_filter
+msgid "Search Concept of Income Withholding"
+msgstr "Concepto de búsqueda de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+msgid "Search File XML"
+msgstr "Buscar archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "Search Income Withholding"
+msgstr "Búsqueda de ingresos de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Set to draft"
+msgstr "Establecer como borrador"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_account_invoice_line_state
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_state
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_state
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_generate_xml_filter
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_customer
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_filter_suppliers
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_account_invoice_status
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_subtract
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_subtract
+msgid "Subtract"
+msgstr "Sustraer"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_sustract
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_sustract
+msgid "Subtrahend"
+msgstr "Sustituir"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_subtract
+msgid "Subtrahend in Tax Units"
+msgstr "Sustituir en unidades tributarias"
+
+#. module: l10n_ve_withholding_islr
+#: model:islr.wh.concept,name:l10n_ve_withholding_islr.islr_wh_concept_sueldos_y_salarios
+msgid "Sueldos y Salarios"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,name:l10n_ve_withholding_islr.action_wh_islr_supplier
+#: model:ir.ui.menu,name:l10n_ve_withholding_islr.menu_action_wh_islr_supplier
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_tree_suppliers
+msgid "Supplier Income Withholding"
+msgstr "Retención de ingresos del proveedor"
+
+#. module: l10n_ve_withholding_islr
+#: selection:islr.wh.doc,type:0
+msgid "Supplier Invoice"
+msgstr "Factura del proveedor"
+
+#. module: l10n_ve_withholding_islr
+#: selection:islr.wh.doc,type:0
+msgid "Supplier Invoice Refund"
+msgstr "Reembolso de la factura del proveedor"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_supplier_invoice_number
+msgid "Supplier inv. #"
+msgstr "Proveedor inv. #"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_form
+msgid "Supplier to Withhold"
+msgstr "Proveedor a Retener"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.template_wh_islr
+msgid "Sustraendo"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:353
+#, python-format
+msgid "Tax [%s] has missing account. Please, fill the missing fields"
+msgstr "El impuesto [% s] tiene una cuenta que falta. Por favor, rellene los campos que faltan"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:302
+#, python-format
+msgid "The Document you are trying to refund has a income withholding \"%s\" which is not yet validated!"
+msgstr "El documento que está intentando reembolsar tiene una retención de ingresos \ "% s \" que aún no se ha validado."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:880
+#, python-format
+msgid "The Following ISLR XML DOC should be set to Draft before Cancelling this Document\n"
+"\n"
+""
+msgstr "El siguiente ISLR XML DOC debe configurarse en Borrador antes de cancelar este documento \ n"
+"\norte"
+""
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:304
+#, python-format
+msgid "The Following Invoices Have not yet been withheld:\n"
+"\n"
+""
+msgstr "Las siguientes facturas aún no se han retenido: \ n"
+"\norte"
+""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_wh_perc
+msgid "The percentage to apply to taxable withold income throw the amount to withhold"
+msgstr "El porcentaje que se aplica a los ingresos gravables gravables arroja la cantidad a retener"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_supplier_invoice_number
+msgid "The reference of this invoice as provided by the supplier."
+msgstr "La referencia de esta factura según lo previsto por el proveedor."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:847
+#, python-format
+msgid "The withholding document needs to be in cancel state to be deleted."
+msgstr "El documento de retención debe estar en estado de cancelación para ser eliminado."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:71
+#: code:addons/l10n_ve_withholding_islr/wizard/income_wh_change_concept.py:40
+#, python-format
+msgid "This Button is meant to be used with Invoices in \"Open State\""
+msgstr "Este botón está diseñado para usarse con facturas en \"Estado abierto\""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_concept_property_retencion_islr_receivable
+msgid "This account will be used as the account where the withheld amounts shall be charged in (Sale) of income tax"
+msgstr "Esta cuenta se utilizará como la cuenta donde los importes retenidos se cargarán en (Venta) del impuesto sobre la renta"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_concept_property_retencion_islr_payable
+msgid "This account will be used as the account where the withheld amounts shall be charged in full (Purchase) of income tax for this concept"
+msgstr "Esta cuenta se utilizará como la cuenta donde los importes retenidos se cargarán en su totalidad (Compra) del impuesto sobre la renta por este concepto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_amount_total_ret
+msgid "Total Withheld amount"
+msgstr "Importe total retenido"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_amount_total_base
+msgid "Total without taxes"
+msgstr "Total sin impuestos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_type
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_raw_base_ut
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_raw_base_ut
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_raw_base_ut
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_historical_data_raw_base_ut
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_raw_base_ut
+msgid "UT Amount"
+msgstr "Cantidad de UT"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_raw_tax_ut
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_raw_tax_ut
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_raw_tax_ut
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_historical_data_raw_tax_ut
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_raw_tax_ut
+msgid "UT Withheld Tax"
+msgstr "Impuesto retenido de UT"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_user_id
+msgid "User Creating Document"
+msgstr "Usuario que crea el documento"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_partner_vat
+msgid "VAT"
+msgstr "RIF"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_form
+msgid "Validate XML"
+msgstr "Validar XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_partner_islr_wh_historical_data_ids
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_users_islr_wh_historical_data_ids
+msgid "Values to be used when computing Rate 2"
+msgstr "Valores a utilizar en el cálculo de la tasa 2."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_concept_user_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_user_id
+msgid "Vendor user"
+msgstr "Usuario vendedor"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Verifique los datos antes de realizar esta operacion"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_date_uid
+msgid "Voucher date"
+msgstr "Fecha del vale"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_name
+msgid "Voucher description"
+msgstr "Descripción del vale"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_code
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_number
+msgid "Voucher reference"
+msgstr "referencia del vale"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_state
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_state
+msgid "Voucher state"
+msgstr "estado del vale"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_type
+msgid "Voucher type"
+msgstr "tipo de vale"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/invoice.py:70
+#: code:addons/l10n_ve_withholding_islr/wizard/income_wh_change_concept.py:33
+#: code:addons/l10n_ve_withholding_islr/wizard/income_wh_change_concept.py:39
+#: code:addons/l10n_ve_withholding_islr/wizard/income_wh_change_concept.py:51
+#, python-format
+msgid "Warning!"
+msgstr "¡Advertencia!"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_xml_islr_line_tree
+msgid "Wh total"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_company_automatic_income_wh
+msgid "When True, Supplier Income Withholding will be check and validate automatically"
+msgstr "Cuando sea verdadero, la retención de ingresos del proveedor se verificará y validará automáticamente"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_automatic_income_wh
+msgid "When the whole process will be check automatically, and if everything is Ok, will be set to done"
+msgstr "Cuando todo el proceso se verifique automáticamente, y si todo está bien, se configurará como hecho"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_partner_islr_exempt
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_res_users_islr_exempt
+msgid "Whether the individual is exempt from income withholding"
+msgstr "Si el individuo está exento de la retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_account_invoice_form_concept_islr
+msgid "While invoice is open and Income Wh is still Draft it is possible to change Concepts"
+msgstr "Mientras que la factura está abierta y los ingresos Wh aún están en borrador, es posible cambiar los conceptos."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,help:l10n_ve_withholding_islr.action_wh_islr_concept
+msgid "With \"Concept of Income Withholding\" you can create and manage the concept of wittholding income. For each concept is to create and manage rates associated."
+msgstr "Con el \"Concepto de retención de ingresos\", puede crear y administrar el concepto de ingresos. Para cada concepto es crear y gestionar las tarifas asociadas."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,help:l10n_ve_withholding_islr.action_wh_islr_customer
+msgid "With Customer Withholding  you can create and manage document withholding issued to your customers. Odoo can also generate document withholding automatically from invoices.For retention must add the invoices, process them and then validate the document."
+msgstr "Con la Retención de clientes, puede crear y administrar la retención de documentos emitida a sus clientes. Odoo también puede generar documentos retenidos automáticamente de las facturas. Para la retención, debe agregar las facturas, procesarlas y luego validar el documento."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,help:l10n_ve_withholding_islr.action_wh_islr_supplier
+msgid "With Supplier Withholding  you can manage document withholding issued to your suppliers. Odoo can Just generate document withholding for purchase process automatically from invoices. To generate the Income Withholding and all accounting process you must confirm and validate the document withholding."
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.actions.act_window,help:l10n_ve_withholding_islr.action_xml_islr
+msgid "With this option you can create and manage the generation of file xml, required monthly for the SENIAT for special agent of withhold income"
+msgstr "Con esta opción, puede crear y administrar la generación del archivo xml, requerido mensualmente para el SENIAT como agente especial de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_account_invoice_line_apply_wh
+msgid "Withheld"
+msgstr "Retenido"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_amount_islr_ret
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_amount
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_wh
+msgid "Withheld Amount"
+msgstr "Cantidad retenida"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_iwdi_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_islr_wh_doc_inv_id
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_form_customers
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_islr_form_suppliers
+msgid "Withheld Invoice"
+msgstr "Cantidad retenida"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoice_ids
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_iwdi_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_islr_wh_doc_inv_id
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_islr_wh_doc_invoices_tree_
+msgid "Withheld Invoices"
+msgstr "Facturas retenidas"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_wh
+msgid "Withheld amount to partner"
+msgstr "Cantidad retenida a socio"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_invoice_id
+msgid "Withheld invoice"
+msgstr "Cantidad retenida"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_withholdable
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.view_wh_concept_filter
+msgid "Withhold"
+msgstr "Retenido"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_concept_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_product_product_concept_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_product_template_concept_id
+msgid "Withhold  Concept"
+msgstr "Retener concepto"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_date_uid
+msgid "Withhold Date"
+msgstr "Fecha de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_islr_wh_doc_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_islr_wh_doc_id
+msgid "Withhold Document"
+msgstr "Retener documento"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_number
+msgid "Withhold Number"
+msgstr "Retener número"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_rates_concept_id
+msgid "Withhold concept associated with this rate"
+msgstr "Retener el concepto asociado a esta tasa."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_retention_rate
+msgid "Withhold rate has been applied to the invoice"
+msgstr "La tasa de retención ha sido aplicada a la factura."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_concept_name
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_concept_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_historical_data_concept_id
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_concept_id
+msgid "Withholding Concept"
+msgstr "Concepto de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_concept_rate_ids
+msgid "Withholding Concept rate"
+msgstr "Tasa de concepto de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_iwdl_ids
+msgid "Withholding Concepts"
+msgstr "Conceptos de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.ui.view,arch_db:l10n_ve_withholding_islr.res_company_wh_islr
+msgid "Withholding ISLR"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_islr_xml_id
+msgid "Withholding Lines"
+msgstr "Retención de ISLR"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_retencion_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_retention_rate
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_line_porcent_rete
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_retencion_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_porcent_rete
+msgid "Withholding Rate"
+msgstr "Tasa de retención"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_historical_data_concept_id
+msgid "Withholding concept associated with this historical data"
+msgstr "Concepto de retención asociado a estos datos históricos."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_concept_id
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_line_concept_id
+msgid "Withholding concept associated with this rate"
+msgstr "Concepto de retención asociado a esta tasa."
+
+#. module: l10n_ve_withholding_islr
+#: selection:account.invoice,status:0
+msgid "Withholding no processed"
+msgstr "Retención no procesada"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_rates_base
+msgid "Without Tax Amount"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_amount_total_base
+msgid "Without Tax Amount Total"
+msgstr "Sin cantidad de impuestos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_employee_xml_ids
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_invoice_xml_ids
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_xml_wh_doc_xml_ids
+msgid "XML Document Lines"
+msgstr "Líneas de documentos XML"
+
+#. module: l10n_ve_withholding_islr
+#: selection:employee.income.wh,type:0
+msgid "XML File"
+msgstr "Archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_account_invoice_line_wh_xml_id
+msgid "XML Id"
+msgstr "XML Id"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_islr_wh_doc_line_xml_ids
+msgid "XML Lines"
+msgstr "Lineas XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,field_description:l10n_ve_withholding_islr.field_employee_income_wh_obj_file
+msgid "XML file"
+msgstr "Archivo XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_employee_income_wh_obj_file
+msgid "XML file name with employee income withholding data"
+msgstr "Nombre de archivo XML con datos de retención de ingresos de empleados"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_employee_xml_ids
+msgid "XML withhold employee line id"
+msgstr "ID de línea de empleado de retención XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_line_xml_ids
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_invoice_xml_ids
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_xml_wh_doc_xml_ids
+msgid "XML withhold invoice line id"
+msgstr "ID de línea de factura de retención XML"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_account_invoice_line_wh_xml_id
+msgid "XML withhold line id"
+msgstr "ID de línea de retención XML"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/wizard/income_wh_change_concept.py:33
+#, python-format
+msgid "You have to tick the \"Are you Sure\" Check"
+msgstr "Tienes que marcar la casilla \"¿Estás seguro?\"Check"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/report/wh_islr.py:96
+#, python-format
+msgid "You need date."
+msgstr "Necesitas cita"
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/report/wh_islr.py:43
+#, python-format
+msgid "You need select a data to print."
+msgstr "Necesitas seleccionar un dato para imprimir."
+
+#. module: l10n_ve_withholding_islr
+#: code:addons/l10n_ve_withholding_islr/models/islr_wh_doc.py:294
+#, python-format
+msgid "You need to Add Invoices to Withhold Income Taxes!!!"
+msgstr "Usted necesita agregar facturas para retener impuestos sobre la renta!"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_concept_ids
+msgid "concept of income withholding"
+msgstr "concepto de retención de ingresos"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_employee_income_wh
+msgid "employee.income.wh"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoice_ids
+msgid "invoices to be withheld"
+msgstr "Facturas a retener"
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_islr_wh_change_concept
+msgid "islr.wh.change.concept"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_islr_wh_doc_id
+msgid "refers to document income withholding tax generated in the bill"
+msgstr "Se refiere al documento de retención de ingresos del impuesto generado en la factura."
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_report_l10n_ve_withholding_islr_template_wh_islr
+msgid "report.l10n_ve_withholding_islr.template_wh_islr"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model,name:l10n_ve_withholding_islr.model_wh_islr_config
+msgid "wh.islr.config"
+msgstr ""
+
+#. module: l10n_ve_withholding_islr
+#: model:ir.model.fields,help:l10n_ve_withholding_islr.field_islr_wh_doc_invoices_iwdl_ids
+msgid "withholding concepts of this withheld invoice"
+msgstr "Conceptos de retención de esta factura retenida."
+
+
+

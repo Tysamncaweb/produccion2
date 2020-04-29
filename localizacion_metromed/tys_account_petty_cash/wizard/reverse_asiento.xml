@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="wizard_reverse_asiento_form">
+            <field name="name">reverse.invoice petty cash</field>
+            <field name="model">reverse.invoice.petty.cash</field>
+            <field name="arch" type="xml">
+                <form string="Modificar factura">
+                    <group colspan="2" col="2" >
+                        <field name="date" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="asiento_de_reversion" string="Confirmar" type="object" class="oe_highlight"/>
+                        <button special="cancel" string="Cancelar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="reverse_asiento" model="ir.actions.act_window">
+            <field name="name">Modificar Factura</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reverse.invoice.petty.cash</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

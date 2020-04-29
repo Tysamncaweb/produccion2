@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_employee_family_form" model="ir.ui.view">
+            <field name="name">hr.employee.family</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='hr_settings']" position="before">
+                    <!-- Add your fields or attributes here -->
+                    <page string="Datos Familiares">
+		                      <h1>Datos Familiares</h1>
+			                  <h3>Hijos</h3>
+						      <field name="son"/>
+			                  <newline/>
+		                      <field name="son_ids" nolabel="1" attrs="{'invisible': [('son', '!=', True)]}"/>
+                            <h3>                         </h3>
+                            <label for="total_son" string="TOTAL HIJOS"/>
+                            <field name="total_son" readonly="True" nolabel="1"/>
+
+						       <h3>Madre</h3>
+								<group colspan="4">
+			                    	<group cols="2">
+										 <label for="mother_name" string="Nombre"/>
+										 <field name="mother_name" nolabel="1"/>
+										 <label for="mother_ci" string="Cedula de Identidad"/>
+										 <div>
+					                        <div class="address_format">
+					                            <field name="mother_nationality" style="width: 25%%" nolabel="1"/>
+					                            <field name="mother_ci" nolabel="1" class="oe_no_button" placeholder="ej.19763505" style="width: 65%%"/>
+					                        </div>
+                                             <h3>       </h3>
+
+                                         </div>
+                                        <label for="direccion_mom" string="Dirección"/>
+                                        <field name="direccion_mom" nolabel="1"  attrs="{'required': [('mother_live', '!=', False)] }"/>
+							         </group>
+							         <group cols="2">
+										 <label for="mother_date" string="Fecha de Nacimiento"/>
+							         	 <field name="mother_date"  nolabel="1"/>
+										 <label for="mother_age" string="Edad"/>
+								         <field name="mother_age" nolabel="1"/>
+                                         <field name="telf_hab_mother" placeholder="Ej.0212-7568081"/>
+                                         <field name="telf_mov_mother" placeholder="Ej.0416-4562123"/>
+										 <label for="mother_live" string="Vive?"/>
+								         <field name="mother_live" nolabel="1"/>
+
+						        	 </group>
+			                    </group>
+			                    <h3>Padre</h3>
+			                    <group colspan="4">
+			                    	<group cols="2">
+										 <label for="father_name" string="Nombre"/>
+										 <field name="father_name" nolabel="1"/>
+										 <label for="father_ci" string="Cedula de Identidad"/>
+										 <div>
+					                        <div class="address_format">
+					                            <field name="father_nationality" style="width: 25%%" nolabel="1"/>
+					                            <field name="father_ci" nolabel="1" class="oe_no_button" placeholder="ej.19763505" style="width: 65%%"/>
+
+					                        </div>
+                                             <h3>       </h3>
+				                    	 </div>
+                                         <label for="direccion_father" string="Dirección"/>
+                                         <field name="direccion_father" nolabel="1" attrs="{'required': [('father_live', '!=', False)] }"/>
+									</group>
+									<group cols="2">
+										 <label for="father_date" string="Fecha de Nacimiento"/>
+								         <field name="father_date" nolabel="1"/>
+										 <label for="father_age" string="Edad"/>
+								         <field name="father_age" nolabel="1"/>
+                                         <field name="telf_hab_father"  placeholder="Ej.0212-7568081"/>
+                                        <field name="telf_mov_father" placeholder="Ej.0416-4562123" />
+										 <label for="father_live" string="Vive?"/>
+								         <field name="father_live" nolabel="1"/>
+									</group>
+			                    </group>
+			                    <h3>Conyugue</h3>
+			                    <field name="spouse"/>
+			                    <group colspan="4" attrs="{'invisible': [('spouse', '!=', True)]}">
+			                    	<group cols="2">
+										<label for="spouse_name" string="Nombre"/>
+					                    <field name="spouse_name" nolabel="1"/>
+					                    <label for="spouse_ci" string="Cedula de Identidad"/>
+										 <div>
+					                        <div class="address_format">
+					                            <field name="spouse_nationality" style="width: 25%%" nolabel="1"/>
+					                            <field name="spouse_ci" nolabel="1" class="oe_no_button" placeholder="ej.19763505" style="width: 65%%"/>
+					                        </div>
+                                             <h3>       </h3>
+				                    	 </div>
+                                        <label for="direccion_spouse" string="Dirección"/>
+                                        <field name="direccion_spouse" nolabel="1"  attrs="{'required': [('spouse', '!=', False)] }"/>
+									</group>
+									<group cols="2">
+										<label for="father_date" string="Fecha de Nacimiento"/>
+							         	<field name="spouse_date" nolabel="1"/>
+										<label for="spouse_age" string="Edad"/>
+								        <field name="spouse_age" nolabel="1"/>
+                                        <field name="telf_mov_spouse" placeholder="Ej.0416-4562123" />
+                                        <field name="telf_hab_spouse"  placeholder="Ej.0212-7568081"/>
+									</group>
+			                    </group>
+			              	</page>
+                </xpath>
+            </field>
+        </record>
+        <record id="hr_son_form" model="ir.ui.view">
+            <field name="name">hr.son</field>
+            <field name="model">hr.son</field>
+            <field name="arch" type="xml">
+                <form string="hols">
+					<group cols="4">
+						<group cols="3">
+                    		<label for="name_sons" string="Nombre"/>
+                    		<field name="name_sons" required="1" nolabel="1"/>
+                    		<label for="sex_sons" string="Sexo"/>
+                    		<field name="sex_sons" required="1" nolabel="1"/>
+                    		<label for="date_sons" string="Fecha de Nacimiento"/>
+                    		<field name="date_sons" required="1" nolabel="1"/>
+                    		<label for="age_sons" string="Edad"/>
+                    		<field name="age_sons" nolabel="1"/>
+                    		<label for="ci_sons" string="Cédula Identidad"/>
+                     		<div>
+                        		<div class="address_format">
+                            	<field name="nationality_sons" style="width: 25%%" nolabel="1"/>
+                            	<field name="ci_sons" nolabel="1" class="oe_no_button" placeholder="ej.19763505" style="width: 65%%"/>
+                        		</div>
+                     		</div>
+                            <field name="telf_hab_son" placeholder="ej.0212-7510987"/>
+                            <field name="telf_mov_son" placeholder="ej.0416-5514487"/>
+                            <label for="direccion_son" string="Dirección"/>
+                            <field name="direccion_son" nolabel="1" required="True"/>
+                    		<label for="disability_sons" string="Discapacidad"/>
+                    		<field name="disability_sons" nolabel="1"/>
+                    		<label for="constancia_inscripcion" string="Constancia de inscripcion"/>
+                    		<field name="constancia_inscripcion" nolabel="1"/>
+						</group>
+					</group>
+				</form>
+            </field>
+        </record>
+
+        <record id="hr_son_tree" model="ir.ui.view">
+            <field name="name">hr.son</field>
+            <field name="model">hr.son</field>
+            <field name="arch" type="xml">
+                <tree string="hola">
+                    <field name="name_sons" string="Nombre y Apellido" nolabel="1"/>
+                    <field name="sex_sons" string="Sexo" nolabel="1"/>
+                    <field name="date_sons" string="Fecha de Nacimiento" nolabel="1"/>
+                    <field name="age_sons" string="Edad" nolabel="1"/>
+                    <field name="nationality_sons" string="Nacionalidad" nolabel="1"/>
+                    <field name="ci_sons" string="Cedula de identidad" nolabel="1"/>
+                    <field name="telf_hab_son"/>
+                    <field name="telf_mov_son"/>
+                    <field name="direccion_son"/>
+                    <field name="disability_sons" string="Discapacidad" nolabel="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hr_son_action" model="ir.actions.act_window">
+            <field name="name">hr_son_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.son</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+              </p><p>
+              </p>
+            </field>
+        </record>
+    </data>
+</odoo>

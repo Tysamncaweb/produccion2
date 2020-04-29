@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <!-- <template id="listing"> -->
+        <template id="search_template_date_filter">
+        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-calendar"/>
+            <t t-if="options['date'].get('string') and options['date'].get('filter') != 'custom'"><t t-esc="options['date']['string']"/></t>
+            <t t-if="options['date'].get('filter') == 'custom'">
+                <t t-if="options['date'].get('date')">Date: <span class="js_format_date"><t t-esc="options['date']['date']"/></span></t>
+                <t t-if="options['date'].get('date_from')">From: <span class="js_format_date"><t t-esc="options['date']['date_from']"/></span> <br/><span class="o_reports_date_to">to: <span class="js_format_date"><t t-esc="options['date']['date_to']"/></span></span></t>
+            </t>
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu">
+            <t t-if="options['date'].get('date')">
+                <li title="Today" data-filter="today" class="js_account_report_date_filter"><a>Today</a></li>
+                <li title="End of Last Month" data-filter="last_month" class="js_account_report_date_filter"><a>End of Last Month</a></li>
+                <li title="End of Last Quarter" data-filter="last_quarter" class="js_account_report_date_filter"><a>End of Last Quarter</a></li>
+                <li title="End of Last Financial Year" data-filter="last_year" class="js_account_report_date_filter"><a>End of Last Financial Year</a></li>
+            </t>
+            <t t-if="options['date'].get('date_from')">
+                <li title="This Month" data-filter="this_month" class="js_account_report_date_filter"><a>This Month</a></li>
+                <li title="This Quarter" data-filter="this_quarter" class="js_account_report_date_filter"><a>This Quarter</a></li>
+                <li title="This Financial Year" data-filter="this_year" class="js_account_report_date_filter"><a>This Financial Year</a></li>
+                <li class="divider"></li>
+                <li title="Last Month" data-filter="last_month" class="js_account_report_date_filter"><a>Last Month</a></li>
+                <li title="Last Quarter" data-filter="last_quarter" class="js_account_report_date_filter"><a>Last Quarter</a></li>
+                <li title="Last Financial Year" data-filter="last_year" class="js_account_report_date_filter"><a>Last Financial Year</a></li>
+            </t>
+            <li class="divider"></li>
+            <li class="js_foldable_trigger o_closed_menu" data-filter='custom_filter_date'><a>Custom</a></li>
+            <li class="o_foldable_menu o_closed_menu" data-filter='custom_filter_date' style='margin-left: 10px; margin-right: 10px;'>
+                <t t-if="options['date'].get('date_from') != None">
+                    <label class="custom-date" for="date_from">Start Date :</label>
+                    <div class="form-group custom-date">
+                        <div class='o_datepicker js_account_reports_datetimepicker' t-att-data-default-value="options['date']['date_from']">
+                            <input type='text' class="o_datepicker_input" name="date_from" />
+                            <span class="o_datepicker_button"/>
+                        </div>
+                    </div>
+                </t>
+                <label class="custom-date" for="date_to" t-if="options['date'].get('date_to') != None">End Date :</label>
+                <label class="custom-date" for="date_to" t-if="options['date'].get('date') != None">Date :</label>
+                <div class="form-group custom-date">
+                    <div class='o_datepicker js_account_reports_datetimepicker' t-att-data-default-value="options['date'].get('date_to') or options['date'].get('date')">
+                        <input type='text' class="o_datepicker_input" name="date_to" />
+                        <span class="o_datepicker_button"/>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary js_account_report_date_filter" data-filter="custom">Apply</button>
+            </li>
+        </ul>
+    </template>
+    </data>
+</odoo>

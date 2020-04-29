@@ -1,0 +1,395 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tys_account_advance_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 10:39-0400\n"
+"PO-Revision-Date: 2019-02-22 11:35-0400\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+msgid "Account Advance Payment"
+msgstr "Anticipo para proveedores"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+msgid "Account Advance receivable"
+msgstr "Anticipo para Clientes"
+
+#. module: tys_account_advance_payment
+#: model:ir.model,name:tys_account_advance_payment.model_account_move
+msgid "Account Entry"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_users_active_client
+msgid "Activo"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_date_advance
+msgid "Advance Date"
+msgstr "Fecha de anticpo"
+
+#. module: tys_account_advance_payment
+#: model:ir.model,name:tys_account_advance_payment.model_account_advanced_payment
+msgid "Advance payments"
+msgstr "Anticipo para proveedores"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_amount_apply
+msgid "Amount Apply"
+msgstr "monto a aplicar"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_amount_available
+msgid "Amount Available"
+msgstr "monto disponible"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_amount_invoice
+msgid "Amount Invoice"
+msgstr "monto factura"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_amount_advance
+msgid "Amount advance"
+msgstr "monto anticipo"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.menu,name:tys_account_advance_payment.menu_action_account_advance_payment_parent_form
+#: model:ir.ui.menu,name:tys_account_advance_payment.menu_action_advance_parent_customer_form
+msgid "Anticipo"
+msgstr "anticipo"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.menu,name:tys_account_advance_payment.menu_advance_apply_customer
+msgid "Aplicar/reintegrar Anticipos Clientes"
+msgstr "Aplicar/reintegrar Anticipos Clientes"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.menu,name:tys_account_advance_payment.menu_apply_advance_supplier
+msgid "Aplicar/reintegrar Anticipos Proveedores"
+msgstr "Aplicar/reintegrar Anticipos Proveedores"
+
+#. module: tys_account_advance_payment
+#: model:ir.actions.act_window,name:tys_account_advance_payment.action_apply_advance_payment_supplier
+msgid "Apply Advance"
+msgstr "Aplicar anticipo"
+
+#. module: tys_account_advance_payment
+#: model:ir.actions.act_window,name:tys_account_advance_payment.action_apply_advance_customer
+msgid "Apply Advance Customer"
+msgstr "Aplicar anticipo Cliente"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_supplier_form
+msgid "Apply Advance Payment"
+msgstr "Aplicar anticipo proveedores"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_customer_form
+msgid "Apply Advance Payment Customer"
+msgstr "Aplicar anticipo a provedores/clientes"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_customer_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_supplier_form
+msgid "Asiento Contable"
+msgstr "Asiento Contable"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_move_apply_id
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_move_id
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_move_refund_id
+msgid "Asiento contable"
+msgstr "Asiento contable"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_asiento_conciliado
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_asiento_conl_apply
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_move_apply_line
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_move_line
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_move_refund_line
+msgid "Asientos contables"
+msgstr "Asientos contables"
+
+#. module: tys_account_advance_payment
+#: selection:account.advanced.payment,state:0
+msgid "Available"
+msgstr "Disponible"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_advance_account_id
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_bank_account_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: tys_account_advance_payment
+#: selection:account.advanced.payment,state:0
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_customer_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_supplier_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: tys_account_advance_payment
+#: model:ir.model,name:tys_account_advance_payment.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_create_uid
+msgid "Created by"
+msgstr "creado por"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_create_date
+msgid "Created on"
+msgstr "creado en"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_currency_id
+msgid "Currency"
+msgstr "moneda"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_customer
+msgid "Customer"
+msgstr "cliente"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_date_apply
+msgid "Date apply"
+msgstr "fecha a aplicar"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:234
+#, python-format
+msgid "El cliente no tiene configurado la cuenta contable de anticipo"
+msgstr "El cliente no tiene configurado la cuenta contable de anticipo"
+
+#. module: tys_account_advance_payment
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:113
+#, python-format
+msgid "El monto a aplicar (%s) no puede ser mayor al monto de la factura (%s)"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:110
+#, python-format
+msgid "El monto a aplicar (%s) no puede ser mayor al monto disponible (%s)"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:236
+#, python-format
+msgid "El proveedor no tiene configurado la cuenta contable de anticipo"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_id
+msgid "ID"
+msgstr "Id"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_invoice_id
+msgid "Invoice"
+msgstr "factura"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_partner_journal_advanced_id
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_users_journal_advanced_id
+msgid "Journal Advanced"
+msgstr "Diario para anticipo"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_apply_journal_id
+msgid "Journal applied"
+msgstr "Diario de aplicacion"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_supplier_form
+msgid "Monto a aplicar"
+msgstr "Monto a aplicar"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: tys_account_advance_payment
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:394
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:412
+#, python-format
+msgid "No se reversaron los asientos asociados"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: selection:account.advanced.payment,state:0
+msgid "Paid"
+msgstr "pagado"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_partner_id
+msgid "Partner"
+msgstr "proveedor"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_payment_id
+msgid "Payment Methods"
+msgstr "Método de pago"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+msgid "Por ejemplo, Banesco ..."
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+msgid "Por ejemplo, Transferencia..."
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_partner_account_advance_payment_purchase_id
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_users_account_advance_payment_purchase_id
+msgid "Purchases advance account"
+msgstr "Cuenta de anticipo para compras"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_customer_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_supplier_form
+msgid "Refund amount available"
+msgstr "Reintegrar anticipo"
+
+#. module: tys_account_advance_payment
+#: model:ir.actions.act_window,name:tys_account_advance_payment.action_register_advance_customer
+msgid "Register Advance Customer"
+msgstr "Registro de anticipo para clientes"
+
+#. module: tys_account_advance_payment
+#: model:ir.actions.act_window,name:tys_account_advance_payment.action_account_advance_payment
+msgid "Register Advance Supplier"
+msgstr "Registro de anticipo para proveedores"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.menu,name:tys_account_advance_payment.menu_action_advance_register_customer_form
+msgid "Registrar de Anticipo Clientes"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.menu,name:tys_account_advance_payment.menu_register_advance_supplier_form
+msgid "Registrar de Anticipo Proveedores"
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_partner_account_advance_payment_sales_id
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_res_users_account_advance_payment_sales_id
+msgid "Sales advance account"
+msgstr "Cuenta de anticipo para ventas"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+msgid "Set to draft"
+msgstr "cambiar a borrador"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_state
+msgid "Status"
+msgstr "estado"
+
+#. module: tys_account_advance_payment
+#: model:ir.model.fields,field_description:tys_account_advance_payment.field_account_advanced_payment_supplier
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: tys_account_advance_payment
+#: selection:account.advanced.payment,state:0
+msgid "Unposted"
+msgstr "borrador"
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_customer_form
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.apply_advance_payment_supplier_form
+msgid "Validate"
+msgstr "validado"
+
+#. module: tys_account_advance_payment
+#: code:addons/tys_account_advance_payment/model/account_advance_payment.py:65
+#, python-format
+msgid "You cannot delete an advance payment is not draft or cancelled"
+msgstr "No se puede eliminar un anticipo, no est en estado borrador o cancelado."
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+msgid "anticipo cliente ..."
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+msgid "anticipo proveedor ..."
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_receivable_form
+msgid "cliente ..."
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.ui.view,arch_db:tys_account_advance_payment.account_advance_payment_form
+msgid "proveedor ..."
+msgstr ""
+
+#. module: tys_account_advance_payment
+#: model:ir.model,name:tys_account_advance_payment.model_reverse_amount_residual
+msgid "reverse of residual amount applied"
+msgstr "Reintegrar monto aplicado"

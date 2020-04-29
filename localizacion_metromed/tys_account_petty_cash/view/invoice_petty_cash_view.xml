@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Top menu item -->
+
+        <record id="invoice_petty_cash_tree" model="ir.ui.view">
+            <field name="name">invoice.account.petty.cash.tree</field>
+            <field name="model">invoice.petty.cash</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="type_petty_cash"/>
+                    <field name="name"/>
+                    <field name="invoice_nro_ctrl"/>
+                    <field name="code"/>
+                    <field name="petty_cash_partner" string="Empresa"/>
+                    <field name="rif" string="RIF"/>
+                    <field name="date_petty_cash"/>
+                    <field name="petty_cash_gastos"/>
+                    <field name="transitoria"/>
+                    <field name="amount_exento"/>
+                    <field name="amount_gravable"/>
+                    <field name="iva"/>
+                    <field name="amount_total"/>
+                    <field name="state" string="Estado"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="invoice_petty_cash_form01" model="ir.ui.view">
+        	<field name="name">invoice Petty Cash</field>
+        	<field name="model">invoice.petty.cash</field>
+        	<field name="view_type">form</field>
+        	 <field name="arch" type="xml">
+                 <form name="invoice Petty cash ">
+                     <header>
+                         <button string="Validar" name="validate_invoice_petty_cash" type="object"  class="oe_highlight"  attrs="{'invisible':[('state', 'in', 'validate')]}"/>
+                         <button name="%(reverse_asiento)d" type="action" string="Asiento de Reversión" class="oe_highlight" attrs="{'invisible':[('state', 'in', 'draft')]}"/>
+                         <field name="state" widget="statusbar"  nolabel="1" statusbar_visible="draft,validate" statusbar_colors="{'validate':'blue'}"/>
+
+                     </header>
+                   <sheet string=" invoice Petty cash">
+
+                        <group  colspan="2" col="2" >
+                            <group>
+                                <field name="code" attrs="{'readonly': [('state', 'in', 'validate')],'required': [('state', '=', 'draft')]}" />
+                                <field name="type_petty_cash" attrs="{'readonly': [('state', 'in', 'validate')]}" required = "1"/>
+                                <field name="name" attrs="{'readonly': [('state', 'in', 'validate')], 'required': [('type_petty_cash', '=', 'invoice')]}" required ="1"/>
+                                <field name="petty_cash_partner" domain="[('supplier','=','FALSE')]" attrs="{'readonly': [('state', 'in', 'validate')]}" />
+                                <field name="rif" readonly="1" force_save="1"/>
+                                <field name="invoice_nro_ctrl" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                            </group>
+                            <group>
+                                <field name="date_petty_cash" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                <field name="date_account" attrs="{'readonly': [('state', 'in', 'validate')]}" required="1"/>
+                                <field name="transitoria"  attrs="{'invisible': [('code', '=', False)], 'readonly': [('state', 'in', 'validate')]}" readonly="1" force_save="1"/>
+                                <label for="petty_cash_gastos"/>
+                                <div class="o_row">
+                                    <field name="petty_cash_gastos" domain="['|',('user_type_id','=', 16),('user_type_id','=', 17)]" required="1" attrs="{'readonly': [('state', 'in', 'validate')]}" options="{'no_create': True, 'no_create_edit':True}" />
+                                </div>
+                                <field name="cuenta_analitica" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                <field name="etiqueta_analitica" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                            </group>
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="razon_gasto" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                    <field name="amount_exento" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                    <field name="amount_gravable" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                    <label for="iva" attrs="{'invisible': [('amount_gravable', '=', 0.00)]}"/>
+                                    <div class="o_row"  attrs="{'invisible': [('amount_gravable', '=', 0.00)]}">
+                                        <field name="tax" attrs="{'readonly': [('state', 'in', 'validate')]}" domain="[('type_tax_use','=','purchase')]"/><br/>
+                                        <field name="iva" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                    </div>
+                                    <field name="amount_total" attrs="{'readonly': [('state', 'in', 'validate')]}"/>
+                                    <label for="sin_cred" attrs="{'invisible':[('type_petty_cash', '!=', 'invoice')]}"/>
+                                    <div class="o_row" attrs="{'invisible':[('type_petty_cash', '!=', 'invoice')]}">
+                                        <field name="sin_cred" readonly="1" attrs="{'invisible':[('type_petty_cash', '!=', 'invoice')]}"/>
+                                        <button name="sin_fiscal_book" type="object" string="Incluir" help="Click this button to change this field."  attrs="{'invisible':[('state', '=', 'validate')]}" />
+                                    </div>
+                                </group>
+                                <group>
+                                    <field name="move_id" string="Asiento Contable" attrs="{'invisible': [('state', 'in', 'draft')], 'readonly': [('state', 'in','validate')]}"/>
+
+                                    <field name="reverse_move_id" string="Asiento de Reversión" readonly="1"/>
+                                    <field name="apertura" string="Monto de Apertura Caja Chica" readonly="1" force_save="1"/>
+                                    <field name="disponible" string="Monto Disponible Caja Chica" readonly="1" force_save="1"/>
+
+                                </group>
+
+                            </group>
+
+                        </group>
+                   </sheet>
+                 </form>
+             </field>
+    	</record>
+
+        <record id="action_invoice_petty_cash" model="ir.actions.act_window">
+            <field name="name">Facturas Caja Chica</field>
+            <field name="res_model">invoice.petty.cash</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', ['draft','validate'])]</field>
+         </record>
+
+        <record id="action_invoice_petty_cash_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="invoice_petty_cash_tree"/>
+            <field name="act_window_id" ref="action_invoice_petty_cash"/>
+        </record>
+        <record id="action_invoice_petty_cash_form" model="ir.actions.act_window.view">
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="invoice_petty_cash_form01"/>
+            <field name="act_window_id" ref="action_invoice_petty_cash"/>
+        </record>
+
+        <menuitem
+                 id="invoice_petty_cash"
+                 parent="cash_operations"
+                 name="Registro de Facturas"
+                 action="action_invoice_petty_cash"
+                 sequence="10"
+        />
+
+        <!--record model="ir.ui.view" id="invoice_petty_cash_inherit">
+            <field name="name">invoice_petty_cash.inherit</field>
+            <field name="model">invoice.petty.cash</field>
+            <field name="inherit_id" ref="tys_account_petty_cash.invoice_petty_cash_form01"/>
+            <field name="arch" type="xml">
+                <field name="petty_cash_gastos" position="attributes">
+                    <attribute name="context">{'otro_nombre': True}</attribute>
+                </field>
+            </field>
+        </record-->
+
+    </data>
+</odoo>

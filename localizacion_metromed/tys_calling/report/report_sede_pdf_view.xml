@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="report.paperformat" id="paperformat_report_calling">
+
+        <field name="name">paperformat.report.calling</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+        <report
+            id = "report_services_for_sede"
+            model = "report.callcenter"
+            string = "Informe de Servicios por Sede"
+            report_type = "qweb-pdf"
+            paperformat="paperformat_report_calling"
+            name = "tys_calling.report_services_sede"
+            file = "tys_calling.report_services_sede"
+        />
+
+        <template id="report_services_sede" >
+        <div class="header" style="border-bottom: 2px solid black">
+            <h3 class="text-center">INFORME DE SERVICIOS POR SEDE</h3>
+            <h4 class="text-center">
+                <strong>Desde</strong>:
+                <t t-esc="date_start"/>
+                <strong>Hasta</strong>:
+                <t t-esc="date_end"/>
+            </h4>
+        </div>
+        <div class="article">
+            <table class="table table-condensed table-bordered" style="width: 100%">
+                <thead>
+                    <th class="text-center" style="width: 15%">Sede</th>
+                    <t t-foreach="service" t-as="o">
+                        <th class="text-center" style="width: 10%">
+                             <span t-esc="o['services']"/>
+
+                        </th>
+                              <t t-if="o['id'] == cant_servicios">
+                                <th class="text-center" style="width: 10%">Servicios Cancelados</th>
+                            </t>
+                     </t>
+
+                    <t t-set="a" t-value="0"/>
+                    <t t-set="b" t-value="0"/>
+                    <t t-set="c" t-value="0"/>
+
+                </thead>
+                <tbody>
+
+                    <t t-foreach="docs" t-as="doc">
+                        <tr>
+                            <td class="text-center">
+                                <span t-esc="doc['sede']"/>
+                                    <t t-set="a" t-value="count / d"/><!--ordenamiento de los servicios-->
+                                    <t t-set="b" t-value="b + a"/>
+                                        <t t-foreach="country[int(c):int(b)]" t-as="g">
+                                            <td class="text-center">
+                                                <span t-esc="g"/>
+                                            </td>
+                                        </t>
+                                    <t t-set="c" t-value="c + a"/>
+                            </td>
+                        </tr>
+                    </t>
+
+
+                    <!--tr>
+                         <td class="text-center"><strong>Totales</strong></td>
+                        <t t-foreach="service_sede" t-as="n">
+                            <td class="text-center">
+                                <strong><span t-esc="n"/></strong>
+                            </td>
+                        </t>
+                    </tr-->
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="row text-center" style="border-top: 1px solid black;">
+                <div class="col-xs-3 col-xs-offset-9 text-right">
+                    <ul class="list-inline" style="margin-top:10px;">
+                        <li>Page:</li>
+                        <li>
+                            <span class="page"/>
+                        </li>
+                        <li>/</li>
+                        <li>
+                            <span class="topage"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+    </data>
+</odoo>

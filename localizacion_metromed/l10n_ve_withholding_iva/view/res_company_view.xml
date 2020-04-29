@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="res_company_wh_iva" model="ir.ui.view">
+            <field name="name">res.company.wh.iva</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='social_media']" position="after">
+                    <group string="Withholding" aling="center">
+                        <field name="consolidate_vat_wh"/>
+                        <field name="allow_vat_wh_outdated"/>
+                        <field name="propagate_invoice_date_to_vat_withholding"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

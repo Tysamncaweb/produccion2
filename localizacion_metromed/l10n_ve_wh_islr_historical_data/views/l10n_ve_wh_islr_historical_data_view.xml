@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="res_partner_wh_islr_historical_data_view_inherit" model="ir.ui.view">
+            <field name="name">res.partner.wh.islr.historical.data.iherit</field>
+            <field name="model">res.partner</field>
+            <!--<field name="inherit_id" ref="l10n_ve_withholding_islr.res_partner_wh_islr"/>-->
+            <field name="inherit_id" ref="l10n_ve_withholding_iva.wh_partner"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='islr_wh_historical_data_ids']" position="replace">
+                    <field name="islr_wh_historical_data_ids" nolabel='1' domain="[('partner_id','=',res_partner.id)">
+                        <tree editable='top'>
+                            <field name="fiscalyear_id" readonly="1"/>
+                            <!--field name="period_id" readonly="1"/-->
+                            <field name="base_amount" readonly="1"/>
+                            <field name="withheld_islr" readonly="1"/>
+                            <field name="withheld_islr_acum" readonly="1"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <!--<xpath expr="//group[@string='Income Withholding Historical Data']" position="attributes">-->
+                     <!--<attribute name="invisible">1</attribute>-->
+                <!--</xpath>-->
+                <!--<xpath expr="//separator[@string='vsep']" position="after">-->
+                    <!--<group string='Historico de Retenciones de ISLR' col="4" colspan="4">-->
+                        <!--<field name="islr_wh_historical_data_ids" nolabel='1'>-->
+                            <!--<tree editable='top'>-->
+                                <!--<field name="fiscalyear_id"/>-->
+                                <!--<field name="period_id"/>-->
+                                <!--<field name="base_amount"/>-->
+                                <!--<field name="withheld_islr"/>-->
+                                <!--<field name="withheld_islr_acum"/>-->
+                            <!--</tree>-->
+                        <!--</field>-->
+                    <!--</group>-->
+                <!--</xpath>-->
+            </field>
+        </record>
+    </data>
+</openerp>

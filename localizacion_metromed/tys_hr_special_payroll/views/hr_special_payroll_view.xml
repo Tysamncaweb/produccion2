@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--  Vacaciones -->
+        <!--  vista lista -->
+        <record id="view_hr_payroll_vacaciones_list_view" model="ir.ui.view">
+            <field name="name">hr.payroll.vacaciones.tree</field>
+            <field name="model">hr.payroll.dias.vacaciones</field>
+            <field name="arch" type="xml">
+                <tree string="Vacaciones">
+                    <field name="service_years"/>
+                    <field name="pay_days"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--  vista Formulario -->
+        <record id="hr_payroll_vacaciones_form_view" model="ir.ui.view">
+            <field name="name">hr.payroll.vacaciones.form</field>
+            <field name="model">hr.payroll.dias.vacaciones</field>
+            <field name="arch" type="xml">
+                <form string="Vacaciones" >
+                    <sheet>
+                        <h1>Vacaciones</h1>
+                        <group col="4">
+                            <field name="service_years"/>
+                            <field name="pay_days"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--  vista Formulario -->
+        <record id="action_view_hr_payroll_vacaciones_list_form" model="ir.actions.act_window">
+            <field name="name">Vacaciones</field>
+            <field name="res_model">hr.payroll.dias.vacaciones</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_hr_payroll_vacaciones_list_view"/>
+        </record>
+
+        <menuitem
+            id="menu_hr_payroll_vacaciones_menu"
+            action="action_view_hr_payroll_vacaciones_list_form"
+            parent="hr_payroll.menu_hr_payroll_configuration"
+            sequence="22"/>
+        <!--  fin Vacaciones -->
+
+        <!--  utilidades config -->
+        <!--  vista lista -->
+        <record id="view_hr_payroll_utilidades_list_view" model="ir.ui.view">
+            <field name="name">hr.payroll.utilidades.tree</field>
+            <field name="model">hr.payroll.utilidades</field>
+            <field name="arch" type="xml">
+                <tree string="Utilidades">
+                    <field name="utilidades_name"/>
+                    <field name="utilidades_pay_days"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--  vista Formulario -->
+        <record id="view_hr_payroll_utilidades_form" model="ir.ui.view">
+            <field name="name">hr.payroll.utilidades.form</field>
+            <field name="model">hr.payroll.utilidades</field>
+            <field name="arch" type="xml">
+                <form string="Utilidades" version="7.0">
+                    <sheet>
+                        <h1>Utilidades</h1>
+                        <group col="4">
+                            <field name="utilidades_name"/>
+                            <field name="utilidades_pay_days"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--  vista Formulario -->
+        <record id="action_view_hr_payroll_utilidades_list_form" model="ir.actions.act_window">
+            <field name="name">Utilidades</field>
+            <field name="res_model">hr.payroll.utilidades</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_hr_payroll_utilidades_list_view"/>
+        </record>
+
+        <menuitem
+            id="menu_hr_payroll_utilidades__view"
+            action="action_view_hr_payroll_utilidades_list_form"
+            parent="hr_payroll.menu_hr_payroll_configuration"
+            sequence="24"/>
+        <!--  fin utilidades config -->
+    </data>
+</openerp>

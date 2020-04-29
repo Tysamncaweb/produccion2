@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_payslip_especial_days_form" model="ir.ui.view">
+            <field name="name">hr.payslip.holidays</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form/sheet/notebook" position="attributes">
+                    <attribute name="name">identification_employee</attribute>
+                </xpath>
+
+
+                <xpath expr="//form/sheet/notebook[@name='identification_employee']" position="before">
+
+
+                    <h3><a><b>Dias Especiales</b></a></h3>
+                    <newline/>
+                    <group col="4">
+                        <group col="2">
+                        <field name="mondays"/>
+                        <field name="holydays"/>
+                        <field name="hollydays_str" nolabel="1" readonly="1" invisible="1 "/>
+                        </group>
+                        <group col="2">
+	                    <field name="saturdays"/>
+                        <field name="sundays"/>
+                        <field name="workdays" invisible="1"/>
+                        </group>
+                    </group>
+                </xpath>
+        </field>
+        </record>
+
+        <!--  dias Feriados -->
+
+        <!--VISTA FORMULARIO-->
+        <record id="view_hr_payroll_hollydays_form_view" model="ir.ui.view">
+            <field name="name">buenas</field>
+            <field name="model">hr.payroll.hollydays</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="6" colspan="4">
+                        <field name="hollydays"/>
+                        <field name="nombre"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+<!--attrs="{'required': [('hollydays','=', True)], 'readonly': [('hollydays','=', False)]}"/-->
+        <!--VISTA DE BUSQUEDA-->
+
+        <record id="view_hr_payroll_hollydays_filter" model="ir.ui.view">
+            <field name="name">hr.payroll.hollydays.search</field>
+            <field name="model">hr.payroll.hollydays</field>
+            <field name="arch" type="xml">
+                <search string="Search Hollydays">
+                   <group col="10" colspan="4">
+                        <field name="hollydays"/>
+                        <field name="nombre"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+
+        <!--  vista lista -->
+        <record id="view_hr_payroll_hollydays_tree" model="ir.ui.view">
+            <field name="name">hr.payroll.hollydays.tree</field>
+            <field name="model">hr.payroll.hollydays</field>
+            <field name="arch" type="xml">
+                <tree string="feriados" editable="bottom">
+                    <field name="hollydays"/>
+                    <field name="nombre"/>
+                    <field name="date_from"/>
+                    <field name="date_to" attrs="{'required': [('hollydays','=', True)]}"/>
+
+                </tree>
+            </field>
+        </record>
+        <record id="act_hr_payroll_hollydays_tree" model="ir.actions.act_window">
+            <field name="name">DIAS FERIADOS</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.hollydays</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <!--field name="act_window_id" ref="view_hr_payroll_hollydays_tree"/-->
+            <!--field name="context">{'readonly_by_pass': True}</field-->
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+
+              </p><p>
+
+              </p>
+            </field>
+        </record>
+
+        <record id="action_hr_payroll_hollydays2_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_hr_payroll_hollydays_tree"/>
+            <field name="act_window_id" ref="act_hr_payroll_hollydays_tree"/>
+        </record>
+
+
+        <menuitem
+            id="view_hr_payroll_hollydays_menu"
+            action="act_hr_payroll_hollydays_tree"
+            parent="hr_payroll.menu_hr_payroll_configuration"
+            name="Dias Feriados"
+            sequence="21"/>
+
+    </data>
+</odoo>

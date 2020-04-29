@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="report.paperformat" id="paperformat_preliminary_squad">
+            <field name="name">paperformat.preliminary.squad</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_right">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">40</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+            id="pos_preliminary_squad"
+            string="Cuadre Preliminar"
+            model="pos.preliminary.squad.wizard"
+            report_type="qweb-pdf"
+            name="valcro_tpv_reports.preliminary_squad_report"
+            file="valcro_tpv_reports.preliminary_squad_report"
+            paperformat ="paperformat_preliminary_squad"
+        />
+
+        <template id="preliminary_squad_report">
+            <div class="article">
+                <div class="page">
+                    <div class="text-center" >
+                        <h2 class="text-center">CUADRE PRELIMINAR</h2>
+                        <strong><t t-esc="start_date" t-options="{'widget': 'datetime'}"/> - <t t-esc="end_date" t-options="{'widget': 'datetime'}"/></strong>
+                        <br></br><br></br>
+                        <table width="100%">
+                            <tr height="20px">
+                                <td class="text-left" width="50%"><strong>Sesión: <t t-esc="session"/></strong></td>
+                                <!--td class="text-right" width="50%"><strong>Fecha: <t t-esc="fecha_actual" t-options="{'widget': 'datetime'}"/></strong></td-->
+                            </tr>
+                            <tr height="20px">
+                                <td class="text-left" width="50%" height="20px"><strong>Movimiento: <t t-esc="movimiento"/></strong></td>
+                            </tr>
+                            <tr height="20px">
+                                <td class="text-left" width="50%" height="20px"><strong>CAJA: <t t-esc="configs_name"/></strong></td>
+                            </tr>
+                        </table><br></br><br></br>
+                        <h3 class="text-center">Resumen de Efectivo</h3><br></br>
+                        <table class="text-center table-bordered" style="border: 1px solid #000000;"  width="100%" height="150px">
+                            <tr height="25px" style="border: 1px solid #000000;">
+                                <td class="text-left" style="margin: 50px;" width="35%">Efectivo de Apertura</td>
+                                <td class="text-right" width="35%"><t t-esc="apertura"/></td>
+                            </tr>
+                            <tr height="25px">
+                                <td class="text-left" width="35%">Monto Pase Entrada</td>
+                                <td class="text-right" width="35%"><t t-esc="entrada"/></td>
+                                <td class="text-right" width="5%"><t t-esc="cont_entrada"/></td>
+                            </tr>
+                            <tr height="25px">
+                                <td class="text-left" width="35%">Subtotal</td>
+                                <td class="text-right" width="35%"><t t-esc="subtotal"/></td>
+                            </tr>
+                            <tr height="25px">
+                                <td class="text-left" width="35%">Monto Pase Salida</td>
+                                <td class="text-right" width="35%"><t t-esc="salida"/></td>
+                                <td class="text-right" width="5%"><t t-esc="cont_salida"/></td>
+                            </tr>
+                            <tr height="25px">
+                                <td class="text-left" width="35%">Subtotal Efectivo</td>
+                                <td class="text-right" width="35%"><t t-esc="subtotal_cash"/></td>
+                            </tr>
+                            <tr height="25px">
+                                <td class="text-left" width="35%">Total Efectivo</td>
+                                <td class="text-right" width="35%"><t t-esc="total_efectivo"/></td>
+                            </tr>
+                        </table><br></br><br></br>
+                        <t t-set="cantidad" t-value="0"/>
+                        <h3 class="text-center">Resumen Movimiento</h3><br></br>
+                        <table class="text-center table-bordered" style="border: 1px solid #000000;" width="100%" height="155px">
+                            <thead>
+                                <tr class="text-center" height="30px">
+                                    <th class="text-center" width="30%">Tipo de Operación</th>
+                                    <th class="text-center" width="20%">Cantidad</th>
+                                    <th class="text-center" width="20%">Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="payment" t-as="pago" >
+                                    <tr style=" border: 1px solid #000000; height: 25px;" class="text-center">
+                                        <td class="text-left" ><t t-esc="pago['journal_id']"/></td>
+                                        <td class="text-center" ><t t-esc="pago['cantidad']"/></td>
+                                        <td class="text-right" ><t t-esc="pago['amount']"/></td>
+                                        <t t-set="cantidad" t-value="cantidad + pago['cantidad']"/>
+                                    </tr>
+                                </t>
+                                <tr height="25px">
+                                    <td class="text-left" ><strong>TOTAL</strong></td>
+                                    <td class="text-center" ><strong><t t-esc="cantidad"/></strong></td>
+                                    <td class="text-right" ><strong><t t-esc="total"/></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </data>
+</odoo>

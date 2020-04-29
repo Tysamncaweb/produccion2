@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--record model="ir.ui.view" id="account_invoice_supplier_filter_inherit">
+            <field name="name">account.invoice.supplier.tree.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <filter position="after">
+                    <filter name="nuevo" string="Number" domain="[('number', '!=', 'False')]"/>
+                </filter>
+            </field>
+         </record-->
+
+        <record id="account.action_invoice_tree2" model="ir.actions.act_window">
+            <field name="domain">[('number','!=','False')]</field>
+        </record>
+
+        <!--record model="ir.ui.view" id="account_invoice_supplier_filter_inherit">
+            <field name="name">account.invoice.supplier.tree.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name="arch" type="xml">
+                <field name="number" position="before">
+                    <field name="number" string="Number" domain="[('number', '!=', False)]"/>
+                </field>
+            </field>
+         </record-->
+
+      </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_submodules/intel_account_invoice_report_submodules/intel_account_invoice_report,submodules/intel_account_invoice_report.submodules/intel_account_invoice_report,model_submodules/intel_account_invoice_report_submodules/intel_account_invoice_report,,1,0,0,0

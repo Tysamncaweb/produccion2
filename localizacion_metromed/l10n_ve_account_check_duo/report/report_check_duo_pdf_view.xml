@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="ir.ui.view" id="sale_order_form_inherit">
+            <field name="name">account.issued.check.forn.inherit</field>
+            <field name="model">account.issued.check</field>
+            <field name="inherit_id" ref="l10n_ve_account_check_duo.view_account_issued_check_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='number']" position="before">
+                    <field name="literal_numb" invisible="1"/>
+                    <field name="literal_numb_1" invisible="1"/>
+                    <field name="literal_numb_2" invisible="1"/>
+                    <field name="day_month" invisible="1"/>
+                    <field name="years" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="report.paperformat" id="paperformat_report_checks">
+
+            <field name="name">paperformat.report.servicios</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_width">178</field>
+            <field name="page_height">80</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_right">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+            id = "account_issued_check"
+            model = "account.issued.check"
+            string = "Imprimir Cheque"
+            report_type = "qweb-pdf"
+            name = "l10n_ve_account_check_duo.report_issued_check"
+            file = "l10n_ve_account_check_duo.report_issued_check"
+            paperformat="paperformat_report_checks"
+            menu = "True"
+        />
+
+         <!--act_window
+            name="Adecuacion"
+            res_model="report.paperformat"
+            src_model="account.issued.check"
+            view_mode="form"
+            target="new"
+            key2="client_print_multi"
+            id="action_check_issue"
+            view_type="form"
+          /-->
+
+        <template id="report_issued_check" >
+            <div class="article">
+                <table style="width:100%; height:100%; border: 1px solid #FFFFFF;">
+                    <table style="width:100%; height:82px; ">
+                        <tbody>
+                            <tr style="height:90%;" ></tr>
+                            <tr style="height:10%;">
+                                <td style="width:35%"></td>
+                                <td style="width:35%"></td>
+                                <td style="width:30%; text-align: center; font-size:12px;"><b><span t-esc="amount"/></b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%; height:64px; ">
+                        <tbody>
+                            <tr style="height:90%;" ></tr>
+                            <tr style="height:10%;">
+                                <td style="width:13%"></td>
+                                <td style="width:87%; text-align: left;font-size:12px;"><b><span t-esc="cliente"/></b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%; height:42px; ">
+                        <tbody>
+                            <tr style="height:70%;"></tr>
+                            <tr  style="height:13%;">
+                                <td style="width:13%;"></td>
+                                <td style="width:87%; font-size:11px;"><p><b><span t-esc="fila1"/></b></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%; height:35px; ">
+                        <tbody>
+                            <tr style="height:100%;">
+                                <td style="width:3%"></td>
+                                <td style="width:97%; font-size:11px;"><p><b><span t-esc="fila2"/></b></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%; height:27px; ">
+                        <tbody>
+                            <tr style="height:90%;"></tr>
+                            <tr style="height:10%;">
+                                <td style="width:38%; text-align: center; font-size:12px;"><p><b><span t-esc="day_month"/></b></p></td>
+                                <td style="width:3%;"></td>
+                                <td style="width:9%;font-size:12px;"><b><span t-esc="year"/></b></td>
+                                <td style="width:50%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%; height:85px; ">
+                        <tbody>
+                            <tr style="height:90%;"></tr>
+                            <tr style="height:10%;">
+                                <td style="width:75%;"></td>
+                                <td style="width:25%;font-size:19px;"><b><span t-esc="camp_endosable"/></b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </table>
+            </div>
+        </template>
+
+    </data>
+</odoo>

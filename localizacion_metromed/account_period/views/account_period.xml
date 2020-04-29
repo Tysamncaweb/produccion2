@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="submodules/account_period.list">
+      <field name="name">submodules/account_period list</field>
+      <field name="model">submodules/account_period.submodules/account_period</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="submodules/account_period.action_window">
+      <field name="name">submodules/account_period window</field>
+      <field name="res_model">submodules/account_period.submodules/account_period</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="submodules/account_period.action_server">
+      <field name="name">submodules/account_period server</field>
+      <field name="model_id" ref="model_submodules/account_period_submodules/account_period"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="submodules/account_period" id="submodules/account_period.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="submodules/account_period.menu_1" parent="submodules/account_period.menu_root"/>
+    <menuitem name="Menu 2" id="submodules/account_period.menu_2" parent="submodules/account_period.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="submodules/account_period.menu_1_list" parent="submodules/account_period.menu_1"
+              action="submodules/account_period.action_window"/>
+    <menuitem name="Server to list" id="submodules/account_period" parent="submodules/account_period.menu_2"
+              action="submodules/account_period.action_server"/>
+    -->
+      <record id="account_period_fiscal_book_form" model="ir.ui.view">
+          <field name="name">account.period.fiscal.book.form</field>
+          <field name="model">fiscal.book</field>
+          <field name="inherit_id" ref="l10n_ve_fiscal_book.view_fiscal_purchase_book_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='company_id']" position="after">
+                  <field name="time_period" />
+                  <label for="date_start" string="Period" attrs="{'invisible': [('time_period', '!=', '7')]}"/>
+                  <div attrs="{'invisible': [('time_period', '!=', '7')]}">
+                       <field name="date_start" class="oe_inline"/> - <field name="date_stop" class="oe_inline"/>
+                  </div>
+              </xpath>
+          </field>
+      </record>
+
+      <record id="account_period_sale_fiscal_book_form" model="ir.ui.view">
+          <field name="name">account.period.sale.fiscal.book.form</field>
+          <field name="model">fiscal.book</field>
+          <field name="inherit_id" ref="l10n_ve_fiscal_book.view_fiscal_sale_book_form"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='company_id']" position="after">
+                  <label for="date_start" string="Period"/>
+                  <div>
+                       <field name="date_start" class="oe_inline"/> - <field name="date_stop" class="oe_inline"/>
+                  </div>
+              </xpath>
+          </field>
+      </record>
+    </data>
+</odoo>

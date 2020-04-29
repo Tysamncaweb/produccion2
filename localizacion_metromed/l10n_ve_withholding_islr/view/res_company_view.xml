@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="res_company_wh_islr" model="ir.ui.view">
+            <field name="name">res.company.wh.islr</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='social_media']" position="after">
+                    <group string="Withholding ISLR" aling="center">
+                        <field name="automatic_income_wh"/>
+                        <field name="propagate_invoice_date_to_income_withholding"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

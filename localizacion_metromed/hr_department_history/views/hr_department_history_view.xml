@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_department_hisotry_tree" model="ir.ui.view">
+            <field name="name">hr.department.history.tree</field>
+            <field name="model">hr.department.history</field>
+            <field name="arch" type="xml">
+                <tree string="Department historical data" create="false">
+                    <field name="employee_id"/>
+                    <field name="employee_ci"/>
+                    <field name="department_last"/>
+                    <field name="department_new"/>
+                    <field name="date_register"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="open_module_hr_department_history" model="ir.actions.act_window">
+            <field name="name">Department Historical Data</field>
+            <field name="res_model">hr.department.history</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+         <menuitem
+            action="hr.open_module_tree_department"
+            id="menu_hr_department_tree_2"
+            parent="hr.menu_hr_department_tree"
+             name="Departamentos"
+            sequence="1"/>
+
+        <menuitem action="open_module_hr_department_history"
+                  id="menu_hr_department_history"
+                  parent="hr.menu_hr_department_tree"/>
+    </data>
+</odoo>

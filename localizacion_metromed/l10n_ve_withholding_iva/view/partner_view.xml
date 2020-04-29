@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+        <!--record id="wh_partner" model="ir.ui.view">
+            <field name="name">res.partner.form.wh</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                   <page string="Withholdings">
+                        <separator colspan="4" string="vsep" name="vsep"/>
+                        <newline/>
+                        <separator colspan="4" string="isep" name="isep"/>
+                        <newline/>
+                        <separator colspan="4" string="rsep" name="rsep"/>
+                    </page>
+                </xpath>
+            </field>
+        </record-->
+	<!-- 
+	=====================================================
+	Partners Extension
+	=====================================================
+	-->  
+        <!--field name="inherit_id" ref="l10n_ve_withholding_iva.wh_partner"/-->
+        <record id="res_partner_wh_iva" model="ir.ui.view">
+            <field name="name">res.partner.wh.iva</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="l10n_ve_withholding.wh_partner"/>
+            <field name="arch" type="xml">
+                <xpath expr="//separator[@name='isep']" position="after">
+                    <newline/>
+                    <group col="6" colspan="2">
+                        <!--field name="vat_subjected"/-->
+                        <field name="vat_subjected"/>
+                        <field name="wh_iva_agent"/>
+                        <field name="wh_iva_rate"/>
+                        <field name="consolidate_vat_wh"/>
+                    </group>
+                </xpath>
+                <xpath expr="//separator[@name='isep']" position="attributes">
+                    <attribute name="string">VAT Withholding</attribute>
+                </xpath>
+                <!--xpath expr="//field[@name='property_account_position_id']" position="after">
+                    <attribute name="string">VAT Withholding</attribute>
+                    <newline/>
+                    <group>
+                        <separator string="Purchase " name="purchase_journal"/>
+                        <field name="purchase_journal_id"/>
+                        <separator string="Sales" name="sales_journal"/>
+                        <field name="purchase_sales_id"/>
+                    </group>
+                </xpath-->
+
+                <xpath expr="//group[@name='accounting_entries']" position="before">
+                    <group string="Retención de IVA">
+                        <separator string="Purchase " name="purchase_journal"/>
+                        <field name="purchase_journal_id"/>
+                        <separator string="Sales" name="sales_journal"/>
+                        <field name="purchase_sales_id"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+
+
+        <!-- Inherit Form View to Modify it
+        <record id="res_partner_wh_iva_base_vat" model="ir.ui.view">
+            <field name="name">res.partner.wh.iva.base.vat</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base_vat.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat_subjected']" position="replace">
+                    <div> </div>
+                </xpath>
+            </field>
+        </record>-->
+    </data>
+</odoo>

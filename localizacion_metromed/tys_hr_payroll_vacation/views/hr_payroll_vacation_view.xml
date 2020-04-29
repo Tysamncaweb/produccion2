@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    <!--  Vacaciones -->
+        <record id="hr_payroll_vacaciones_view" model="ir.ui.view">
+            <field name="name">hr.payroll.vacaciones.view</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook[@name='identification_employee']" position="before">
+
+                    <h3><a><b>Vacaciones</b></a></h3>
+                    <newline/>
+                    <group col="4" >
+                        <group col="2">
+                            <field name="salario_mensual_va" string="Salario Mensual" readonly="1"/>
+                            <field name="tiempo_servicio_va" string="Tiempo de Servicio" readonly="1"/>
+                        </group>
+                        <group col="2">
+                            <field name="dias_porcion" string="Días / Porción" readonly="1"/>
+                            <!--<field name="dias_festivos" string="Días Festivos" />-->
+                            <!--<field name="domingos" string="Domingos" />-->
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        <!--  fin Vacaciones -->
+    </data>
+</openerp>

@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+        <data noupdate="1">
+            <record model="account.account.template" id="account_activa_account_11129003">
+                <field name="code">11129003</field>
+                <field name="name">TRANSFERENCIAS BANCARIAS</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            </record>
+
+            <record id="ve_chart_template_amd" model="account.chart.template">
+                <field name="name">Venezuelan - Account</field>
+                <field name="code_digits">8</field>
+                <field name="currency_id" ref="base.VEF"/>
+                <field name="transfer_account_id" ref="account_activa_account_11129003"/>
+            </record>
+            <!--
+                Chart of account
+            -->
+            <record model="account.account.template" id="account_activa_account_11129003">
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+    
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102001">
+                <field name="name">11102001</field>
+                <field name="name">Banco Provincial (1205)</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102002">
+                <field name="name">11102002</field>
+                <field name="name">Banco Provincial (7796)</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102003">
+                <field name="name">11102003</field>
+                <field name="name">Banesco (7680)</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102004">
+                <field name="name">11102004</field>
+                <field name="name">Banco Mercantil (4009)</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102005">
+                <field name="name">11102005</field>
+                <field name="name">Banco Nacional de Crédito (0507)</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102006">
+                <field name="name">11102006</field>
+                <field name="name">Banco Activo (3455)</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_bank_11102007">
+                <field name="name">11102007</field>
+                <field name="name">Banco </field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_bank"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_cash_11101001">
+                <field name="name">11101001</field>
+                <field name="name">Fondo de Caja Chica</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_cash"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_cash_11101002">
+                <field name="name">11101002</field>
+                <field name="name">Menos: desembolso caja chica</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_cash"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_receivable_11201001">
+                <field name="name">11201001</field>
+                <field name="name">Cuentas por cobrar clientes</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_receivable"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201002">
+                <field name="name">11201002</field>
+                <field name="name">Menos: provisi�n para cuentas incobrables</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201003">
+                <field name="name">11201003</field>
+                <field name="name">Efectos por cobrar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201004">
+                <field name="name">11201004</field>
+                <field name="name">Menos: Efectos por cobrar descontados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201005">
+                <field name="name">11201005</field>
+                <field name="name">Cuentas por cobrar empleados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201006">
+                <field name="name">11201006</field>
+                <field name="name">Otras cuentas por cobrar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201007">
+                <field name="name">11201007</field>
+                <field name="name">Anticipos proveedores</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201008">
+                <field name="name">11201008</field>
+                <field name="name">I.V.A. Crédito Fiscal</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201009">
+                <field name="name">11201009</field>
+                <field name="name">Anticipos I.S.L.R.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201010">
+                <field name="name">11201010</field>
+                <field name="name">Retenciones I.V.A.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201011">
+                <field name="name">11201011</field>
+                <field name="name">Retenciones Responsabilidad Social</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201012">
+                <field name="name">11201012</field>
+                <field name="name">Seguros pagados por anticipado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201013">
+                <field name="name">11201013</field>
+                <field name="name">Menos: Amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201014">
+                <field name="name">11201014</field>
+                <field name="name">Publicidad y propaganda pagados por anticipado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201015">
+                <field name="name">11201015</field>
+                <field name="name">Menos: Amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201016">
+                <field name="name">11201016</field>
+                <field name="name">Alquileres pagados por anticipado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201017">
+                <field name="name">11201017</field>
+                <field name="name">Menos: Amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201018">
+                <field name="name">11201018</field>
+                <field name="name">Intereses pagados por anticipado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201019">
+                <field name="name">11201019</field>
+                <field name="name">Menos: Amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201020">
+                <field name="name">11201020</field>
+                <field name="name">Otros gastos pagados por anticipado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11201021">
+                <field name="name">11201021</field>
+                <field name="name">Menos: Amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301001">
+                <field name="name">11301001</field>
+                <field name="name">Entrada material medico quirurgico</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301002">
+                <field name="name">11301002</field>
+                <field name="name">Salida material medico quirurgico</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301003">
+                <field name="name">11301003</field>
+                <field name="name">Insumos medicos disponibles</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301004">
+                <field name="name">11301004</field>
+                <field name="name">Entrada articulos de oficina</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301005">
+                <field name="name">11301005</field>
+                <field name="name">Salida articulos de oficina</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301006">
+                <field name="name">11301006</field>
+                <field name="name">Insumos de oficina disponible</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301007">
+                <field name="name">11301007</field>
+                <field name="name">Entrada articulos de limpieza</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301008">
+                <field name="name">11301008</field>
+                <field name="name">Salidas articulos de limpieza</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301009">
+                <field name="name">11301009</field>
+                <field name="name">Insumos de limpieza disponible</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301010">
+                <field name="name">11301010</field>
+                <field name="name">Entrada accesorios y respuestos de vehiculo</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301011">
+                <field name="name">11301011</field>
+                <field name="name">Salida accesorios y respuestos de vehiculos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11301012">
+                <field name="name">11301012</field>
+                <field name="name">Insumos de vehiculos disponible</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11302001">
+                <field name="name">11302001</field>
+                <field name="name">Entrada Medicinas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11302002">
+                <field name="name">11302002</field>
+                <field name="name">Salidas Medicinas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_11302003">
+                <field name="name">11302003</field>
+                <field name="name">Medicinas Disponibles</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101001">
+                <field name="name">12101001</field>
+                <field name="name">Terrenos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101002">
+                <field name="name">12101002</field>
+                <field name="name">Edificios</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101003">
+                <field name="name">12101003</field>
+                <field name="name">Menos: depreciaci�n acumulada Edificios</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101004">
+                <field name="name">12101004</field>
+                <field name="name">Maquinarias</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101005">
+                <field name="name">12101005</field>
+                <field name="name">Menos: depreciaci�n acumulada Maquinarias</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101006">
+                <field name="name">12101006</field>
+                <field name="name">Mobiliarios y equipos de oficina</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101007">
+                <field name="name">12101007</field>
+                <field name="name">Menos: depreciaci�n acumulada Mobiliarios y equipos de oficina</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101008">
+                <field name="name">12101008</field>
+                <field name="name">Equipos de computaci�n</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101009">
+                <field name="name">12101009</field>
+                <field name="name">Menos: depreciaci�n acumulada Equipos de computaci�n</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101010">
+                <field name="name">12101010</field>
+                <field name="name">Instalaciones y remodelaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101011">
+                <field name="name">12101011</field>
+                <field name="name">Menos: depreciaci�n acumulada Instalaciones y Remodelaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101012">
+                <field name="name">12101012</field>
+                <field name="name">Vehiculos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101013">
+                <field name="name">12101013</field>
+                <field name="name">Menos: depreciaci�n acumulada Vehiculos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101014">
+                <field name="name">12101014</field>
+                <field name="name">Equipos medicos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12101015">
+                <field name="name">12101015</field>
+                <field name="name">Menos: depreciaci�n acumulada Equipos Medicos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102001">
+                <field name="name">12102001</field>
+                <field name="name">Plusvalia</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102002">
+                <field name="name">12102002</field>
+                <field name="name">menos: amortizaci�n acumulada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102003">
+                <field name="name">12102003</field>
+                <field name="name">Marca de Fabrica</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102004">
+                <field name="name">12102004</field>
+                <field name="name">Menos: amortizaci�n acumulada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102005">
+                <field name="name">12102005</field>
+                <field name="name">Patente Industria y Comercio</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102006">
+                <field name="name">12102006</field>
+                <field name="name">Menos: amortizaci�n acumulada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102007">
+                <field name="name">12102007</field>
+                <field name="name">Renombre Comercial</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102008">
+                <field name="name">12102008</field>
+                <field name="name">menos: amortizaci�n acumulada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102009">
+                <field name="name">12102009</field>
+                <field name="name">Derecho de Autor</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_asset_12102010">
+                <field name="name">12102010</field>
+                <field name="name">Menos: amortizaci�n acumulada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_asset"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.account_type_asset_view1_12201001">
+                <field name="name">12201001</field>
+                <field name="name">Cuentas por cobrar Intercompa�ias</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.account_type_asset_view1"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.account_type_asset_view1_12201002">
+                <field name="name">12201002</field>
+                <field name="name">Cuentas por cobrar Accionistas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.account_type_asset_view1"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.account_type_asset_view1_12201003">
+                <field name="name">12201003</field>
+                <field name="name">Depositos en garantia</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.account_type_asset_view1"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.account_type_asset_view1_12201004">
+                <field name="name">12201004</field>
+                <field name="name">Anticipos Prestaciones Sociales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.account_type_asset_view1"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.account_type_asset_view1_12201005">
+                <field name="name">12201005</field>
+                <field name="name">Impuesto Diferido</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.account_type_asset_view1"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101001">
+                <field name="name">21101001</field>
+                <field name="name">Cuentas por pagar importaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_payable_21101002">
+                <field name="name">21101002</field>
+                <field name="name">Cuentas por pagar proveedores</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_payable"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101003">
+                <field name="name">21101003</field>
+                <field name="name">Efectos por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101004">
+                <field name="name">21101004</field>
+                <field name="name">Honorarios Profesionales por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101005">
+                <field name="name">21101005</field>
+                <field name="name">Alquileres por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101006">
+                <field name="name">21101006</field>
+                <field name="name">Luz electrica por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101007">
+                <field name="name">21101007</field>
+                <field name="name">CANTV por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101008">
+                <field name="name">21101008</field>
+                <field name="name">Nomina por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101009">
+                <field name="name">21101009</field>
+                <field name="name">Intereses sobre Prestaciones Sociales por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101010">
+                <field name="name">21101010</field>
+                <field name="name">Gastos acumulados por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101011">
+                <field name="name">21101011</field>
+                <field name="name">Otras cuentas por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101012">
+                <field name="name">21101012</field>
+                <field name="name">I.V.S.S. por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101013">
+                <field name="name">21101013</field>
+                <field name="name">I.N.C.E.S. por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101014">
+                <field name="name">21101014</field>
+                <field name="name">F.A.O.V. por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101015">
+                <field name="name">21101015</field>
+                <field name="name">I.S.L.R. por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101016">
+                <field name="name">21101016</field>
+                <field name="name">Retenciones I.S.L.R. por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101017">
+                <field name="name">21101017</field>
+                <field name="name">I.V.A. Debito Fiscal</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101018">
+                <field name="name">21101018</field>
+                <field name="name">Retenciones I.V.A. por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101019">
+                <field name="name">21101019</field>
+                <field name="name">Provisiones Utilidades</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101020">
+                <field name="name">21101020</field>
+                <field name="name">Provisiones Vacaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101021">
+                <field name="name">21101021</field>
+                <field name="name">Fondo de ahorro por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_21101022">
+                <field name="name">21101022</field>
+                <field name="name">Anticipos clientes</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22101001">
+                <field name="name">22101001</field>
+                <field name="name">Hipotecas por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22101002">
+                <field name="name">22101002</field>
+                <field name="name">Emprestito Obligaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22101003">
+                <field name="name">22101003</field>
+                <field name="name">Cuentas por pagar Intercompa�ias</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22101004">
+                <field name="name">22101004</field>
+                <field name="name">Cuentas por pagar Accionistas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22101005">
+                <field name="name">22101005</field>
+                <field name="name">Dividendos por pagar Accionistas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22101006">
+                <field name="name">22101006</field>
+                <field name="name">Prestamos Bancarios por pagar</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_22102001">
+                <field name="name">22102001</field>
+                <field name="name">Apartado Prestaciones Sociales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.conf_account_type_equity_31101001">
+                <field name="name">31101001</field>
+                <field name="name">Capital Social</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.conf_account_type_equity"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.conf_account_type_equity_31101002">
+                <field name="name">31101002</field>
+                <field name="name">Capital Social Suscrito no pagado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.conf_account_type_equity"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_31201001">
+                <field name="name">31201001</field>
+                <field name="name">RESERVA LEGAL</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_31301001">
+                <field name="name">31301001</field>
+                <field name="name">Superavit Acumulado</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_17_31301002">
+                <field name="name">31301002</field>
+                <field name="name">Utilidad o Perdida del Ejercicio</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_17"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_income_41101001">
+                <field name="name">41101001</field>
+                <field name="name">Servicios Prestados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_income"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_income_41102001">
+                <field name="name">41102001</field>
+                <field name="name">Ventas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_income"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_income_41102002">
+                <field name="name">41102002</field>
+                <field name="name">Devoluciones en Ventas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_income"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_income_41102003">
+                <field name="name">41102003</field>
+                <field name="name">Descuentos en Ventas por pronto pago</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_income"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_income_41103001">
+                <field name="name">41103001</field>
+                <field name="name">Intereses Bancarios</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_income"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51101001">
+                <field name="name">51101001</field>
+                <field name="name">Costos de Ventas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201001">
+                <field name="name">51201001</field>
+                <field name="name">Sueldos y salarios</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201002">
+                <field name="name">51201002</field>
+                <field name="name">Horas extras</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201003">
+                <field name="name">51201003</field>
+                <field name="name">Bono nocturno</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201004">
+                <field name="name">51201004</field>
+                <field name="name">Descanso, domingos y feriados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201005">
+                <field name="name">51201005</field>
+                <field name="name">Bonificaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201006">
+                <field name="name">51201006</field>
+                <field name="name">Bono de alimentaci�n</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201007">
+                <field name="name">51201007</field>
+                <field name="name">Gastos de transporte</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201008">
+                <field name="name">51201008</field>
+                <field name="name">Gastos de guarderia</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201009">
+                <field name="name">51201009</field>
+                <field name="name">Gastos de uniforme</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201010">
+                <field name="name">51201010</field>
+                <field name="name">Gastos examenes medicos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201011">
+                <field name="name">51201011</field>
+                <field name="name">Vacaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201012">
+                <field name="name">51201012</field>
+                <field name="name">Bono vacacional</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201013">
+                <field name="name">51201013</field>
+                <field name="name">Utilidades</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201014">
+                <field name="name">51201014</field>
+                <field name="name">Prestaciones Sociales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201015">
+                <field name="name">51201015</field>
+                <field name="name">Intereses sobre Prestaciones Sociales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201016">
+                <field name="name">51201016</field>
+                <field name="name">Aporte patronal I.V.S.S.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201017">
+                <field name="name">51201017</field>
+                <field name="name">Aporte patronal F.A.O.V.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201018">
+                <field name="name">51201018</field>
+                <field name="name">Aporte patronal I.N.C.E.S.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201019">
+                <field name="name">51201019</field>
+                <field name="name">Mano de obra directa aplicada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201020">
+                <field name="name">51201020</field>
+                <field name="name">Gastos servicios contratados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201021">
+                <field name="name">51201021</field>
+                <field name="name">Gastos de viaticos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201022">
+                <field name="name">51201022</field>
+                <field name="name">Gastos cursos y entrenamiento de personal</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201023">
+                <field name="name">51201023</field>
+                <field name="name">Gastos agasajos y atenciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201024">
+                <field name="name">51201024</field>
+                <field name="name">Gastos representaci�n</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201025">
+                <field name="name">51201025</field>
+                <field name="name">Gastos de seguros</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201026">
+                <field name="name">51201026</field>
+                <field name="name">Gastos honorarios profesionales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201027">
+                <field name="name">51201027</field>
+                <field name="name">Gastos electricidad y aseo</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201028">
+                <field name="name">51201028</field>
+                <field name="name">Gastos agua</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201029">
+                <field name="name">51201029</field>
+                <field name="name">Gastos telefono</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201030">
+                <field name="name">51201030</field>
+                <field name="name">Gastos informatica</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201031">
+                <field name="name">51201031</field>
+                <field name="name">Gastos suscripci�n y afiliaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201032">
+                <field name="name">51201032</field>
+                <field name="name">Gastos alquiler</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201033">
+                <field name="name">51201033</field>
+                <field name="name">Gastos depreciaciones y amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201034">
+                <field name="name">51201034</field>
+                <field name="name">Gastos mantenimiento y reparaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201035">
+                <field name="name">51201035</field>
+                <field name="name">Gastos materiales y articulos de limpieza</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201036">
+                <field name="name">51201036</field>
+                <field name="name">Gastos materiales y articulos de oficina</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201037">
+                <field name="name">51201037</field>
+                <field name="name">Gastos vehiculos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201038">
+                <field name="name">51201038</field>
+                <field name="name">Gastos estacionamiento</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201039">
+                <field name="name">51201039</field>
+                <field name="name">Gastos traslados y encomiendas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201040">
+                <field name="name">51201040</field>
+                <field name="name">Gastos insumos medicos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201041">
+                <field name="name">51201041</field>
+                <field name="name">Gastos medicinas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="__export__.account_account_type_24_51201042">
+                <field name="name">51201042</field>
+                <field name="name">Carga fabril aplicada</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="__export__.account_account_type_24"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101001">
+                <field name="name">61101001</field>
+                <field name="name">Sueldos y salarios</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101002">
+                <field name="name">61101002</field>
+                <field name="name">Sueldos directores</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101003">
+                <field name="name">61101003</field>
+                <field name="name">Horas extras</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101004">
+                <field name="name">61101004</field>
+                <field name="name">Bono nocturno</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101005">
+                <field name="name">61101005</field>
+                <field name="name">Descanso, domingos y feriados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101006">
+                <field name="name">61101006</field>
+                <field name="name">Bonificaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101007">
+                <field name="name">61101007</field>
+                <field name="name">Bono alimentaci�n</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101008">
+                <field name="name">61101008</field>
+                <field name="name">Gastos caja de ahorro personal</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101009">
+                <field name="name">61101009</field>
+                <field name="name">Gastos transporte</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101010">
+                <field name="name">61101010</field>
+                <field name="name">Gastos guarderia</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101011">
+                <field name="name">61101011</field>
+                <field name="name">Gastos uniforme</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101012">
+                <field name="name">61101012</field>
+                <field name="name">Gastos examenes medicos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101013">
+                <field name="name">61101013</field>
+                <field name="name">Vacaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101014">
+                <field name="name">61101014</field>
+                <field name="name">Bono vacacional</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101015">
+                <field name="name">61101015</field>
+                <field name="name">Utilidades</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101016">
+                <field name="name">61101016</field>
+                <field name="name">Prestaciones Sociales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101017">
+                <field name="name">61101017</field>
+                <field name="name">Intereses Prestaciones Sociales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101018">
+                <field name="name">61101018</field>
+                <field name="name">Aporte patronal I.V.S.S.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101019">
+                <field name="name">61101019</field>
+                <field name="name">Aporte patronal F.A.O.V.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101020">
+                <field name="name">61101020</field>
+                <field name="name">Aporte patronal I.N.C.E.S.</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101021">
+                <field name="name">61101021</field>
+                <field name="name">Gastos servicios contratados</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101022">
+                <field name="name">61101022</field>
+                <field name="name">Gastos viaticos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101023">
+                <field name="name">61101023</field>
+                <field name="name">Gastos cursos y entrenamiento al personal</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101024">
+                <field name="name">61101024</field>
+                <field name="name">Gastos agasajos y atenciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101025">
+                <field name="name">61101025</field>
+                <field name="name">Gastos representaci�n</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101026">
+                <field name="name">61101026</field>
+                <field name="name">Gastos seguros</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101027">
+                <field name="name">61101027</field>
+                <field name="name">Gastos honorarios profesionales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101028">
+                <field name="name">61101028</field>
+                <field name="name">Gastos electricidad y aseo</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101029">
+                <field name="name">61101029</field>
+                <field name="name">Gastos agua</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101030">
+                <field name="name">61101030</field>
+                <field name="name">Gastos telefonos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101031">
+                <field name="name">61101031</field>
+                <field name="name">Gastos informatica</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101032">
+                <field name="name">61101032</field>
+                <field name="name">Gastos suscripci�n y afiliaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101033">
+                <field name="name">61101033</field>
+                <field name="name">Gastos alquiler</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101034">
+                <field name="name">61101034</field>
+                <field name="name">Gastos depreciaciones y amortizaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101035">
+                <field name="name">61101035</field>
+                <field name="name">Gastos mantenimiento y reparaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101036">
+                <field name="name">61101036</field>
+                <field name="name">Gastos materiales y articulos de limpieza</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101037">
+                <field name="name">61101037</field>
+                <field name="name">Gastos materiales y articulos de oficina</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101038">
+                <field name="name">61101038</field>
+                <field name="name">Gastos vehiculos</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101039">
+                <field name="name">61101039</field>
+                <field name="name">Gastos estacionamiento</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101040">
+                <field name="name">61101040</field>
+                <field name="name">Gastos traslados y encomiendas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101041">
+                <field name="name">61101041</field>
+                <field name="name">Gastos donaciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101042">
+                <field name="name">61101042</field>
+                <field name="name">Gastos patente, industria y comercio</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101043">
+                <field name="name">61101043</field>
+                <field name="name">Gastos publicidad y propaganda</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101044">
+                <field name="name">61101044</field>
+                <field name="name">Gastos legales</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101045">
+                <field name="name">61101045</field>
+                <field name="name">Gastos bancarios</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101046">
+                <field name="name">61101046</field>
+                <field name="name">Gastos fianza</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61101047">
+                <field name="name">61101047</field>
+                <field name="name">Gastos impuestos, tasas y contribuciones</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61102001">
+                <field name="name">61102001</field>
+                <field name="name">Multas</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_61102002">
+                <field name="name">61102002</field>
+                <field name="name">Impuestos no deducibles</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+
+            <record model="account.account.template" id="account.data_account_type_expense_22000000">
+                <field name="name">22000000</field>
+                <field name="name">Expenses</field>
+                <field name="reconcile" eval="True"/>
+                <field name="user_type_id" ref="account.data_account_type_expense"/>
+                <field name="chart_template_id" ref="ve_chart_template_amd"/>
+            </record>
+        </data>
+    </odoo>

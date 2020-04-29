@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+    <!--
+    =====================================================
+    Partners Extension Income
+    =====================================================
+    -->
+
+        <record id="res_partner_wh_islr" model="ir.ui.view">
+            <field name="name">res.partner.wh.islr</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="l10n_ve_withholding.wh_partner"/>
+            <field name="arch" type="xml">
+                <xpath expr="//separator[@name='vsep']" position="before" >
+                     <xpath expr="//separator[@name='vsep']" position="attributes">
+                                 <attribute name="string">Income Withholding</attribute>
+                      </xpath>
+                    <newline/>
+                        <group col="6" colspan="2">
+                            <field name="islr_withholding_agent"/>
+                            <field name="spn"/>
+                            <field name="islr_exempt"/>
+                        </group>
+
+                        <!--group string='Income Withholding Historical Data' col="4" colspan="4">
+                            <field name="islr_wh_historical_data_ids" nolabel='1'>
+                                <tree editable='top'>
+                                    <field name="fiscalyear_id"/>
+                                    <field name="raw_base_ut"/>
+                                    <field name="raw_tax_ut"/>
+                                    <field name="concept_id"/>
+                                </tree>
+                            </field>
+                        </group-->
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="partner_ext_islr_view">
+            <field name="name">partner_ext_islr_view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+            <xpath expr="//group[@name='accounting_entries']" position="after">
+                <group string="Diarios de Retención de ISLR">
+                        <separator string="Journal ISLR de Purchase " name="purchase_ISLR_journal"/>
+                        <field name="purchase_islr_journal_id"/>
+                        <separator string="Journal ISLR Sales" name="sales_ISLR_journal"/>
+                        <field name="sale_islr_journal_id"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

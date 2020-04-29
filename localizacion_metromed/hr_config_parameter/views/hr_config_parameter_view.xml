@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_config_form" model="ir.ui.view">
+            <field name="model">hr.config.parameter</field>
+            <field name="arch" type="xml">
+                <form string="Config Parámetros" version="11.0">
+                    <sheet>
+                        <group>
+                            <field name="key"/>
+                            <field name="value"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_config_tree" model="ir.ui.view">
+            <field name="model">hr.config.parameter</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="key"/>
+                    <field name="value"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="open_module_hr_config" model="ir.actions.act_window">
+            <field name="name">Parámetros</field>
+            <field name="res_model">hr.config.parameter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a parameter.
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+            action="open_module_hr_config"
+            id="menu_hr_config_parameter_tree"
+            parent="hr_payroll.menu_hr_payroll_configuration"
+            sequence="20"
+            groups="hr.group_hr_user"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!--  Liquidaciones -->
+        <!--  vista lista -->
+        <record id="hr_payroll_payoff_list_view" model="ir.ui.view">
+            <field name="name">hr.payroll.payoff.list.view</field>
+            <field name="model">hr.payslip</field>
+            <field name="arch" type="xml">
+                <!--tree colors="blue:state in ('confirm','verify','done');black:state == 'draft';gray:state == 'cancel'" string="Liquidacionnes" domain="[('payslip_type','=','payoff')]"-->
+                    <tree>
+                    <field name="name"/>
+                    <field name="number"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+                <!--  vista Formulario inicio-->
+        <record id="hr_payroll_payoff_form_view" model="ir.ui.view">
+            <field name="name">hr.payroll.payoff.form.view</field>
+            <field name="model">hr.payslip</field>
+            <field name="context">{'readonly_by_pass': True}</field>
+            <field name="arch" type="xml">
+                <form string="Liquidaciones" version="7.0">
+                    <header>
+                        <button string="Confirmar" name="hr_action_confirm" class="oe_highlight" type="object" confirm="Esta seguro que desea confirmar esta nomina?" attrs="{'invisible':['|',('general_state', '=', 'not_autorized' ),('state', 'not in', 'verify' )]}"/>
+                        <button string="Verificar" name="hr_verify_sheet" states="draft" type='object' class="oe_highlight" context="{'come_from':'payoff'}"/>
+                        <button string="Volver a Borrador" name="hr_action_draft" states="verify" type="object" context="{'come_from':'hr_action_draft'}"/>
+                        <button string="Realizado" name="hr_action_done" type="object" states="confirm" class="oe_highlight"/>
+                        <button string="Cancelar" name="hr_action_cancel" states="draft,verify" type="object" />
+                        <field name="state" widget="statusbar" statusbar_visible="draft,verify,done"/>
+                        <field name="general_state" invisible="1"/>
+                    </header>
+                    <sheet>
+                        <group name="datos_emploeado" col="2" >
+                            <field name="name"  attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="number"  readonly="1" attrs="{'invisible':[('state','not in','confirm')]}"/>
+                            <field name="employee_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="department_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="job_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="journal_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                        </group>
+                        <group name="periodo" col="4">
+                            <field name="date_from" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="date_to" attrs="{'readonly':[('state','not in','draft')]}" required="1" on_change="onchange_date_end(date_from,date_to)"/>
+                        </group>
+                        <group>
+                            <group name="tiempo_servicio" string="Tiempo de Servicio">
+                                <field name="tiempo_servicio_year" string="Años" readonly="1" force_save="1"/>
+                                <field name="tiempo_servicio_meses" readonly="1" string="Meses" force_save="1"/>
+                                <field name="tiempo_servicio_dias" string="Días" readonly="1" force_save="1"/>
+                                <field name="tiempo_servicio" readonly="1" force_save="1"/>
+                                <field name="month_worked_year_str" readonly="1" force_save="1"/>
+                                <field name="month_worked_year" readonly="1" invisible="1" force_save="1"/>
+                            </group>
+                            <group string="Antigüedad (19/06/1997)">
+                                <field name="antiguedad_19061997_year" string="Años" readonly="1" force_save="1"/>
+                                <field name="antiguedad_19061997_meses" string="Meses" readonly="1" force_save="1"/>
+                                <field name="antiguedad_19061997_dias" string="Días" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                             <page string="Liquidación">
+                                <group col="2" name="datos_calculo">
+                                    <field name="struct_id" attrs="{'readonly':[('state','not in','draft')]}"/>
+                                    <field name="conceptos_salariales" string="Conceptos Salariales" attrs="{'readonly':[('state','not in','draft')],'invisible':[('state','not in','draft')],'nolabel':[('state','not in','draft')]}"/>
+                                    <field name="line_ids" string="Conceptos Salariales" attrs="{'readonly':[('state','!=','draft')],'invisible':[('state','in','draft')],'nolabel':[('state','in','draft')]}">
+                                        <tree string="Salary Structure" editable="bottom">
+                                            <field name="name"/>
+                                            <field name="code"/>
+                                            <field name="category_id"/>
+                                            <field name="sequence" invisible="1"/>
+                                            <field name="quantity"/>
+                                            <field name="rate"/>
+                                            <field name="amount"/>
+                                            <field name="total"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                             </page>
+                             <page string="Datos de cálculo">
+                                 <group>
+                                     <group name="payoff_aditional_fields_1">
+                                         <label for= "salario_basico" string="Salario básico mensual" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_basico" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_basico_diario" string="Salario básico diario" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_basico_diario" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_prom_mensual" string="Salario promedio mensual" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_prom_mensual" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_prom_diairo" string="Salario promedio diario" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_prom_diairo" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "alic_bono_vac_liq" string="Alícuota de bono vacacional" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="alic_bono_vac_liq" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "alic_util_liq" string="Alícuota de utilidades" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="alic_util_liq" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_integral" string="Salario integral"/>
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_integral" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                     </group>
+                                 </group>
+                             </page>
+                        </notebook>
+                        <group col="2">
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--  vista Formulario fin-->
+
+        <record model="ir.ui.view" id="hr_payroll_payoff_search">
+			<field name="name">hr.payroll.payoff.search</field>
+			<field name="model">hr.payslip</field>
+			<field name="arch" type="xml">
+                <search string="Liquidaciones">
+					<field name="employee_id"/>
+                    <filter name="payoff_true" string="Liquidaciones" icon="terp-stock_effects-object-colorize" domain="[('is_payoff','=','True')]" />
+                </search>
+			</field>
+		 </record>
+
+         <record id="action_hr_payroll_payoff" model="ir.actions.act_window">
+            <field name="name">Liquidaciones</field>
+            <field name="res_model">hr.payslip</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+             <field name="context">{"search_default_payoff_true":1,'is_payoff':True}</field>
+            <field name="view_id" ref="hr_payroll_payoff_list_view"/>
+            <field name="help" type="html">
+
+              <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                  Lista de nominas de liquidacion
+              </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+              </p>
+            </field>
+        </record>
+        <menuitem id="menu_hr_payroll_payoff" name="Liquidaciones" action="action_hr_payroll_payoff" parent="hr_payroll.menu_hr_payroll_root" sequence="15"/>
+        <!--  fin liquidaciones -->
+    </data>
+</odoo>

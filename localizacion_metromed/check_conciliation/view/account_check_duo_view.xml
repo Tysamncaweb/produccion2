@@ -1,0 +1,133 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="view_account_issued_check_form">
+            <field name="name">account.issued.check.inherit.form</field>
+            <field name="model">account.issued.check</field>
+            <field name="inherit_id" ref="l10n_ve_account_check_duo.view_account_issued_check_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//sheet/group" position="after">
+					<group string="Asientos Contables registrados para el cheque" attrs="{'invisible':[('state','not in',['handed','holding','payed','hrejected'])]}">
+							<field name="move_id" readonly="1" force_save="1" attrs="{'invisible':[('state','not in',['handed','holding','payed'])]}"/>
+							<field name="move_payed_id"  readonly="1" force_save="1" attrs="{'invisible':[('state','not in',['handed','payed'])]}" />
+							<field name="move_hrejected_id" readonly="1" force_save="1"   attrs="{'invisible':[('state','not in',['hrejected'])]}" />
+					</group>
+            		<group>
+            			<notebook>
+	            			<page string="Asiento Contable para el estado Entregado" attrs="{'invisible':[('state','not in',['handed','holding','payed'])]}">
+		                    		<field name="asiento_conciliado" readonly="1">
+                    				<tree string="Asiento Contable">
+                	    	        	<field name="ref" readonly="1"/>
+            	    	            	<field name="date"/>
+    	    	                    	<field name="partner_id"/>
+	    	                        	<field name="account_id"/>
+	                            		<field name="name"/>
+                            			<field name="debit"/>
+                            			<field name="credit"/>
+                		            	<field name="amount_currency" groups="base.group_multi_currency"/>
+            		                	<field name="currency_id" groups="base.group_multi_currency"/>
+									 </tree>
+								</field>
+		        	        </page>
+							<page string="Asiento Contable para el estado Pagado" attrs="{'invisible':[('state', 'not in', ['handed','payed'])]}">
+		                    		<field name="asiento_conciliado_payed" readonly="1" >
+                    				<tree string="Asiento Contable">
+                	    	        	<field name="ref" readonly="1"/>
+            	    	            	<field name="date"/>
+    	    	                    	<field name="partner_id"/>
+	    	                        	<field name="account_id"/>
+	                            		<field name="name"/>
+                            			<field name="debit"/>
+                            			<field name="credit"/>
+                		            	<field name="amount_currency" groups="base.group_multi_currency"/>
+            		                	<field name="currency_id" groups="base.group_multi_currency"/>
+									 </tree>
+								</field>
+		        	        </page>
+							<page string="Asiento Contable para el estado Rechazado" attrs="{'invisible':[('state','not in',['hrejected'])]}">
+		                    		<field name="asiento_conciliado_hrejected" readonly="1">
+                    				<tree string="Asiento Contable">
+                	    	        	<field name="ref" readonly="1"/>
+            	    	            	<field name="date"/>
+    	    	                    	<field name="partner_id"/>
+	    	                        	<field name="account_id"/>
+	                            		<field name="name"/>
+                            			<field name="debit"/>
+                            			<field name="credit"/>
+                		            	<field name="amount_currency" groups="base.group_multi_currency"/>
+            		                	<field name="currency_id" groups="base.group_multi_currency"/>
+									 </tree>
+								</field>
+		        	        </page>
+	        	        </notebook>
+        	        </group>
+        	    </xpath>
+        	</field>
+        </record>
+
+		<record model="ir.ui.view" id="view_account_third_check_form">
+            <field name="name">account.third.check.inherit.form</field>
+            <field name="model">account.third.check</field>
+            <field name="inherit_id" ref="l10n_ve_account_check_duo.view_account_third_check_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//sheet/group" position="after">
+					<group string="Asientos Contables registrados para el cheque" attrs="{'invisible':[('state','not in',['holding','deposited','drejected','sold'])]}">
+							<field name="move_id" readonly="1" force_save="1"  attrs="{'invisible':[('state','not in',['holding','deposited'])]}"/>
+							<field name="move_payed_id" readonly="1" force_save="1"  attrs="{'invisible':[('state','not in',['sold','deposited','payed'])]}" />
+							<field name="move_drejected_id" readonly="1" force_save="1"   attrs="{'invisible':[('state','not in',['drejected'])]}" />
+					</group>
+					<group>
+            			<notebook>
+	            			<page string="Asiento Contable para el estado Entregado" attrs="{'invisible':[('state','not in',['holding','deposited'])]}">
+		                    		<field name="asiento_conciliado" readonly="1">
+                    				<tree string="Asiento Contable">
+                	    	        	<field name="ref" readonly="1"/>
+            	    	            	<field name="date"/>
+    	    	                    	<field name="partner_id"/>
+	    	                        	<field name="account_id"/>
+	                            		<field name="name"/>
+                            			<field name="debit"/>
+                            			<field name="credit"/>
+                		            	<field name="amount_currency" groups="base.group_multi_currency"/>
+            		                	<field name="currency_id" groups="base.group_multi_currency"/>
+									 </tree>
+								</field>
+		        	        </page>
+							<page string="Asiento Contable para el estado Pagado" attrs="{'invisible':[('state', 'not in', ['deposited','payed','sold'])]}">
+		                    		<field name="asiento_conciliado_payed" readonly="1">
+                    				<tree string="Asiento Contable">
+                	    	        	<field name="ref" readonly="1"/>
+            	    	            	<field name="date"/>
+    	    	                    	<field name="partner_id"/>
+	    	                        	<field name="account_id"/>
+	                            		<field name="name"/>
+                            			<field name="debit"/>
+                            			<field name="credit"/>
+                		            	<field name="amount_currency" groups="base.group_multi_currency"/>
+            		                	<field name="currency_id" groups="base.group_multi_currency"/>
+									 </tree>
+								</field>
+		        	        </page>
+							<page string="Asiento Contable para el estado Rechazado" attrs="{'invisible':[('state','not in',['drejected'])]}">
+		                    		<field name="asiento_conciliado_drejected" readonly="1">
+                    				<tree string="Asiento Contable">
+                	    	        	<field name="ref" readonly="1"/>
+            	    	            	<field name="date"/>
+    	    	                    	<field name="partner_id"/>
+	    	                        	<field name="account_id"/>
+	                            		<field name="name"/>
+                            			<field name="debit"/>
+                            			<field name="credit"/>
+                		            	<field name="amount_currency" groups="base.group_multi_currency"/>
+            		                	<field name="currency_id" groups="base.group_multi_currency"/>
+									 </tree>
+								</field>
+		        	        </page>
+	        	        </notebook>
+        	        </group>
+
+				</xpath>
+        	</field>
+		</record>
+	</data>
+</odoo>

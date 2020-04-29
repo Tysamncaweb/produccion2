@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="res_country_state_view_form" model="ir.ui.view">
+            <field name="name">res.country.state.view.form</field>
+            <field name="model">res.country.state</field>
+            <field name="arch" type="xml">
+                <form string="Credentials">
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="country_id" />
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="code"/>
+                        </group>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_country_state_view_tree" model="ir.ui.view">
+            <field name="name">res.country.state.view.tree</field>
+            <field name="model">res.country.state</field>
+            <field name="arch" type="xml">
+                <tree string="Credentials">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_country_state_xml" model="ir.actions.act_window">
+            <field name="name">Country States</field>
+            <field name="res_model">res.country.state</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="res_country_state_view_tree"/>
+            <!--<field name="search_view_id" ref="view_rule_search"/> TODO-->
+        </record>
+
+        <menuitem action="res_country_state_xml" id="menu_res_country_state_xml" parent="base.menu_security" sequence="20"/>
+
+    </data>
+</openerp>

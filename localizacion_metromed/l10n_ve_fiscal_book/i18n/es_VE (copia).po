@@ -1,0 +1,1672 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ve_fiscal_book
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-26 18:20+0000\n"
+"PO-Revision-Date: 2018-12-26 18:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.taxes.summary,tax_type:0
+msgid "0% Exento"
+msgstr "0% Exento"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_additional_base
+msgid "ADD BASE"
+msgstr "Añadir Base"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_additional_tax
+msgid "ADD TAX"
+msgstr "Agregar Impuesto"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_accounting_date
+msgid "Accounting Date"
+msgstr "Fecha contable"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_additional_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_additional_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_additional_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_additional_vat_base_sum
+msgid "Additional VAT Taxable Amount"
+msgstr "IVA Adicional Base Imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_additional_vat_tax_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_additional_vat_tax_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_additional_vat_tax_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_additional_vat_tax_sum
+msgid "Additional VAT Taxed Amount"
+msgstr "IVA adicional Monto imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_additional_vat_base_sum
+msgid "Additional VAT Taxed Domestic Base Amount Totalization. For Purchase Book it sums Additional VAT Base column for domestic transactions. For Sale Book it sums Tax Payer and No Tax Payer Additional VAT Base columns"
+msgstr "Additional VAT Taxed Domestic Base Amount Totalization. For Purchase Book it sums Additional VAT Base column for domestic transactions. For Sale Book it sums Tax Payer and No Tax Payer Additional VAT Base columns"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_additional_vat_tax_sum
+msgid "Additional VAT Taxed Domestic Tax Amount Totalization. For Purchase Book it sums Additional VAT Tax column for domestic transactions. For Sale Book it sums Tax Payer and No Tax Payer Additional VAT Tax columns"
+msgstr "Additional VAT Taxed Domestic Tax Amount Totalization. For Purchase Book it sums Additional VAT Tax column for domestic transactions. For Sale Book it sums Tax Payer and No Tax Payer Additional VAT Tax columns"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_additional_vat_base_sum
+msgid "Additional VAT Taxed Imports/Exports Base Amount. Sum of Additional VAT Base column for international transactions"
+msgstr "Additional VAT Taxed Imports/Exports Base Amount. Sum of Additional VAT Base column for international transactions"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_additional_vat_tax_sum
+msgid "Additional VAT Taxed Imports/Exports Tax Amount. Sum of  Additional VAT Tax column for international transactions"
+msgstr "Additional VAT Taxed Imports/Exports Tax Amount. Sum of  Additional VAT Tax column for international transactions"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_additional_vat_base_sum
+msgid "Additional VAT Taxed Non-Tax Payer Base Amount Totalization. Sum of Additional VAT Base column for Non-Tax Payer transactions"
+msgstr "Additional VAT Taxed Non-Tax Payer Base Amount Totalization. Sum of Additional VAT Base column for Non-Tax Payer transactions"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_additional_vat_tax_sum
+msgid "Additional VAT Taxed Non-Tax Payer Tax Amount Totalization. Sum of Additional VAT Tax column for Non-Tax Payer transactions"
+msgstr "Additional VAT Taxed Non-Tax Payer Tax Amount Totalization. Sum of Additional VAT Tax column for Non-Tax Payer transactions"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_additional_vat_base_sum
+msgid "Additional VAT Taxed Tax Payer Base Amount Totalization. Sum of Additional VAT Base column for tax payer transactions"
+msgstr "Additional VAT Taxed Tax Payer Base Amount Totalization. Sum of Additional VAT Base column for tax payer transactions"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_additional_vat_tax_sum
+msgid "Additional VAT Taxed Tax Payer Tax Amount Totalization. Sum of Additional VAT Tax column for tax payer transactions"
+msgstr "Additional VAT Taxed Tax Payer Tax Amount Totalization. Sum of Additional VAT Tax column for tax payer transactions"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_additional_rate
+msgid "Additional rate"
+msgstr "Additional rate"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_adjustment_book_line_line_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_adjustment_book_line_tree
+msgid "Adjustment Book Line"
+msgstr "Ajuste Línea de Libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_adjustment_vat_tax_sum
+msgid "Adjustment VAT Taxed Amount"
+msgstr "Adjustment VAT Taxed Amount"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_credit_affected
+msgid "Affected Credit Notes"
+msgstr "Affected Credit Notes"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_debit_affected
+msgid "Affected Debit Notes"
+msgstr "Affected Debit Notes"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_doc_affected
+msgid "Affected Document"
+msgstr "Affected Document"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_doc_affected
+msgid "Affected Document for adjustment book"
+msgstr "Affected Document for adjustment book"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_affected_invoice
+msgid "Affected Invoice"
+msgstr "Factura Afectada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_affected_invoice_date
+msgid "Affected Invoice Date"
+msgstr "Fecha de Factura Afectada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "All Transactions"
+msgstr "Todas las Transacciones"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_amount
+msgid "Amount Document at VAT Withholding"
+msgstr "Amount Document at VAT Withholding"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_amount_untaxed_i
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_amount_untaxed_n
+msgid "Amount Untaxed"
+msgstr "Amount Untaxed"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_amount
+msgid "Amount document for adjustment book"
+msgstr "Amount document for adjustment book"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_amount_untaxed_i
+msgid "Amount untaxed for international operations"
+msgstr "Amount untaxed for international operations"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_amount_untaxed_n
+msgid "Amount untaxed for national operations"
+msgstr "Amount untaxed for national operations"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_base_amount
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_taxes_base_amount
+msgid "Amount used as Taxing Base"
+msgstr "Amount used as Taxing Base"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,state:0
+msgid "Approved by Manager"
+msgstr "Aprobado por el Responsable"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.wizard_change_invoice_sin_cred_form
+msgid "Are you sure you want to do this?"
+msgstr "¿Estás seguro que quieres hacer esto?"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_sure
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_article_number
+msgid "Article Number"
+msgstr "Nro. Artículo"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_article_number
+msgid "Article number describing the fiscal book special features according to the Venezuelan RLIVA statement for fiscal accounting books. Options: - Art. 75: Pruchase Book. - Art. 76: Sale Book. Reflects every individual operation detail. - Art. 77: Sale Book. Groups Non-Tax Payer operations in one  consolidated line. Only fiscal billing. - Art. 78: Sale Book. Hybrid for 76 and 77 article. Show automatic and mechanized operations in individual way, and  groups fiscal billing operationss in one consolidated line."
+msgstr "Número de artículo que describe las características especiales del libro fiscal de acuerdo con la ley RLIVA de Venezuela para libros contables fiscales. Opciones: - Art. 75: Libro de compra. - Art º. 76: Libro de Venta. Refleja cada detalle individual de la operación. - Art º. 77: Libros de Venta. Agrupa las operaciones del pagador no tributario en una línea consolidada. Solo facturación fiscal. - Art º. 78: Libro de Venta. Híbrido para artículo 76 y 77. Muestra las operaciones automáticas y mecanizadas de forma individual y agrupa las operaciones de facturación fiscal en una línea consolidada."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_get_wh_debit_credit
+msgid "Based Tax Debit"
+msgstr "Débito fiscal base"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_wh_debit_credit_sum
+msgid "Based Tax Debit Sum"
+msgstr "Suma Débito fiscal base"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_fbl_ids
+msgid "Book Lines"
+msgstr "Líneas del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_type
+msgid "Book Type"
+msgstr "Tipo"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_type
+msgid "Book line transtaction type: - Purchase: Import or Domestic. - Sales: Expertation, Tax Payer, Non-Tax Payer."
+msgstr "Línea de libro, tipo de transacción: - Compra: Nacional o Internacional. - Ventas: Peritaje, Contribuyente, No contribuyente."
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,state:0
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.fiscal_book_wizard_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.wizard_change_invoice_sin_cred_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.account_invoice_fiscal_book_form
+msgid "Change Exclusion"
+msgstr "Cambio de Exclusion"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_book.action_change_invoice_sin_cred
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.wizard_change_invoice_sin_cred_form
+msgid "Change Invoice Sin Cred"
+msgstr "Cambiar factura Sin Cred"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_change_invoice_sin_cred
+msgid "Change Invoice Tax Exempt"
+msgstr "Cambiar factura exenta de impuestos"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Clear Book"
+msgstr "Borrar Libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.account_invoice_fiscal_book_form
+msgid "Click this button to change this field."
+msgstr "Haga click aquí para cambiar éste campo"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_company_id
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.wizard_change_invoice_sin_cred_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_parent_id
+msgid "Consolidated Line"
+msgstr "Línea consolidada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_control_end
+msgid "Control End"
+msgstr "Fin de control"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_control_start
+msgid "Control Start"
+msgstr "Inicio de control"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_ve_fiscal_book
+#: selection:adjustment.book.line,type_doc:0
+msgid "Credit Note"
+msgstr "Nota de Crédito"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_credit_affected
+msgid "Credit notes affected"
+msgstr "Nota de crédito afectada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_currency_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_currency_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_wh_sum
+msgid "Current Period Withholding"
+msgstr "Período actual de retención"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_custom_statement
+msgid "Custom Statement"
+msgstr "Declaración Personalizada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_date_accounting
+msgid "Date Accounting"
+msgstr "Fecha Contable"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_date_admin
+msgid "Date Administrative"
+msgstr "Fecha Administrativa"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_date_accounting
+msgid "Date accounting for adjustment book"
+msgstr "Fecha Contable para ajuste del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_date_admin
+msgid "Date administrative for adjustment book"
+msgstr "Fecha administrativa para ajuste del libro"
+
+#. module: l10n_ve_fiscal_book
+#: selection:adjustment.book.line,type_doc:0
+msgid "Debit Note"
+msgstr "Nota de Débito"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_debit_affected
+msgid "Debit notes affected"
+msgstr "Nota de débito afectada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_doc_type
+msgid "Doc. Type"
+msgstr "Tipo Doc."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_type_doc
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_doc_type
+msgid "Document Type"
+msgstr "Tipo de documento"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.line,type:0
+#: selection:fiscal.book.taxes.summary,op_type:0
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+msgid "Domestic"
+msgstr "Nacional"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_exempt_vat_sum
+msgid "Domestic Exempt Tax Totalization. For Purchase Book it sums Exempt column for domestic transactions. For Sale Book it sums Tax Payer and Non-Tax Payer Exempt columns"
+msgstr "Totalización de impuestos exentos nacionales. Para el Libro de compras, suma la columna exenta para transacciones nacionales. En venta, suma las columnas exentas del contribuyente y del no contribuyente."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_sdcf_vat_sum
+msgid "Domestic SDCF Tax Totalization. For Purchase Book it sums SDCF column for domestic transactions. For Sale Book it sums Tax Payer and Non-Tax Payer SDCF columns"
+msgstr "Totalización de impuestos nacionales SDCF. Para el Libro de compras, suma la columna SDCF para las transacciones nacionales. Para el libro de venta, suma las columnas SDCF del contribuyente y del no contribuyente tributario"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_vat_base_sum
+msgid "Domestic Taxable Amount"
+msgstr "Monto imponible nacional"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_do_sum
+msgid "Domestic Total with VAT Totalization"
+msgstr "Total nacional con totalización de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_sdcf_and_exempt_sum
+msgid "Domestic Untaxed VAT Sum"
+msgstr "Suma IVA nacional no gravado"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Done"
+msgstr "Hecho"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_emission_date
+msgid "Emission Date"
+msgstr "Fecha de emisión"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_date_end
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_exempt
+msgid "Exempt"
+msgstr "Exento"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_exempt_vat_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_exempt_vat_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_exempt_vat_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_exempt_vat_sum
+msgid "Exempt Tax"
+msgstr "Exento de Impuesto"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_vat_sdcf_sum
+msgid "Exempt and Non entitled to tax credit totalization. Sum of SDCF and Exempt Tax Totalization columns for all transaction types"
+msgstr "Exentos y no autorizados a la totalización del crédito fiscal. Suma de las columnas SDCF y Totalización de impuestos exentos para todos los tipos de transacciones"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_vat_sdcf_sum
+msgid "Exempt and SDCF Tax Sum"
+msgstr "Suma de Exento e Impuesto SDCF"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_exempt
+msgid "Exempt is a Tax with 0 tax percentage"
+msgstr "Exento es un Impuesto con porcentaje cero (0)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Explanation about this adjustment"
+msgstr "Explicación de este ajuste"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.line,type:0
+#: selection:fiscal.book.taxes.summary,op_type:0
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Exports"
+msgstr "Exportaciones"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,fortnight:0
+msgid "First Fortnight"
+msgstr "Primera quincena"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_previous_wh_sum
+msgid "First row at the Withholding Summary block"
+msgstr "Primera fila en el bloque de resumen de retenciones"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_account_invoice_fb_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_account_invoice_issue_fb_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_account_wh_iva_line_fb_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_fb_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_fb_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_fb_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_fb_id
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_book_tree
+msgid "Fiscal Book"
+msgstr "Libro Fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Fiscal Book Adjustments"
+msgstr "Ajustes Libro Fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Fiscal Book Invoices"
+msgstr "Facturas libro Fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_fbl_id
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_book_lines_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Fiscal Book Lines"
+msgstr "Líneas Libro Fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_taxes_fbl_id
+msgid "Fiscal Book Lines where this tax is related to"
+msgstr "Líneas del libro fiscal donde se relaciona este impuesto"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_book.fiscal_book_wizard_act
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.fiscal_book_wizard_form
+msgid "Fiscal Book Report"
+msgstr "Informe Libro Fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Fiscal Book Taxes"
+msgstr "Libro de Impuestos Fiscales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Fiscal Book Vat Withholdings"
+msgstr "Libro Fiscal Retenciones de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_fb_id
+msgid "Fiscal Book that owns this book line"
+msgstr "Libro fiscal al que pertenece ésta línea"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_ntp_fb_id
+msgid "Fiscal Book that owns this book line This Book is only for Non-Tax Payer lines"
+msgstr "Libro fiscal al que pertenece ésta línea. Este libro es solo para líneas de no contribuyentes"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_account_invoice_issue_fb_id
+msgid "Fiscal Book where this invoice needs to be add"
+msgstr "Libro fiscal donde ésta línea será agregada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_account_invoice_fb_id
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_account_wh_iva_line_fb_id
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_fb_id
+msgid "Fiscal Book where this line is related to"
+msgstr "Libro fiscal donde ésta línea está relacionada"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_taxes_fb_id
+msgid "Fiscal Book where this tax is related to"
+msgstr "Libro fiscal donde está relacionado éste impuesto"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_book.action_fiscal_purchase_book
+#: model:ir.ui.menu,name:l10n_ve_fiscal_book.menu_fiscal_purchase_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+msgid "Fiscal Purchase Book"
+msgstr "Libro Fiscal de Compra"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.menu,name:l10n_ve_fiscal_book.menu_fr_main
+msgid "Fiscal Reporting"
+msgstr "Informes Fiscales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_book.action_fiscal_sale_book
+#: model:ir.ui.menu,name:l10n_ve_fiscal_book.menu_fiscal_sale_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Fiscal Sale Book"
+msgstr "Libro Fiscal de Ventas"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_book_taxes_tree
+msgid "Fiscal Taxes"
+msgstr "Impuestos Fiscales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_fiscal_printer
+msgid "Fiscal machine number"
+msgstr "Número de máquina fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_affected_invoice
+msgid "For an invoice line type means parent invoice for a Debit or Credit Note. For an withholding line type means the invoice number related to the withholding"
+msgstr "Para un tipo de línea de factura se refiere a la factura principal para una nota de débito o crédito. Para un tipo de línea de retención se refiera al número de factura relacionado con la retención"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_fortnight
+msgid "Fortnight"
+msgstr "Quincena"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_fortnight
+msgid "Fortnight that applies to the current book."
+msgstr "Quincena que aplica al libro actual."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_general_base
+msgid "GRAL BASE"
+msgstr "Base Imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_general_tax
+msgid "GRAL TAX"
+msgstr "IVA"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.taxes.summary,tax_type:0
+msgid "General Aliquot"
+msgstr "Alícuota General"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.taxes.summary,tax_type:0
+msgid "General Aliquot + Additional"
+msgstr "Alícuota General + Adicional"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_general_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_general_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_general_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_general_vat_base_sum
+msgid "General VAT Taxable Amount"
+msgstr "Base Imponible General de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_general_vat_tax_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_general_vat_tax_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_general_vat_tax_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_general_vat_tax_sum
+msgid "General VAT Taxed Amount"
+msgstr "Monto General Gravado de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_general_vat_base_sum
+msgid "General VAT Taxed Domestic Base Amount Totalization. For Purchase Book it sums General VAT Base column for domestic transactions. For Sale Book it sums Tax Payer and Non-Tax Payer General VAT Base columns"
+msgstr "Total general del monto base gravado con IVA, nacional. Para el Libro de compras, suma la columna Base de IVA general para transacciones nacionales. Para el libro de venta suma las columnas Base de IVA general de contribuyentes y no contribuyentes."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_general_vat_tax_sum
+msgid "General VAT Taxed Domestic Tax Amount Totalization. For Purchase Book it sums General VAT Tax column for domestic transactions. For Sale Book it sums Tax Payer and Non-Tax Payer General VAT Tax columns"
+msgstr "Total general de los impuestos gravados nacionales. Para el Libro de compras, se suma la columna de IVA general para las transacciones nacionales. Para el libro de venta, suma las columnas de Impuesto general de IVA al contribuyente y a el no contribuyente."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_general_vat_base_sum
+msgid "General VAT Taxed Imports/Exports Base Amount. Sum of General VAT Base column for international transactions"
+msgstr "Monto base de las importaciones / exportaciones gravadas de IVA general. Suma de la columna base general del IVA para transacciones internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_general_vat_tax_sum
+msgid "General VAT Taxed Imports/Exports Tax Amount. Sum of General VAT Tax column for international transactions"
+msgstr "Impuesto de IVA general a las importaciones / exportaciones. Suma de la columna del IVA general para transacciones internacionales."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_general_vat_base_sum
+msgid "General VAT Taxed Non-Tax Payer Base Amount Totalization. Sum of General VAT Base column for taxy payer transactions"
+msgstr "Totalización del monto base gravado de IVA general para no contribuyente. Suma de la columna Base de IVA general para transacciones de contribuyentes"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_general_vat_tax_sum
+msgid "General VAT Taxed Non-Tax Payer Tax Amount Totalization. Sum of General VAT Tax column for Non-Tax Payer transactions"
+msgstr "Totalización del IVA general gravado para no contribuyente. Suma la columna de IVA general para las transacciones del no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_general_vat_base_sum
+msgid "General VAT Taxed Tax Payer Base Amount Totalization. Sum of General VAT Base column for taxy payer transactions"
+msgstr "Totalización del IVA  general gravado del contribuyente. Suma de la columna Base de IVA general para transacciones de contribuyentes"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_general_vat_tax_sum
+msgid "General VAT Taxed Tax Payer Tax Amount Totalization. Sum of General VAT Tax column for tax payer transactions"
+msgstr "Totalización del IVA general gravado del contribuyente. Suma la columna de IVA general para las transacciones del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_general_rate
+msgid "General rate"
+msgstr "Tasa general"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_month_year
+msgid "Get Month Year"
+msgstr "Obtener mes - año"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_partner_addr
+msgid "Get Partner Addr"
+msgstr "Obtener dirección del proveedor"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,state:0
+msgid "Getting Ready"
+msgstr "Preparándose"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_imex_date
+msgid "Imex Date"
+msgstr "Fecha Imex"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_exempt_vat_sum
+msgid "Import/Export Exempt Tax Totalization: Sum of Exempt column for international transactions"
+msgstr "Totalización de impuestos exentos de importación / exportación: Suma de la columna Exento para transacciones internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_sdcf_vat_sum
+msgid "Import/Export SDCF Tax Totalization: Sum of SDCF column for international transactions"
+msgstr "Totalización de impuestos SDCF de importación / exportación: Suma de la columna SDCF para transacciones internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_imex_sum
+msgid "Imported/Exported Total with VAT Totalization"
+msgstr "Totalización de IVA de importación / exportación"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.line,type:0
+#: selection:fiscal.book.taxes.summary,op_type:0
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+msgid "Imports"
+msgstr "Importaciones"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_adjustment_book_line_line_form
+msgid "International Operations"
+msgstr "Operaciones Internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_vat_base_sum
+msgid "International Taxable Amount"
+msgstr "Base Imponible Internacional"
+
+#. module: l10n_ve_fiscal_book
+#: selection:adjustment.book.line,type_doc:0
+#: model:ir.model,name:l10n_ve_fiscal_book.model_account_invoice
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_control_number
+msgid "Invoice Control"
+msgstr "Control de factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_ctrl_number
+msgid "Invoice Control number"
+msgstr "Nro. de Control de Factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_emission_date
+msgid "Invoice Document Date / Wh IVA Line Voucher Date"
+msgstr "Fecha de factura / Fecha de la línea de retención de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_imex_date
+msgid "Invoice Imports/Exports Date"
+msgstr "Fecha de factura importación / exportación"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_invoice_number
+msgid "Invoice Number"
+msgstr "Nro. de Factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_invoice_number
+msgid "Invoice Number. In case of use of fiscal printer this field will store the invoice number generate by the fiscal printer machine"
+msgstr "Número de factura. En el caso de uso de impresora fiscal, este campo almacenará el número de factura generado por la impresora fiscal."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_control_number
+msgid "Invoice control for adjustment book"
+msgstr "Control de factura para ajuste del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_invoice_number
+msgid "Invoice number"
+msgstr "Número de factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_invoice_number
+msgid "Invoice number for adjustment book"
+msgstr "Número de factura para ajuste del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_invoice_id
+msgid "Invoice related to this book line"
+msgstr "Factura relacionada a ésta línea del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_invoice_ids
+msgid "Invoices being recorded in a Fiscal Book"
+msgstr "Facturas a ser guardadas en el lirbo fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_issue_invoice_ids
+msgid "Invoices that are in pending state cancel or draft"
+msgstr "Facturas que están en estadp pendoente, cancelado o borrador"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_issue_invoice_ids
+msgid "Issue Invoices"
+msgstr "Facturas Emitidas"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "Last fiscal year"
+msgstr "Último año fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "Last month"
+msgstr "Último mes"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "Last quarter"
+msgstr "Último trimestre"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_parent_left
+msgid "Left Parent"
+msgstr "Padre izquierdo"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_rank
+msgid "Line"
+msgstr "Nro. Operación"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_rank
+msgid "Line Position"
+msgstr "Posición de línea"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_fbl_ids
+msgid "Lines being recorded in the book"
+msgstr "Lineas a ser registradas en el libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_adjustment_book_line_line_form
+msgid "National Operations"
+msgstr "Operaciones Nacionales"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.line,type:0
+#: selection:fiscal.book.taxes.summary,op_type:0
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Non-Tax Payer"
+msgstr "No Contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_parent_id
+msgid "Non-Tax Payer Consolidated Line. Indicate the id of the consolidated line where this Non-Tax Payer line belongs"
+msgstr "Non-Tax Payer Consolidated Line. Indicate the id of the consolidated line where this Non-Tax Payer line belongs"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_ntp_fb_id
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Non-Tax Payer Detail"
+msgstr "Detalle no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_child_ids
+msgid "Non-Tax Payer Detail Line"
+msgstr "Línea de detalle del no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_fbl_ids
+msgid "Non-Tax Payer Detail Lines"
+msgstr "Línea de detalle del no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_exempt_vat_sum
+msgid "Non-Tax Payer Exempt Tax Totalization. Sum of Exempt column for Non-Tax Payer transactions"
+msgstr "Totalización de impuestos exentos del no contribuyente. Suma de la columna Exento para transacciones del no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_vat_base_sum
+msgid "Non-Tax Payer Grand Base Totalization. Sum of all no tax payer tax bases (reduced, general and additional)"
+msgstr "Totalización de monto Base del no contribuyente. Suma de todas las bases impositivas del no contribuyente(reducida, general y adicional)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_child_ids
+msgid "Non-Tax Payer Group of book lines that this line represent"
+msgstr "Grupo de no contribuyente de líneas del libro que esta línea representa"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_fbl_ids
+msgid "Non-Tax Payer Lines that are grouped by the statement law that represent the data of are consolidate book lines"
+msgstr "Las líneas de pagador no impositivo que se agrupan por ley de declaración que representan los datos son líneas de libros consolidadas"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_sdcf_vat_sum
+msgid "Non-Tax Payer SDCF Tax Totalization. Sum of SDCF column for Non-Tax Payer transactions"
+msgstr "Totalización del impuesto SDCF de no contribuyente. Suma de la columna SDCF para transacciones de no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_vat_base_sum
+msgid "Non-Tax Payer Taxable Amount"
+msgstr "Monto imponible de no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_ntp_sum
+msgid "Non-Tax Payer Total with VAT Totalization"
+msgstr "Totalización de IVA de no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.taxes.summary,tax_type:0
+msgid "Not entitled to tax credit"
+msgstr "No tienen derecho a crédito fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_sdcf
+msgid "Not entitled to tax credit (The field name correspond to the spanih acronym for 'Sin Derecho a Credito Fiscal')"
+msgstr "No tienen derecho a crédito fiscal (El nombre del campo corresponde al acrónimo en español de 'Sin Derecho a Credito Fiscal')"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_note
+msgid "Note"
+msgstr "Nota"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_op_type
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_void_form
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_op_type
+msgid "Operation Type: - Purchase: Import or Domestic. - Sales: Expertation, Tax Payer, Non-Tax Payer."
+msgstr "Tipo de operación: - Compra: Nacional o importada. - ventas: Peritaje, Contribuyente, No contribuyente."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_partner_name
+msgid "Partner Name"
+msgstr "Nombre de la empresa"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_partner_vat
+msgid "Partner TIN"
+msgstr "Nro. de RIF"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_partner_addr
+msgid "Partner address printable format"
+msgstr "Dirección del proveedor en formato imprimible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_partner
+msgid "Partner for adjustment book"
+msgstr "Proveedor para ajuste del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_amount_with_vat_n
+msgid "Percent(%) VAT for national operations"
+msgstr "Porcentaje(%) de IVA para operadores nacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Period"
+msgstr "Período"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_period_end
+msgid "Period End"
+msgstr "Fin de período"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_period_start
+msgid "Period Start"
+msgstr "Inicio de período"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "Personalize"
+msgstr "Personalizado"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_previous_wh_sum
+msgid "Previous Period Withholding"
+msgstr "Perpiodo de retención anterior"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Print Book"
+msgstr "Imprimir Libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.fiscal_book_wizard_form
+msgid "Print Report"
+msgstr "Imprimir reporte"
+
+#. module: l10n_ve_fiscal_book
+#: code:addons/l10n_ve_fiscal_book/wizard/fiscal_book_wizard.py:40
+#: selection:fiscal.book.wizard,type:0
+#, python-format
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,type:0
+msgid "Purchase Book"
+msgstr "Libro de Compra"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_reduced_base
+msgid "RED BASE"
+msgstr "Base RED"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_reduced_tax
+msgid "RED TAX"
+msgstr "Impuesto RED"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_reduced_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_reduced_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_reduced_vat_base_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_reduced_vat_base_sum
+msgid "Reduced VAT Taxable Amount"
+msgstr "IVA Reducido Monto Imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_reduced_vat_base_sum
+msgid "Reduced VAT Taxed Domestic Base Amount Totalization. For Purchase Book it sums Reduced VAT Base column for domestic transactions. For Sale Book it sums Tax Payer and Non-Tax Payer Reduced VAT Base columns"
+msgstr "Totalización importe base de IVA reducido para transacciones nacionales. Compras, se suma la columna Base de IVA reducido para transacciones nacionales. Ventas suma las columnas del importe base de IVA reducido de contribuyentes y no contribuyentes."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_reduced_vat_tax_sum
+msgid "Reduced VAT Taxed Domestic Tax Amount Totalization. For Purchase Book it sums Reduced VAT Tax column for domestic transactions. For Sale Book it sums Tax Payer and Non-Tax Payer Reduced VAT Tax columns"
+msgstr "Totalización del importe de IVA nacional gravado. Compras, se suma la columna Impuesto de IVA reducido para transacciones nacionales. Ventas suma las columnas de Impuesto del IVA y el Impuesto del IVA no reducido"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_reduced_vat_base_sum
+msgid "Reduced VAT Taxed Imports/Exports Base Amount. Sum of  Reduced VAT Base column for international transactions"
+msgstr "Importe base de las importaciones / exportaciones gravadas con IVA reducido. Suma de la columna base de IVA reducido para transacciones internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_reduced_vat_tax_sum
+msgid "Reduced VAT Taxed Imports/Exports Tax Amount. Sum of  Reduced VAT Tax column for international transactions"
+msgstr "Importe de IVA reducido a las importaciones / exportaciones. Suma de la columna de IVA reducido para transacciones internacionales."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_reduced_vat_base_sum
+msgid "Reduced VAT Taxed Non-Tax Payer Base Amount Totalization. Sum of Reduced VAT Base column for Non-Tax Payer transactions"
+msgstr "Totalización del monto base gravado del no contribuyente del IVA reducido. Suma de la columna base de IVA reducido para las transacciones del no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_ntp_reduced_vat_tax_sum
+msgid "Reduced VAT Taxed Non-Tax Payer Tax Amount Totalization. Sum of Reduced VAT Tax column for Non-Tax Payer transactions"
+msgstr "Totalización del monto del impuesto del no contribuyente del IVA reducido. Suma de la columna de impuesto de IVA reducido para las transacciones del no contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_reduced_vat_base_sum
+msgid "Reduced VAT Taxed Tax Payer Base Amount Totalization. Sum of Reduced VAT Base column for tax payer transactions"
+msgstr "Totalización del monto del impuesto del contribuyente del IVA reducido. Suma de la columna de impuesto de IVA reducido para las transacciones del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_reduced_vat_tax_sum
+msgid "Reduced VAT Taxed Tax Payer Tax Amount Totalization. Sum of Reduced VAT Tax column for tax payer transactions"
+msgstr "Totalización del monto del impuesto del IVA reducido. Suma de la columna de impuesto de IVA reducido para las transacciones del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_reduced_rate
+msgid "Reduced rate"
+msgstr "Tasa reducida"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.taxes.summary,tax_type:0
+msgid "Reducted Aliquot"
+msgstr "Alícuota Reducida"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_z_report
+msgid "Report Z"
+msgstr "Reporte Z"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_parent_right
+msgid "Right Parent"
+msgstr "Padre derecho"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_vat_sdcf
+msgid "SDCF"
+msgstr "SDCF"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_do_sdcf_vat_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_imex_sdcf_vat_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_ntp_sdcf_vat_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_sdcf_vat_sum
+msgid "SDCF Tax"
+msgstr "Impuesto SDCF"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_sdcf_and_exempt_sum
+msgid "SDCF and Exempt sum for domestict transanctions. At Sale book represent the sum of Tax Payer and Non-Tax Payer transactions."
+msgstr "Suma de SDCF y exento para las transacciones nacionales. En el libro de ventas representa la suma de las transacciones del contribuyente y del no contribuyente."
+
+#. module: l10n_ve_fiscal_book
+#: code:addons/l10n_ve_fiscal_book/wizard/fiscal_book_wizard.py:39
+#: selection:fiscal.book.wizard,type:0
+#, python-format
+msgid "Sale"
+msgstr "Venta"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,type:0
+msgid "Sale Book"
+msgstr "Libro de Venta"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,fortnight:0
+msgid "Second Fortnight"
+msgstr "Segunda quincena"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_type
+msgid "Select Sale for Customers and Purchase for Suppliers"
+msgstr "Seleccione Ventas para clientes y Compras para proveedores"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,state:0
+msgid "Seniat Submitted"
+msgstr "Enviado al SENIAT"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Set to draft"
+msgstr "Establecer para borrar"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_uncredit_fiscal
+msgid "Sin derecho a Credito Fiscal"
+msgstr "Sin derecho a Credito Fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_uncredit_fiscal
+msgid "Sin derechoa credito fiscal"
+msgstr "Sin derechoa credito fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_date_start
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_state
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_total_with_iva
+msgid "Sub Total of the invoice (untaxed amount) plus all tax amount of the related taxes"
+msgstr "Subtotal de la factura (importe no gravado) más el importe total de los impuestos relacionados"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_imex_vat_base_sum
+msgid "Sum of International Tax Base Amounts (reduced, general and additional). Used at 2nd row in thw Sale book's summary with Exports Sales title"
+msgstr "Suma de Montos Base de impuestos internacionales (reducida, general y adicional). Utilizado en la segunda fila en el resumen del libro de ventas con el título Ventas de exportación"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_vat_base_sum
+msgid "Sum of all Tax Payer Grand Base Sum (reduced, general and additional taxes)"
+msgstr "Suma de todos los montos base de contriguyentes(impuestos reducido, general y adicional)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_do_vat_base_sum
+msgid "Sum of all domestic transaction base amounts (reduced, general and additional)"
+msgstr "Suma de todos los montos base para transacciones nacionales (reducida, general y adicional)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_get_wh_debit_credit
+msgid "Sum of all tax amount for the taxes realeted to the wh iva line."
+msgstr "Suma de todos los impuestos realionados con las líneas de retención."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_book_taxes_summary_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_ait_id
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_tax_credit_debit_base_sum
+msgid "Tax Credit Total Base Amount"
+msgstr "Importe base total del crédito fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_tax_credit_debit_tax_sum
+msgid "Tax Credit Total Tax Amount"
+msgstr "monto total de impuesto del crédito fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_change_invoice_sin_cred_sin_cred
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_change_invoice_sin_cred_sin_cred
+msgid "Tax Exempt"
+msgstr "Exento de impuestos"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_fbt_ids
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_fbt_ids
+msgid "Tax Lines"
+msgstr "Líneas de Impuestos"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_fbt_ids
+msgid "Tax Lines being recorded in a Fiscal Book"
+msgstr "Líneas de impuestos que se registran en un libro fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book.line,type:0
+#: selection:fiscal.book.taxes.summary,op_type:0
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Tax Payer"
+msgstr "Contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_exempt_vat_sum
+msgid "Tax Payer Exempt Tax Totalization. Sum of Exempt column for tax payer transactions"
+msgstr "Totalización de impuestos exento del contribuyente. Suma de la columna Exento para las transacciones del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tp_sdcf_vat_sum
+msgid "Tax Payer SDCF Tax Totalization. Sum of SDCF column for tax payer transactions"
+msgstr "Totalización de impuestos SDCF del contribuyente. Suma de la columna Exento para las transacciones del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tp_vat_base_sum
+msgid "Tax Payer Taxable Amount"
+msgstr "Importe imponible del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_tp_sum
+msgid "Tax Payer Total with VAT Totalization"
+msgstr "Totalización del IVA del contribuyente"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_fbts_ids
+msgid "Tax Summary"
+msgstr "Resumen de impuestos"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_tax_type
+msgid "Tax Type"
+msgstr "Tipo de Impuesto"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_taxes_ait_id
+msgid "Tax where is related to"
+msgstr "Impuesto relacionado con"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_base_amount
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_base_amount
+msgid "Taxable Amount"
+msgstr "Base Imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_base_amount_sum
+msgid "Taxable Amount Sum"
+msgstr "Suma Monto Imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_tax_amount
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_tax_amount
+msgid "Taxed Amount"
+msgstr "Monto Gravado"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_taxes_summary_tax_amount_sum
+msgid "Taxed Amount Sum"
+msgstr "Suma Monto Gravado"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_tax_amount
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_taxes_tax_amount
+msgid "Taxed Amount on Taxing Base"
+msgstr "Importe gravado en base imponible"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Taxes Totalization"
+msgstr "Totalización Impuestos"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_fbt_ids
+msgid "Taxes being recorded in the book"
+msgstr "Impuestos registrados en el libro."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_accounting_date
+msgid "The day of the accounting record [(invoice, date_invoice), (wh iva line, date_ret)]"
+msgstr "El día del registro contable [(factura, date_invoice), (Línea de retención de IVA, date_ret)]"
+
+#. module: l10n_ve_fiscal_book
+#: sql_constraint:fiscal.book:0
+msgid "The period, type, fortnight combination must be unique per company!"
+msgstr "¡La combinación período, tipo, quincena debe ser única por compañía!"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "This fiscal year"
+msgstr "Este año fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "This month"
+msgstr "Este mes"
+
+#. module: l10n_ve_fiscal_book
+#: selection:fiscal.book,time_period:0
+msgid "This quarter"
+msgstr "Este trimestre"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_time_period
+msgid "Time Periods"
+msgstr "Período"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Total Taxing Base & Total Taxed Amount"
+msgstr "Total Base Imponible y Total Monto Gravado"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_do_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_imex_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_ntp_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_sum
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_tp_sum
+msgid "Total amount with VAT"
+msgstr "Importe Total con IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_total_with_iva
+msgid "Total with IVA"
+msgstr "Total con IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_with_iva_sum
+msgid "Total with VAT Sum (Import/Export, Domestic, Tax Payer and Non-Tax Payer"
+msgstr "Suma total con IVA (importación / exportación, nacional, contribuyente y no contribuyente)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_wh_sum
+msgid "Totalization row at the Withholding Summary block"
+msgstr "Totalización de fila en el resumen de retenciones"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_wh_debit_credit_sum
+msgid "Totalization row in Fiscal Book Line block at Based Tax Debit Column"
+msgstr "Totalización de fila en la línea del libnro fiscal en la columna de débito fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_type
+msgid "Transaction Type"
+msgstr "Tipo de Transacción"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_void_form
+msgid "Transaction type"
+msgstr "Tipo de Transacción"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_wizard_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_type_doc
+msgid "Type of Document for adjustment book: -Invoice(F),-Debit Note(dn),-Credit Note(cn)"
+msgstr "Tipo de documento para ajustes del libro: - Factura (F), - Nota de débito (dn), - Nota de crédito (cn)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_purchase_book_form
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.view_fiscal_sale_book_form
+msgid "Update Book"
+msgstr "Actualizar libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_wh_sum
+msgid "Used at 1. Totalization row in Fiscal Book Line block at Withholding VAT Column 2. Second row at the Withholding Summary block"
+msgstr "Se utiliza en 1.- Totalización de fila en la línea de libro fiscal en la columna de retención de IVA. 2.- Segunda fila en el bloque de resumen de retención"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_total_tax_credit_debit_base_sum
+msgid "Uses at 1. purchase: total row at summary taxes. 2. sales: row at summary taxes."
+msgstr "Usos en 1.- compra: Total de fila en resumen de impuestos. 2. ventas: fila en resumen de impuestos."
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_get_wh_vat
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_get_wh_vat
+msgid "VAT Withholding"
+msgstr "IVA Retenido"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_percent_with_vat_i
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_percent_with_vat_n
+msgid "VAT Withholding (%)"
+msgstr "Porcentaje de Retención (%)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_amount_with_vat_i
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_amount_with_vat_n
+msgid "VAT Withholding Amount"
+msgstr "Monto de retención de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_get_total_wh_sum
+msgid "VAT Withholding Sum"
+msgstr "Suma de retención de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_amount_with_vat
+msgid "VAT Withholding Total Amount"
+msgstr "Monto total de retención de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_voucher
+msgid "VAT Withholding Voucher"
+msgstr "Retención de IVa en factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_amount_with_vat_i
+msgid "VAT amount for international operations"
+msgstr "Monto del IVA para operaciones internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_percent_with_vat_i
+msgid "VAT percent (%) for international operations"
+msgstr "Porcentaje (%) de IVA para operaciones internacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_percent_with_vat_n
+msgid "VAT percent (%) for national operations"
+msgstr "Porcentaje (%) de IVA para operaciones nacionales"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_amount_with_vat
+msgid "VAT withholding total amount"
+msgstr "Monto total de retencion de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_voucher
+msgid "VAT withholding voucher"
+msgstr "Retención de IVA en factura"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_adjustment_book_line_vat
+msgid "Vat"
+msgstr "RIF"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_general_base
+msgid "Vat General Base Amount"
+msgstr "Monto base general IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_general_tax
+msgid "Vat General Tax Amount"
+msgstr "Monto inpuesto general IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_additional_tax
+msgid "Vat General plus Additional Tax Amount"
+msgstr "IVA General más el Impuesto Adicional"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_additional_base
+msgid "Vat Generald plus Additional Base Amount"
+msgstr "IVA General más el monto base Adicional"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_reduced_base
+msgid "Vat Reduced Base Amount"
+msgstr "monto base IVA reducido"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_reduced_tax
+msgid "Vat Reduced Tax Amount"
+msgstr "Monto de impuesto IVA reducido"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_iwdl_id
+msgid "Vat Withholding"
+msgstr "IVA Retenido (por el comprador)"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_account_wh_iva_line
+msgid "Vat Withholding line"
+msgstr "Linea de Retención de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_iwdl_ids
+msgid "Vat Withholdings"
+msgstr "Retenciones de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_iwdl_ids
+msgid "Vat Withholdings being recorded in a Fiscal Book"
+msgstr "Retenciones de IVA registradas en un libro fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_general_rate
+msgid "Vat general tax rate "
+msgstr "Tasa general de IVA"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_adjustment_book_line_vat
+msgid "Vat of partner for adjustment book"
+msgstr "IVA de socio para ajustes de libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_additional_rate
+msgid "Vat plus additional tax rate "
+msgstr "IVA mas tasa adiconal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_vat_reduced_rate
+msgid "Vat reduced tax rate "
+msgstr "Tasa de IVA reducido"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_fiscal_book_line
+msgid "Venezuela's Sale & Purchase Fiscal Book Lines"
+msgstr "Líneas de lIbros Fiscales de Compra y Venta de Venezuela"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_fiscal_book_taxes
+msgid "Venezuela's Sale & Purchase Fiscal Book Taxes"
+msgstr "Impuestos de libros fiscales de compra y ventas de Venezuela"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_fiscal_book_taxes_summary
+msgid "Venezuela's Sale & Purchase Fiscal Book Taxes Summary"
+msgstr "Libro Fiscal Resumen de Impuestos de Compra y Venta para Venezuela"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_fiscal_book
+msgid "Venezuela's Sale & Purchase Fiscal Books"
+msgstr "Libros Fiscales de Compra y Venta de Venezuela"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_line_iwdl_id
+msgid "Withholding iva line related to this book line"
+msgstr "Línea de retención de IVA relacionada a ésta línea del libro"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_wh_number
+msgid "Withholding number"
+msgstr "Número de Comprobante"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_book.field_fiscal_book_line_wh_rate
+msgid "Withholding percentage"
+msgstr "Porcentaje de Retención"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model.fields,help:l10n_ve_fiscal_book.field_fiscal_book_get_month_year
+msgid "Year and Month ot the Fiscal book period"
+msgstr "Año y mes del período del libro fiscal"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_adjustment_book_line
+msgid "adjustment.book.line"
+msgstr "adjustment.book.line"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.model,name:l10n_ve_fiscal_book.model_fiscal_book_wizard
+msgid "fiscal.book.wizard"
+msgstr "fiscal.book.wizard"
+
+#. module: l10n_ve_fiscal_book
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_book.wizard_change_invoice_sin_cred_form
+msgid "or"
+msgstr "o"
+

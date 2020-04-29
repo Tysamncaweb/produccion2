@@ -1,0 +1,830 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ve_fiscal_requirements
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-08 16:21+0000\n"
+"PO-Revision-Date: 2019-01-08 16:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_company_acc_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_date_document
+msgid "Administrative date, generally is the date printed on invoice, this date is used to show in the Purchase Fiscal book"
+msgstr "Administrative date, generally is the date printed on invoice, this date is used to show in the Purchase Fiscal book"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_tax_appl_type
+msgid "Aliquot Type"
+msgstr "Tipo de alícuota"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_l10n_ut_amount
+msgid "Amount of the tax unit in bs"
+msgstr "Amount of the tax unit in bs"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_sure
+msgid "Are You Sure?"
+msgstr "Are You Sure?"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_invoice_nro_ctrl
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_update_info_partner
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.wizard_nro_ctrl_form
+msgid "Are you sure you want to do this?"
+msgstr "¿Estás seguro que quieres hacer esto?"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_sure
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:189
+#, python-format
+msgid "Can not %s draft/proforma/cancel invoice."
+msgstr "No puede %s draft/proforma/cancel facturas."
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:194
+#, python-format
+msgid "Can not %s invoice which is already reconciled, invoice should be unreconciled first. You can only Refund this invoice"
+msgstr "Imposible generar una nota de crédito cuando la factura %s ya está conciliada, primero debe realizar la desconciliación"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_vat_search
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_invoice_nro_ctrl
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.wizard_nro_ctrl_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.act_l10n_ut_tree
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.menu_action_l10n_ut_tree
+msgid "Carcas"
+msgstr "Carcas"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.action_wiz_nroctrl
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve1
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "Change control number"
+msgstr "Cambiar número de control"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.wizard_nro_ctrl_form
+msgid "Changing the Control Number"
+msgstr "Cambio del Número de Control"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,help:l10n_ve_fiscal_requirements.action_sale_debit_tree
+msgid "Click to create a customer debit note."
+msgstr "Click to create a customer debit note."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,help:l10n_ve_fiscal_requirements.action_purchase_debit_tree
+msgid "Click to record a new supplier debit note."
+msgstr "Click to record a new supplier debit note."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_refund_nro_ctrl
+msgid "Code used for intern invoice control"
+msgstr "Code used for intern invoice control"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.wizard_nro_ctrl_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_nro_ctrl
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_refund_nro_ctrl
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_name
+msgid "Control Number"
+msgstr "Control Number"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:260
+#, python-format
+msgid "Control Number !"
+msgstr "Número de control !"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:153
+#, python-format
+msgid "Could not connect! Check the URL "
+msgstr "No se pudo conectar! Compruebe la URL "
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_invoice_nro_ctrl
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_invoice_nro_ctrl
+msgid "Create an invoice to justify the damaged one"
+msgstr "Crear una factura para justificar la factura dañada"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.wizard_invoice_nro_control_action
+msgid "Create null paper"
+msgstr "Crear paple nulo"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_create_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_create_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_account_invoice_refund
+msgid "Credit Note"
+msgstr "Credit Note"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.action_sale_debit_tree
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.menu_action_sale_debit_tree
+msgid "Customer Debit Notes"
+msgstr "Notas de Débito Cliente"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.il_company_invoice_damaged
+msgid "Damaged Invoices Info"
+msgstr "Información Facturas Dañadas"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_l10n_ut_date
+msgid "Date on which goes into effect the new Unit Tax Unit"
+msgstr "Date on which goes into effect the new Unit Tax Unit"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_date
+msgid "Date used for declared damaged paper. Keep empty to use the"
+msgstr "Date used for declared damaged paper. Keep empty to use the"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.wizard_invoice_nro_ctrl_action
+msgid "Declare damaged paper"
+msgstr "Declarar papel dañado"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_company_acc_id
+msgid "Default account used for invoices and lines from damaged invoices"
+msgstr "Default account used for invoices and lines from damaged invoices"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_company_jour_id
+msgid "Default journal for damaged invoices"
+msgstr "Default journal for damaged invoices"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_display_name
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_date_document
+msgid "Document Date"
+msgstr "Document Date"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.il_company_invoice_damaged
+msgid "Does This Company Use Fiscal Printer?"
+msgstr "Esta empresa utiliza Impresora fiscal?"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_nro_ctrl.py:34
+#, python-format
+msgid "El Numero de Control ya Existe"
+msgstr "El Numero de Control ya Existe"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:188
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:193
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:480
+#, python-format
+msgid "Error !"
+msgstr "Error !"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/partner.py:210
+#, python-format
+msgid "Error occurred while validating the field(s) %s: %s"
+msgstr "Se produjo un error al validar los campos %s: %s"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_nro_ctrl.py:25
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_nro_ctrl.py:33
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_sin_cred
+msgid "Exclude this document from fiscal book"
+msgstr "Exclude this document from fiscal book"
+
+#. module: l10n_ve_fiscal_requirements
+#: selection:account.tax,appl_type:0
+msgid "Exempt"
+msgstr "Exento"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve1
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "Fecha Contable"
+msgstr "Fecha Contable"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve1
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "Fecha Factura"
+msgstr "Fecha Factura"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve1
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "Fiscal Information"
+msgstr "Información fiscal"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_invoice_printer
+msgid "Fiscal printer invoice number"
+msgstr "Fiscal printer invoice number"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_invoice_printer
+msgid "Fiscal printer invoice number, is the number of the invoice on the fiscal printer"
+msgstr "Fiscal printer invoice number, is the number of the invoice on the fiscal printer"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_fiscal_printer
+msgid "Fiscal printer number"
+msgstr "Fiscal printer number"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_fiscal_printer
+msgid "Fiscal printer number, generally is the id number of the printer."
+msgstr "Fiscal printer number, generally is the id number of the printer."
+
+#. module: l10n_ve_fiscal_requirements
+#: selection:account.tax,appl_type:0
+msgid "General Aliquot"
+msgstr "Alícuota General"
+
+#. module: l10n_ve_fiscal_requirements
+#: selection:account.tax,appl_type:0
+msgid "General Aliquot + Additional"
+msgstr "Alícuota General + Adicional"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_l10n_ut_filter
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_seniat_url_url_seniat2
+msgid "In this field enter\n"
+"            the URL from Seniat for search the retention rate from partner\n"
+"            (CI or Passport)"
+msgstr "In this field enter\n"
+"            the URL from Seniat for search the retention rate from partner\n"
+"            (CI or Passport)"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_seniat_url_name
+msgid "In this field enter the URL from Seniat for search the\n"
+"            fiscal information from partner"
+msgstr "In this field enter the URL from Seniat for search the\n"
+"            fiscal information from partner"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_seniat_url_url_seniat
+msgid "In this field enter the URL from Seniat for search the\n"
+"            retention rate from partner (RIF)"
+msgstr "In this field enter the URL from Seniat for search the\n"
+"            retention rate from partner (RIF)"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_partner_wh_iva_agent
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_users_wh_iva_agent
+msgid "Indicate if the partner is a withholding vat agent"
+msgstr "Indicate if the partner is a withholding vat agent"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_company_printer_fiscal
+msgid "Indicates that the company can operate a fiscal printer"
+msgstr "Indicates that the company can operate a fiscal printer"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:82
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:149
+#, python-format
+msgid "Invalid VAT!"
+msgstr "RIF Inválido"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_account_invoice
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_account_invoice_tax
+msgid "Invoice Tax"
+msgstr "Impuesto de factura"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_invoice_id
+msgid "Invoice to be declared damaged."
+msgstr "Invoice to be declared damaged."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_account_journal
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_refund_journal_id
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_company_jour_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl___last_update
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_write_uid
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_search_info_partner_seniat_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_update_info_partner_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wiz_nroctrl_write_date
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_wizard_invoice_nro_ctrl_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_company_printer_fiscal
+msgid "Manages fiscal printer"
+msgstr "Manages fiscal printer"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:261
+#, python-format
+msgid "Missing Control Number on Invoice Refund!"
+msgstr "Missing Control Number on Invoice Refund!"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_update_info_partner
+msgid "No"
+msgstr "No"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:153
+#, python-format
+msgid "No Connection !"
+msgstr "No hay conexión !"
+
+#. module: l10n_ve_fiscal_requirements
+#: selection:account.tax,appl_type:0
+msgid "Not entitled to tax credit"
+msgstr "No tienen derecho a crédito fiscal"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_nro_ctrl
+msgid "Number used to manage pre-printed invoices, by law you will need to put here this number to be able to declarate on Fiscal reports correctly."
+msgstr "Number used to manage pre-printed invoices, by law you will need to put here this number to be able to declarate on Fiscal reports correctly."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,help:l10n_ve_fiscal_requirements.action_sale_debit_tree
+msgid "OpenERP's electronic invoicing allows to ease and fasten the\n"
+"                collection of customer payments. Your customer receives the\n"
+"                invoice by email and he can pay online and/or import it\n"
+"                in his own system."
+msgstr "OpenERP's electronic invoicing allows to ease and fasten the\n"
+"                collection of customer payments. Your customer receives the\n"
+"                invoice by email and he can pay online and/or import it\n"
+"                in his own system."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:res.groups,name:l10n_ve_fiscal_requirements.group_parameters_fiscal_printer_manager
+msgid "Parameters Fiscal Printer / Manager"
+msgstr "Parámetros de Impresora Fiscal / Responsable"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:res.groups,name:l10n_ve_fiscal_requirements.group_parameters_fiscal_printer_user
+msgid "Parameters Fiscal Printer / User"
+msgstr "Parámetros de Impresora Fiscal / Usuario"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.menu_finance_partner_fiscal_information
+msgid "Partner Fiscal Information"
+msgstr "Información Fiscal Proveedor"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_invoice_nro_ctrl.py:114
+#, python-format
+msgid "Please confirm that you know what you're doing by checking the option bellow!"
+msgstr "Por favor confirme que usted sabe lo que está haciendo, marcando la opción de abajo!"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_nro_ctrl.py:26
+#, python-format
+msgid "Please confirm that you want to do this by checking the option"
+msgstr "Por favor confirma que quieres hacer esto marcando la opción"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_partner_wh_iva_rate
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_users_wh_iva_rate
+msgid "Rate"
+msgstr "Tasa"
+
+#. module: l10n_ve_fiscal_requirements
+#: selection:account.tax,appl_type:0
+msgid "Reducted Aliquot"
+msgstr "Alícuota Reducida"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_name
+msgid "Reference number"
+msgstr "Reference number"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_l10n_ut_name
+msgid "Reference number under the law"
+msgstr "Reference number under the law"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_z_report
+msgid "Report Z"
+msgstr "Reporte Z"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_loc_req
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_refund_loc_req
+msgid "Required by Localization"
+msgstr "Required by Localization"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_rif
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve1
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "Rif"
+msgstr "Rif"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_l10n_ut_user_id
+msgid "Salesman"
+msgstr "Vendedor"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.wizard_vat_search_action_menu
+msgid "Search RIF"
+msgstr "Buscar RIF"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_l10n_ut_filter
+msgid "Search Tax Unit"
+msgstr "Buscar Unidad Tributaria"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_vat_search
+msgid "Seniat"
+msgstr "Seniat"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_partner_seniat_updated
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_users_seniat_updated
+msgid "Seniat Updated"
+msgstr "Seniat Updated"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_seniat_url
+msgid "Seniat config needed to run auto-config partner"
+msgstr "Seniat config needed to run auto-config partner"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_sin_cred
+msgid "Set it true if the invoice is VAT excempt (Tax Exempt)"
+msgstr "Set it true if the invoice is VAT excempt (Tax Exempt)"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_tax_appl_type
+msgid "Specify the aliquote type for the tax so it can be processed accrordly when the sale/purchase book is generatred"
+msgstr "Especifique el tipo de alícuota para el impuesto, para que pueda procesarse de acuerdo con la generación del libro de compra / ventas"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.action_purchase_debit_tree
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.menu_action_purchase_debit_tree
+msgid "Supplier Debit Notes"
+msgstr "Notas de Débito Proveedor"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_account_invoice_supplier_invoice_number
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "Supplier Invoice Number"
+msgstr "Supplier Invoice Number"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_rif
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Número de identificación fiscal. Llénelo si la compañía está sujeta a impuestos. Usado por algunos documentos legales."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_l10n_ut
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_l10n_ut_form
+msgid "Tax Unit"
+msgstr "Unidad Tributaria"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_l10n_ut_tree
+msgid "Tax Unit per date"
+msgstr "Unidad Tributaria por fecha"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/partner.py:243
+#, python-format
+msgid "The VAT [%s] looks like [%s] which is already being used by: %s"
+msgstr "The VAT [%s] looks like [%s] which is already being used by: %s"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,help:l10n_ve_fiscal_requirements.action_sale_debit_tree
+msgid "The discussions with your customer are automatically displayed at\n"
+"                the bottom of each invoice."
+msgstr "Las discusiones con sus clientes se muestran automáticamente al\n"
+"final de cada factura."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_supplier_invoice_number
+msgid "The reference of this invoice as provided by the supplier."
+msgstr "The reference of this invoice as provided by the supplier."
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/account_invoice_refund.py:481
+#, python-format
+msgid "There are non-valid withholds for the document %s which refund is being processed!vacio"
+msgstr "Hay retenciones no válidas para el documento %s cuya devolución se le procesa! vacía"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_partner_seniat_updated
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_users_seniat_updated
+msgid "This field indicates if partner was updated using SENIAT button"
+msgstr "This field indicates if partner was updated using SENIAT button"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_loc_req
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_account_invoice_refund_loc_req
+msgid "This fields is for technical use"
+msgstr "This fields is for technical use"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_name
+msgid "URL Seniat for Partner Information"
+msgstr "URL Seniat for Partner Information"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_url_seniat
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_seniat_url_url_seniat2
+msgid "URL Seniat for Retention Rate"
+msgstr "URL Seniat for Retention Rate"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:151
+#, python-format
+msgid "Unregistered VAT!"
+msgstr "RIF no registrado!"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.wizard_update_all_partner_information
+msgid "Update All Partner Information"
+msgstr "Actualizar toda la información del cliente / proveedor"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.wizard_update_info_partner
+msgid "Update Info Partner"
+msgstr "Actualizar información del Proveedor"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_invoice_nro_ctrl.py:47
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_invoice_nro_ctrl.py:113
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_invoice_nro_ctrl.py:121
+#, python-format
+msgid "Validation error!"
+msgstr "Error de validación!"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/model/partner.py:240
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:82
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:149
+#: code:addons/l10n_ve_fiscal_requirements/model/seniat_url.py:151
+#, python-format
+msgid "Vat Error !"
+msgstr "Error de RIF !"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_partner_wh_iva_rate
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_users_wh_iva_rate
+msgid "Vat Withholding rate"
+msgstr "Vat Withholding rate"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_l10n_ut_user_id
+msgid "Vendor user"
+msgstr "Vendor user"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.menu_finance_fiscal_settings
+msgid "Venezuela Fiscal settings"
+msgstr "Venezuela Fiscal settings"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.menu,name:l10n_ve_fiscal_requirements.menu_venezuela_reporting
+msgid "Venezuela Reports"
+msgstr "Informes Venezuela"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_partner_wh_iva_agent
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_users_wh_iva_agent
+msgid "Wh. Agent"
+msgstr "Wh. Agent"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,help:l10n_ve_fiscal_requirements.act_l10n_ut_tree
+msgid "With Tax Unit you can create and manage the tax unit. The Tax Unit is established under the law of each country, is used for the withholding income and withholding vat."
+msgstr "Con la Unidad Tributaria puedes crear y manejar la unidad tributaria. La Unidad Tributaria es establecida bajo la ley de cada país, es usada para la retención de ISLR y retención del IVA."
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,name:l10n_ve_fiscal_requirements.wizard_vat_search_action
+msgid "Wizard Search VAT"
+msgstr "Asistente Búsqueda de RIF"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_wiz_nroctrl
+msgid "Wizard that changes the invoice control number"
+msgstr "Asistente de Configuración para cambia el número de control de la factura"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_wiz_updatename
+msgid "Wizard that changes the partner name"
+msgstr "Asistente para cambiar el nombre del proveedor"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_vat_search
+msgid "Wizard to search partner on SENIAT"
+msgstr "Asistente para buscar Proveedor en el SENIAT"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_wizard_update_info_partner
+msgid "Yes"
+msgstr "Sí"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.actions.act_window,help:l10n_ve_fiscal_requirements.action_purchase_debit_tree
+msgid "You can control the invoice from your supplier according to\n"
+"                what you purchased or received. OpenERP can also generate\n"
+"                draft invoices automatically from purchase orders or receipts."
+msgstr "You can control the invoice from your supplier according to\n"
+"                what you purchased or received. OpenERP can also generate\n"
+"                draft invoices automatically from purchase orders or receipts."
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_invoice_nro_ctrl.py:48
+#, python-format
+msgid "You can run this process just if the invoice have Control Number, please verify the invoice and try again."
+msgstr "Puede ejecutar este proceso sólo si la factura tiene número de control, por favor verifique la factura y vuelva a intentarlo"
+
+#. module: l10n_ve_fiscal_requirements
+#: code:addons/l10n_ve_fiscal_requirements/wizard/wizard_invoice_nro_ctrl.py:122
+#, python-format
+msgid "You must go to the company form and configure a journal and an account for damaged invoices"
+msgstr "Usted debe ir al formulario de la compañía y configurar un registro y una cuenta para las facturas dañada"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_partner_uid_country
+#: model:ir.model.fields,help:l10n_ve_fiscal_requirements.field_res_users_uid_country
+msgid "country code of the current company"
+msgstr "country code of the current company"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.view_l10n_ut_filter
+msgid "date"
+msgstr "fecha"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve1
+#: model:ir.ui.view,arch_db:l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve
+msgid "numero de control"
+msgstr "numero de control"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_search_info_partner_seniat
+msgid "search.info.partner.seniat"
+msgstr "search.info.partner.seniat"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_partner_uid_country
+#: model:ir.model.fields,field_description:l10n_ve_fiscal_requirements.field_res_users_uid_country
+msgid "uid_country"
+msgstr "uid_country"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_update_info_partner
+msgid "update.info.partner"
+msgstr "update.info.partner"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_wizard_invoice_nro_ctrl
+msgid "wizard.invoice.nro.ctrl"
+msgstr "Asistente nro ctrl de factura"
+
+#. module: l10n_ve_fiscal_requirements
+#: model:ir.model,name:l10n_ve_fiscal_requirements.model_wizard_seniat_url
+msgid "wizard.seniat.url"
+msgstr "wizard.seniat.url"
+

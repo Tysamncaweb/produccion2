@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Vista en El Modulo de Procesamiento de Nomina-->
+        <!--hr.payslip.run-->
+
+        <record id="hr_payslip_run_form_struct" model="ir.ui.view">
+            <field name="name">hr.payslip.run.form.struct</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <!--<field name="credit_note" position="before"> </field>-->
+                <xpath expr="//form/sheet/separator" position="attributes">
+                    <attribute name="name">payslips_name</attribute>
+                </xpath>
+
+
+                <xpath expr="//form/sheet/separator[@name='payslips_name']" position="before">
+                    <group>
+                        <field name="check_special_struct" style="width: 10%"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+
+                    </group>
+                    <group col="2">
+                        <label for="struct_id" string="Tipo de Nomina" attrs="{'invisible': [('check_special_struct', '!=', True)]}"/>
+                        <field name="struct_id" domain="[('struct_category','=','especial')]"
+                                attrs="{'invisible': [('check_special_struct', '!=', True)],'required': [('check_special_struct', '==', True)], 'readonly': [('state', '!=', 'draft')]}" nolabel= "1"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='slip_ids']" position="attributes">
+                    <attribute name = "context">{'active_id': active_id}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Vista en Modulo de Estructura Salarial / Tipo de Nomina-->
+        <!--hr_payroll_structure-->
+        <record id="view_hr_payroll_structure_inherit" model="ir.ui.view">
+            <field name="name">hr.payroll.structure.form.inherit</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="struct_category"/>
+                    <!--<field name="struct_id_payroll_category" />-->
+                    <field name="struct_id_reference"  attrs="{'invisible': [('struct_category', '!=', 'especial')]}"/>
+                    <!--<field name="deductions_pay_mode"/>-->
+                </xpath>
+
+            </field>
+        </record>
+
+        <!--Vista del modulo hr_payroll_reference-->
+        <record model="ir.ui.view" id="view_hr_payroll_reference_search">
+            <field name="model">hr.payroll.reference</field>
+            <field name="arch" type="xml">
+                <search string="Referencia de Nomina">
+                    <field name="name" string="Nombre de Referencia"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_hr_payroll_reference_list">
+            <field name="model">hr.payroll.reference</field>
+            <field name="arch" type="xml">
+                <tree string="Referencia de Nomina">
+                    <field name="name" string="Nombre de Referencia"/>
+                    <field name="description" string="Descripción de Referencia"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_hr_payroll_reference_form">
+            <field name="model">hr.payroll.reference</field>
+            <field name="arch" type="xml">
+                <form string="Referencia de Nomina" version="7.0">
+                  <sheet>
+                    <group>
+                        <field name="name" string="Nombre de Referencia"/>
+                        <field name="description" string="Descripción de la Referencia de la Nómina Especial"/>
+                    </group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_hr_payroll_reference" model="ir.actions.act_window">
+            <field name="name">Referencia de Nómina Especial</field>
+            <field name="res_model">hr.payroll.reference</field>
+            <!--<field name="context">{'readonly_by_pass': True}</field>-->
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_hr_payroll_reference_list"/>
+        </record>
+
+        <menuitem id="hr_payroll_reference_menu"
+            action="action_view_hr_payroll_reference"
+            parent="hr_payroll.menu_hr_payroll_configuration"
+            sequence="22"/>
+        
+    </data>
+</openerp>

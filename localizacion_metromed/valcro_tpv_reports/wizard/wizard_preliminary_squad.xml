@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+      <record id="view_pos_preliminary_squad_wizard" model="ir.ui.view">
+        <field name="name">pos.preliminary.squad.wizard.form</field>
+            <field name="model">pos.preliminary.squad.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Cuadre Preliminar">
+                    <group colspan="2" col="2">
+                        <group>
+                            <field name="start_date" string="Fecha de inicio"/>
+                            <field name="end_date" string="Fecha Final"/>
+                        </group>
+                        <group>
+                            <field name="pos_config_ids" string="Caja"/>
+                            <field name="session" string="Sesión en Progreso" domain="[('start_at','>=', start_date),('start_at','&lt;', end_date),('config_id','=', pos_config_ids),('user_id','=', uid), ]" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="generate_report_preliminary_squad" string="Imprimir" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_preliminary_squad" model="ir.actions.act_window">
+        	<field name="name">Cuadre Preliminar</field>
+        	<field name="res_model">pos.preliminary.squad.wizard</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="view_pos_preliminary_squad_wizard"/>
+        	<field name="target">new</field>
+    	</record>
+
+        <menuitem
+                 id="preliminary_squad"
+                 parent="point_of_sale.menu_point_rep"
+                 name="Cuadre Preliminar"
+                 action="action_report_preliminary_squad"
+                 sequence="4"
+        />
+  </data>
+</odoo>

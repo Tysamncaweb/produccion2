@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template id="template" xml:space="preserve">
+      <t t-extend="website_sign.create_signature_request_dialog">
+        <t t-jquery='.o_sign_request_signers' t-operation='append'>
+             <div class="form-group">
+                      <label for="o_sign_followers_calling" class="col-md-3">Call Center</label>
+                    <div class="col-md-9">
+                        <input type="hidden" id="o_sign_followers_calling" placeholder="Write email or search contact..." multiple="multiple"/>
+                    </div>
+             </div>
+        </t>
+      </t>
+</template>

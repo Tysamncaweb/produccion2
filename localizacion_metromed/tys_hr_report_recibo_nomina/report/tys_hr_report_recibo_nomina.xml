@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_hr_payroll_report_recibo_nomina">
+
+        <field name="name">paperformat.report.hr.payroll.report.recibo.nomina</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">60</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">25</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+    <report
+            id="action_hr_payroll_report_recibo_nomina"
+            string="Recibo de Nomina"
+            model="hr.payslip.run"
+            report_type="qweb-pdf"
+            name="tys_hr_resumen_nomina.template_hr_payroll_report_recibo_nomina"
+            file="tys_hr_resumen_nomina.template_hr_payroll_report_recibo_nomina"
+            paperformat="paperformat_hr_payroll_report_recibo_nomina"
+    />
+    <template id="template_hr_payroll_report_recibo_nomina" >
+
+
+
+
+
+
+
+
+
+    </template>
+
+
+
+
+</odoo>

@@ -1,0 +1,40 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+calling.coordinador,Registro de llamadas coordinador,model_calling,tys_calling_coordinador,1,1,1,1
+headquarter.coordinador,Sedes coordinador,model_headquarter,tys_calling_coordinador,1,0,0,0
+client.coordinador,Clientes coordinador,account.model_res_partner,tys_calling_coordinador,1,1,1,1
+collective.coordinador,Colectivos coordinador,model_collective,tys_calling_coordinador,1,1,1,1
+states.coordinador,Estados coordinador,model_states,tys_calling_coordinador,1,0,0,0
+parish.coordinador,Parroquias coordinador,model_parish,tys_calling_coordinador,1,0,0,0
+patient.coordinador,Pacientes coordinador,model_patient,tys_calling_coordinador,1,1,1,1
+service.coordinador,Servicios coordinador,model_service,tys_calling_coordinador,1,1,1,1
+service_type.coordinador,Typos de servicios coordinador,model_service_type,tys_calling_coordinador,1,1,1,1
+additional_service_type.coordinador,Typos de servicios adicionales coordinador,model_additional_service_type,tys_calling_coordinador,1,1,1,1
+diagnosis.coordinador,Diagnosticos coordinador,model_diagnosis,tys_calling_coordinador,1,1,1,1
+news.coordinador,Relación de novedades coordinador,model_news,tys_calling_coordinador,1,1,1,1
+news_member_out_line.coordinador,Miembros del grupo que entrega coordinador,model_news_members_out_line,tys_calling_coordinador,1,1,1,1
+news_member_in_line.coordinador,Miembros del grupo que recibe coordinador,model_news_members_in_line,tys_calling_coordinador,1,1,1,1
+guard_groups.coordinador,Grupos de guardia coordinador,model_guard_groups,tys_calling_coordinador,1,1,1,1
+guard_group_member.coordinador,Miembros de grupos de guardia coordinador,model_guard_group_members,tys_calling_coordinador,1,1,1,1
+guard_group_members_line.coordinador,Linea de miembros de grupo de guardia coordinador,model_guard_group_members_line,tys_calling_coordinador,1,1,1,1
+guard_change.coordinador,Novedades de cambio de guardia coordinador,model_guard_change,tys_calling_coordinador,1,1,1,1
+guard_change_line.coordinador,Linea de novedades d cambio de guardia coordinador,model_guard_change_line,tys_calling_coordinador,1,1,1,1
+calling.operador,Registro de llamadas operador,model_calling,tys_calling_operador,1,1,1,0
+headquarter.operador,Sedes operador,model_headquarter,tys_calling_operador,1,0,0,0
+client.operador,Clientes operador,account.model_res_partner,tys_calling_operador,1,0,0,0
+collective.operador,Colectivos operador,model_collective,tys_calling_operador,1,1,1,0
+states.operador,Estados operador,model_states,tys_calling_operador,1,0,0,0
+parish.operador,Parroquias operador,model_parish,tys_calling_operador,1,0,0,0
+patient.operador,Pacientes operador,model_patient,tys_calling_operador,1,1,1,0
+service.operador,Servicios operador,model_service,tys_calling_operador,1,0,0,0
+service_type.operador,Tipos de servicios operador,model_service_type,tys_calling_operador,1,0,0,0
+additional_service_type.operador,Tipos de servicios adicionales operador,model_additional_service_type,tys_calling_operador,1,0,0,0
+diagnosis.operador,Diagnosticos operador,model_diagnosis,tys_calling_operador,1,1,1,1
+hr_employee.coordinador, Empleado - Coordinador,hr.model_hr_employee,tys_calling_coordinador,1,0,0,0
+hr_employee.operador, Empleado - Operador,hr.model_hr_employee,tys_calling_operador,1,0,0,0
+res_state_municipal.coordinador, Municipio - Coordinador,tys_l10n_ve.model_res_state_municipal,tys_calling_coordinador,1,0,0,0
+res_state_municipal.operador, Municipio - Operaador,tys_l10n_ve.model_res_state_municipal,tys_calling_operador,1,0,0,0
+res_state_parish.coordinador, Parroquia - Coordinador,tys_l10n_ve.model_res_municipal_parish,tys_calling_coordinador,1,0,0,0
+res_state_parish.operador, Parroquia - Operaador,tys_l10n_ve.model_res_municipal_parish,tys_calling_operador,1,0,0,0
+clientes_callcenter.coordinador, Reporte clientes coordinador,model_clientes_callcenter,tys_calling_coordinador,1,1,1,1
+servicios_callcenter.coordinador, Reportes servicios coordinador,model_servicios_callcenter,tys_calling_coordinador,1,1,1,1
+report_callcenter.coordinador, Reportes sedes coordinador,model_report_callcenter,tys_calling_coordinador,1,1,1,1

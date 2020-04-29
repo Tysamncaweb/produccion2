@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_employee_studies_form" model="ir.ui.view">
+            <field name="name">hr.employee.studies</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+               <xpath expr="//page[@name='hr_settings']" position="before">
+                    <!-- Datos Educativos -->
+                    <page string="Datos Educativos">
+						<group  string="Estudios Actuales">
+							<group cols="2">
+								<field name="active_studies" />
+							</group>
+							<group cols="4">
+								<field name="career_id" attrs="{'invisible': [('active_studies','!=', True)], 'required':[('active_studies','=', True)]}"/>
+								<field name="institution_id" attrs="{'invisible': [('active_studies','!=', True)], 'required':[('active_studies','=', True)]}"/>
+							</group>
+						</group>
+
+						<group string="Cursos">
+						   	<group cols="4">
+								<field name="courses_ids" nolabel="1">
+									<tree string="Languages" editable="bottom">
+										<field name="name_instituto" required="1"/>
+										<field name="name_curso" />
+										<field name="name_titulo" />
+										<field name="duracion" />
+										<field name="graduado" />
+										<field name="date_culminacion" />
+                                    </tree>
+								</field>
+							</group>
+						</group>
+						<group string="Idiomas">
+							 <group cols="4">
+								 <field name="languages_id" nolabel="1">
+									<tree string="Languages" editable="bottom">
+										<field name="lang_id" required="1" options="{'no_create': True}"/>
+										<field name="writing" />
+										<field name="reading" />
+										<field name="pronunciation"/>
+										<field name="listening" />
+                                    </tree>
+								</field>
+							</group>
+						</group>
+
+						<group strting="Historico de Estudios">
+						   <group cols="4">
+							   <field name="studies_ids" nolabel="1">
+									<tree string="Languages" editable="bottom">
+										<field name="name_nivel" required="1"/>
+										<field name="name_institute" />
+										<field name="anos_aprobado" />
+										<field name="si_graduado" />
+										<field name="fecha_culminacion" />
+										<field name="nombre_titulo" />
+                                    </tree>
+								</field>
+							</group>
+						</group>
+					</page>
+                </xpath>
+
+            </field>
+        </record>
+
+		<record id="hr_stadies_tree" model="ir.ui.view">
+		    <field name="name">hr.stadies</field>
+		    <field name="model">hr.stadies</field>
+		    <field name="arch" type="xml">
+				<tree string="Estudios">
+					<field name="name_nivel"/>
+					<field name="name_institute"/>
+					<field name="anos_aprobado" />
+					<field name="si_graduado" />
+					<field name="nombre_titulo"/>
+					<field name="fecha_culminacion"/>
+				</tree>
+		    </field>
+		</record>
+
+	    <record id="hr_stadies_form" model="ir.ui.view">
+	        <field name="name">hr.stadies</field>
+	        <field name="model">hr.stadies</field>
+	        <field name="arch" type="xml">
+				<form string="Estudios">
+					<group cols="4">
+						<group cols="2">
+							<field name="name_nivel"/>
+							<field name="name_institute"/>
+							<field name="si_graduado" />
+						</group>
+						<group cols="2">
+							<field name="nombre_titulo" attrs="{'invisible': [('si_graduado','!=', True)]}"/>
+							<field name="fecha_culminacion" attrs="{'invisible': [('si_graduado','!=', True)]}"/>
+							<field name="anos_aprobado" attrs="{'invisible': [('si_graduado','!=', True)]}" />
+						</group>
+					</group>
+				</form>
+	        </field>
+	    </record>
+
+
+		<record id="hr_course_tree" model="ir.ui.view">
+		    <field name="name">hr.course.tree</field>
+		    <field name="model">hr.course</field>
+		    <field name="arch" type="xml">
+                <tree string="Cursos">
+					<field name="name_instituto"/>
+					<field name="name_curso"/>
+					<field name="name_titulo" />
+					<field name="duracion" />
+					<field name="graduado"/>
+					<field name="date_culminacion"/>
+				</tree>
+		    </field>
+		</record>
+
+		<record id="hr_course_form" model="ir.ui.view">
+		    <field name="name">hr.course.form</field>
+		    <field name="model">hr.course</field>
+		    <field name="arch" type="xml">
+		        <form string="Cursos">
+			        <group>
+				        <group>
+						    <field name="name_instituto"/>
+							<field name="name_curso"/>
+				        </group>
+				        <group >
+						    <field name="name_titulo" />
+					        <field name="duracion" />
+				        </group>
+			        </group>
+			        <group>
+				        <group >
+					        <field name="graduado"/>
+				        </group>
+				        <group >
+					        <field name="date_culminacion" attrs="{'invisible': [('graduado','!=', True)]}"/>
+				        </group>
+
+			        </group>
+
+				</form>
+		    </field>
+		</record>
+    </data>
+</odoo>

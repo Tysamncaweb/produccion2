@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="tys_calling_management" model="ir.module.category">
+            <field name="name">Call Center</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="tys_calling_coordinador" model="res.groups">
+            <field name="name">Coordinador</field>
+            <field name="descripton">Coordinador</field>
+            <field name="category_id" ref="tys_calling_management"/>
+        </record>
+
+        <record id="tys_calling_operador" model="res.groups">
+            <field name="name">Operador</field>
+            <field name="description">operador</field>
+            <field name="category_id" ref="tys_calling_management"/>
+        </record>
+    </data>
+</odoo>

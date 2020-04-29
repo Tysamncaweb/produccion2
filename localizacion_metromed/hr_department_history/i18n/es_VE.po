@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_department_history
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-18 15:08+0000\n"
+"PO-Revision-Date: 2019-01-18 15:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_date_register
+msgid "Date"
+msgstr "Fecha"
+
+#. module: hr_department_history
+#: model:ir.actions.act_window,name:hr_department_history.open_module_hr_department_history
+#: model:ir.ui.menu,name:hr_department_history.menu_hr_department_history
+msgid "Department Historical Data"
+msgstr "Datos Históricos del Departamento"
+
+#. module: hr_department_history
+#: model:ir.ui.view,arch_db:hr_department_history.view_hr_department_hisotry_tree
+msgid "Department historical data"
+msgstr "Datos Históricos del Departamento"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_employee_ci
+msgid "Employee Id"
+msgstr "Cédula del Empleado"
+
+#. module: hr_department_history
+#: model:ir.model,name:hr_department_history.model_hr_employee
+msgid "Employee antiguedad"
+msgstr "Antiguedad del Empleado"
+
+#. module: hr_department_history
+#: model:ir.model,name:hr_department_history.model_hr_department_history
+msgid "Employees department changes historical data"
+msgstr "El departamento de empleados cambia los datos históricos"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_department_last
+msgid "Last Department"
+msgstr "Último departamento"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history___last_update
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: hr_department_history
+#: model:ir.model.fields,field_description:hr_department_history.field_hr_department_history_department_new
+msgid "New Department"
+msgstr "Nuevo Departamento"
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="account.check_dreject_form_view">
+            <field name="name">account.check.dreject.wizard.form</field>
+            <field name="model">account.check.dreject</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Deposited Check Reject" col="2">
+                    <group>
+                        <field name="reject_date"/>
+                        <field name="make_expense" string="Make Expenses ?"/>
+                        <field name="expense_account"/>
+                        <field name="expense_amount"/>
+                        <field name="invoice_expense"/>
+                    </group>    
+                    <footer>
+                        <button type="special" special="cancel" string="Cancel" icon="fa-times-circle" class="oe_highlight"/>
+                        or
+                        <button type="object" name="action_dreject" string="Deposited Checks Reject" icon="fa-mail-reply-all" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window
+            name="Rejected Deposited Check"
+            res_model="account.check.dreject"
+            src_model="account.third.check"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_check_dreject"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,336 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_personal_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-28 14:00+0000\n"
+"PO-Revision-Date: 2018-12-28 14:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_personal_info
+#: selection:hr.employee,grupo_sanguineo:0
+msgid "AB"
+msgstr "AB"
+
+#. module: hr_personal_info
+#: code:addons/hr_personal_info/model/hr_personal_info.py:98
+#: code:addons/hr_personal_info/model/hr_personal_info.py:125
+#, python-format
+msgid "Advertencia!"
+msgstr "Advertencia!"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_street
+msgid "Av./Calle"
+msgstr "Av./Calle"
+
+#. module: hr_personal_info
+#: selection:hr.employee,education:0
+msgid "Bachiller"
+msgstr "Bachiller"
+
+#. module: hr_personal_info
+#: selection:hr.employee,education:0
+msgid "Básica"
+msgstr "Básica"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_identification_id_2
+msgid "Cedula de Identidad"
+msgstr "Cedula de Identidad"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_city_id_res
+msgid "Ciudad"
+msgstr "Ciudad"
+
+#. module: hr_personal_info
+#: model:ir.model,name:hr_personal_info.model_hr_ciudad
+msgid "Ciudad Description"
+msgstr "Descripcón de la Ciudad"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_name
+msgid "Ciudad Name"
+msgstr "Nombre de la Ciudad"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_city_id
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Ciudad de nacimiento"
+msgstr "Ciudad de nacimiento"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_personal_email
+msgid "Correo Electronico Personal"
+msgstr "Correo Electronico Personal"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_create_uid
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_create_date
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_employee_ci_filter
+msgid "Cédula"
+msgstr "Cédula"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_employee_ci_view_inherit
+msgid "Cédula de Identidad"
+msgstr "Cédula de Identidad"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Datos Personales"
+msgstr "Datos Personales"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_display_name
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion_display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: hr_personal_info
+#: selection:hr.employee,marital_2:0
+msgid "Divorced"
+msgstr "Divorciado(a)"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_employee_age
+msgid "Edad"
+msgstr "Edad"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_house
+msgid "Edif. Quinta o Casa"
+msgstr "Edif. Quinta o Casa"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Ej. 0123-4567890"
+msgstr "Ej. 0123-4567890"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Ej. 19763505"
+msgstr "Ej. 19763505"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Ej. VEV012345678 o VEE012345678"
+msgstr "Ej. VEV012345678 o VEE012345678"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Ej. cuenta@dominio.xxx"
+msgstr "Ej. cuenta@dominio.xxx"
+
+#. module: hr_personal_info
+#: code:addons/hr_personal_info/model/hr_personal_info.py:98
+#, python-format
+msgid "El email es incorrecto. Ej: cuenta@dominio.xxx. Por favor intente de nuevo"
+msgstr "El email es incorrecto. Ej: cuenta@dominio.xxx. Por favor intente de nuevo"
+
+#. module: hr_personal_info
+#: code:addons/hr_personal_info/model/hr_personal_info.py:125
+#, python-format
+msgid "El número telefónico tiene el formato incorrecto. Ej: 0123-4567890. Por favor intente de nuevo"
+msgstr "El número telefónico tiene el formato incorrecto. Ej: 0123-4567890. Por favor intente de nuevo"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_marriage_certificate
+msgid "Entrego acta de matrimonio?"
+msgstr "Entrego acta de matrimonio?"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_estate_id
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_state_id_res
+msgid "Estado"
+msgstr "Estado"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_state_id
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Estado de nacimiento"
+msgstr "Estado de nacimiento"
+
+#. module: hr_personal_info
+#: selection:hr.employee,nationality:0
+msgid "Extranjero"
+msgstr "Extranjero"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_factor_rh
+msgid "Factor RH"
+msgstr "Factor RH"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_grupo_sanguineo
+msgid "Grupo Sangineo"
+msgstr "Grupo Sangineo"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Informacion de Contacto"
+msgstr "Informacion de Contacto"
+
+#. module: hr_personal_info
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Información Personal"
+msgstr "Información Personal"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad___last_update
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion___last_update
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_write_uid
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_ciudad_write_date
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_marital_2
+msgid "Marital Status"
+msgstr "Estado civil"
+
+#. module: hr_personal_info
+#: selection:hr.employee,marital_2:0
+msgid "Married"
+msgstr "Casado(a)"
+
+#. module: hr_personal_info
+#: selection:hr.employee,factor_rh:0
+msgid "Negativo"
+msgstr "Negativo"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_education
+msgid "Nivel Educativo"
+msgstr "Nivel Educativo"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_apto
+msgid "No. de apartamento."
+msgstr "No. de apartamento."
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_Nro_de_Hijos
+msgid "Numero de hijos"
+msgstr "Numero de hijos"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_country_birth_id
+#: model:ir.ui.view,arch_db:hr_personal_info.hr_personal_info_view_inherit
+msgid "Pais de nacimiento"
+msgstr "Pais de nacimiento"
+
+#. module: hr_personal_info
+#: model:ir.model,name:hr_personal_info.model_hr_employee
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_piso
+msgid "Piso"
+msgstr "Piso"
+
+#. module: hr_personal_info
+#: selection:hr.employee,factor_rh:0
+msgid "Positivo"
+msgstr "Positivo"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_profesion_id
+msgid "Profesion"
+msgstr "Profesion"
+
+#. module: hr_personal_info
+#: model:ir.model,name:hr_personal_info.model_hr_profesion
+msgid "Profesion Description"
+msgstr "Profesion Description"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_profesion_name
+msgid "Profesion Name"
+msgstr "Nombre de la Profesión"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_rif
+msgid "Rif"
+msgstr "Rif"
+
+#. module: hr_personal_info
+#: selection:hr.employee,marital_2:0
+msgid "Single"
+msgstr "Soltero(a)"
+
+#. module: hr_personal_info
+#: selection:hr.employee,education:0
+msgid "TSU"
+msgstr "TSU"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_telf_Contacto
+msgid "Telefono Contacto"
+msgstr "Telefono Contacto"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_telf_hab
+msgid "Telefono Habitacion"
+msgstr "Telefono Habitacion"
+
+#. module: hr_personal_info
+#: model:ir.model.fields,field_description:hr_personal_info.field_hr_employee_nationality
+msgid "Tipo Documento"
+msgstr "Tipo Documento"
+
+#. module: hr_personal_info
+#: selection:hr.employee,marital_2:0
+msgid "Union Estable de Hecho"
+msgstr "Union Estable de Hecho"
+
+#. module: hr_personal_info
+#: selection:hr.employee,education:0
+msgid "Universitario"
+msgstr "Universitario"
+
+#. module: hr_personal_info
+#: selection:hr.employee,nationality:0
+msgid "Venezolano"
+msgstr "Venezolano"
+
+#. module: hr_personal_info
+#: selection:hr.employee,marital_2:0
+msgid "Widower"
+msgstr "Viudo(a)"
+

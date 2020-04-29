@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Top menu item -->
+
+        <record id="replacement_petty_cash_tree" model="ir.ui.view">
+            <field name="name">replacement.account.petty.cash.tree</field>
+            <field name="model">replacement.petty.cash</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="date"/>
+                    <field name="description"/>
+                    <field name="responsable"/>
+                    <field name="apertura"/>
+                    <field name="consumido"/>
+                    <field name="disponible"/>
+                    <field name="transitoria"/>
+                    <field name="petty_cash_status" string="Estado"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="replacement_petty_cash_form01" model="ir.ui.view">
+        	<field name="name">Replacement Petty Cash</field>
+        	<field name="model">replacement.petty.cash</field>
+        	<field name="view_type">form</field>
+        	 <field name="arch" type="xml">
+                 <form name="Replacement Petty cash ">
+                     <header>
+
+                         <button string="Aprobar" name="confirm_replacement" type="object"  class="oe_highlight" attrs="{'invisible':[('petty_cash_status', 'in', ('close','liquidado'))]}"/>
+                         <!--field name="petty_cash_status" widget="statusbar"  nolabel="1" statusbar_visible="draft,approved" statusbar_colors="{'approved':'blue'}"/-->
+
+                         <button name="replacement_petty_cash" type="object" string="Liquidar" class="oe_highlight"  attrs="{'invisible':[('petty_cash_status', 'in', ('process','liquidado'))]}"/>
+
+                         <field name="petty_cash_status" widget="statusbar"  nolabel="1" statusbar_visible="process,close,liquidado" statusbar_colors="{'process':'blue'}"/>
+                     </header>
+                   <sheet string=" Replacement Petty cash">
+                        <group  colspan="3" col="3" >
+                            <group>
+                                <field name="name"/>
+                                <field name="code" attrs="{'readonly':[('petty_cash_status', 'in', ('close','liquidado'))]}"/>
+                                <field name="petty_cash_bank_id" attrs="{'invisible':[('petty_cash_status', 'in', 'process')], 'required':[('petty_cash_status', 'in', 'close')], 'readonly':[('petty_cash_status', 'in', 'liquidado')]}"/>
+                                <field name="move_id" string="Asiento Contable" attrs="{'invisible': [('petty_cash_status', 'in', ('process','close'))], 'readonly': [('petty_cash_status', 'in','liquidado')]}"/>
+
+                            </group>
+                            <group>
+                                <field name="date" attrs="{'readonly':[('petty_cash_status', 'in', ('close','liquidado'))]}"/>
+                                <field name="description" readonly="1" force_save="1"/>
+                                <field name="responsable" readonly="1" force_save="1"/>
+                            </group>
+                            <group>
+                                <label for="apertura"/>
+                                <div class="o_row" string="%">
+                                    <field name="apertura" readonly="1" force_save="1"/>
+                                    <!--field name="porcentaje"/-->
+                                </div>
+                                <label for="consumido"/>
+                                <div class="o_row" string="%">
+                                    <field name="consumido"  readonly="1" force_save="1"/>
+                                    <!--field name="porcentaje"/-->
+                                </div>
+                                <label for="disponible"/>
+                                <div class="o_row" string="%">
+                                    <field name="disponible" readonly="1" force_save="1" />
+                                    <!--field name="porcentaje"/-->
+                                </div>
+                                <field name="transitoria" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                       <notebook colspan="4">
+                        <page string="Factura/Documento">
+                            <div class="oe_inline">
+                                 <field name="facturas_ids"  widget="many2one_list" mode="tree" domain="[('state','=','validate'),('code', '=', code)]" attrs="{'readonly':[('petty_cash_status', 'in', ('close','liquidado'))]}">
+                                    <tree>
+                                        <field name="type_petty_cash"/>
+                                        <field name="name"/>
+                                        <field name="invoice_nro_ctrl"/>
+                                        <field name="date_petty_cash"/>
+                                        <field name="petty_cash_partner"/>
+                                        <field name="amount_exento"/>
+                                        <field name="amount_gravable"/>
+                                        <field name="iva"/>
+                                        <field name="amount_total"/>
+                                    </tree>
+                                </field>
+                            </div>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="amount_exento"  readonly="1" force_save="1"/>
+                                <field name="amount_gravable"  readonly="1" force_save="1"/>
+                                <field name="amount_tax"  readonly="1" force_save="1"/>
+                                <field name="amount_total" class="oe_subtotal_footer_separator"  readonly="1" force_save="1"/>
+                                <field name="residual" class="oe_subtotal_footer_separator" attrs="{'invisible': [('petty_cash_status', '=', 'process')]}"  readonly="1" force_save="1"/>
+                            </group>
+                            <field name="comment" placeholder="Terms and conditions..."/>
+                        </page>
+                       </notebook>
+                   </sheet>
+                 </form>
+             </field>
+    	</record>
+
+        <record id="action_replacement_petty_cash" model="ir.actions.act_window">
+            <field name="name">Reposición Petty cash</field>
+            <field name="res_model">replacement.petty.cash</field>
+            <field name="view_mode">tree,form</field>
+         </record>
+
+        <record id="action_replacement_petty_cash_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="replacement_petty_cash_tree"/>
+            <field name="act_window_id" ref="action_replacement_petty_cash"/>
+        </record>
+        <record id="action_replacement_petty_cash_form" model="ir.actions.act_window.view">
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="replacement_petty_cash_form01"/>
+            <field name="act_window_id" ref="action_replacement_petty_cash"/>
+        </record>
+
+        <menuitem
+                 id="replacement_petty_cash"
+                 parent="cash_operations"
+                 name="Reposición"
+                 action="action_replacement_petty_cash"
+                 sequence="20"
+        />
+
+
+
+    </data>
+</odoo>

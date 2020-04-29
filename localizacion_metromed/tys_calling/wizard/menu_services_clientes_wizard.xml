@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- se crea el menu para imprimir los reportes en call center-->
+<odoo>
+    <data>
+<!-- Menu para imprimir reporte de servicios por Cliente-->
+        <record id="report_callcenter_clientes" model="ir.ui.view">
+       	    <field name="name"> Reporte de Servicios por Clientes</field>
+            <field name="model">clientes.callcenter</field>
+    	    <field name="arch" type="xml">
+    	    	 <form string="Reporte de Servicios por Clientes">
+                     <field invisible="1" name="state"/>
+                        <div states="choose">
+                        <group >
+                            <field name="date_from" string="Fecha Inicio" required="1"/>
+                            <field name="date_to" string="Fecha Fin" required="1"/>
+                            <field name ="all_clients" string="Todos los clientes"/>
+                            <field name="cliente" string="Por cliente" required="0" domain="[('active_client','=',True)]" attrs="{'invisible':[('all_clients','=',True)]}"/>
+                        </group>
+                        </div>
+                     <div states="get">
+                        <group>
+                            <field name="name" colspan="4" invisible="1"/>
+                            <field name="report" filename="name" colspan="4"/>
+                        </group>
+                    </div>
+                   <footer states="choose">
+                        <button name="print_clientes" string="Exportar PDF" type="object" class="oe_highlight" />
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                      <footer states="get">
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                </form>
+    	    </field>
+    	</record>
+
+        <record id="action_report_callcenter_clientes" model="ir.actions.act_window">
+        	<field name="name">Reporte de Servicios por Cliente</field>
+        	<field name="res_model">clientes.callcenter</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="report_callcenter_clientes"/>
+        	<field name="target">new</field>
+    	</record>
+
+        <menuitem
+                 id="report_clientes"
+                 parent="menu_informes"
+                 name="Reporte de servicios por cliente"
+                 action="action_report_callcenter_clientes"
+                 sequence="4"
+        />
+    </data>
+</odoo>

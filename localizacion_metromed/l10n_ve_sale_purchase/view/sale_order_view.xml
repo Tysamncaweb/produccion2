@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+    
+    
+    
+            <record model="ir.ui.view" id="view_sale_order_line_tree_islr">
+                <field name="name">sale_order_line_tree_islr</field>
+                <field name="model">sale.order.line</field>
+                <field name="inherit_id" ref="sale.view_order_line_tree"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='qty_invoiced']" position="after">
+                        <field name="concept_id"/>
+                    </xpath>
+                    </field>
+            </record>
+
+            <!--record model="ir.ui.view" id="view_sale_order_line_form_islr">
+                <field name="name">sale_order_line_form_islr</field>
+                <field name="model">sale.order.line</field>
+                <field name="inherit_id" ref="sale.view_order_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='name']" position="before">
+                        <field name="concept_id" required="1"/>
+                    </xpath>
+                    </field>
+            </record-->
+
+            <record model="ir.ui.view" id="view_sale_order_form_concept">
+                <field name="name">sale_order_form_concept</field>
+                <field name="model">sale.order</field>
+                <field name="inherit_id" ref="sale.view_order_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='carrier_id']" position="before">
+                        <field name="concept_id" required="1"/>
+                    </xpath>
+                </field>
+            </record>
+
+    </data>
+</odoo>

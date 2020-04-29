@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--  Registro de Motivos -->
+        <!--  vista lista -->
+        <record id="view_hr_egress_conditions_tree" model="ir.ui.view">
+            <field name="name">hr.egress.conditions.tree</field>
+            <field name="model">hr.egress.conditions</field>
+            <field name="arch" type="xml">
+                <tree string="Registro de Motivos">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--vista Formulario-->
+        <record id="view_hr_egress_conditions_form" model="ir.ui.view">
+            <field name="name">hr.egress.conditions.form</field>
+            <field name="model">hr.egress.conditions</field>
+            <field name="arch" type="xml">
+                <form string="Registro de Motivos">
+                    <sheet>
+                        <h1>Motivos de Egreso</h1>
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--  Accion -->
+        <record id="open_module_hr_egress_conditions" model="ir.actions.act_window">
+            <field name="name">Motivos de Egreso</field>
+            <field name="res_model">hr.egress.conditions</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem action="open_module_hr_egress_conditions"
+                  id="menu_hr_egress_conditions"
+                  parent="hr.menu_human_resources_configuration"/>
+    </data>
+</odoo>

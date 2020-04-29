@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_hr_payroll_summary_report">
+
+        <field name="name">paperformat.report.hr.payroll.summary.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">60</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">25</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+    <report
+            id="action_hr_payroll_summary_report"
+            string="Resumen de Nomina"
+            model="hr.payslip.run"
+            report_type="qweb-pdf"
+            name="tys_hr_resumen_nomina.template_hr_payroll_summary_report"
+            file="tys_hr_resumen_nomina.template_hr_payroll_summary_report"
+            paperformat="paperformat_hr_payroll_summary_report"
+    />
+
+    <template id="template_hr_payroll_summary_report" >
+        <div class="header">
+
+          <h3 class="text-center"><b>METROMED, C.A. - RIF J310341850</b>
+          </h3>
+          <h4 class="text-center">
+              <b>Relación de Pago Resumido</b>
+          </h4>
+           <br></br>
+                 <center><h5><b>Emitido el &amp;nbsp;</b><span t-esc="date_actual"/></h5></center>
+                    <br></br>
+                 <center><h5><b>EMPLEADOS. DEL&amp;nbsp;</b><span t-esc="date_start"/> <b>&amp;nbsp;AL&amp;nbsp;</b><span t-esc="date_end"/> </h5></center>
+        </div>
+
+        <div class="article">
+            <div class="page" style="page-break-before:always;">
+                <div class="text-left">
+                    <table class="table table-striped" >
+                        <tbody>
+                            <t t-set="cont" t-value="0"/>
+                            <t t-set="var_departamento" t-value="var_departamento"/>
+                            <t t-set="total_departmento" t-value="0.00"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <t t-if="var_departamento != doc['department']">
+                                    <tr>
+                                        <td class="text-center" colspan="4" ><strong>TOTAL DE TRABAJADORES POR DEPARTAMENTO: </strong>
+                                        <span t-esc="department_work[cont]"/>
+                                        </td>
+
+                                         <td colspan="3" ><strong>MONTO A CANCELAR: </strong>
+                                             <t t-esc="str('%.2f'% total_departmento).replace('.', ',')" />
+                                        </td>
+
+                                        <t t-set="total_departmento" t-value="0.00"/>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7"></td>
+                                    </tr>
+                                    <t t-set="cont" t-value="cont+1"/>
+                                </t>
+                                <t t-set="total_departmento" t-value="total_departmento + doc['total_depart']"/>
+                                    <tr>
+                                        <td colspan="3"><b>DEPARTAMENTO:</b>&amp;nbsp;&amp;nbsp;<span t-esc="doc['department']"/></td>
+                                    </tr>
+                                    <tr  style="background-color:#E5E1DE;">
+                                          <th class="text-center" scope="col">C.I.</th>
+                                          <th class="text-center" scope="col">EMPLEADO</th>
+                                          <th class="text-center" scope="col">FECHA ING.</th>
+                                          <th class="text-center" style="width:500px">SUELDO</th>
+                                          <th class="text-center" scope="col">CARGO</th>
+                                          <th class="text-center" scope="col">CONCEPTO</th>
+                                          <th class="text-center" scope="col">&amp;nbsp;</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <span t-esc="doc['ci']"/>
+                                        </td>
+
+                                        <td class="text-center">
+                                            <span t-esc="doc['employee']"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="doc['f_ing']"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="doc['wage']"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="doc['cargo']"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="doc['concepto']"/>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-active" >
+                                          <th class="text-center" scope="col">CÓD.</th>
+                                          <th class="text-center" style="width:80px">DESCRIPCIÓN</th>
+                                          <th class="text-center" scope="col">CANT. DÍAS/HRS</th>
+                                          <th class="text-center" scope="col">UNID.</th>
+                                          <th class="text-center" scope="col">ASIGNACIONES</th>
+                                          <th class="text-center" scope="col">DEDUCCIONES</th>
+                                          <th class="text-center" scope="col">NETO A CANCELAR</th>
+                                    </tr>
+                                    <t t-foreach="docs2[doc['var2']:doc['var1']]" t-as="doc2">
+                                        <div>
+                                            <tr>
+                                            <td class="text-center">
+                                                <span t-esc="doc2['code']"/>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <span t-esc="doc2['descripcion']"/>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <span t-esc="doc2['cant_sueldo']"/>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <span t-esc="doc2['unidad']"/>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <span t-esc="doc2['total_alw']"/>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <span t-esc="doc2['total_ded']"/>
+                                            </td>
+                                            </tr>
+                                        </div>
+                                    </t>
+
+                                    <tr>
+                                        <th scope="col">&amp;nbsp;&amp;nbsp;</th>
+                                        <th scope="col">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</th>
+                                        <th scope="col">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</th>
+                                        <td style="border-style: dashed; border-top: 2px dashed #000000;"><strong>TOTALES...</strong></td>
+                                        <!--th scope="col">&amp;nbsp;&amp;nbsp;TOTALES...</th-->
+                                        <th style="border-style: dashed; border-top: 2px dashed #000000;" class="text-center">
+                                          <span t-esc="doc['asig_total']"/>
+                                        </th>
+                                        <th style="border-style: dashed; border-top: 2px dashed #000000;" class="text-center">
+                                          <span t-esc="doc['ded_total']"/>
+                                        </th>
+                                        <th style="border-style: dashed; border: 2px dashed #000000;" class="text-center">
+                                          <span t-esc="doc['net_total']"/>
+                                        </th>
+
+                                    </tr>
+                                    <tr>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;</th>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</th>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</th>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;</th>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</th>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</th>
+                                      <th scope="col">&amp;nbsp;&amp;nbsp;</th>
+                                    </tr>
+
+
+
+                                <t t-set="var_departamento" t-value="doc['department']"/>
+                            </t>
+                            <tr>
+                                <td class="text-center" colspan="4"><strong>TOTAL DE TRABAJADORES POR DEPARTAMENTO: </strong>
+                                <span t-esc="department_work[cont]"/>
+                                </td>
+
+
+                                <td class="text-center" colspan="3"><strong>MONTO A CANCELAR: </strong>
+                                        <t t-esc="str('%.2f'% total_departmento).replace('.', ',')" />
+                                        </td>
+                                        <t t-set="total_departmento" t-value="0.00"/>
+                            </tr>
+                            <tr>
+
+                            </tr>
+                            <tr>
+                                 <td class="text-center" colspan="4" style=" border: 2px solid #000000;"><strong>TRABAJADORES POR NÓMINA:</strong>
+                                     <span t-esc="total_final"/>
+                                </td>
+
+                                <td class="text-center" colspan="3" style=" border: 2px solid #000000;"><strong>TOTAL NÓMINA:</strong>
+                                     <span t-esc="monto_final"/>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <br></br>
+                <table style="width:100%; height:120px;" >
+                    <tr style="height:10%;">
+                    </tr>
+                    <tr style="height:10%;">
+                        <td colspan="7"><h4 class="text-left"><b>Firmas Autorizadas:</b></h4></td>
+                    </tr>
+                    <tr style="height:80%;">
+                    </tr>
+                </table>
+                <table style="width:100%; height:180px;">
+                    <tr style="height:10%;">
+                        <th style="border-bottom: 1px solid black; width:30%;"></th>
+                        <th style="width:5%;"></th>
+                        <th style="border-bottom: 1px solid black; width:30%;"></th>
+                        <th style="width:5%;"></th>
+                        <th style="border-bottom: 1px solid black; width:30%;"></th>
+                    </tr>
+                     <tr style="height:10%;">
+                        <th class="text-center" style ="width:30%;">Elaborado por: </th>
+                        <th style="width:5%;"></th>
+                        <th class="text-center" style ="width:30%;">Revisado por: </th>
+                        <th style="width:5%;"></th>
+                        <th class="text-center" style ="width:30%;">Revisado por: </th>
+                    </tr>
+
+                    <tr style="height:10%;">
+                        <td class="text-center" style ="width:30%;"> Analista de Recursos Humanos</td>
+                         <td style="width:5%;"></td>
+                        <td class="text-center" style ="width:30%;"> Coordinadora de Recursos Humanos</td>
+                         <td style="width:5%;"></td>
+                        <td class="text-center" style ="width:30%;">Gerente de Administración y Finanzas</td>
+                    </tr>
+                    <tr style="height:50%;">
+                        <td colspan="5"></td>
+                    </tr >
+                     <tr style="height:10%;">
+                         <td style="width:30%;"></td>
+                         <td style="width:5%;"></td>
+                         <th class="text-center" style="border-bottom: 1px solid black; width:30%;"></th>
+                         <td style="width:5%;"></td>
+                         <td style="width:30%;"></td>
+                     </tr>
+                    <tr style="height:10%;">
+                         <td style="width:30%;"></td>
+                         <td style="width:5%;"></td>
+                         <th class="text-center" style=" width:30%;">Aprobado por:</th>
+                         <td style="width:5%;"></td>
+                         <td style="width:30%;"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <div class="row text-center" >
+                <div class="col-xs-3 col-xs-offset-9 text-right">
+                    <ul class="list-inline" style="margin-top:10px;">
+                        <li>Page:</li>
+                        <li>
+                            <span class="page"/>
+                        </li>
+                        <li>/</li>
+                        <li>
+                            <span class="topage"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </template>
+</odoo>

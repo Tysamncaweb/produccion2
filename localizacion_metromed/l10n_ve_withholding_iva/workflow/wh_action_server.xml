@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+    <data>
+
+        <record id="filter_invoice_state_open_iva" model="ir.filters">
+            <field name="name">Invoice Open IVA</field>
+            <field name="model_id">account.invoice</field>
+            <field name="domain" eval="[('wh_iva_id', '=', False), ('state', '=', 'open')]"/>
+            <field name="context">{}</field>
+
+
+        </record>
+                <!-- Server Actions  -->
+        <record id="wh_iva_srv_act" model="ir.actions.server">
+            <field name="name">IVA Withholding Server Action</field>
+            <field name="model_id" ref="model_account_invoice"/>
+            <field name="condition">True</field>
+            <field eval="3" name="sequence"/>
+            <field name="state">code</field>
+            <field name="type">ir.actions.server</field>
+            <field name="code">object.check_document_date() and \
+                                object.check_invoice_dates() and \
+                                object.check_wh_apply() and \
+                                object.check_withholdable() and \
+                                object.action_wh_iva_supervisor() and \
+                                object.action_wh_iva_create()</field>
+        </record>
+
+        <record id="wh_iva_act_rule" model="base.action.rule">
+            <field name="name">IVA Withholding Action Rule</field>
+            <field name="model_id" model="ir.model" search="[('model', '=', 'account.invoice')]"/>
+            <field name="active" eval="True"/>
+            <field name="sequence">9</field>
+            <field name="kind">on_write</field>
+            <field name="filter_id" ref="filter_invoice_state_open_iva"/>
+            <field name="server_action_ids" eval="[(4, ref('wh_iva_srv_act')),]" />
+        </record>
+
+    </data>
+</openerp>

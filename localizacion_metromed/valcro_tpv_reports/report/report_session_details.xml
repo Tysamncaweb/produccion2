@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="pos_session_details"
+            string="Detalles de Sesión"
+            model="pos.session.details.wizard"
+            report_type="qweb-pdf"
+            name="valcro_tpv_reports.session_details0"
+            file="valcro_tpv_reports.session_details0"
+    />
+
+        <template id="session_details0">
+            <div class="article">
+                <div class="page">
+                    <div class="text-center">
+                        <h2>Detalles de Sesión</h2>
+                        <strong><t t-esc="date_start" t-options="{'widget': 'datetime'}"/> - <t t-esc="date_stop" t-options="{'widget': 'datetime'}"/></strong>
+                        <t t-foreach="configs_name" t-as="a">
+                            <div class="text-left"><h4><strong>CAJA: <t t-esc="a"/></strong></h4></div>
+                        </t>
+                    </div><br></br>
+                    <t t-foreach="session_id" t-as="o">
+                     <t t-set="display_discount" t-value="any([l['discount'] for l in sesion])"/>
+                        <t t-set="session_id" t-value="any([l['sesion'] for l in sesion])"/>
+                        <table style="width:100%;">
+                            <thead>
+                                <strong><h3 t-if="session_id != o['session'] " class="text-left">Sesión: <t t-esc="o['session']"/></h3></strong>
+                                <strong><h3 class="text-left">Pedido: <t t-esc="o['pedido']"/></h3></strong>
+                                <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000; font-size: 12px;">
+                                    <th class="text-center table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000;">PRODUCTO</th>
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">CANT.</th>
+                                    <th t-if="display_discount" class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">DESC(%).</th>
+                                    <th class="text-center table-bordered" style="width:15%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNIT.</th>
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">IMPUESTO</th>
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">MONTO</th>
+                                    <th class="text-center table-bordered" style="width:15%; vertical-align: middle; border: 1px solid #000000;">PAGO TOTAL </th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="invoice_tbody">
+                                <t t-foreach="sesion" t-as="l">
+                                    <t t-if="l['order_id'] == o['pedido']">
+                                        <tr style=" border: 1px solid #000000; height: 20px;" class="text-center">
+                                            <td class="text-left" style=" border: 1px solid #000000; vertical-align: middle; "><span t-esc="l['product_id']"/></td>
+                                            <td style=" border: 1px solid #000000; vertical-align: middle;">
+                                                <span t-esc="str(l['qty']).strip('0')"/>
+                                            </td>
+                                            <td t-if="display_discount" style=" border: 1px solid #000000; vertical-align: middle;">
+                                                <span t-esc="l['discount']"/>
+                                            </td>
+                                            <td class="text-right" style=" border: 1px solid #000000; vertical-align: middle;">
+                                                <span t-esc="l['price_unit']"/>
+                                            </td>
+                                            <td t-if="l['tax'] != False" style=" border: 1px solid #000000; vertical-align: middle;" >
+                                                <span t-esc="l['tax']"/>
+                                            </td>
+                                            <td t-else="l['tax'] == False"></td>
+                                            <td t-if="l['tax'] != False" class="text-right" style=" border: 1px solid #000000; vertical-align: middle;" >
+                                                <span t-esc="l['impuesto']"/>
+                                            </td>
+                                            <td t-else="l['tax'] == False"></td>
+                                            <td class="text-right" style=" border: 1px solid #000000; vertical-align: middle;">
+                                                <span t-esc="l['price_total']"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table><br></br><br></br>
+                        <table style="width:100%;">
+                            <thead>
+                                <strong><h3 class="text-left">Métodos de Pago</h3></strong>
+                                <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000; font-size: 12px;">
+                                    <th class="text-center table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000;">NOMBRE</th>
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody class="invoice_tbody">
+                                <t t-foreach="journal_id" t-as="journal" >
+                                    <t t-if="journal['order_id'] == o['pedido']">
+                                        <tr style=" border: 1px solid #000000; height: 20px;" class="text-center">
+                                            <td class="text-left" style=" border: 1px solid #000000; vertical-align: middle; "><span t-esc="journal['journal_id']"/></td>
+                                            <td class="text-right" style=" border: 1px solid #000000; vertical-align: middle;"><span t-esc="journal['amount']"/></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                        <h4 class="text-left"><strong>Total: <t t-esc="o['amount_total']"/></strong></h4>
+                    </t>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

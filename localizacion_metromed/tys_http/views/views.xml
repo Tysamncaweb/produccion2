@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="submodules/tys_http.list">
+      <field name="name">submodules/tys_http list</field>
+      <field name="model">submodules/tys_http.submodules/tys_http</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="submodules/tys_http.action_window">
+      <field name="name">submodules/tys_http window</field>
+      <field name="res_model">submodules/tys_http.submodules/tys_http</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="submodules/tys_http.action_server">
+      <field name="name">submodules/tys_http server</field>
+      <field name="model_id" ref="model_submodules/tys_http_submodules/tys_http"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="submodules/tys_http" id="submodules/tys_http.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="submodules/tys_http.menu_1" parent="submodules/tys_http.menu_root"/>
+    <menuitem name="Menu 2" id="submodules/tys_http.menu_2" parent="submodules/tys_http.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="submodules/tys_http.menu_1_list" parent="submodules/tys_http.menu_1"
+              action="submodules/tys_http.action_window"/>
+    <menuitem name="Server to list" id="submodules/tys_http" parent="submodules/tys_http.menu_2"
+              action="submodules/tys_http.action_server"/>
+    -->
+  </data>
+</odoo>

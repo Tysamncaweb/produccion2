@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_payroll_account_inherit" model="ir.ui.view">
+            <field name="name">hr.payroll.account.view.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_payroll_account.hr_contract_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/field[@name='analytic_account_id']" position="replace">
+                        <field name="analytic_account_id" groups="analytic.group_analytic_accounting" required="True"/>
+                </xpath>
+                <xpath expr='//field[@name="type_id"]' position='before'>
+                        <field name="type_nom" />
+                </xpath>
+
+            </field>
+
+        </record>
+
+        <record id="hr_salary_rule_account_form_inherit" model="ir.ui.view">
+            <field name="name">hr.salary.rule.account.form.inherit</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="hr_payroll_account.hr_salary_rule_form_inherit"/>
+            <field name="arch" type="xml">
+              <xpath expr="/form/notebook/page[@name='rules']" position="after">
+                    <page name="Accounting">
+                        <group colspan="4">
+                            <field name="account_debit" string="Cuenta deudora directa" />
+                            <!--field name="account_debit_indirect" /-->
+                            <field name="account_credit"/>
+                            <field name="analytic_account_id" groups="analytic.group_analytic_accounting"/>
+                            <field name="account_tax_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="account_journal_sequence_view" model="ir.ui.view">
+            <field name="name">account.journal.sequence.view</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sequence_id']" position="replace">
+                    <field name="sequence_id" required="0" attrs="{'readonly': 1}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

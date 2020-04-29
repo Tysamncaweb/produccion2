@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_small_box_information">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout"/>
+                <div class="page" style="padding-top:50; font-color:red;" >
+                    <div style="text-align:center;"><h2 align="center" style="color:red;"> Reporte de caja Chica</h2> </div>
+                    <table style="border: 1px black solid;" width="100%" >
+                        <tr>
+                            <td> <strong> Codigo </strong> </td>
+                            <td> <strong> Cuenta contable </strong> </td>
+                            <td> <strong> Cuenta Transitoria </strong> </td>
+                            <td> <strong> Diario </strong> </td>
+                            <td> <strong> Periodo </strong> </td>
+                        </tr>
+                        <tr class="border-black">
+                            <td> <span t-field="o.small_code"/> </td>
+                            <td> <span t-field="o.small_accounting_account.name" /> </td>
+                            <td> <span t-field="o.small_transitory_account.name" /> </td>
+                            <td> <span t-field="o.small_daily_id.name" /> </td>
+                            <td> <span t-field="o.small_period_id" /> </td>
+                        </tr>
+                        <tr class="border-black">
+                            <td> <strong> Responsable </strong> </td>
+                            <td> <strong> Saldo de cuenta contable </strong> </td>
+                            <td> <strong> Fecha de apertura</strong> </td>
+                            <td> <strong> Moneda </strong> </td>
+                            <td>  </td>
+                        </tr>
+                        <tr class="border-black">
+                            <td> <span t-field="o. small_responsible.name"/> </td>
+                            <td> <span t-field="o.small_debit_account" /> </td>
+                            <td>  <span t-field="o.small_date" /> </td>
+                            <td>  <span t-field="o.small_coin" /> </td>
+                            <td>  </td>
+                        </tr>
+                        <tr class="border-black">
+                            <td> <strong>Cuentas de gastos </strong> </td>
+                            <td> <strong>Numero de cuenta </strong> </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                        </tr>
+                        <tr t-foreach="o.small_type_expense" t-as="l"  class="border-black">
+                            <td><span t-field="l.name"/></td>
+                            <td> <span  t-field="l.id_type_expense.code"/> </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

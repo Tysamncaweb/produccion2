@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="news_register_menu" parent="menu_root_CallCenter" name="Registro de Novedades" sequence="55" />
+        <menuitem id="guard_groups_register_menu" parent="menu_root_CallCenter" name="Registro de Grupos" sequence="65" />
+
+        <!-- novedades -->
+        <!-- News Register form view -->
+        <record id="view_news_register_form" model="ir.ui.view">
+            <field name="name">news</field>
+            <field name="model">news</field>
+            <field name="arch" type="xml">
+                <form string="News Register">
+                    <sheet>
+                        <group col="4">
+                            <field name="news_date" string="Fecha de registro" required="1" />
+                            <field name="headquarter_id" string="Sede" required="1" />
+                            <field name="group_leader_id" string="Jefe de grupo" required="1" domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="supervisor_id" string="Supervisor" required="1"  domain="[('job_id','=','Miembro de Call Center')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="news" string="Novedades" required="1" colspan="4" />
+                        </group>
+                        <notebook>
+                            <page string="Grupo de Guardia">
+                                <group col="4">
+                                    <field name="guard_group_out" required="1"/>
+                                    <group string="Members" colspan="4">
+                                        <field name="news_members_out_line" nolabel="1">
+                                            <tree editable="bottom">
+                                                <field name="member_id" string="Miembro" required="1"  domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                                <field name="news_member_attendee" string="Miembro Asistente" />
+                                                <field name="news_member_no_attendee_reason" string="Razon de Inasistencia" attrs="{'readonly':[('news_member_attendee','=',True)], 'required':[('news_member_attendee','=',False)]}" options="{'no_quick_create':True, 'no_quick_create':True}" />
+                                                <field name="member_id_substitute" string="Suplente" attrs="{'readonly':[('news_member_attendee','=',True)], 'required':[('news_member_attendee','=',False)]}"  domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Asignaciones">
+                                <group col="4">
+                                    <field name="guard_group_in" required="1" />
+                                    <group string="Members" colspan="4">
+                                        <field name="news_members_in_line"  nolabel="1">
+                                            <tree editable="bottom">
+                                                <field name="member_id" string="Miembro" required="1"  domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                                <field name="news_member_attendee" string="Miembro Asistente" />
+                                                <field name="news_member_no_attendee_reason" string="Razon de Inasistencia" attrs="{'readonly':[('news_member_attendee','=',True)], 'required':[('news_member_attendee','=',False)]}" />
+                                                <field name="member_id_substitute" string="Suplente" attrs="{'readonly':[('news_member_attendee','=',True)], 'required':[('news_member_attendee','=',False)]}"  domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Tripulación y Unidades">
+                                <group col="4" string="Unidad">
+                                    <group colspan="2" string="Unidades ">
+                                    <field name="unit_id" string="Unit" required="0" options="{'no_create':True}"  />
+                                    <field name="unit_id2" string="Unit" options="{'no_create':True}"  />
+                                    <field name="unit_id3" string="Unit" options="{'no_create':True}" />
+                                    </group>
+                                    <group colspan="2" string="Kilometrajes">
+                                    <field name="mileage" string="Kilometraje"/>
+                                    <field name="mileage2" string="Kilometraje"/>
+                                    <field name="mileage3" string="Kilometraje" />
+                                    </group>
+                                </group>
+                                <group col="2" string="Observaciones">
+                                    <field name="news_comments" string="Observaciones"/>
+                                </group>
+                                <group col="4" string="Tripulación">
+                                    <group colspan="2" string="Médicos Honorarios Profesionales">
+                                        <field name="crew_medic" string="Primer Médico" required="0"/>
+                                        <field name="crew_medic2" string="Segundo Médico"/>
+                                        <field name="crew_medic3" string="Tercer Médico" />
+                                        <!--field name="crew_paramedic" string="Primer Paramédico" required="1" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_paramedic2" string="Segundo Paramédico" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_paramedic3" string="Tercer Paramédico" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_driver" string="Primer Conductor" required="1" domain="[('job_id','=','Conductor')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_driver2" string="Segundo Conductor" domain="[('job_id','=','Conductor')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_driver3" string="Tercer Conductor" domain="[('job_id','=','Conductor')]" options="{'no_create': True, 'no_create_edit':True}" /-->
+                                    </group>
+                                    <group colspan="2" string="Suplentes">
+                                        <field name="crew_medic_substitute" string="Médico Suplente"/>
+                                        <field name="crew_medic_substitute2" string="Médico Suplente" />
+                                        <field name="crew_medic_substitute3" string="Médico Suplente"/>
+                                        <!--field name="crew_paramedic_substitute" string="Paramédico Suplente" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_paramedic_substitute2" string="Paramédico Suplente" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_paramedic_substitute3" string="Paramédico Suplente" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_driver_substitute" string="Conductor Suplente" domain="[('job_id','=','Paramédico-Conductor')]"  options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_driver_substitute2" string="Conductor Suplente" domain="[('job_id','=','Paramédico-Conductor')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                        <field name="crew_driver_substitute3" string="Conductor Suplente" domain="[('job_id','=','Paramédico-Conductor')]" options="{'no_create': True, 'no_create_edit':True}"/-->
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- vista tree News Register -->
+        <record id="view_news_tree" model="ir.ui.view">
+            <field name="name">news</field>
+            <field name="model">news</field>
+            <field name="arch" type="xml">
+                <tree string="News">
+                    <field name="id" />
+                    <field name="guard_group_in" string="Grupo de guardia que recibe" />
+                    <field name="guard_group_out" string="Grupo de guardia que entrega" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Filtro News Register -->
+        <record id="view_news_filter" model="ir.ui.view">
+            <field name="name">news.select</field>
+            <field name="model">news</field>
+            <field name="arch" type="xml">
+                <search string="Search News">
+                    <field name="guard_group_in" string="Grupo de guardia que recibe" />
+                    <group expand="0" string="Group By">
+                        <filter string="Grupo de guardia ue recibe" name="guard_group_in" icon="erp-folder_orange" context="{'group_by':'guard_group_in'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action News Register -->
+        <record id="action_view_news_register_form" model="ir.actions.act_window">
+            <field name="name">Novedades</field>
+            <field name="res_model">news</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_news_tree" />
+            <field name="search_view_id" ref="view_news_filter" />
+        </record>
+
+        <menuitem action="action_view_news_register_form" id="menu_news_view_tree" parent="news_register_menu" />
+
+        <!-- guard.groups -->
+        <!-- Guard Groups Register form view -->
+        <record id="view_guard_groups_register_form" model="ir.ui.view">
+            <field name="name">guard.groups</field>
+            <field name="model">guard.groups</field>
+            <field name="arch" type="xml">
+                <form string="Guard Register">
+                    <sheet>
+                        <group col="4">
+                            <field name="name" string="Nombre del grupo" required="1" colspan="2"/>
+                            <field name="group_headquarter" string="Sede" required="1" colspan="2"/>
+                            <field name="group_leader" string="Jefe de Grupo" required="1" colspan="2" domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group col="4" string="Members">
+                            <field name="guard_group_members" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="member_id" string="Miembros" domain="[('department_id','=','Operaciones')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- vista tree Guard Group Register -->
+        <record id="view_guard_groups_tree" model="ir.ui.view">
+            <field name="name">guard.groups</field>
+            <field name="model">guard.groups</field>
+            <field name="arch" type="xml">
+                <tree string="Grupos">
+                    <field name="id" />
+                    <field name="name" string="Nombre del grupo" />
+                    <field name="group_headquarter" string="Sede"/>
+                    <field name="group_leader" string="Jefe de Grupo"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Filtro Guard Groups Register -->
+        <record id="view_guard_groups_filter" model="ir.ui.view">
+            <field name="name">guard.groups.select</field>
+            <field name="model">guard.groups</field>
+            <field name="arch" type="xml">
+                <search string="Search Guard Groups">
+                    <field name="name" string="Nombre del grupo" />
+                    <group expand="0" string="Group By">
+                        <filter string="Nombre del grupo" name="name" icon="erp-folder_orange" context="{'group_by':'name'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action Guard Groups Register -->
+        <record id="action_view_guard_groups_register_form" model="ir.actions.act_window">
+            <field name="name">Grupo de Guardia</field>
+            <field name="res_model">guard.groups</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_guard_groups_tree" />
+            <field name="search_view_id" ref="view_guard_groups_filter" />
+        </record>
+
+        <menuitem action="action_view_guard_groups_register_form" id="menu_guard_groups_view_tree" parent="guard_groups_register_menu" />
+
+        <!-- guard.change -->
+        <!-- Guard Change form view -->
+        <record id="view_guard_change_form" model="ir.ui.view">
+            <field name="name">Guard Change Form View</field>
+            <field name="model">guard.change</field>
+            <field name="arch" type="xml">
+                <form string="Guard Change">
+                    <sheet>
+                        <group col="4">
+                            <field name="change_date" string="Fecha" colspan="2"/>
+                            <field name="change_group" string="Grupo" colspan="2" />
+                            <field name="change_headquarter" string="Sede" colspan="2" />
+                            <field name="change_group_leader" string="Jefe de Grupo" colspan="2" domain="[('job_id','=','Paramédico')]" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="change_third_service" string="Tercerizado" colspan="2" />
+                            <field name="change_viatic" string="Viaticos" colspan="2" />
+                            <field name="change_viatic_motive" colspan="2" attrs="{'invisible':[('change_viatic','!=',True)]}" />
+                            <field name="change_members" string="Miembros" colspan="4">
+                                <tree create="false">
+                                    <field name="member_id" />
+                                </tree>
+                            </field>
+                            <field name="change_vehicle" string="Unidad" colspan="4" options="{'no_create':True}" />
+                            <field name="change_notes" string="" colspan="4" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Guard Change tree view -->
+        <record id="view_guard_change_tree" model="ir.ui.view">
+            <field name="name">Guard Change Tree View</field>
+            <field name="model">guard.change</field>
+            <field name="arch" type="xml">
+                <tree string="Guard Change">
+                    <field name="id" />
+                    <field name="change_date" string="Fecha"/>
+                    <field name="change_group" string="Grupo" />
+                    <field name="change_headquarter" string="Sede" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Guard Change tree view action -->
+        <record id="view_guard_change_tree_action" model="ir.actions.act_window">
+            <field name="name">Cambio de Guardia</field>
+            <field name="res_model">guard.change</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_guard_change_tree" />
+        </record>
+
+        <!-- Guard Change tree view action menu -->
+        <menuitem action="view_guard_change_tree_action"
+                  id="menu_view_guard_change_tree_action"
+                  parent="news_register_menu"/>
+
+        <!-- services -->
+        <!-- News Register form view -->
+        <record id="view_services_register_form" model="ir.ui.view">
+            <field name="name">view.services.register.form</field>
+            <field name="model">service.type</field>
+            <field name="arch" type="xml">
+                <form string="Sefvice Register">
+                    <sheet>
+                        <group col="4">
+                            <field name="service_type_name" string="servicio" required="1" />
+                            <field name="short_service_type_name" string="Nombre Corto"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- vista tree Services Register -->
+        <record id="view_services_tree" model="ir.ui.view">
+            <field name="name">view.services.tree</field>
+            <field name="model">service.type</field>
+            <field name="arch" type="xml">
+                <tree string="News">
+                    <field name="service_type_name" string="servicio" required="1" />
+                    <field name="short_service_type_name" string="Nombre Corto"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Filtro service Register -->
+        <record id="view_service_filter" model="ir.ui.view">
+            <field name="name">view.service.filter</field>
+            <field name="model">service.type</field>
+            <field name="arch" type="xml">
+                <search string="Search Services">
+                    <field name="service_type_name" string="Servicios" />
+                    <group expand="0" string="Group By">
+                        <filter string="Grupo de guardia ue recibe" name="service_type_name" icon="erp-folder_orange" context="{'group_by':'service_type_name'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action News Register -->
+        <record id="action_view_service_register_form" model="ir.actions.act_window">
+            <field name="name">Servicios</field>
+            <field name="res_model">service.type</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_services_tree" />
+            <field name="search_view_id" ref="view_service_filter" />
+        </record>
+
+        <menuitem action="action_view_service_register_form" id="menu_service_view_tree" parent="service_register_menu" />
+        <!-- guard.group.members -->
+        <!-- Guard Group Members Register form view -->
+        <!--
+        <record id="view_guard_group_members_register_form" model="ir.ui.view">
+            <field name="name">guard.group.members</field>
+            <field name="model">guard.group.members</field>
+            <field name="arch" type="xml">
+                <form string="Guard Members Register">
+                    <sheet>
+                        <group col="4">
+                            <field name="guard_group_id" string="Grupo" required="1" />
+                            <field name="group_leader" string="Lider del grupo" required="1" widget="selection" options="{'no_quick_create':True, 'no_quick_create':True}" />
+                            <group string="Members" colspan="4">
+                                <field name="guard_group_members"  nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="member_id" required="1" widget="selection" options="{'no_quick_create':True, 'no_quick_create':True}" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        -->
+
+        <!-- vista tree Guard Group Members Register -->
+        <!--
+        <record id="view_guard_group_members_tree" model="ir.ui.view">
+            <field name="name">guard.group.members</field>
+            <field name="model">guard.group.members</field>
+            <field name="arch" type="xml">
+                <tree string="Guard Members">
+                    <field name="id" />
+                    <field name="guard_group_id" string="Grupo" />
+                    <field name="group_leader" string="Jefe de grupo" />
+                </tree>
+            </field>
+        </record>
+        -->
+
+        <!-- Filtro Guard Group Members Register -->
+        <!--
+        <record id="view_guard_group_members_filter" model="ir.ui.view">
+            <field name="name">guard.group.members.select</field>
+            <field name="model">guard.group.members</field>
+            <field name="arch" type="xml">
+                <search string="Search Guard Group Members">
+                    <field name="guard_group_id" string="Grupo" />
+                    <group expand="0" string="Group By">
+                        <filter string="Grupo" name="guard_group_id" icon="erp-folder_orange" context="{'group_by':'guard_group_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        -->
+
+        <!-- action Guard Group Members Register -->
+        <!--
+        <record id="action_view_guard_group_members_register_form" model="ir.actions.act_window">
+            <field name="name">Guard group members</field>
+            <field name="res_model">guard.group.members</field>
+            <field name="view_model">tree,form</field>
+            <field name="view_id" ref="view_guard_group_members_tree" />
+            <field name="search_view_id" ref="view_guard_group_members_filter" />
+        </record>
+
+        <menuitem action="action_view_guard_group_members_register_form" id="menu_guard_group_members_view_tree" parent="guard_groups_register_menu" />
+        -->
+
+        <!-- Fleet.vehicle - genera error al cargar
+        <record id="action_view_vehicle_fleet" model="ir.actions.act_window">
+            <field name="name">Vehicles</field>
+            <field name="res_model">fleet.vehicle</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_view_vehicle_fleet" id="menu_vehicle_fleet" parent="news_register_menu" />
+        -->
+    </data>
+</odoo>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="salary_increase_form" model="ir.ui.view">
+            <field name="name">salary.increase.form</field>
+            <field name="model">salary.increase</field>
+            <field name="arch" type="xml">
+                 <form string="Incrementos Salariales" duplicate="0">
+                    <header>
+						<button name="upload_calcular" string="Calcular" states="draft" type="object"/>
+						<button name="set_to_draft"  string="Cambiar a Borrador" states="calculate" type="object"/>
+						<button name="upload_wage" string="Confirmar" states="calculate" type="object"/>
+						<field name="state" widget="statusbar"/>
+	                </header>
+                    <sheet>
+                        <group>
+	                        <group>
+		                        <field name="name" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+								<field name="type_aumento" required="True" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+								<field name="wage" attrs="{'readonly': [('state','!=', 'draft')], 'invisible':[('type_aumento','!=', 'por')], 'required': [('type_aumento','=', 'por')]}"/>
+								<field name="monto" attrs="{'readonly': [('state','!=', 'draft')], 'invisible':[('type_aumento','!=', 'mov')], 'required': [('type_aumento','=', 'mov')]}"/>
+	                        </group>
+	                        <group >
+		                        <field name="fecha_decrete" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+		                        <field name="fecha_increase" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+		                        <field name="user_id" attrs="{'readonly': [('state','=', 'done')]}" readonly="True"/>
+	                        </group>
+							<notebook colspan="4">
+                         		<page string="Empleados" name="employee_salary">
+							 		<group>
+										<button string="Agregar" type="action" name="%(view_wizzard_action_add_form)d" attrs="{'invisible': [('state','!=', 'draft')]}"/>
+                           			</group>
+                          			<field name="employee_ids" attrs="{'readonly': [('state','!=', 'draft')]}">
+                            			<tree string="Historico de Incrementos Salariales" editable="button" create="0">
+										<field name="employee_id"/>
+					            		<field name="vat"/>
+	                            		<field name="porcent"/>
+	                            		<field name="amount" />
+				            			</tree>
+	                    			</field>
+                         		</page>
+                    		</notebook>
+
+						</group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+	    <record id="salary_increase_tree" model="ir.ui.view">
+	        <field name="name">salary.increase.tree</field>
+	        <field name="model">salary.increase</field>
+	        <field name="arch" type="xml">
+	            <tree string="Incrementos Salariales">
+					<field name="name"/>
+					<field name="fecha_increase"/>
+					<field name="wage"/>
+					<field name="user_id"/>
+					<field name="state"/>
+				</tree>
+	        </field>
+	    </record>
+        <record id="salary_increase_action" model="ir.actions.act_window">
+            <field name="name">Incremento Salarial</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">salary.increase</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                  Gestiona los incrementos de Salario
+              </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+              </p>
+            </field>
+        </record>
+	    <!-- This Menu Item must have a parent and an action -->
+	    <!--menuitem id="salary_increase_menu" name="Incrementos Salariales" parent="hr.menu_hr_main" groups="group_hr_manager" action="salary_increase_action"/-->
+
+		<menuitem
+            id="salary_increase_menu"
+            name="Incrementos Salariales"
+            parent="hr.menu_hr_root"
+            action="salary_increase_action"
+           />
+
+		<menuitem
+            id="salary_increase_menu_2"
+            name="Incrementos Salariales"
+            parent="hr_salary_increase.salary_increase_menu"
+            action="salary_increase_action"
+			sequence="1"
+           />
+
+
+	    <record id="salary_increase_line_tree" model="ir.ui.view">
+	        <field name="name">salary.increase.line.tree</field>
+	        <field name="model">salary.increase.line</field>
+	        <field name="arch" type="xml">
+	            <tree string="Historico de Incrementos Salariales" create="0" delete="0">
+	                <field name="employee_id"/>
+		            <field name="vat"/>
+		            <field name="increase_name"/>
+		            <field name="past_amount"/>
+		            <field name="fecha_increase"/>
+		            <field name="porcent"/>
+		            <field name="amount"/>
+
+	            </tree>
+	        </field>
+	    </record>
+
+		 <record model="ir.ui.view" id="salary_record_search">
+			<field name="name">salary.record.search</field>
+			<field name="model">salary.increase.line</field>
+			<field name="arch" type="xml">
+                <search string="Historico de Sueldos">
+					<field name="employee_id"/>
+					<field name="vat"/>
+					<group expand="0" string="Agrupar Por...">
+						<filter string="Empleados" icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by':'employee_id'}"/>
+
+					</group>
+                </search>
+			</field>
+		 </record>
+
+		<record id="salary_increase_line_action" model="ir.actions.act_window">
+            <field name="name">Hístorico de Aumento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">salary.increase.line</field>
+            <field name="view_mode">tree</field>
+
+            <field name="help" type="html">
+
+              <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                  Lista de Historial de Incrementos
+              </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+              </p>
+            </field>
+        </record>
+	    <menuitem id="salary_increase_line_menu"
+	    name="Hístorico de Aumentos"
+	    parent="hr_salary_increase.salary_increase_menu"
+	     action="salary_increase_line_action"/>
+
+
+    </data>
+</odoo>

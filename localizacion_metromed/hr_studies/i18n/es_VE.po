@@ -1,0 +1,281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_studies
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20180222\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-07 14:59+0000\n"
+"PO-Revision-Date: 2019-01-07 14:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_studies
+#: selection:hr.languages,listening:0
+#: selection:hr.languages,pronunciation:0
+#: selection:hr.languages,reading:0
+#: selection:hr.languages,writing:0
+msgid "Advance"
+msgstr "Avanzado"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_anos_aprobado
+msgid "Años Aprobados"
+msgstr "Años Aprobados"
+
+#. module: hr_studies
+#: selection:hr.stadies,name_nivel:0
+msgid "Bachiller"
+msgstr "Bachiller"
+
+#. module: hr_studies
+#: selection:hr.languages,listening:0
+#: selection:hr.languages,pronunciation:0
+#: selection:hr.languages,reading:0
+#: selection:hr.languages,writing:0
+msgid "Basic"
+msgstr "Básico"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_career_id
+msgid "Carrera"
+msgstr "Carrera"
+
+#. module: hr_studies
+#: model:ir.model,name:hr_studies.model_hr_career
+msgid "Carrera Description"
+msgstr "Descripción de la Carrera"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_name
+msgid "Carrera Name"
+msgstr "Nombre de la Carrera"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_name_institute
+msgid "Colegio/Institucion"
+msgstr "Colegio/Institucion"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_create_uid
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_create_uid
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_create_uid
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_create_date
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_create_date
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_create_date
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_courses
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_courses_ids
+#: model:ir.ui.view,arch_db:hr_studies.hr_course_form
+#: model:ir.ui.view,arch_db:hr_studies.hr_course_tree
+#: model:ir.ui.view,arch_db:hr_studies.hr_employee_studies_form
+msgid "Cursos"
+msgstr "Cursos"
+
+#. module: hr_studies
+#: model:ir.ui.view,arch_db:hr_studies.hr_employee_studies_form
+msgid "Datos Educativos"
+msgstr "Datos Educativos"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_display_name
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_display_name
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_display_name
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_duracion
+msgid "Duracion"
+msgstr "Duracion"
+
+#. module: hr_studies
+#: selection:hr.stadies,name_nivel:0
+msgid "Educación Basica"
+msgstr "Educación Basica"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_employee_id
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_employee_id
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_studies
+#: model:ir.model,name:hr_studies.model_hr_languages
+msgid "Employee Languages"
+msgstr "Lenguaje de Empleado"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_active_studies
+msgid "Estudia Actualmente"
+msgstr "Estudia Actualmente"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_stadies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_studies_ids
+#: model:ir.ui.view,arch_db:hr_studies.hr_stadies_form
+#: model:ir.ui.view,arch_db:hr_studies.hr_stadies_tree
+msgid "Estudios"
+msgstr "Estudios"
+
+#. module: hr_studies
+#: model:ir.ui.view,arch_db:hr_studies.hr_employee_studies_form
+msgid "Estudios Actuales"
+msgstr "Estudios Actuales"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_date_culminacion
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_fecha_culminacion
+msgid "Fecha de Culminacion"
+msgstr "Fecha de Culminacion"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_graduado
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_si_graduado
+msgid "Graduado"
+msgstr "Graduado"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_id
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_id
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_id
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_languages_id
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_lang_id
+#: model:ir.ui.view,arch_db:hr_studies.hr_employee_studies_form
+msgid "Idiomas"
+msgstr "Idiomas"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_name_instituto
+msgid "Institucion"
+msgstr "Institucion"
+
+#. module: hr_studies
+#: selection:hr.languages,listening:0
+#: selection:hr.languages,pronunciation:0
+#: selection:hr.languages,reading:0
+#: selection:hr.languages,writing:0
+msgid "Intermediate"
+msgstr "Intermedio"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_employee_languages
+#: model:ir.ui.view,arch_db:hr_studies.hr_employee_studies_form
+msgid "Languages"
+msgstr "Idiomas"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career___last_update
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course___last_update
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages___last_update
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies___last_update
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_write_uid
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_write_uid
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_write_uid
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_career_write_date
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_write_date
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_write_date
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: hr_studies
+#: selection:hr.stadies,name_nivel:0
+msgid "Licenciado"
+msgstr "Licenciado"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_listening
+msgid "Listening"
+msgstr "Comprensión"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_name_nivel
+msgid "Nivel Educativo"
+msgstr "Nivel Educativo"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_name_curso
+msgid "Nombre del Curso"
+msgstr "Nombre del Curso"
+
+#. module: hr_studies
+#: model:ir.model,name:hr_studies.model_hr_employee
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_pronunciation
+msgid "Pronunciation"
+msgstr "Pronunciación"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_reading
+msgid "Reading"
+msgstr "Lectura"
+
+#. module: hr_studies
+#: selection:hr.stadies,name_nivel:0
+msgid "Tecnico Medio"
+msgstr "Tecnico Medio"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_course_name_titulo
+msgid "Titulo o Certificado"
+msgstr "Titulo o Certificado"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_stadies_nombre_titulo
+msgid "Titulo o Certificado Obtenido"
+msgstr "Titulo o Certificado Obtenido"
+
+#. module: hr_studies
+#: selection:hr.stadies,name_nivel:0
+msgid "Universitario"
+msgstr "Universitario"
+
+#. module: hr_studies
+#: model:ir.model.fields,field_description:hr_studies.field_hr_languages_writing
+msgid "Writing"
+msgstr "Escritura"
+
+#. module: hr_studies
+#: model:ir.model,name:hr_studies.model_hr_course
+msgid "hr.course"
+msgstr "hr.course"
+
+#. module: hr_studies
+#: model:ir.model,name:hr_studies.model_hr_stadies
+msgid "hr.stadies"
+msgstr "hr.stadies"
+

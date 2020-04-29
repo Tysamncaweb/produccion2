@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_contract_view_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.view.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='other']" position="after">
+                    <page string="Asignaciones y Deducciones" name="asignaciones_deducciones">
+                        <group>
+                            <!--ASIGNACIONES-->
+                            <group name="assignments" string="Asignaciones">
+                                <label for= "night_bonus_check" string="Bono Nocturno"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="night_bonus_check" style="width: 15%%"/>
+                                        <field name="night_bonus_value" class="oe_no_button" style="width: 65%%" placeholder="hh:mm" attrs="{'invisible': [('night_bonus_check', '!=', True)]}"/>
+                                        <!--<field name="night_bonus" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('night_bonus_check', '!=', True)]}" readonly="True"/>-->
+                                        <!--field name="night_bonus" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('night_bonus_check', '!=', True)]}"/-->
+                                    </div>
+                                </div>
+                                <label for= "days_of_salary_pending_check" string="Reintegro de Días"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="days_of_salary_pending_check" style="width: 15%%"/>
+                                        <field name="days_of_salary_pending_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('days_of_salary_pending_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                 <label for= "sundays_check" string="Domingos"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="sundays_check" style="width: 15%%"/>
+                                        <field name="sundays_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('sundays_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "holidays_check" string="Feriados"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="holidays_check" style="width: 15%%"/>
+                                        <field name="holidays_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('holidays_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "salary_assignment_check" string="Asignacion de Días(Vacaciones)"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="salary_assignment_check" style="width: 15%%"/>
+                                        <field name="salary_assignment_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('salary_assignment_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "salary_retroactive_check" string="Otras Asignaciones"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="salary_retroactive_check" style="width: 15%%"/>
+                                        <field name="salary_retroactive_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('salary_retroactive_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                 <label for= "salary_retroactive_check" string="Retroactivo"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="retroactivo_check" style="width: 15%%"/>
+                                        <field name="retroactivo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('retroactivo_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                            </group>
+                            <group name="deducciones" string="Deducciones">
+                                 <label for= "subsidio_patria_check" string="Subsidio Patria"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="subsidio_patria_check" style="width: 15%%"/>
+                                        <field name="subsidio_patria_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('subsidio_patria_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "hours_not_worked_check" string="Descuento de Horas"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="hours_not_worked_check" style="width: 15%%"/>
+                                        <field name="hours_not_worked_value" class="oe_no_button" style="width: 30%%" placeholder="hh:mm" attrs="{'invisible': [('hours_not_worked_check', '!=', True)]}"/>
+                                        <!--<field name="hours_not_worked" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('hours_not_worked_check', '!=', True)]}" readonly="True"/>-->
+                                        <field name="hours_not_worked" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('hours_not_worked_check', '!=', True)]}" readonly="1" force_save="1"/>
+                                    </div>
+                                </div>
+                                <label for="hours_not_worked_mes_ant_check" string="Descuento de Horas Mes Anterior"/>
+                                 <div>
+                                    <div class="address_format">
+                                        <field name="hours_not_worked_mes_ant_check" style="width: 15%%"/>
+                                        <field name="hours_not_worked_mes_ant_value" class="oe_no_button" style="width: 30%%" placeholder="hh:mm" attrs="{'invisible': [('hours_not_worked_mes_ant_check', '!=', True)]}"/>
+                                        <!--<field name="hours_not_worked" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('hours_not_worked_check', '!=', True)]}" readonly="True"/>-->
+                                        <field name="hours_not_worked_mes_ant" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('hours_not_worked_mes_ant_check', '!=', True)]}" readonly="1" force_save="1"/>
+                                    </div>
+                                </div>
+                                <label for="salario_hours_not_worked_mes_ant" string="Salario Descuento de Horas Mes Anterior" attrs="{'invisible': [('hours_not_worked_mes_ant_check', '!=', True)]}"/>
+                                <div>
+                                    <div class="address_format">
+                                    <field name="salario_hours_not_worked_mes_ant" style="width: 45%%" class="oe_no_button" attrs="{'invisible': [('hours_not_worked_mes_ant_check', '!=', True)]}" domain="[('employee_id','=',employee_id)]" options="{'no_create':True,'no_open':True,'limit':2}"/>
+
+                                    </div>
+                                </div>
+
+
+                                <label for= "ausencias_ded_check" string="Ausencias Injustificadas"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="ausencias_ded_check" style="width: 15%%"/>
+                                        <field name="ausencias_ded_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ausencias_ded_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "dcto_sso_check" string="Descuento Seguro Social SSO"/>
+                                <div invisible="0">
+                                    <div class="address_format">
+                                        <field name="dcto_sso_check" style="width: 15%%"/>
+                                    </div>
+                                </div>
+                                <label for= "dcto_reg_prest_empleo_check" string="Regimen Prestacional de Empleo"/>
+                                <div invisible="0">
+                                    <div class="address_format">
+                                        <field name="dcto_reg_prest_empleo_check" style="width: 15%%"/>
+                                    </div>
+                                </div>
+                                 <label for= "retencion_faov_check" string="Retencion F.A.O.V."/>
+                                <div invisible="0">
+                                    <div class="address_format">
+                                        <field name="retencion_faov_check" style="width: 15%%"/>
+                                    </div>
+                                </div>
+
+                                <label for= "islr_withholding_check" string="Retenciones I.S.L.R."/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="islr_withholding_check" style="width: 15%%"/>
+                                        <field name="islr_withholding_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('islr_withholding_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "salary_deduction_check" string="Otras Deducciones"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="salary_deduction_check" style="width: 15%%"/>
+                                        <field name="salary_deduction_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('salary_deduction_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "non_salary_deduction_check" string="Días de Disfrute"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="non_salary_deduction_check" style="width: 15%%" />
+                                        <field name="non_salary_deduction_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('non_salary_deduction_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                <label for= "non_salary_deduction_check" string="Días Bono Vacacional"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="deduction_bono_vac_check" style="width: 15%%" />
+                                        <field name="deduction_bono_vac_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('deduction_bono_vac_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+                                 <label for= "salary_retroactive_check" string="Prestamo"/>
+                                <div>
+                                    <div class="address_format">
+                                        <field name="prestamo_check" style="width: 15%%"/>
+                                        <field name="prestamo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('prestamo_check', '!=', True)]}"/>
+                                    </div>
+                                </div>
+
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

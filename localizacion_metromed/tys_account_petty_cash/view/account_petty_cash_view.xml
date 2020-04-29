@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Vista tree para el registro de la caja chica-->
+        <!--record id="account_petty_cash_tree" model="ir.ui.view">
+            <field name="name">account.petty.cash.tree</field>
+            <field name="model">account.petty.cash</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="petty_cash_description"/>
+                    <field name="petty_cash_responsible_id"/>
+                    <field name="petty_cash_currency_id"/>
+                    <field name="petty_cash_account_id"/>
+                    <field name="petty_cash_trans_account_id"/>
+                    <field name="petty_cash_date"/>
+                    <field name="petty_cash_move_id"/>
+                    <field name="petty_cash_journal_id"/>
+                    <field name="petty_cash_status"/>
+
+                </tree>
+            </field>
+        </record-->
+
+        <!--Vista formulario para el registro de la caja chica-->
+
+        <!--record id="account_petty_cash_form" model="ir.ui.view">
+             <field name="name">account.petty.cash.form</field>
+             <field name="model">account.petty.cash</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                 <form name="Register Petty cash">
+                     <header>
+                         <button string="Approved" name="confirm_petty_cash" type="object"  class="oe_highlight" attrs="{'invisible':[('petty_cash_status', 'in', ('approved'))]}"/>
+                         <field name="petty_cash_status" widget="statusbar"  nolabel="1" statusbar_visible="draft,approved" statusbar_colors="{'approved':'blue'}"/>
+                     </header>
+                    <sheet string="Register Petty cash">
+                        <group  colspan="2" col="2" >
+                            <group>
+                                <field name="name" string="Code Petty cash" readonly="1"/>
+                                <field name="petty_cash_date" string="Date" attrs="{'readonly': [('petty_cash_status', '=', 'approved')]}"/>
+                                <field name="petty_cash_responsible_id" string="Responsible"/>
+                                <field name="petty_cash_currency_id" string="Currency" attrs="{'readonly': [('petty_cash_status', '=', 'approved')]}"/>
+                            </group>
+                            <group>
+                                <field name="petty_cash_account_id" string="Account" attrs="{'readonly': [('petty_cash_status', '=', 'approved')]}"/>
+                                <field name="petty_cash_trans_account_id" string="Account transitory" attrs="{'readonly': [('petty_cash_status', '=', 'approved')]}"/>
+                                <field name="petty_cash_journal_id" string="Journal small box" attrs="{'readonly': [('petty_cash_status', '=', 'approved')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="petty_cash_description" string="Small box description" attrs="{'readonly': [('petty_cash_status', '=', 'approved')]}"/>
+                        </group>
+                    </sheet>
+                 </form>
+             </field>
+	     </record-->
+
+        <!--Accion para el registro de la caja chica -->
+         <!--record id="action_petty_cash" model="ir.actions.act_window">
+            <field name="name">Register Petty cash</field>
+            <field name="res_model">account.petty.cash</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="account_petty_cash_tree"/>
+         </record-->
+        <!--menu padre para el registro de la caja chica-->
+
+         <!--menuitem id="cash_operations" name="Petty Cash Operations" />
+         <menuitem id="registry_petty_cash" name="Registry Petty cash"  parent="cash_operations"/>
+         <menuitem id="menu_registry_petty_cash" action="action_petty_cash"  parent="registry_petty_cash"/-->
+
+        <!--********************************************************************************************-->
+        <!--Vista tree para el Registrar y Validar la caja chica-->
+        <record id="validate_account_petty_cash_tree" model="ir.ui.view">
+            <field name="name">validate.account.petty.cash.tree</field>
+            <field name="model">account.petty.cash</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="petty_cash_description"/>
+                    <field name="petty_cash_responsible_id"/>
+                    <field name="petty_cash_currency_id"/>
+                    <field name="petty_cash_account_id"/>
+                    <field name="petty_cash_trans_account_id"/>
+                    <field name="petty_cash_date"/>
+                    <field name="petty_cash_bank_id"/>
+                    <field name="petty_cash_amount_open"/>
+                    <field name="disponible"/>
+                    <field name="petty_cash_status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Vista formulario para validar la caja chica-->
+
+        <record id="validate_petty_cash_form1" model="ir.ui.view">
+             <field name="name">Validate Petty cash</field>
+             <field name="model">account.petty.cash</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                 <form name="Petty cash Validate">
+                     <header>
+
+                         <button string="Aprobar" name="confirm_petty_cash" type="object"  class="oe_highlight" attrs="{'invisible':[('petty_cash_status', 'in', ('approved','validate'))]}"/>
+                         <!--field name="petty_cash_status" widget="statusbar"  nolabel="1" statusbar_visible="draft,approved" statusbar_colors="{'approved':'blue'}"/-->
+
+                         <button name="validate_petty_cash" type="object" string="Validar" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('petty_cash_status', 'in', ('draft','validate'))]}"/>
+                         <button name="%(action_change_amount_petty_cash)d" type="action" string="Incrementar Monto" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('petty_cash_status', 'in', ('draft','approved'))]}"/>
+                         <button name="%(action_decrease_amount_petty_cash)d" type="action" string="Decrementar Monto" class="oe_highlight" icon="gtk-go-forward"  attrs="{'invisible':[('petty_cash_status', 'in', ('draft','approved'))]}"/>
+                         <field name="petty_cash_status" widget="statusbar"  nolabel="1" statusbar_visible="draft,approved,validate" statusbar_colors="{'approved':'blue'}"/>
+                     </header>
+                    <sheet string="Petty cash Validate">
+                        <group  colspan="2" col="2" >
+                            <group>
+                                <field name="name" string="Código" readonly="1"/>
+                                <field name="petty_cash_date" string="Fecha" attrs="{'readonly': [('petty_cash_status', 'in', ('approved','validate'))]}"/>
+                                <field name="petty_cash_responsible_id" string="Responsable" attrs="{'readonly': [('petty_cash_status', 'in', ('approved','validate'))]}" domain="[('id', '=', uid)]"/>
+                                <field name="petty_cash_currency_id" string="Moneda" attrs="{'readonly': [('petty_cash_status', 'in', ('approved','validate'))]}"/>
+                            </group>
+                            <group>
+                                <field name="petty_cash_account_id" string="Cuenta Contable" attrs="{'readonly': [('petty_cash_status', 'in',( 'approved','validate'))]}"/>
+                                <field name="petty_cash_trans_account_id" string="Cuenta Transitoria" attrs="{'readonly': [('petty_cash_status', 'in', ('approved','validate'))]}"/>
+                                <field name="petty_cash_journal_id" string="Diario de Caja Chica" attrs="{'readonly': [('petty_cash_status', 'in', ('approved','validate'))]}"/>
+                                <field name="petty_cash_amount_open" string="Monto de Apertura" required="1" attrs="{'readonly': [('petty_cash_status', 'in', 'validate')]}"/>
+                                <field name="disponible" string="Saldo Disponible" readonly="1"/>
+                                <field name="petty_cash_bank_id" string="Banco" required="1" attrs="{'readonly': [('petty_cash_status', 'in', 'validate')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="petty_cash_description" string="Descripción de Caja Chica" attrs="{'readonly': [('petty_cash_status', 'in', ('approved','validate'))]}"/>
+                            <field name="petty_cash_move_id" string="Asiento Contable" attrs="{'invisible': [('petty_cash_status', 'in', ('approved','draft'))], 'readonly': [('petty_cash_status', 'in', 'validate')]}"/>
+                            <!--field name="petty_cash_move_id" attrs="{'readonly': [('petty_cash_status', '=', 'validate')],'invisible':[('petty_cash_status', 'in', ('draft','approved'))]}"/-->
+                        </group>
+                        <!--notebook>
+                            <page string="Asiento Contable" attrs="{'invisible':[('petty_cash_status', 'in', ('draft','approved'))]}">
+                                    <field name="petty_cash_move_reconcile" readonly="1">
+                                    <tree string="Asiento Contable">
+                                        <field name="ref"/>
+                                        <field name="date"/>
+                                        <field name="partner_id"/>
+                                        <field name="account_id"/>
+                                        <field name="name"/>
+                                        <field name="debit"/>
+                                        <field name="credit"/>
+                                        <field name="currency_id" groups="base.group_multi_currency"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook-->
+                    </sheet>
+                 </form>
+             </field>
+	     </record>
+
+
+        <!--Acccion para vista tree y form para validar la caja chica-->
+        <record id="action_validate_petty_cash" model="ir.actions.act_window">
+            <field name="name">Registro de Caja Chica</field>
+            <field name="res_model">account.petty.cash</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['|',('petty_cash_status','in',('approved','validate')),('petty_cash_responsible_id', '=', uid)]</field>
+         </record>
+        <record id="action_validate_petty_cash_tree" model="ir.actions.act_window.view">
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="validate_account_petty_cash_tree"/>
+            <field name="act_window_id" ref="action_validate_petty_cash"/>
+        </record>
+        <record id="action_validate_petty_cash_form" model="ir.actions.act_window.view">
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="validate_petty_cash_form1"/>
+            <field name="act_window_id" ref="action_validate_petty_cash"/>
+        </record>
+
+        <!--menu padre para el registro de la caja chica-->
+        <menuitem id="cash_operations" name="Caja Chica" />
+        <menuitem id="menu_validate_petty_cash" name= "Registro de Caja Chica" action="action_validate_petty_cash" parent="cash_operations" sequence="0"/>
+    </data>
+</odoo>

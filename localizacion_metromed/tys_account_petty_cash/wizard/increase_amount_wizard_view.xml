@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="wizard_change_amount_petty_cash_form">
+            <field name="name">change.amount.petty.cash.form</field>
+            <field name="model">change.amount.petty.cash.wizard</field>
+            <field name="arch" type="xml">
+                <form string=" Amount Petty Cash">
+                    <group>
+                        <field name="amount" readonly="1"/>
+                        <field name="increase_amount_petty_cash"/>
+                        <field name="amount_new" readonly="1"/>
+                    </group>
+                    <separator string="Seguro que quieres hacer esto?" colspan="4" />
+                    <field name="sure"/>
+                    <footer>
+                        <button name="increase_amount" string="Confirm" type="object" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_change_amount_petty_cash" model="ir.actions.act_window">
+            <field name="name">Change Amount petty cash</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">change.amount.petty.cash.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="account.account_issuedcheck_hreject_form_view">
+            <field name="name">account.issuedcheck.hreject.wizard.form</field>
+            <field name="model">account.issuedcheck.hreject</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Rejected Handed Check" col="2">
+                    <group> 
+                        <field name="reject_date"/>
+                        <field name="make_expense" string="Make Expense ?"/>
+                        <field name="expense_account"/>
+                        <field name="expense_amount"/>
+                        <field name="invoice_expense"/>
+                    </group>
+                    <footer>
+                        <button type="special" special="cancel" string="Cancel" icon="fa-times-circle" class="oe_highlight"/>
+                        or
+                        <button type="object" name="action_hreject_issued" string="Rejecting Checks Handed" icon="fa-mail-reply-all" class="oe_highlight"/>
+                    </footer>     
+                </form>
+            </field>
+        </record>
+
+        <act_window
+            name="Reject Handed Checks"
+            res_model="account.issuedcheck.hreject"
+            src_model="account.issued.check"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_check_issue_hrejected"/>
+
+
+          <!--TODO #ESTE ES ACTION PARA PRINT CORRECTO EN LAS VISTAS DE FORMULARIO.
+            TODO #(PARA QUE SE VEA EL BOTON IMPRIMIR).
+            act_window
+            name="Reject Handed Checks"
+            res_model="account.issuedcheck.hreject"
+            src_model="account.issued.check"
+            view_mode="form"
+            target="new"
+            key2="client_print_multi"
+            id="action_check_issue_hrejected"
+            view_type="form" /-->
+
+    </data>
+</odoo>

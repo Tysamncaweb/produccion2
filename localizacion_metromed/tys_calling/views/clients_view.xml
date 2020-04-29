@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <menuitem
+                id="clients_register_menu"
+                parent="menu_root_CallCenter"
+                name="Registro de Clientes"
+                sequence="42"
+        />
+
+        <!-- Petient -->
+        <!--Patient Register form view-->
+        <record id="view_patient_register_form" model="ir.ui.view">
+            <field name="name">patient</field>
+            <field name="model">patient</field>
+            <field name="arch" type="xml">
+                <form string="Patient Register">
+                    <sheet>
+                        <group col="4">
+                            <group colspan="2">
+                                <field name="particular" string="Es Particular"/>
+                                <field name="patient_owner_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible':[('particular','=',True)],'required':[('particular','=','False')]}"/>
+                                <field name="patient_id" string="Cédula del paciente" required="1" />
+                                <field name="name" string="Nombre del paciente" required="1" />
+                                <field name="patient_relationship" string="Parentesco" attrs="{'invisible':[('particular','=',True)],'required':[('particular','=','False')]}"/><!--required="1" /-->
+                                <field name="patient_birth_date" string="Fecha de nacimiento" required="0" />
+                                <field name="patient_age" string="Edad"  />
+                                <field name="patient_gender" string="Genero" required="1" />
+                                <field name="patient_phone" string="Teléfono" required="1" />
+                            </group>
+                            <group colspan="2">
+                                <field name="patient_active" string="Activo" />
+                                <field name="patient_vip" string="VIP" />
+                                <field name="patient_client" string="Cliente" attrs="{'required':[('particular','=',False)]}"/>
+                                <field name="patient_collective" string="Colectivo" attrs="{'invisible':[('particular','=',True)],'required':[('particular','=','False')]}" domain="[('collective_client_id','=',patient_client)]"/> <!--attrs="{'readonly':[('patient_owner_id','!=',False)], 'required':[('patient_owner_id','=',False)]}" /-->
+                                <field name="patient_collective_certificate" string="Certificado" attrs="{'invisible':[('particular','=',True)],'required':[('particular','=','False')]}"/> <!--attrs="{'readonly':[('patient_owner_id','!=',False)], 'required':[('patient_owner_id','=',False)]}" /-->
+                            </group>
+                        </group>
+                        <group>
+                            <field name="patient_address" string="Dirección" required="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!-- vista tree de paciente-->
+        <record id="view_patient_tree" model="ir.ui.view">
+            <field name="name">patient</field>
+            <field name="model">patient</field>
+            <field name="arch" type="xml">
+                <tree string="Pacientes" >
+                    <field name="id" string="Id" />
+                    <field name="patient_owner_id" string="Titular"/>
+                    <field name="patient_id" string="Cédula Paciente"/>
+                    <field name="name" string="Nombre del Paciente"/>
+                    <field name="patient_relationship" string="Parentesco" />
+                    <field name="patient_birth_date" string="Fecha de nacimiento"/>
+                    <field name="patient_age" string="Edad"/>
+                    <field name="patient_gender" string="Genero" />
+                    <field name="patient_phone" string="Telefono"/>
+                    <field name="patient_address" string="Direccion" />
+                    <field name="patient_active" string="Activo" />
+                    <field name="patient_vip" string="VIP" />
+                    <field name="patient_client" string="Cliente" />
+                    <field name="patient_collective" string="Colectivo"/>
+                    <field name="patient_collective_certificate" string="Certificado" />
+                </tree>
+            </field>
+        </record>
+
+        <!--patient register filter-->
+        <!--record id="view_patient_filter" model="ir.ui.view">
+            <field name="name">patient.select</field>
+            <field name="model">patient</field>
+            <field name="arch" type="xml">
+                <search string="Search Patients">
+                    <field name="patient_owner_id" string="Cédula del titular" filter_domain="['|',('patient_id','like',self),('patient_owner_id','like',self)]"/>
+                    <field name="patient_id"  string="Cédula del paciente"/>
+                    <field name="patient_collective" string="Colectivo" />
+                    <group expand="0" string="Group By">
+                        <filter string="Cédula del titular" name="patient_owner_id" icon="terp-folder-orange" context="{'group_by':'patient_owner_id'}"/>
+                        <filter string="Cédula del paciente" icon="terp-folder_orange" name="patient_id" context="{'group_by':'patient_id'}"/>
+                        <filter string="Colectivo" name="patient_collective" icon="terp-folder_orange" contex="{'group_by':'patient_collective'}" />
+                    </group>
+                </search>
+            </field>
+        </record-->
+
+        <!--action patient-->
+        <record id="action_view_patient_register_form" model="ir.actions.act_window">
+            <field name="name">Paciente</field>
+            <field name="res_model">patient</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_patient_tree"/>
+            <!--field name="search_view_id" ref="view_patient_filter"/-->
+            <field name="context">{'readonly_by_pass':True}</field>
+        </record>
+        <!--action patient-->
+        <menuitem
+                action="action_view_patient_register_form"
+                id="menu_patient_view_tree"
+                parent="clients_register_menu"
+        />
+
+        <!-- Collective -->
+        <!--collective Register form view-->
+        <record id="view_collective_register_form" model="ir.ui.view">
+            <field name="name">collective</field>
+            <field name="model">collective</field>
+            <field name="arch" type="xml">
+                <form string="Collective Register">
+                    <sheet>
+                        <group col="2">
+                            <group>
+                                <field name="collective_name" string="Nombre del colectivo" required="1" />
+                                <field name="collective_client_id" domain="[('active_client','=',True)]" string="Cliente" required="1"  widget="selection" options="{'no_quick_create':True, 'no_quick_create':True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!-- vista tree de colectivo-->
+        <record id="view_collective_tree" model="ir.ui.view">
+            <field name="name">collective</field>
+            <field name="model">collective</field>
+            <field name="arch" type="xml">
+                <tree string="Colectivos" >
+                    <field name="id" string="Id  collectivo"/>
+                    <field name="collective_name" string="Nombre del Colectivo"/>
+                    <field name="collective_client_id" string="Nombre del Cliente" options="{'no_create': True, 'no_create_edit':True}" />
+                </tree>
+            </field>
+        </record>
+
+        <!--collective register filter-->
+        <!--record id="view_collective_filter" model="ir.ui.view">
+            <field name="name">collective.select</field>
+            <field name="model">collective</field>
+            <field name="arch" type="xml">
+                <search string="Search Collective">
+                    <field name="collective_name"  string="Colectivo"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Colectivo" icon="terp-personal" name="collective_name" context="{'group_by':'collective_name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record-->
+
+        <!--action collective-->
+        <record id="action_view_collective_register_form" model="ir.actions.act_window">
+            <field name="name">Colectivo</field>
+            <field name="res_model">collective</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_collective_tree"/>
+            <!--field name="search_view_id" ref="view_collective_filter"/-->
+        </record>
+
+        <menuitem
+          action="action_view_collective_register_form"
+          id="menu_collective_view_tree"
+          parent="clients_register_menu"
+          />
+
+        <!-- Client -->
+        <!--client Register form view-->
+        <!--record id="view_client_register_form" model="ir.ui.view">
+            <field name="name">client</field>
+            <field name="model">client</field>
+            <field name="arch" type="xml">
+                <form string="Client Register">
+                    <sheet>
+                        <group col="4">
+                            <group>
+                                <field name="client_name" string="Nombre del cliente" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         < vista tree de cliente>
+        <record id="view_client_tree" model="ir.ui.view">
+            <field name="name">client</field>
+            <field name="model">client</field>
+            <field name="arch" type="xml">
+                <tree string="Clientes" >
+                    <field name="id" string="Id  cliente"/>
+                    <field name="client_name" string="Nombre del Cliente"/>
+                </tree>
+            </field>
+        </record>
+
+        <!client register filter-->
+        <!--record id="view_client_filter" model="ir.ui.view">
+            <field name="name">client.select</field>
+            <field name="model">client</field>
+            <field name="arch" type="xml">
+                <search string="Search Client">
+                    <field name="client_name"  string="Cliente"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Cliente" icon="terp-personal" name="client_name" context="{'group_by':'client_name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record-->
+
+        <!--action client>
+        <record id="action_view_client_register_form" model="ir.actions.act_window">
+            <field name="name">Client</field>
+            <field name="res_model">client</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_client_tree"/>
+            <!field name="search_view_id" ref="view_client_filter"/>
+        </record-->
+
+        <!--action client (res.partner) Solamente con estos ultimos 2 se hace una herencia a
+         al modulo de clientes completo-->
+        <!--record id="action_view_client_register_test" model="ir.actions.act_window">
+            <field name="name">Cliente</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_customer":1}</field>
+        </record>
+
+        <menuitem
+          action="action_view_client_register_test"
+          id="menu_client_view_tree"
+          parent="clients_register_menu"
+          groups="tys_calling.tys_calling_coordinador"
+          name="Cliente"
+        /-->
+    </data>
+</odoo>

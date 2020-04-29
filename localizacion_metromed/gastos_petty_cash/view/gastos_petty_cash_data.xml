@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="a" model="gastos.petty.cash">
+            <field name="name">001</field>
+            <field name="concepto">AGUA</field>
+            <field name="cta_contable">6.12.02.01.003</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="b" model="gastos.petty.cash">
+            <field name="name">002</field>
+            <field name="concepto">SERVICIO DE GAS</field>
+            <field name="cta_contable">6.12.02.01.005</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="c" model="gastos.petty.cash">
+            <field name="name">003</field>
+            <field name="concepto">SUMINISTROS DE IMPLEMENTOS DE LIMPIEZA</field>
+            <field name="cta_contable">6.12.02.01.007</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="d" model="gastos.petty.cash">
+            <field name="name">004</field>
+            <field name="concepto">SUMINISTROS DE MATERIALES DE OFICINA</field>
+            <field name="cta_contable">6.12.02.01.009</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="e" model="gastos.petty.cash">
+            <field name="name">005</field>
+            <field name="concepto">SUMINISTROS DE SEGURIDAD INDUSTRIAL</field>
+            <field name="cta_contable">6.12.02.01.011</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="f" model="gastos.petty.cash">
+            <field name="name">006</field>
+            <field name="concepto">SUMINISTROS LUBRICANTES Y COMBUSTIBLE</field>
+            <field name="cta_contable">6.12.02.01.013</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="g" model="gastos.petty.cash">
+            <field name="name">007</field>
+            <field name="concepto">SUMINISTRO MATERIAL FARMACIA</field>
+            <field name="cta_contable">6.12.03.03.001</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="h" model="gastos.petty.cash">
+            <field name="name">008</field>
+            <field name="concepto">SERVICIO DE TRANSPORTE</field>
+            <field name="cta_contable">6.12.03.03.002</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="i" model="gastos.petty.cash">
+            <field name="name">009</field>
+            <field name="concepto">SUMINISTRO ARTICULO FERRETERIA</field>
+            <field name="cta_contable">6.12.04.01.025</field>
+            <field eval="376" name="phone_code" />
+        </record>
+        <record id="j" model="gastos.petty.cash">
+            <field name="name">010</field>
+            <field name="concepto">COMIDAS Y REFRIGERIOS</field>
+            <field name="cta_contable">6.12.05.01.007</field>
+            <field eval="376" name="phone_code" />
+        </record>
+
+
+    </data>
+</odoo>

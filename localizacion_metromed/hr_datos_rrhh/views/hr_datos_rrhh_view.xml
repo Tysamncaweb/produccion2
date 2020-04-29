@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_hr_antiguedad_form" model="ir.ui.view">
+            <field name="name">hr.employee.antiguedad</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='hr_settings']" position="before">
+                    <page name= "datos_rrhh" string="Datos de RRHH">
+                        <group>
+                            <group string="Información Adicional">
+                                <field name="fecha_inicio" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="fecha_fin"/>
+                                <field name="m_egreso" options="{'search_more': True}" style="width:150px"/>
+                            </group>
+                            <group string="Información Bancaria">
+                                <field name="bank_account_id_emp_2" string="Institucion Financiera"/>
+                                <field name="account_number_2"/>
+                                <field name="account_type_2"/>
+                            </group>
+                            <group string="Antigüedad">
+                                <field name="dias_antig"/>
+                                <field name="mes_antig"/>
+                                <field name="ano_antig"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

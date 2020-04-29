@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_contract_view_inherit_non_common" model="ir.ui.view">
+            <field name="name">hr.contract.view.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract_add_fields.hr_contract_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/group/group[@name='assignments']" position="inside">
+                    <label for= "ajust_util_check" string="Diferencia de Utilidades" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="ajust_util_check" style="width: 15%%"/>
+                                <field name="ajust_util_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ajust_util_check', '!=', True)]}"/>
+
+                            </div>
+                        </div>
+
+                    <label for= "ajust_tickets_check" string="Retroactivo de Cesta Tickets" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="ajust_tickets_check" style="width: 15%%"/>
+                                <field name="ajust_tickets_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ajust_tickets_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <!--label for= "ajust_fide_check" string="Diferencia de Fideicomiso"/>
+                        <div>
+                            <div class="address_format">
+                                <field name="ajust_fide_check" style="width: 15%%"/>
+                                <field name="ajust_fide_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ajust_fide_check', '!=', True)]}"/>
+                            </div>
+                        </div-->
+
+                    <!--label for= "bon_esp_check" string="Bonificaciones Especiales"/>
+                        <div>
+                            <div class="address_format">
+                                <field name="bon_esp_check" style="width: 15%%"/>
+                                <field name="bon_esp_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('bon_esp_check', '!=', True)]}"/>
+                            </div>
+                        </div-->
+
+                    <label for= "dias_pen_disfr_check" string="Días Pendientes por Disfrutar" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="dias_pen_disfr_check" style="width: 15%%"/>
+                                <field name="dias_pen_disfr_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dias_pen_disfr_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "trans_alim_pasantes_value" string="Transporte/Alimentación de Pasantes" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format" >
+                                <field name="trans_alim_pasantes_check" style="width: 15%%"/>
+                                <field name="trans_alim_pasantes_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('trans_alim_pasantes_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <!--label for= "bon_proc_value" string="Bono por Producción"/>
+                        <div>
+                            <div class="address_format" >
+                                <field name="bon_proc_check" style="width: 15%%"/>
+                                <field name="bon_proc_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('bon_proc_check', '!=', True)]}"/>
+                            </div>
+                        </div-->
+
+                    <label for= "ant_utils_check" string="Anticipo de Utilidades" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="ant_utils_check" style="width: 15%%"/>
+                                <field name="ant_utils_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ant_utils_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <!--label for= "ant_prest_check" string="Anticipo de Prestaciones"/>
+                        <div>
+                            <div class="address_format">
+                                <field name="ant_prest_check" style="width: 15%%"/>
+                                <field name="ant_prest_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ant_prest_check', '!=', True)]}"/>
+                            </div>
+                        </div-->
+
+                    <label for= "reint_desc_ind_check" string="Reintegro Descuento Indebido" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="reint_desc_ind_check" style="width: 15%%"/>
+                                <field name="reint_desc_ind_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('reint_desc_ind_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "reint_gast_varios_embargo_check" string="Reintegro Gastos Varios por Embargo" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="reint_gast_varios_embargo_check" style="width: 15%%"/>
+                                <field name="reint_gast_varios_embargo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('reint_gast_varios_embargo_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "ant_vacaciones_check" string="Anticipo de Vacaciones" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="ant_vacaciones_check" style="width: 15%%"/>
+                                <field name="ant_vacaciones_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ant_vacaciones_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <!--label for= "reint_medicos_check" string="Reintegro Gastos Médicos"/>
+                        <div>
+                            <div class="address_format">
+                                <field name="reint_medicos_check" style="width: 15%%"/>
+                                <field name="reint_medicos_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('reint_medicos_check', '!=', True)]}"/>
+                            </div>
+                        </div-->
+
+
+                    <label for= "adicional_zona_check" string="Adicional por Zona" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="adicional_zona_check" style="width: 15%%"/>
+                                <field name="adicional_zona_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('adicional_zona_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "examen_pre_post_vac_check" string="Examen Pre/Post Vacacional" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="examen_pre_post_vac_check" style="width: 15%%"/>
+                                <field name="examen_pre_post_vac_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('examen_pre_post_vac_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "accdte_prof_check" string="Accidente Profesional" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="accdte_prof_check" style="width: 15%%"/>
+                                <field name="accdete_prof_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('accdte_prof_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "n_accdete_prof_check" string="Accidente No Profesional" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="n_accdte_prof_check" style="width: 15%%"/>
+                                <field name="n_accdete_prof_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('n_accdte_prof_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "pre_post_vacacional_check" string="Pre/Post Vacacional" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="pre_post_vacacional_check" style="width: 15%%"/>
+                                <field name="pre_post_vacacional_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('pre_post_vacacional_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "reposo_100_check" string="Reposo 100%" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="reposo_100_check" style="width: 15%%"/>
+                                <field name="reposo_100_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('reposo_100_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "reposo_33_check" string="Reposo 33%"/>
+                        <div>
+                            <div class="address_format">
+                                <field name="reposo_33_check" style="width: 15%%"/>
+                                <!--field name="reposo_33_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('reposo_33_check', '!=', True)]}"/-->
+                            </div>
+                        </div>
+
+                    <label for= "perm_nac_examen_check" string="Permiso por Nacimiento o Exámen" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="perm_nac_examen_check" style="width: 15%%"/>
+                                <field name="perm_nac_examen_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('perm_nac_examen_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "reposo_pre_post_check" string="Reposo Pre/Post" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="reposo_pre_post_check" style="width: 15%%"/>
+                                <field name="reposo_pre_post_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('reposo_pre_post_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "anticipo_salario_check" string="Anticipo de Salario" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="anticipo_salario_check" style="width: 15%%"/>
+                            <field name="anticipo_salario_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('anticipo_salario_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "comisiones_check" string="Comisiones" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="comisiones_check" style="width: 15%%"/>
+                            <field name="comisiones_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('comisiones_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "anticipo_comisiones_check" string="Anticipo de Comisiones" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="anticipo_comisiones_check" style="width: 15%%"/>
+                            <field name="anticipo_comisiones_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('anticipo_comisiones_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "retroactivo_salario_check" string="Retroactivo de Salario" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="retroactivo_salario_check" style="width: 15%%"/>
+                            <field name="retroactivo_salario_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('retroactivo_salario_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "reintegro_inasis_desct_check" string="Reintegro por Inasistencia Descontada" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="reintegro_inasis_desct_check" style="width: 15%%"/>
+                            <field name="reintegro_inasis_desct_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('reintegro_inasis_desct_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "reintegro_desc_indebido_check" string="Reintegro por Descuento Indebido" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="reintegro_desc_indebido_check" style="width: 15%%"/>
+                            <field name="reintegro_desc_indebido_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('reintegro_desc_indebido_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "reintegro_desc_uniforme_check" string="Reintegro Descuento Uniformes" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="reintegro_desc_uniforme_check" style="width: 15%%"/>
+                            <field name="reintegro_desc_uniforme_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('reintegro_desc_uniforme_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "anticipo_prest_soc_check" string="Anticipo sobre Prestaciones Sociales" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="anticipo_prest_soc_check" style="width: 15%%"/>
+                            <field name="anticipo_prest_soc_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('anticipo_prest_soc_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+
+                    <label for= "complemento_comision_mes_check" string="Complemento Comisiones Mes Anterior" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="complemento_comision_mes_check" style="width: 15%%"/>
+                            <field name="complemento_comision_mes_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('complemento_comision_mes_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "asig_especiales_check" string="Asignaciones Especiales" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="asig_especiales_check" style="width: 15%%"/>
+                            <field name="asig_especiales_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('asig_especiales_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "asig_otros_check" string="Otras Asignaciones" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="asig_otros_check" style="width: 15%%"/>
+                            <field name="asig_otros_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('asig_otros_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "bono_produccion_check" string="Bono por Producción" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="bono_produccion_check" style="width: 15%%"/>
+                            <field name="bono_produccion_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('bono_produccion_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dias_faltantes_ticket_check" string="Dias Faltantes Cestatickets" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dias_faltantes_ticket_check" style="width: 15%%"/>
+                            <field name="dias_faltantes_ticket_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('dias_faltantes_ticket_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "ayuda_escolar_check" string="Ayuda Escolar" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="ayuda_escolar_check" style="width: 15%%"/>
+                            <field name="ayuda_escolar_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('ayuda_escolar_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "clausula_minima_check" string="Clausula Mínima" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="clausula_minima_check" style="width: 15%%"/>
+                            <field name="clausula_minima_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('clausula_minima_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//notebook/page/group/group[@name='deducciones']" position="inside">
+
+                    <label for= "desc_horas_check" string="Descuento Horas no Trabajadas" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="desc_horas_check" style="width: 15%%"/>
+                                <field name="desc_horas_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('desc_horas_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+                     <label for= "prestamo_check" string="Préstamos" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="prestamo_check" style="width: 15%%"/>
+                                <field name="prestamo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('prestamo_check', '!=', True)]}" />
+                            </div>
+                        </div>
+
+                    <label for= "cuota_check" string="Cuota" attrs="{'invisible': [('prestamo_check', '!=', True)]}" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="cuota_check" style="width: 15%%" attrs="{'invisible': [('prestamo_check', '!=', True)]}"/>
+                                <field name="cuota_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('cuota_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+                    <label for= "desc_ind_salary_check" string="Descuento Indebido del Salario" invisible="1"/>
+                        <div invisible="1">
+                            <div class="address_format">
+                                <field name="desc_ind_salary_check" style="width: 15%%"/>
+                                <field name="desc_ind_salary_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('desc_ind_salary_check', '!=', True)]}"/>
+                            </div>
+                        </div>
+
+                    <label for= "dcto_copias_check" string="Descuento por Fotocopias" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_copias_check" style="width: 15%%"/>
+                            <field name="dcto_copias_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_copias_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_llamadas_check" string="Descuento Llamadas Telefónicas" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_llamadas_check" style="width: 15%%"/>
+                            <field name="dcto_llamadas_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_llamadas_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "trimestre_vehiculo_check" string="Trimestre Vehículos" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="trimestre_vehiculo_check" style="width: 15%%"/>
+                            <field name="trimestre_vehiculo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('trimestre_vehiculo_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_pago_factura_check" string="Descuento por Pago Factura" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_pago_factura_check" style="width: 15%%"/>
+                            <field name="dcto_pago_factura_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_pago_factura_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_pago_comision_check" string="Descuento por Pago Comisión Indebida" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_pago_comision_check" style="width: 15%%"/>
+                            <field name="dcto_pago_comision_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_pago_comision_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_poliza_hc_check" string="Descuento Póliza Seguro HC" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_poliza_hc_check" style="width: 15%%"/>
+                            <field name="dcto_poliza_hc_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_poliza_hc_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_ant_gtos_moto_check" string="Descuento Ant. Gtos. Motos" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_ant_gtos_moto_check" style="width: 15%%"/>
+                            <field name="dcto_ant_gtos_moto_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_ant_gtos_moto_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_poliza_vehiculo_check" string="Descuento Póliza Seguro Vehículo" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_poliza_vehiculo_check" style="width: 15%%"/>
+                            <field name="dcto_poliza_vehiculo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_poliza_vehiculo_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_comision_dev_merc_check" string="Descuento Comisión por Devolución Mercancía" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_comision_dev_merc_check" style="width: 15%%"/>
+                            <field name="dcto_comision_dev_merc_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_comision_dev_merc_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_vale_caja_chica_check" string="Descuento Vales de Caja Chica" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_vale_caja_chica_check" style="width: 15%%"/>
+                            <field name="dcto_vale_caja_chica_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_vale_caja_chica_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_reposicion_carnet_check" string="Descuento por Reposición de Carnet" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_reposicion_carnet_check" style="width: 15%%"/>
+                            <field name="dcto_reposicion_carnet_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_reposicion_carnet_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_pago_vehiculo_check" string="Descuento Pago Vehículo" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_pago_vehiculo_check" style="width: 15%%"/>
+                            <field name="dcto_pago_vehiculo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('dcto_pago_vehiculo_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for= "otras_deducciones_check" string="Descuento Otras Deducciones" invisible="1"/>
+                    <div invisible="0">
+                        <div class="address_format">
+                            <field name="otras_deducciones_check" style="width: 15%%" invisible="1"/>
+                            <field name="otras_deducciones_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': True}"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_sso_check" string="Descuento Seguro Social SSO" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_sso_check" style="width: 15%%"/>
+                        </div>
+                    </div>
+                    <label for= "dcto_reg_prest_empleo_check" string="Regimen Prestacional de Empleo" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_reg_prest_empleo_check" style="width: 15%%"/>
+                        </div>
+                    </div>
+                    <!--<label for= "dcto_fideicomiso_check" string="Descuento de Fideicomiso"/>
+                    <div invisible="0">
+                        <div class="address_format">
+                            <field name="dcto_fideicomiso_check" style="width: 15%%"/>
+                        </div>
+                    </div>-->
+                    <label for= "dcto_cestaticket_check" string="Descuento de Cestaticket" invisible="1"/>
+                    <div invisible="1">
+                        <div class="address_format">
+                            <field name="dcto_cestaticket_check" style="width: 15%%"/>
+                            <field name="dcto_cestaticket_value" class="oe_no_button" style="width: 65%%"  attrs="{'invisible': [('dcto_cestaticket_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                </xpath>
+                <!--xpath expr="//label[@for='hrs_no_lab_check']" position="replace">
+                    <label for= "hrs_no_lab_check" string="Descuento de Horas"/>
+                </xpath-->
+
+                <!--xpath expr="//label[@for='permiso_no_remunerado_dias_check']" position="replace">
+                    <label for= "permiso_no_remunerado_dias_check" string="Permiso no Remunerado Dias"/>
+                </xpath>
+                <xpath expr="//label[@for='permiso_no_remunerado_dias_check']" position="before">
+                    <field name="inasistencia_injustificada_motivo" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('inasistencia_injustificada_check', '!=', True),('hrs_no_lab_check', '!=', True)], 'required': ['|',('inasistencia_injustificada_check', '=', True),('hrs_no_lab_check', '=', True)]}"/>
+                </xpath-->
+
+                <!--xpath expr="//label[@for='inasistencia_injustificada_check']" position="replace">
+                    <label for= "inasistencia_injustificada_check" string="Ausencia Injustificada"/>
+                </xpath-->
+                <!--OCULTAR EL CHECKBOX DE RETENCION DE FAOV PORQUE ES UN DESCUENTO FIJO-->
+                <!--xpath expr="//label[@for='retencion_faov_check']" position="replace">
+                    <label for= "retencion_faov_check" attrs="{'invisible': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='retencion_faov_check']" position="replace">
+                    <field name="retencion_faov_check" attrs="{'invisible': True}"/>
+                </xpath-->
+
+                <!--OCULTAR EL CHECKBOX DEDUCCION DE CARACTER SALARIAL-->
+                <!--xpath expr="//label[@for='deduccion_salarial_check']" position="replace">
+                    <label for= "deduccion_salarial_check" attrs="{'invisible': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='deduccion_salarial_check']" position="replace">
+                    <field name="deduccion_salarial_check" attrs="{'invisible': True}"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='deduccion_salarial_value']" position="replace">
+                    <field name="deduccion_salarial_value" attrs="{'invisible': True}"/>
+                </xpath-->
+
+                <!--OCULTAR EL CHECKBOX DEDUCCION DE CARACTER NO SALARIAL-->
+                <!--xpath expr="//label[@for='deduccion_no_salarial_check']" position="replace">
+                    <label for= "deduccion_no_salarial_check" attrs="{'invisible': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='deduccion_no_salarial_check']" position="replace">
+                    <field name="deduccion_no_salarial_check" attrs="{'invisible': True}"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='deduccion_no_salarial_value']" position="replace">
+                    <field name="deduccion_no_salarial_value" attrs="{'invisible': True}"/>
+                </xpath-->
+
+                <!--xpath expr="//field[@name='bono_nocturno_value']" position="replace"-->
+                    <!--<field name="bono_nocturno_float_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('bono_nocturno_check', '!=', True)]}"/>-->
+                    <!--field name="bono_nocturno_int_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('bono_nocturno_check', '!=', True)]}"/>
+                    <field name="bono_nocturno_value" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='bono_nocturno']" position="replace">
+                    <field name="bono_nocturno" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+
+                <xpath expr="//label[@for='days_of_salary_pending_check']" position="before">
+                    <label for= "bono_nocturno_mes_ant_check" string="Bono Nocturno Mes Anterior"/>
+                    <div>
+                        <div class="address_format">
+                            <field name="bono_nocturno_mes_ant_check" style="width: 15%%"/>
+                            <field name="bono_nocturno_mes_ant_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('bono_nocturno_mes_ant_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for="salario_bono_nocturno_mes_ant" string="Salario Bono Nocturno Mes Anterior" attrs="{'invisible': [('bono_nocturno_mes_ant_check', '!=', True)]}"/>
+                    <div>
+                        <div class="address_format">
+                            <field name="salario_bono_nocturno_mes_ant" style="width: 65%%" class="oe_no_button" attrs="{'invisible': [('bono_nocturno_mes_ant_check', '!=', True)]}" domain="[('employee_id','=',employee_id)]" options="{'no_create':True,'no_open':True,'limit':2}"/>
+                            <field name="last_month_wage" attrs="{'invisible':True}"/>
+                        </div>
+                    </div>
+                <!--/xpath-->
+                <!--xpath expr="//label[@for='feriados_no_lab_check']" position="replace">
+                    <label for= "feriados_no_lab_check" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='feriados_no_lab_check']" position="replace">
+                    <label for= "feriados_no_lab_check" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='feriados_no_lab_value']" position="replace">
+                    <label for= "feriados_no_lab_value" invisible="1"/>
+                </xpath-->
+                <!--xpath expr="//label[@for='hrs_extra_diurno_check']" position="before"-->
+
+
+
+
+                </xpath>
+                <xpath expr="//label[@for='salary_assignment_check']" position="before">
+                    <label for= "feriado_laborado_mes_ant_check" string="Feriado Laborado Mes Anterior"/>
+                    <div>
+                        <div class="address_format">
+                            <field name="feriado_laborado_mes_ant_check" style="width: 15%%"/>
+                            <field name="feriado_laborado_mes_ant_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('feriado_laborado_mes_ant_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for="salario_feriado_laborado_mes_ant" string="Salario Feriado Laborado Mes Anterior" attrs="{'invisible': [('feriado_laborado_mes_ant_check', '!=', True)]}"/>
+                    <div>
+                        <div class="address_format">
+                            <field name="salario_feriado_laborado_mes_ant" style="width: 45%%" class="oe_no_button" attrs="{'invisible': [('feriado_laborado_mes_ant_check', '!=', True)]}" domain="[('employee_id','=',employee_id)]" options="{'no_create':True,'no_open':True,'limit':2}"/>
+                            <!--field name="salario_feriado_laborado_mes_ant_usado" attrs="{'invisible':True}"/-->
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//label[@for='holidays_check']" position="before">
+                    <label for= "domingos_laborados_mes_ant_check" string="Domingos Laborados Mes Anterior"/>
+                    <div>
+                        <div class="address_format">
+                            <field name="domingos_laborados_mes_ant_check" style="width: 15%%"/>
+                            <field name="domingos_laborados_mes_ant_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('domingos_laborados_mes_ant_check', '!=', True)]}"/>
+                        </div>
+                    </div>
+                    <label for="salario_domingos_laborados_mes_ant" string="Salario Domingos Laborados Mes Anterior" attrs="{'invisible': [('domingos_laborados_mes_ant_check', '!=', True)]}"/>
+                    <div>
+                        <div class="address_format">
+                            <field name="salario_domingos_laborados_mes_ant" style="width: 45%%" class="oe_no_button" attrs="{'invisible': [('domingos_laborados_mes_ant_check', '!=', True)]}" domain="[('employee_id','=',employee_id)]" options="{'no_create':True,'no_open':True,'limit':2}"/>
+                            <!--field name="salario_domingos_laborados_mes_ant_usado" attrs="{'invisible':True}"/-->
+                        </div>
+                    </div>
+                </xpath>
+                <!-- AGREGADOS RECIENTEMENTE REINTEGRO DE DIAS MES ANTERIOR-->
+                 <xpath expr="//label[@for='sundays_check']" position="before">
+                            <label for= "days_of_salary_pending_mes_anterior_check" string="Reintegro de Días Mes Anterior"/>
+                            <div>
+                                <div class="address_format">
+                                    <field name="days_of_salary_pending_mes_anterior_check" style="width: 15%%"/>
+                                    <field name="days_of_salary_pending_mes_anterior_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('days_of_salary_pending_mes_anterior_check', '!=', True)]}"/>
+                                </div>
+                            </div>
+                            <label for="reintegro_dias_mes_ant" string="Salario Reintegro de Días Mes Anterior" attrs="{'invisible': [('days_of_salary_pending_mes_anterior_check', '!=', True)]}"/>
+                            <div>
+                                <div class="address_format">
+                                    <field name="reintegro_dias_mes_ant" class="oe_no_button" style="width: 45%%" attrs="{'invisible': [('days_of_salary_pending_mes_anterior_check', '!=', True)]}" domain="[('employee_id','=',employee_id)]" options="{'no_create':True,'no_open':True,'limit':2}"/>
+                                    <!--field name="salario_domingos_laborados_mes_ant_usado" attrs="{'invisible':True}"/-->
+                                </div>
+                            </div>
+                 </xpath>
+                <xpath expr="//label[@for='dcto_sso_check']" position="before">
+                            <label for= "ausencias_ded_mes_ant_check" string="Ausencias Injustificadas Mes Anterior"/>
+                            <div>
+                                <div class="address_format">
+                                    <field name="ausencias_ded_mes_ant_check" style="width: 15%%"/>
+                                    <field name="ausencias_ded_mes_ant_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('ausencias_ded_mes_ant_check', '!=', True)]}"/>
+                                </div>
+                            </div>
+                            <label for="ausencias_ded_mes_ant" string="Salario Ausencias Injustificadas Mes Anterior" attrs="{'invisible': [('ausencias_ded_mes_ant_check', '!=', True)]}"/>
+                            <div>
+                                <div class="address_format">
+                                    <field name="ausencias_ded_mes_ant" class="oe_no_button" style="width: 45%%" attrs="{'invisible': [('ausencias_ded_mes_ant_check', '!=', True)]}" domain="[('employee_id','=',employee_id)]" options="{'no_create':True,'no_open':True,'limit':2}"/>
+
+                                </div>
+                            </div>
+                 </xpath>
+
+
+                <!--xpath expr="//field[@name='hrs_no_lab_value']" position="replace">
+                    <field name="hrs_no_lab_float_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('hrs_no_lab_check', '!=', True)]}"/>
+                    <field name="hrs_no_lab_value" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='hrs_no_lab']" position="replace">
+                    <field name="hrs_no_lab" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='inasistencia_injustificada_value']" position="replace">
+                    <field name="inasistencia_injustificada_float_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('inasistencia_injustificada_check', '!=', True)]}"/>
+                    <field name="inasistencia_injustificada_value" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='inasistencia_injustificada']" position="replace">
+                    <field name="inasistencia_injustificada" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='permiso_no_remunerado_dias_value']" position="replace">
+                    <field name="permiso_no_remunerado_dias_float_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('permiso_no_remunerado_dias_check', '!=', True)]}"/>
+                    <field name="permiso_no_remunerado_dias_value" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+                <!--xpath expr="//field[@name='permiso_no_remunerado_hrs_value']" position="replace">
+                    <field name="permiso_no_remunerado_hrs_float_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('permiso_no_remunerado_hrs_check', '!=', True)]}"/>
+                    <field name="permiso_no_remunerado_hrs_value" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='permiso_no_remunerado_hrs']" position="replace">
+                    <field name="permiso_no_remunerado_hrs" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='hrs_extra_diurno_value']" position="replace">
+                    <field name="hrs_extra_diurno_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('hrs_extra_diurno_check', '!=', True)]}"/>
+                </xpath>
+                 <xpath expr="//field[@name='hrs_extra_diurno']" position="replace">
+                    <field name="hrs_extra_diurno" class="oe_no_button" style="width: 65%%" invisible="1"/>
+                </xpath-->
+
+            </field>
+        </record>
+    </data>
+</openerp>

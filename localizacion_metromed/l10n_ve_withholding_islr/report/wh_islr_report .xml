@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="template_wh_islr">
+    <div class="article">
+        <t t-foreach="data" t-as="d">
+                <table style="width:100%;">
+                    <tr>
+                        <td style="width:30%;text-align:center;">
+                            <img t-att-src="'data:image/png;base64,%s' %(to_text(d.company_id.logo))" style="width:100px;"/>
+                        </td>
+                        <td style="width:70%;">
+                            <p style="text-align:center;">
+                                <b>COMPROBANTE DE RETENCION DEL IMPUESTO SOBRE LA RENTA</b>
+                            </p>
+                            <p style="font-size:8px;text-align:center;">
+                                "Según Artículo No. 24 de la Gaceta Oficial de la República Bolivariana de Venezuela No. 36203 del 125997"
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <table style="width:60%;float:right;border:1px solid #000;">
+                    <tr style="border:1px solid #000;">
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                           N° COMPROBANTE
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            FECHA
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            PERIODO FISCAL
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="d.number"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model.get_date(d.date_ret)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model.get_period(d.date_ret)"/>
+                        </td>
+                    </tr>
+                </table>
+                 <div class="page" t-if="d.type">
+                    <t t-if="d.type == 'in_invoice'">
+                        <table style="width:100%;margin-top:60px;">
+                            <tr>
+                                <td colspan="3" style="text-align:center;">
+                                    <b>AGENTE DE RETENCIÓN</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    NOMBRE O RAZON SOCIAL
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:20%;">
+                                    RIF
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    DIRECCIÓN FISCAL
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.company_id.partner_id.name"/>
+                                </td>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.company_id.partner_id.vat"/>
+                                </td>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="model.get_direction(d.company_id.partner_id)"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <table style="width:100%;margin-top:20px;">
+                            <tr>
+                                <td colspan="3" style="text-align:center;">
+                                    <b>DATOS DEL AGENTE BENEFICIARIO</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    NOMBRE O RAZON SOCIAL
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:20%;">
+                                    RIF
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    DIRECCIÓN FISCAL
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.partner_id.name"/>
+                                </td>
+                                 <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.partner_id.vat"/>
+                                </td>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="model.get_direction(d.partner_id)"/>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </t>
+                 </div>
+                <!--Datos para Cliente-->
+                <div class="page" t-if="d.type">
+                    <t t-if="d.type == 'out_invoice'">
+                        <table style="width:100%;margin-top:60px;">
+                            <tr>
+                                <td colspan="3" style="text-align:center;">
+                                    <b>AGENTE DE RETENCIÓN</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    NOMBRE O RAZON SOCIAL
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:20%;">
+                                    RIF
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    DIRECCIÓN FISCAL
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.partner_id.name"/>
+                                </td>
+                                 <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.partner_id.vat"/>
+                                </td>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="model.get_direction(d.partner_id)"/>
+                                </td>
+
+                            </tr>
+                        </table>
+                        <br/>
+                        <table style="width:100%;margin-top:30px;">
+                            <tr>
+                                <td colspan="3" style="text-align:center;">
+                                    <b>DATOS DEL AGENTE BENEFICIARIO</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    NOMBRE O RAZON SOCIAL
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:20%;">
+                                    RIF
+                                </th>
+                                <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;width:40%;">
+                                    DIRECCIÓN FISCAL
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.company_id.partner_id.name"/>
+                                </td>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="d.company_id.partner_id.vat"/>
+                                </td>
+                                <td style="text-align:center;border:1px solid #000;">
+                                    <span t-esc="model.get_direction(d.company_id.partner_id)"/>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </t>
+                </div>
+
+
+                <br/>
+                <table width="100%;margin-top:30px;">
+                    <tr>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            Fecha Factura
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            N° de Factura
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            N° Control
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            Concepto de Retención
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            % de Retención
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            Base
+                        </th>
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            Sustraendo
+                        </th>
+
+                        <th style="text-align:center;background-color:#A9F5F2;border:1px solid #000;">
+                            ISLR Monto Retenido
+                        </th>
+                    </tr>
+                    <tr t-foreach="d.concept_ids" t-as="inv">
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_date_invoice(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_supplier_invoice_number(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_nro_ctrl(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_islr_wh_concept(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_islr_wh_retencion_islr(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_islr_wh_doc_invoices_base(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_islr_wh_doc_invoice_subtract(inv)"/>
+                        </td>
+                        <td style="text-align:center;border:1px solid #000;">
+                            <span t-esc="model._get_islr_invoice_amount_ret(inv)"/>
+                        </td>
+
+                    </tr>
+                </table>
+                <br/>
+                <table width="100%;margin-top:30px;" style="text-align:right;">
+                    <tr>
+                        <td style="text-align:right;">
+                            <b>Total Impuesto Retenido: </b>
+                        </td>
+                        <td style="text-align:center;">
+                            <b><span t-esc="d.amount_total_ret"/></b>
+                        </td>
+                    </tr>
+                </table>
+
+                <style>
+                    hr {
+                        border-color: #000;
+                        width: 60%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                    }
+                </style>
+             <div class="page" t-if="d.type">
+                    <t t-if="d.type == 'in_invoice'">
+                <table border="1" style="width:100%;margin-top:80px;">
+                    <tr>
+                        <td style="width:50%;text-align:center;padding:0px;margin:0px;">
+                            <hr/>
+                            <b><span t-esc="d.company_id.partner_id.name"/></b>
+                            <br/>
+                            <b>Firma Sello</b>
+                        </td>
+                        <td style="width:50%;text-align:center;padding:0px;margin:0px;">
+                            <hr/>
+                            <b><span t-esc="d.partner_id.name"/></b>
+
+                            <br/>
+                            <b>Firma Sello</b>
+                        </td>
+                    </tr>
+                </table>
+                    </t>
+             </div>
+            <div class="page" t-if="d.type">
+                    <t t-if="d.type == 'out_invoice'">
+                <table border="1" style="width:100%;margin-top:80px;">
+                    <tr>
+                        <td style="width:50%;text-align:center;padding:0px;margin:0px;">
+                            <hr/>
+                            <b><span t-esc="d.partner_id.name"/></b>
+
+                            <br/>
+                            <b>Firma Sello</b>
+                        </td>
+                        <td style="width:50%;text-align:center;padding:0px;margin:0px;">
+                            <hr/>
+                            <b><span t-esc="d.company_id.partner_id.name"/></b>
+                            <br/>
+                            <b>Firma Sello</b>
+                        </td>
+                    </tr>
+                </table>
+                    </t>
+             </div>
+        </t>
+    </div>
+</template>
+
+    <record id="paperformat_withholding_islr_report" model="report.paperformat">
+        <field name="name">Report ISLR</field>
+        <field name="orientation">Landscape</field>
+    </record>
+
+    <report
+            id="action_withholdong_islr_report"
+            string="Comprobante de ISLR"
+            model="islr.wh.doc"
+            report_type="qweb-pdf"
+            name="l10n_ve_withholding_islr.template_wh_islr"
+            file="l10n_ve_withholding_islr.template_wh_islr"
+            paperformat="l10n_ve_withholding_islr.paperformat_withholding_islr_report"/>
+
+    <!--record id="l10n_ve_withholding_iva.action_withholdong_vat_report" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="l10n_ve_withholding_iva.paperformat_withholding_vat_report"/>
+    </record-->
+</odoo>

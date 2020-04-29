@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- se crea el menu para imprimir los reportes en call center-->
+<odoo>
+    <data>
+
+        <!-- Top menu item -->
+
+        <menuitem
+                 id="menu_informes"
+                 parent="menu_root_CallCenter"
+                 name="Informes"
+                 sequence="75"
+        />
+
+        <!-- Menu para imprimir reporte de servicios por una sede-->
+        <record id="report_callcenter" model="ir.ui.view">
+       	    <field name="name"> Reporte de Servicios por Sede</field>
+            <field name="model">report.callcenter</field>
+    	    <field name="arch" type="xml">
+    	    	 <form string="Reporte de Servicios por Sede">
+                        <field invisible="1" name="state"/>
+                        <div states="choose">
+                        <group >
+                            <field name="date_from" string="Fecha Inicio" required="1"/>
+                            <field name="date_to" string="Fecha Fin" required="1"/>
+                            <field name="all" string="Todas las sedes"/>
+                            <field name="sede" string="Por Sede" attrs="{'invisible':[('all','=',True)]}"/>
+                        </group>
+                        </div>
+                     <div states="get">
+                        <group>
+                            <field name="name" colspan="4" invisible="1"/>
+                            <field name="report" filename="name" colspan="4"/>
+                        </group>
+                    </div>
+                   <footer states="choose">
+                        <button name="print_facturas" string="Exportar PDF" type="object" class="oe_highlight" />
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                      <footer states="get">
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                </form>
+    	    </field>
+    	</record>
+
+        <record id="action_report_callcenter" model="ir.actions.act_window">
+        	<field name="name">Reporte de Servicios por Sede</field>
+        	<field name="res_model">report.callcenter</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="report_callcenter"/>
+        	<field name="target">new</field>
+    	</record>
+
+        <menuitem
+                 id="report_sede"
+                 parent="menu_informes"
+                 name="Reporte de servicios por sede"
+                 action="action_report_callcenter"
+                 sequence="2"
+        />
+    </data>
+</odoo>
